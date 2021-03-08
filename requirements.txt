@@ -1,0 +1,14 @@
+# List here the programs required by the project. Specifiying The version
+# number (i.e. '=x.y.z') is optional but recommended for reproducibility.
+
+bioconductor-edger =3.32.0
+fastqc =0.11.9
+gffutils =0.10.1
+hisat2 =2.2.1
+multiqc =1.9
+r-data.table =1.14.0
+r-ggplot2 =3.3.3
+r-r.utils =2.10.1
+samtools =1.11
+snakemake =6.0.0
+subread =2.0.1
