@@ -12,3 +12,4 @@ r-r.utils =2.10.1
 samtools =1.11
 snakemake =6.0.0
 subread =2.0.1
+IGV =2.9.2
