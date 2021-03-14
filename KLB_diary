@@ -10,13 +10,19 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 # Re-cap biology on the command line
 
 
-#Week 2 plan (8-12 March)
+#Week 2 (8-12 March)
 ###
 # Download the genome annotation
 # Index reference genome
-# Read quality control
-# Read alignment to the genome
-# Count the genes
-# Perform the above on a few data sets from my terminal using data processing option 1 and 3...snakemake
-# Then perform the data processing with snakemake on all the files on the cluster
+# Read quality control - fastqc
+# Read alignment to the genome - hisat2
+# Install IGV and observed read coverage
+# Count the number of reads that align to genes from each sample - featureCounts
+# Perform the above on all of the datasets from the cluster and the Snakefile
 # Recap biology on the command line & ngs
+
+
+#Week 3 (15-19 March)
+# Read coverage with IGV and take snapshots of key ookinete genes
+# Theory of differential expression
+# Brush up on R & plotting
