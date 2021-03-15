@@ -121,3 +121,4 @@ snakemake --dry-run --printshellcmds --jobs 1 \
 #IGV
 Transferred hisat2 files to PC; installed IGV =2.9.2
 mamba install --freeze-installed -n MRes_project_2021 --yes --file requirements.txt
+open IGV using the command "igv"
