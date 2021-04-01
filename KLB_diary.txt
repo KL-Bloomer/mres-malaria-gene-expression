@@ -1,0 +1,50 @@
+Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
+
+#Week 1 (1-5 March)
+###
+# Managed to get onto the computer cluster
+# Created a GitHub repository
+# Installed conda and bioconda
+# Created a virtual environment where I installed the packages necessary for the data analysis using the requirements.txt file (nelson)
+# Downloaded the P.berghei genome
+# Re-cap biology on the command line
+
+
+#Week 2 (8-12 March)
+###
+# Download the genome annotation
+# Index reference genome
+# Read quality control - fastqc
+# Read alignment to the genome - hisat2
+# Install IGV and observed read coverage
+# Count the number of reads that align to genes from each sample - featureCounts
+# Perform the above on all of the datasets from the cluster and the Snakefile
+# Recap biology on the command line & ngs
+
+
+#Week 3 (15-19 March)
+# Re-run snakefile - concatenate mouse and P.berghei genomes and re-run the alignment
+# Analayse the data
+# Read coverage with IGV and take snapshots of key ookinete genes
+# Blast unmapped reads 
+# Theory of differential expression
+# Brush up on R & plotting
+# PCA plot
+
+##Week 4 (22-26 March)
+# MDS plot - ggplot & re-do without outliers & Dim2 vs Dim3
+# Troubleshoot blast...last step
+# Remove rRNA count reads and see how it alters the MDS plot(s)
+# Validation of the literature
+
+##Week 5 (29 March-2 April)
+# re-run the snakefile with female gametocyte data (0hr) and generate MDS plot 
+# Add labels to MDS plot
+# Work on library barplot - ggplot
+# idxstat table & percentage for counts.summary.report table - finalise tables
+# Generate MA plot for female gametocyte data as well
+# Do some reading up of the literature
+#Volcano plot, global expression plot & snakemake workflow plot
+#Differential gene expression analysis
+# Snakemake tutorial
+# work on tables and take better pictures of key ookinete genes (igv)
