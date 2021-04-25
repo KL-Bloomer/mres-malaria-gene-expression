@@ -1,9 +1,9 @@
-### mres-malaria-gene-expression
+### mres-malaria-gene-expression RNA seq pipeline
 
-#Learning about vim: https://vimhelp.org/usr_02.txt.html#02.7
+[Learning about vim](https://vimhelp.org/usr_02.txt.html#02.7)
 
-#Created & cloned git repository
-https://www.melbournebioinformatics.org.au/tutorials/tutorials/using_git/Using_Git/
+[Create & clone a git repository](https://www.melbournebioinformatics.org.au/tutorials/tutorials/using_git/Using_Git/)
+
 #to backtrack to a different version of the files
 git log #take log string
 git checkout {log string} test.text
@@ -16,34 +16,30 @@ git push
 git pull
 *don't need to use pull and create a new branch when updating files etc.
 
-#Conda & Bioconda installation
-https://bioconda.github.io/user/install.html
-
+[Conda & Bioconda installation](https://bioconda.github.io/user/install.html)
 #Then create conda environment and install the programmes on the file
 bash
 conda create --yes --name mres-malaria-gene-expression
 conda activate mres-malaria-gene-expression
-mamba install --freeze-installed -n mres-malaria-gene-expression --yes --file requirements.txt
-Note to self: when installing using mamba from the cluster, need to install in the base environment which will translate to the mres-malaria-gene-expression environment
+mamba install --freeze-installed -n MRes_project_2021 --yes --file requirements.txt
+* Note to self: when installing using mamba from the cluster, need to install in the base environment which will translate to the conda environment
 
 realpath $CONDA_PREFIX
 * where the current activated environment lives
 
-#Download, install & connect to VPN Client
-https://www.gla.ac.uk/myglasgow/it/vpn/#downloadvpnclientforyourdevice
-https://www.cisco.com/c/en/us/support/docs/smb/routers/cisco-rv-series-small-business-routers/Kmgmt-785-AnyConnect-Linux-Ubuntu.html
-From the user interface, for connect, type: gucsasa1.cent.gla.ac.uk, followed by username (2592613b) & password
+[Download, install & connect to VPN Client](https://www.gla.ac.uk/myglasgow/it/vpn/#downloadvpnclientforyourdevice;https://www.cisco.com/c/en/us/support/docs/smb/routers/cisco-rv-series-small-business-routers/Kmgmt-785-AnyConnect-Linux-Ubuntu.html)
+* From the user interface, for connect, type: gucsasa1.cent.gla.ac.uk, followed by username (2592613b) & password
 
 #To make logging into headnode easier
 atom ~/.bashrc #opens a cryptic file with default settings for the shell
 alias cluster="ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 2592613b@headnode03.cent.gla.ac.uk"
-Therefore, just need to open terminal and type "cluster"
+* Therefore, just need to open terminal and type "cluster", followed by:
 ssh bioinf03.hpc.gla.ac.uk
 
-Installed conda and bioconda as on PC.
+* Installed conda and bioconda as on PC - environment = mres-malaria-gene-expression.
 
 #Accessing fastqc files and saving into "mres-malaria-gene-expression" folder
- mkdir -p ~/mres-malaria-gene-expression
+mkdir -p ~/mres-malaria-gene-expression
 cp -r /export/home/db291g/Kirstin_fastq ~/mres-malaria-gene-expression/
 
 * To avoid this issue "Unable to negotiate with 130.209.19.28 port 22: no matching key exchange method found...".
@@ -73,17 +69,19 @@ done
 firefox file.html
 
 #Creating the sample sheet
-*library_id = library name i.e. Ap20-GFP-SFC-16h-R1 - name with only letters, numbers, dots, underscores, hyphens
-*Time
-*Strain
-*R1 Full path to read 1 fastq file
-*R2 Full path to read 2 fastq file
+* library_id = library name i.e. Ap20-GFP-SFC-16h-R1 - name with only letters, numbers, dots, underscores, hyphens
+* Time
+* Strain
+* R1 Full path to read 1 fastq file
+* R2 Full path to read 2 fastq file
 
-*Prepared with Excel - save as plain text with columns separated by TAB (not comma or space).
+* Prepared with Excel - save as plain text with columns separated by TAB (__not comma or space__).
 
 #To visualise if there are any spaces; where tabs are replaced by ^I; end of each line = $
 cat -vet export/home/2592613b/mres-malaria-gene-expression/sample_sheet.tsv
-sed -i 's/ //g' ~/mres-malaria-gene-expression/sample_sheet.tsv #the -i option means it will do the replacement directly on the file; "s" is substitution and "/" refers to delimiters...i.e. sed 's /unix/linux' - unix is search pattern & linux is replacement
+sed -i 's/ //g' ~/mres-malaria-gene-expression/sample_sheet.tsv
+* the -i option means it will do the replacement directly on the file;
+* "s" is substitution and "/" refers to delimiters...i.e. sed 's /unix/linux' - unix is search pattern & linux is replacement
 
 #Create snakefile_run; remove --dry-run when you want to run the commands (otherwise only shows what would be executed)
 snakemake --dry-run --printshellcmds --jobs 1 \
@@ -100,41 +98,45 @@ open IGV using the command "igv"
  #take pictures of the top 5 or so genes that are differentially expressed.
  #scale to max tracks
 
-#### Edit & re-run the snakefile - download the M.Musculus genome and concatenate with P.berghei
-Evidence of contamination due to a high GC content and bimodal graph from the fastqc/multiqc analyses. Therefore, it was decided to blast the unmapped reads and to re-run the mapping with a M.musulus-P.berghei concatenated genome. This would eliminate reads that map preferentially to the M/musculus genome from the downstream analysis (i.e. read counts).
-Note to self: No tabs in the snakefile, only whitespace.
-Changed the shell command: cat {input.pb} {output.fa} > {output.fa} to cat {input.pb} {input.mm} > {output.fa}
+## Edit & re-run the snakefile - download the M.Musculus genome and concatenate with P.berghei
+* Evidence of contamination due to a high GC content and bimodal graph from the fastqc/multiqc analyses. Therefore, it was decided to blast the unmapped reads and to re-run the mapping with a M.musulus-P.berghei concatenated genome. This would eliminate reads that map preferentially to the M/musculus genome from the downstream analysis (i.e. read counts).
+* Note to self: __No tabs in the snakefile__, only __whitespace__.
+* Changed the shell command: cat {input.pb} {output.fa} > {output.fa} __to__ cat {input.pb} {input.mm} > {output.fa}
 
-####Samtools
-#Number of reads mapped to mouse or plasmodium genome
- samtools idxstats <my.bam>
- # where output columns are - chromosome name, size, number of alignments/mapped reads, reads unmapped but a   mapped mate
- #open a bam file
- samtools view <my.bam> | less -S
- #convert bam to fasta
- samtools fasta <my.bam>
+##Samtools
 
- broadinstitute/picard/explain flags...
- flag 4 = unmapped
+samtools idxstats <my.bam>
+* number of reads mapped to mouse or plasmodium genome; output columns: __chromosome name__, __size__, __number of alignments/mapped reads__, __reads unmapped but a mapped mate__
 
-####Ran the over-respresented sequences in blast which matched to M.musculus
-####Ran the unmapped reads from the files in blast as recordered in Snakefile:
+samtools view <my.bam> | less -S
+* open a bam file
 
-#Corrupt download when trying to download the blast database, therefore:
-# Remove leftover from download (this was not necessary as my download seemed to have failed completely):
-rm -r /export/home/2592613b/mres-malaria-gene-expression/output/blastdb
+samtools fasta <my.bam>
+* convert bam to fasta
 
-# Symlink * could use cp to make hard copies but this will prevent the need to duplicate large files
-ln -s /export/home/db291g/Tritume/blastdb /export/home/2592613b/mres-malaria-gene-expression/output/
-https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/
+[explain flags](https://broadinstitute.github.io/picard/explain-flags.html)
 
-#And ultimately, read the blast database from Dario's home directory.
-#Note to self: can execute a snakemake wrapper script in the background using nohup
+* note: decided to run the over-represented sequences in blast which matched to M.musculus
 
+# Ran the unmapped reads from the files in blast (as recorded in Snakefile)
+* Corrupt download when trying to download the blast database, therefore:
+  * remove leftover from download (this was not necessary as my download seemed to have failed completely):
+    rm -r /export/home/2592613b/mres-malaria-gene-expression/output/blastdb
+  * [Symlink](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/)
+  * Could use cp to make hard copies but this will prevent the need to duplicate large files
+    ln -s /export/home/db291g/Tritume/blastdb /export/home/2592613b/mres-malaria-gene-expression/output/
+  * And ultimately, read the blast database from Dario's home directory.
+
+#Working with snakemake
+* Note to self: can execute a snakemake wrapper script in the background using nohup (very handy!)
 nohup ./snakefile_run &
-#Therefore, even if I am logged out of the cluster, snakemake will still be going in the background; to see the output from snakemake = less nohup.out; to kill snakemake = pkill snakemake OR immediate kill(emergency) = pkill -9 snakemake
+    * Therefore, even if I am logged out of the cluster, snakemake will still be going in the background;
+    * To see the output from snakemake = less nohup.out;
+    * to kill snakemake = pkill snakemake
+    __OR__
+    * immediate kill(emergency) = pkill -9 snakemake
 
-#Issues being logged out:
+* Issues being logged out:
 snakemake --printshellcmds --jobs 1 \
     --config ss=$PWD/sample_sheet.tsv \
     --directory output \
@@ -142,11 +144,11 @@ snakemake --printshellcmds --jobs 1 \
     --dry-run \
     --unlock
 
-#Snakemake logs under .snakemake in the working directory:
+* Snakemake logs under .snakemake in the working directory:
 ls -a
 /export/home/2592613b/mres-malaria-gene-expression/output/.snakemake/log/
 
-#To get around the "AmbiguousRuleException" error when running rule summarise_contamination, performed the following:
+* To get around the "AmbiguousRuleException" error when running rule summarise_contamination, performed the following:
 1) output:
     summary= 'blast_species/{library_id}.species.tsv',
 		#and made corrections to rule final_output
@@ -154,21 +156,20 @@ ls -a
     library_id = '|'.join([re.escape(x) for x in sample_sheet['library_id']])
 		#add this before the rule final_output - gets rid of "greedy behaviour"
 
-#Re-ran the snakemake file on the female gametocyte data
+##Re-ran the snakemake file on the female gametocyte data
 * included female gametocytes (Strain = RFP & Time = 0h)
-* *SRR526055* from:
-	* https://www.ebi.ac.uk/ena/browser/view/PRJNA374918
-* *21725* from:
-	* https://www.ebi.ac.uk/ena/browser/view/PRJNA714084
+  * [SRR526055](https://www.ebi.ac.uk/ena/browser/view/PRJNA374918)
+  * [21725](https://www.ebi.ac.uk/ena/browser/view/PRJNA714084)
 * edited sample sheet to include female gametocyte data
 * If you don't want blast to run on female gametocyte data, edit rule final_output:
 expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet[sample_sheet['Time'] != 0]['library_id'])
 * Prioritise the gene count output:
 snakemake --prioritize count_reads_in_genes --jobs 1 ...
 
-#Created MDS plot  - later removed outliers and rRNA contamination and PIR/fam genes (R script)
-#removal of the PIR/fam genes did not affect the MDS plot/MA plot, therefore kept those genes in.
-#From the MDS plot, there appears to be a batch effect with the RM samples clustering away from the other samples (i.e. GFPcon & Ap20 are confounded by strain). Therefore corrected for batch effect in all subsequent plots.
+#Creating MDS plot - "planning to add this to Snakefile"
+* Removed outliers and rRNA contamination and PIR/fam genes (R script)
+* removal of the PIR/fam genes did not affect the MDS plot/MA plot, therefore kept those genes in.
+* Appears to be a batch effect with the RM samples clustering away from the other samples (i.e. GFPcon & Ap20 are confounded by strain). Therefore corrected for batch effect in all subsequent plots.
 
 	rm(list=ls())
 	library(data.table)
@@ -206,18 +207,18 @@ class(RNA_Gene_ID)
 counts_min_outliers <- counts_min_outliers[!counts_min_outliers$Geneid %in% RNA_Gene_ID]
 
 mat <- as.matrix(counts_min_outliers, rownames= 'Geneid')
-#for batch correction, rename mat to raw_counts
+  #for batch correction, rename mat to raw_counts
 raw_counts <- mat
 
-# Sanity check that sample sheet and count matrix are in the same order
+  # Sanity check that sample sheet and count matrix are in the same order
 stopifnot(identical(ss_min_outliers$library_id, colnames(raw_counts)))
 library(sva)
 adj_counts <- ComBat_seq(raw_counts, batch= ss_min_outliers$Batch, group= ss_min_outliers$Time)
 
-#raw_counts is the matrix of counts with rRNA and failed libraries removed;
-#ss_min_outliers is the sample sheet with column batch as prepared above and Time as factor as before.
-#adj_counts is the adjusted matrix of counts that can be used for everything else
-#from now on.
+  #raw_counts is the matrix of counts with rRNA and failed libraries removed;
+  #ss_min_outliers is the sample sheet with column batch as prepared above and Time as factor as before.
+  #adj_counts is the adjusted matrix of counts that can be used for everything else
+  #from now on.
 
 design <- model.matrix(~0 + ss_min_outliers$group)
 colnames(design) <- sub('ss_min_outliers$group', '', colnames(design), fixed= TRUE)
@@ -230,16 +231,14 @@ y <- calcNormFactors(y)
 y <- estimateDisp(y, design)
 y$samples
 
-# MDS plot before and after batch correction
-
 mds_min_outliers <- plotMDS(y, plot=FALSE)
 mdsout_min_outliers <- as.data.table(mds_min_outliers$cmdscale.out)
 mdsout_min_outliers[, library_id := colnames(y)]
 
-# Add library characteristics from sample sheet
+  # Add library characteristics from sample sheet
 mdsout_min_outliers <- merge(mdsout_min_outliers, ss_min_outliers, by= "library_id")
 
-## Include time in the labels - changing library_id to include time
+  # Include time in the labels - changing library_id to include time
 mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("Ap20-GFP-SFC-4h-R[0-9]", "Ap20-4h", mdsout_min_outliers$library_id)]
 mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("Ap20-GFP-SFC-16h-R[0-9]", "Ap20-16h", mdsout_min_outliers$library_id)]
 mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("Ap20-GFP-SFC-8h-R[0-9]", "Ap20-8h", mdsout_min_outliers$library_id)]
@@ -259,7 +258,7 @@ mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("RM-1_S408", "RM-1
 mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("F-.*", "RFP-0h", mdsout_min_outliers$library_id)]
 mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("F[1-3].*", "RFP-0h", mdsout_min_outliers$library_id)]
 
-# Finally plot:
+  # Finally plot:
 library(ggrepel)
 ggplot(data= mdsout_min_outliers, aes(x= V1, y= V2, label= library_id, colour= Time, shape= Strain)) +
   geom_point() +
@@ -297,23 +296,20 @@ ggsave('ggplot_min_outliers_min_rRNA_time0_dim1_dim2_nobatchcorrection.png', wid
 	write.table(gene_id_descr_table, gz, sep= '\t', row.names= FALSE, quote= FALSE)
 	close(gz)
 
-#Created MA plot (R script)
-#logCPM = average log counts per million across the libraries
-#LogCPM are the log counts per million, which can be understood as measuring expression
-#level. LogFC is the log fold-change, which is the log difference between your groups.
-#log-fold-change is the average (root-mean-square) of the
-#largest absolute log-fold-changes between each pair of samples
-#transformation and normalisation...logCPM?
+#Created MA plot (R script) - "planning to add to the Snakefile"
+* Note to self: logCPM = average log counts per million across the libraries
+* LogCPM are the log counts per million, which can be understood as measuring expression level.
+* LogFC __(fold change)__ is the log fold-change, which is the log difference between your groups.
+* logFC = average (root-mean-square) of the largest absolute log-fold-changes between each pair of samples
+* transformation and normalisation = __logCPM__ - normalise for library size/sequencing depth
 
-#The glm approach to multiple groups is similar to the classic approach,
-#but permits more general comparisons to be made
+  #The glm approach to multiple groups is similar to the classic approach,but permits more general comparisons to be made
 design_glm <- model.matrix(~0+group, data=y$samples)
-#colnames(design_glm) <- levels(y$samples$group)
+colnames(design_glm) <- levels(y$samples$group)
 design_glm
-#Here, the0+in the model formula is an instruction
-#not to include an intercept column and instead to include a column for each group
+  #Here, the0+in the model formula is an instruction not to include an intercept column and instead to include a column for each group
 
-# These must be the same as those for ATAC
+  # Same as those for ATAC
 contrasts <- makeContrasts("h24vs16"= group24 - group16,
                            "h24vs12"= group24 - group12,
                            "h16vs12"= group16 - group12,
@@ -326,24 +322,18 @@ contrasts <- makeContrasts("h24vs16"= group24 - group16,
 
 class(design_glm)
 stopifnot(all(abs(colSums(contrasts)) < 1e-6))
-#all = given a set of logical vectors, are all the values true?
-#abs = computes the absolute value of x
-#form column sums for numeric arrays or dataframes
+  #all = given a set of logical vectors, are all the values true?
+  #abs = computes the absolute value of x
+  #form column sums for numeric arrays or dataframes
 
-fit <- glmFit(y, design_glm, prior.count= 1)
-#glmFit = Fit a negative binomial generalized log-linear model to the read counts
-#for each gene.
+fit <- glmFit(y, design_glm, prior.count= 1) #glmFit = Fit a negative binomial generalized log-linear model to the read counts for each gene.
 
-dge <- list()
-#Functions to construct, coerce and check for both kinds of R lists.
+dge <- list()  #Functions to construct, coerce and check for both kinds of R lists.
 for(cntr in colnames(contrasts)){{
   print(cntr)
   lfc <- glmTreat(fit, contrast= contrasts[, cntr], lfc= log2(1.5))
-  #numeric scalar specifying the absolute value
-  #of the log2-fold change threshold
-  #above which differential expression is to be considered.
-  detable <- topTags(lfc, n= nrow(y))$table
-  #n = max number of genes/tags to return
+  #__lfc__ = numeric scalar specifying the absolute value of the log2FC threshold above which differential expression is to be considered.
+  detable <- topTags(lfc, n= nrow(y))$table #n = max number of genes/tags to return
   detable$gene_id <- row.names(detable)
   detable <- data.table(detable)
   detable[, contrast := cntr]
@@ -353,11 +343,11 @@ dge <- rbindlist(dge)
 class(dge)
 dge[, unshrunk.logFC := NULL]
 
-#https://www.reneshbedre.com/blog/ma.html - ma plots
-# Normalisation - https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html
+[ma plots](https://www.reneshbedre.com/blog/ma.html)
+[ma plots](http://manual.omicsbox.biobam.com/user-manual/module-transcriptomics/pairwise-differential-expression-analysis/#PairwiseDifferentialExpressionAnalysis-MAPlot)
+[normalisation](https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html)
 
-#merge dge table with the gene description table so one can see on the same line
-#the gene_id, the difference between time points and the gene description
+  #merge dge table with the gene description table so one can see on the same line - gene_id, difference between time points and the gene description
 dge_descr <- merge(dge, gene_id_descr_table, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
 dge_descr
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
@@ -365,13 +355,11 @@ gz <- gzfile('dge_descr_table_time0_additionalcontrasts_batchcorrection_9April',
 write.table(dge_descr, gz, sep= '\t', row.names= FALSE, quote= FALSE)
 close(gz)
 
-#Finally plot MA
-#plot shows DE vs non-DE genes with log2 FC against normalised mean count
- #the higher the mean count, the lower the log fold change required for the gene to be DE
- #for genes with low mean count, need a higher log FC to be DE
-
-dge_descr
-is.data.table(dge_descr) == TRUE
+  #Plot MA
+  #plot shows DE vs non-DE genes with log2 FC against normalised mean count (logCPM)
+  #higher mean count = lower logFC for gene to be DE
+  #genes with low mean count, need a higher logFC to be DE
+  #order according to time - 0hr to 24hr
 
 xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12', 'h24vs16')
 dge_descr[, contrast_order := factor(contrast, xord)]
@@ -383,8 +371,7 @@ nsig[, n_down:= sprintf('Down = %s', n_down)]
 library(ggplot2)
 gg <- ggplot(data= dge_descr, aes(x= logCPM, y= logFC)) +
   geom_point(alpha= 0.5, pch= '.') +
-  geom_point(data= dge_descr[FDR < 0.01], alpha= 0.5, colour= 'red', pch= '.') +
-  #to avoid overplotting, geom_smooth() and alpha (make points transparent)
+  geom_point(data= dge_descr[FDR < 0.01], alpha= 0.5, colour= 'red', pch= '.') + # avoid overplotting, geom_smooth & alpha = points transparent
   geom_smooth(se= FALSE, col= 'grey60', size= 0.1) +
   geom_hline(yintercept= 0, colour= 'blue') +
   geom_text(data= nsig, x= Inf, y= Inf, aes(label= n_up), vjust= 1.3, hjust= 1.1, size= 3) +
@@ -397,10 +384,9 @@ gg <- ggplot(data= dge_descr, aes(x= logCPM, y= logFC)) +
 gg
 
 ggsave('MAplot_order_extracontrasts_nobatchcorrection_9Apr.png', width= 16, height= 20, units= 'cm')
-#http://manual.omicsbox.biobam.com/user-manual/module-transcriptomics/pairwise-differential-expression-analysis/#PairwiseDifferentialExpressionAnalysis-MAPlot
 
 
-#Created barplot of library sizes - prior to normalisation & sorted by time
+# Barplot of library sizes - prior to normalisation, sorted by time
 
 	sizes <- data.frame(LibraryID = ss$library_id, LibrarySize = y$samples$lib.size, Strain = ss$Strain,
                     Time = ss$Time, group = ss$group)
@@ -435,27 +421,24 @@ ggsave('barplot_libsizes_before norm_time.pdf', width = 10, height = 10)
 
 #idxstats workflow - make data analysis easier (see Snakefile) - did not work as expected
 
-#Volcano plot
-#displays significance on the y-axis and fold-change on the x-axis. In this case we use the log2 fold change (logFC) on the x-axis, and on the y-axis we’ll use -log10(FDR). This -log10 transformation
-#is commonly used for p-values as it means that more significant genes
-#have a higher scale.
-dge_volcano <- dge_descr
-#the significantly differentially expressed genes are the ones on the upper right and left hand side
-#add a column to the dataframe to specify if if they are UP- or DOWN- regulated
+# Volcano plot
+  #displays significance on the y-axis and fold-change on the x-axis. In this case we use the logFC on the x-axis, and on the y-axis we’ll use -log10(FDR).
+  #This -log10 transformation is commonly used for p-values as it means that more significant genes have a higher scale.
+  #the significantly differentially expressed genes are the ones on the upper right and left hand side
+  #add a column to the dataframe to specify if if they are UP- or DOWN- regulated
 
-#add a column of NA's
+dge_volcano <- dge_descr
+  #add a column of NA's
 dge_volcano$diffexpressed <- "NO"
 
-#if logfold change > 0.58 and p-value less than 0.05, set as "UP"
+  # if logfold change > 0.58 (FC = 1.5) and p-value less than 0.05, set as "UP"
 dge_volcano$diffexpressed[dge_volcano$logFC > 0.58 & dge_volcano$PValue < 0.05] <- "UP"
 dge_volcano$diffexpressed[dge_volcano$logFC < -0.58 & dge_volcano$PValue < 0.05] <- "DOWN"
 
-
-##to automate a bit
 mycolours <- c("blue", "red", "black")
 names(mycolours) <- c("DOWN", "UP", "NO")
 
-### Names of genes besides the points
+  # Names of genes besides the points
 dge_volcano$delabel <- NA
 dge_volcano$delabel[dge_volcano$diffexpressed != "NO"] <- dge_volcano$gene_id[dge_volcano$diffexpressed != "NO"]
 
@@ -475,16 +458,17 @@ volcano_plot <- ggplot(dge_volcano, mapping = aes(x= logFC, y= -log10(PValue), c
   ggsave('Volcano_plot_order_batchcorrection_9Apr.png', width= 20, height= 25, units= 'cm')
 
 #Create a workflow plot
-snakemake [...] / #assuming that [...] are the same commands used before
---forceall --dag > dag.dot # dag.dot refers to the plotting instructions & you can open in  a text editor to #see. dot.pdf is the actual plot.
-
- *then run on the command line the following
+snakemake [...] /
+--forceall --dag > dag.dot
+* assuming that [...] are the same commands as used before
+* dag.dot refers to the plotting instructions & you can open in a text editor.
+* dot.pdf is the actual plot.
+* then run on the command line the following
 dot -Tpdf dag.dot > dag.pdf
- #OR
+__OR__
 dot -Tpng dag.dot > dag.png
 
 #Create a global expression plot
-
 global <- data.table(dge_descr$gene_id, dge_descr$contrast_order, dge_descr$logFC)
 global <- rename(global, gene_id = V1, contrast = V2, logFC = V3)
 qq <- quantile(global$logFC, p= 0.995)
@@ -503,3 +487,10 @@ gg <- ggplot(data= global, aes(x= contrast, y= logFC, colour= col)) +
 gg
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
 ggsave('globalexpression_plot_batchcorrection_9Apr.png', width= length(unique(global$contrast)) * 2, height= 10, units= 'cm')
+
+#Plotting genomic data using Gviz (alternative to IGV); install using Bioconda - added to requirements file and running mamba
+Encountered problems while solving.
+Problem: nothing provides requested bioconductor-sva 3.38.0-1
+Problem: nothing provides icu 54.* needed by r-base-3.3.1-1
+
+#Need to include code for clustering and heatmaps and gene expression changes over time.
