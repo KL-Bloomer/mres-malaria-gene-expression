@@ -44,7 +44,32 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 # idxstat table & percentage for counts.summary.report table - finalise tables
 # Generate MA plot for female gametocyte data as well
 # Do some reading up of the literature
-#Volcano plot, global expression plot & snakemake workflow plot
 #Differential gene expression analysis
-# Snakemake tutorial
-# work on tables and take better pictures of key ookinete genes (igv)
+
+##Week 6 (5-9 April)
+# Volcano plot, global expression plot & snakemake workflow plot
+# Batch correction included to MDS, MA, volcano & global gene expression plots
+# clustering & heatmaps
+
+##Week 7 (12-16 April)
+# Write up intro - plan send to Kasia
+# Write up methods
+# Volcano plot - p-value <0.01
+
+##Week 8 (19-23 April)
+# heatmap & clustering - hclust = average, complete, median & ward.D
+			- distance = correlation matrix
+			- cluster into groups
+			- logrpkm counts
+			- logFC, logrpkm for all genes & FDR < 0.01
+# take pictures of DEG with Gviz
+# plot changes in gene expression over time
+
+##Week 9 (26-30 April)
+# GO
+# sort out Snakefile and README.md
+# put results together
+# introduction, methods
+# project proposal
+					
+
