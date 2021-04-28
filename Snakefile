@@ -18,16 +18,40 @@ def get_fastq_basenames(fastq_file_list):
 fastq_file_list = list(sample_sheet['R1']) + list(sample_sheet['R2'])
 fastq_dict = get_fastq_basenames(fastq_file_list)
 
+PbANKA_chroms = ['PbANKA_01_v3',
+    'PbANKA_02_v3',
+    'PbANKA_03_v3',
+    'PbANKA_04_v3',
+    'PbANKA_05_v3',
+    'PbANKA_06_v3',
+    'PbANKA_07_v3',
+    'PbANKA_08_v3',
+    'PbANKA_09_v3',
+    'PbANKA_10_v3',
+    'PbANKA_11_v3',
+    'PbANKA_12_v3',
+    'PbANKA_13_v3',
+    'PbANKA_14_v3',
+    'PbANKA_00_v3_archived_contig_1',
+    'PbANKA_00_v3_archived_contig_2',
+    'PbANKA_00_v3_archived_contig_3',
+    'PbANKA_00_v3_archived_contig_4',
+    'PbANKA_00_v3_archived_contig_5',
+    'PbANKA_API_v3',
+    'PbANKA_MIT_v3']
+
 rule final_output:
-    # The only porpose of this rule is listing the files we want as final
+    # The only purpose of this rule is listing the files we want as final
     # output of the workflow. Snakemake will use the rules after this one to
     # generate this files.
     input:
         'multiqc/fastqc_report.html',
         expand('hisat2/{library_id}.bam', library_id= sample_sheet['library_id']),
         'featureCounts/counts.tsv',
-        expand('blast/{library_id}.species.tsv', library_id= sample_sheet['library_id']),
-
+        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
+        'idxstats/idxstats.tsv',
+        expand('bigwig/{library_id}.bw', library_id= sample_sheet['library_id']),
+        
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -64,6 +88,26 @@ rule download_reference_genome:
         curl -s https://plasmodb.org/common/downloads/release-49/PbergheiANKA/fasta/data/PlasmoDB-49_PbergheiANKA_Genome.fasta > {output.fasta}
         """
 
+rule download_mouse_reference:
+    output:
+        fa= 'ref/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa',
+    shell:
+        r"""
+        curl -s ftp://ftp.ensembl.org/pub/release-99/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa.gz \
+        | zcat > {output.fa}
+        """
+
+rule concatenate_genomes:
+    input:
+        pb= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
+        mm= 'ref/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa',
+    output:
+        fa= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
+    shell:
+        r"""
+        cat {input.pb} {input.mm} > {output.fa}
+        """
+
 rule prepare_reference_annotation:
     output:
         gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
@@ -78,20 +122,20 @@ rule prepare_reference_annotation:
 
 rule index_genome:
     input:
-        fasta= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
+     fasta= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
     output:
-        index= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta.8.ht2',
+        index= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa.8.ht2',
     shell:
         r"""
-        hisat2-build --seed 1234 {input.fasta} {input.fasta}
+        hisat2-build -p 16 --seed 1234 {input.fasta} {input.fasta}
         """
 
 rule align_reads:
     input:
         R1= lambda wildcard: sample_sheet[sample_sheet['library_id'] == wildcard.library_id].R1,
         R2= lambda wildcard: sample_sheet[sample_sheet['library_id'] == wildcard.library_id].R2,
-        genome= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
-        index= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta.8.ht2',
+        genome= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
+        index= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa.8.ht2',
     output:
         bam= 'hisat2/{library_id}.bam',       
         bai= 'hisat2/{library_id}.bam.bai',
@@ -99,9 +143,8 @@ rule align_reads:
     shell:
         r"""
         hisat2 --summary-file {output.log} --new-summary \
-                --max-intronlen 5000 --threads 1 -x {input.genome} -1 {input.R1} -2 {input.R2} \
+               --max-intronlen 5000 --threads 16 -x {input.genome} -1 {input.R1} -2 {input.R2} \
         | samtools sort -@ 1 > {output.bam}
-
         samtools index -@ 1 {output.bam}
         """
 
@@ -113,7 +156,132 @@ rule count_reads_in_genes:
         counts= 'featureCounts/counts.tsv',
     shell:
         r"""
-        featureCounts -p -T 1 -Q 10 -s 2 -t exon -g gene_id -a {input.gff} -o {output.counts} {input.bam}
+        featureCounts -p -T 8 -Q 10 -s 2 -t exon -g gene_id -a {input.gff} -o {output.counts} {input.bam}
+        """
+
+rule samtools_idxstats:
+    input:
+        bam= 'hisat2/{library_id}.bam',
+    output:
+        idxstats= temp('idxstats/{library_id}.tsv'),
+    shell:
+        r"""
+        samtools idxstats {input.bam} \
+        | awk -v library_id='{wildcards.library_id}' -v FS='\t' -v OFS='\t' '{{print $0, library_id}}' > {output.idxstats}
+        """
+
+rule concatenate_idxstats:
+    input:
+        stats= expand('idxstats/{library_id}.tsv', library_id= sample_sheet['library_id']),
+    output:
+        stats= 'idxstats/idxstats.tsv',
+    shell:
+        r"""
+        echo "chrom length mapped unmapped library_id" | tr ' ' '\t' > {output.stats}
+        cat {input.stats} >> {output.stats}
+        """
+
+rule filter_bam:
+    input:
+        bam= 'hisat2/{library_id}.bam',
+    output:
+        bam= temp('bigwig/{library_id}.bam'),
+        bai= temp('bigwig/{library_id}.bam.bai'),
+    params:
+        chroms= ' '.join(PbANKA_chroms),
+    shell:
+        r"""
+        samtools view -u -q 10 -@ 4 {input.bam} {params.chroms} > {output.bam}
+        samtools index {output.bam}
+        """
+
+rule bam_to_bigwig:
+    input:
+        bam= 'bigwig/{library_id}.bam',
+        bai= 'bigwig/{library_id}.bam.bai',
+    output:
+        bw= 'bigwig/{library_id}.bw',
+    shell:
+        r"""
+        bamCoverage -b {input.bam} -o {output.bw} \
+            --normalizeUsing BPM \
+            --numberOfProcessors 8
+        """
+
+rule download_blastdb:
+    output:
+        'blastdb/taxdb.btd',
+    shell:
+        r"""
+	cd `dirname {output}`
+        update_blastdb.pl --decompress nt
+        """
+
+rule extract_candidate_contaminating_reads:
+    input:
+        bam= 'hisat2/{library_id}.bam',
+    output:
+        fasta= 'fasta/{library_id}.fasta',
+    params:
+        # This is effectively the number of *lines* in output. Since a read
+        # takes two lines (one for the fasta header, one for the sequence), the
+        # number of reads in output fasta will be half this number
+        n_reads= 5000 * 2,
+    shell:
+        r"""
+        samtools fasta -n -F 128 -f 8 -f 4 {input.bam} \
+        | awk 'NR <= {params.n_reads}' > {output.fasta}
+        """
+
+rule blast_reads:
+    input:
+        query= 'fasta/{library_id}.fasta',
+        db= 'blastdb/taxdb.btd',
+    output:
+        out= 'blast/{library_id}.tsv',
+    shell:
+        r"""
+        blastdir=`realpath {input.db}`
+        blastdir=`dirname $blastdir`
+        export BLASTDB=$blastdir
+
+        header="ssciname scomname stitle sseqid sstart send slen qseqid qlen evalue pident qcovhsp"
+        echo $header | tr ' ' '\t' > {output.out}
+        blastn -task megablast \
+               -query {input.query} \
+               -db $blastdir/nt \
+               -outfmt "6 $header" \
+               -max_target_seqs 1 \
+               -subject_besthit \
+               -word_size 28 \
+               -num_threads 8 >> {output.out}
+        """
+rule summarise_contamination:
+      input:
+         query= 'fasta/{library_id}.fasta',
+         blast= 'blast/{library_id}.tsv',
+      output:
+         summary= 'blast_species/{library_id}.species.tsv',
+      shell:
+         r"""
+cat <<'EOF' > {rule}.$$.tmp.R
+
+library(data.table)
+
+blast <- fread('{input.blast}')
+query <- fread(cmd= 'grep ">" {input.query}', header= FALSE, col.names= 'qseqid', sep= '\t')
+query[, qseqid := sub('>', '', qseqid)]
+
+smry <- blast[, list(n_hits= sum(evalue < 0.01)), by= list(species= ssciname)][order(-n_hits)]
+smry[, pct_hits := 100 * n_hits/nrow(query)]
+smry[, cum_pct_hits := cumsum(pct_hits)]
+
+write.table(smry, '{output.summary}', sep= '\t', row.names= FALSE, quote= FALSE)
+
+EOF
+Rscript {rule}.$$.tmp.R
+rm {rule}.$$.tmp.R
+>>>>>>> 43759273c6b7fd574b59631d514b04aa36f3e253
         """
 
 rule analyse_differential_gene_expression:
