@@ -1,0 +1,2406 @@
+Geneid	groups	description
+PBANKA_0100200	1	Plasmodium exported protein, unknown function
+PBANKA_0101100	1	liver merozoite formation protein
+PBANKA_0101400	1	SAC3 domain-containing protein, putative
+PBANKA_0102200	1	trophozoite exported protein 1, putative
+PBANKA_0102900	1	AP2 domain transcription factor, putative
+PBANKA_0103200	1	conserved protein, unknown function
+PBANKA_0105100	1	conserved Plasmodium protein, unknown function
+PBANKA_0106900	1	heptatricopeptide repeat-containing protein, putative
+PBANKA_0109700	1	SWI/SNF-related matrix-associated actin-dependent regulator of chromatin, putative
+PBANKA_0109800	1	conserved protein, unknown function
+PBANKA_0110100	1	conserved Plasmodium protein, unknown function
+PBANKA_0110500	1	leucine-rich repeat protein
+PBANKA_0110600	1	transmembrane protein 234, putative
+PBANKA_0112600	1	fam-b protein
+PBANKA_0112641	1	fam-b protein
+PBANKA_0200700	1	fam-b protein
+PBANKA_0204500	1	LCCL domain-containing protein, putative
+PBANKA_0205600	1	double-strand break repair protein MRE11, putative
+PBANKA_0207500	1	cyclin-dependent kinases regulatory subunit, putative
+PBANKA_0208600	1	conserved protein, unknown function
+PBANKA_0210500	1	conserved Plasmodium protein, unknown function
+PBANKA_0210600	1	ubiquitin carboxyl-terminal hydrolase, putative
+PBANKA_0211200	1	conserved protein, unknown function
+PBANKA_0211700	1	conserved Plasmodium protein, unknown function
+PBANKA_0212300	1	actin-like protein, putative
+PBANKA_0212800	1	alpha/beta hydrolase, putative
+PBANKA_0213600	1	N6-adenosine-methyltransferase MT-A70, putative
+PBANKA_0214200	1	tRNA pseudouridine synthase D, putative
+PBANKA_0214800	1	heat shock protein, putative
+PBANKA_0216741	1	lysophospholipase, putative, pseudogene
+PBANKA_0301700	1	5'-3' exonuclease, putative
+PBANKA_0302600	1	3'-5' exonuclease, putative
+PBANKA_0307600	1	syntaxin, putative
+PBANKA_0307800	1	conserved Plasmodium protein, unknown function
+PBANKA_0309900	1	conserved protein, unknown function
+PBANKA_0310300	1	protein kinase 7
+PBANKA_0310700	1	conserved protein, unknown function
+PBANKA_0311400	1	serine/threonine protein kinase STK2
+PBANKA_0312700	1	DEAD/DEAH box helicase, putative
+PBANKA_0314800	1	conserved protein, unknown function
+PBANKA_0316400	1	PIR protein, pseudogene
+PBANKA_0406800	1	pre-mRNA-processing factor 19, putative
+PBANKA_0407200	1	dual specificity protein phosphatase
+PBANKA_0409500	1	conserved protein, unknown function
+PBANKA_0409800	1	ATP synthase F0 subunit d-like protein, putative
+PBANKA_0410700	1	conserved Plasmodium protein, unknown function
+PBANKA_0411500	1	conserved Plasmodium protein, unknown function
+PBANKA_0411900	1	conserved Plasmodium protein, unknown function
+PBANKA_0413500	1	conserved Plasmodium protein, unknown function
+PBANKA_0414900	1	dynein intermediate light chain, putative
+PBANKA_0415300	1	exoribonuclease II, putative
+PBANKA_0415500	1	coatomer subunit beta, putative
+PBANKA_0417000	1	signal peptidase complex subunit 3, putative
+PBANKA_0418100	1	conserved protein, unknown function
+PBANKA_0418400	1	conserved protein, unknown function
+PBANKA_0500971	1	PIR protein
+PBANKA_0501500	1	enoyl-CoA hydratase-related protein, putative
+PBANKA_0502000	1	conserved Plasmodium protein, unknown function
+PBANKA_0502100	1	conserved Plasmodium protein, unknown function
+PBANKA_0502650	1	conserved Plasmodium protein, unknown function
+PBANKA_0502800	1	tRNA wybutosine-synthesizing protein, putative
+PBANKA_0503800	1	conserved Plasmodium protein, unknown function
+PBANKA_0504400	1	conserved Plasmodium protein, unknown function
+PBANKA_0505900	1	conserved Plasmodium protein, unknown function
+PBANKA_0506800	1	kelch protein K10, putative
+PBANKA_0506900	1	phospholipid scramblase, putative
+PBANKA_0507500	1	conserved protein, unknown function
+PBANKA_0509800	1	cytochrome c oxidase copper chaperone, putative
+PBANKA_0513600	1	adenosine deaminase, putative
+PBANKA_0513900	1	conserved Plasmodium protein, unknown function
+PBANKA_0514300	1	conserved Plasmodium protein, unknown function
+PBANKA_0514800	1	calmodulin, putative
+PBANKA_0515700	1	conserved Plasmodium protein, unknown function
+PBANKA_0516400	1	conserved protein, unknown function
+PBANKA_0518300	1	conserved Plasmodium protein, unknown function
+PBANKA_0518600	1	conserved protein, unknown function
+PBANKA_0520100	1	conserved Plasmodium protein, unknown function
+PBANKA_0520600	1	enhancer of rudimentary homolog, putative
+PBANKA_0521500	1	conserved Plasmodium protein, unknown function
+PBANKA_0521600	1	holo-[acyl-carrier-protein] synthase, putative
+PBANKA_0522200	1	conserved Plasmodium protein, unknown function
+PBANKA_0603300	1	sexual stage-specific protein G37
+PBANKA_0604600	1	conserved protein, unknown function
+PBANKA_0606100	1	tRNA dimethylallyltransferase, putative
+PBANKA_0606600	1	conserved Plasmodium protein, unknown function
+PBANKA_0606900	1	amino acid transporter, putative
+PBANKA_0607700	1	telomere repeat-binding zinc finger protein, putative
+PBANKA_0608600	1	zinc finger protein, putative
+PBANKA_0608900	1	general transcription factor 3C polypeptide 5, putative
+PBANKA_0609000	1	conserved Plasmodium protein, unknown function
+PBANKA_0609700	1	conserved Plasmodium protein, unknown function
+PBANKA_0609800	1	DNA helicase MCM8, putative
+PBANKA_0612400	1	conserved Plasmodium protein, unknown function
+PBANKA_0616300	1	conserved Plasmodium protein, unknown function
+PBANKA_0617400	1	conserved Plasmodium protein, unknown function
+PBANKA_0618000	1	conserved Plasmodium protein, unknown function
+PBANKA_0701200	1	conserved Plasmodium protein, unknown function
+PBANKA_0702900	1	SET domain protein, putative
+PBANKA_0703500	1	conserved Plasmodium protein, unknown function
+PBANKA_0704300	1	SPRY domain, putative
+PBANKA_0704400	1	alpha/beta hydrolase, putative
+PBANKA_0704500	1	HECT-like E3 ubiquitin ligase, putative
+PBANKA_0705600	1	conserved Plasmodium protein, unknown function
+PBANKA_0706300	1	GTP-binding protein Obg2, putative
+PBANKA_0712900	1	high mobility group protein B2
+PBANKA_0713600	1	conserved protein, unknown function
+PBANKA_0714600	1	vacuolar protein sorting-associated protein 2, putative
+PBANKA_0716100	1	conserved Plasmodium protein, unknown function
+PBANKA_0716200	1	calmodulin-like protein, putative
+PBANKA_0717000	1	arsenical pump-driving ATPase, putative
+PBANKA_0718500	1	repressor of RNA polymerase III transcription MAF1, putative
+PBANKA_0719900	1	cdc2-related protein kinase 1
+PBANKA_0721500	1	conserved Plasmodium protein, unknown function
+PBANKA_0800041	1	fam-a protein, pseudogene
+PBANKA_0800700	1	conserved Plasmodium protein, unknown function
+PBANKA_0800900	1	conserved Plasmodium protein, unknown function
+PBANKA_0802500	1	protein phosphatase PPM12, putative
+PBANKA_0802900	1	conserved Plasmodium protein, unknown function
+PBANKA_0803200	1	inositol-phosphate phosphatase, putative
+PBANKA_0803700	1	conserved Plasmodium protein, unknown function
+PBANKA_0804700	1	conserved Plasmodium protein, unknown function
+PBANKA_0806700	1	conserved Plasmodium protein, unknown function
+PBANKA_0808700	1	GTPase-activating protein, putative
+PBANKA_0808900	1	ATP-dependent protease ATPase subunit ClpY, putative
+PBANKA_0810000	1	mitochondrial carrier protein, putative
+PBANKA_0812200	1	conserved protein, unknown function
+PBANKA_0812600	1	conserved Plasmodium protein, unknown function
+PBANKA_0812900	1	conserved Plasmodium protein, unknown function
+PBANKA_0813300	1	conserved protein, unknown function
+PBANKA_0814600	1	conserved Plasmodium protein, unknown function
+PBANKA_0815400	1	protein KIC3, putative
+PBANKA_0815900	1	BSD-domain protein, putative
+PBANKA_0816300	1	heptatricopeptide repeat-containing protein, putative
+PBANKA_0818800	1	conserved Plasmodium protein, unknown function
+PBANKA_0820100	1	PPPDE peptidase, putative
+PBANKA_0821100	1	CS domain protein, putative
+PBANKA_0821200	1	conserved Plasmodium protein, unknown function
+PBANKA_0821600	1	CRAL/TRIO domain-containing protein, putative
+PBANKA_0823100	1	S-adenosylmethionine synthetase, putative
+PBANKA_0824300	1	conserved Plasmodium protein, unknown function
+PBANKA_0826900	1	protein kinase, putative
+PBANKA_0828100	1	fumarate hydratase, putative
+PBANKA_0828500	1	serine/threonine protein phosphatase 4
+PBANKA_0831400	1	conserved Plasmodium protein, unknown function
+PBANKA_0831500	1	conserved Plasmodium protein, unknown function
+PBANKA_0834100	1	conserved Plasmodium protein, unknown function
+PBANKA_0835500	1	UBX domain-containing protein, putative
+PBANKA_0836500	1	conserved rodent malaria protein, unknown function
+PBANKA_0836700	1	fam-a protein
+PBANKA_0836800	1	erythrocyte membrane associated protein 1
+PBANKA_0901600	1	protein farnesyltransferase subunit beta, putative
+PBANKA_0901900	1	tubulin--tyrosine ligase, putative
+PBANKA_0902300	1	conserved Plasmodium protein, unknown function
+PBANKA_0902900	1	conserved protein, unknown function
+PBANKA_0903000	1	ribosome assembly protein 4, putative
+PBANKA_0904200	1	conserved Plasmodium protein, unknown function
+PBANKA_0904300	1	apicoplast import protein Tic20, putative
+PBANKA_0905900	1	AP2 domain transcription factor AP2-O
+PBANKA_0907000	1	heptatricopeptide repeat-containing protein, putative
+PBANKA_0907100	1	inner membrane complex protein 1b
+PBANKA_0908000	1	conserved Plasmodium protein, unknown function
+PBANKA_0908100	1	conserved Plasmodium protein, unknown function
+PBANKA_0909100	1	ER membrane protein complex subunit 8, putative
+PBANKA_0909600	1	AP2 domain transcription factor, putative
+PBANKA_0909900	1	WD repeat-containing protein, putative
+PBANKA_0914100	1	conserved Plasmodium protein, unknown function
+PBANKA_0917500	1	structural maintenance of chromosomes protein 1, putative
+PBANKA_0918900	1	conserved Plasmodium protein, unknown function
+PBANKA_0919000	1	26S proteasome regulatory subunit RPN7, putative
+PBANKA_0919100	1	parasitophorous vacuolar protein 1
+PBANKA_0919200	1	fam-d protein
+PBANKA_0919600	1	CCR4-NOT transcription complex subunit 2, putative
+PBANKA_0921100	1	tRNA (guanine-N(7)-)-methyltransferase, putative
+PBANKA_0922300	1	threonine--tRNA ligase, putative
+PBANKA_0926500	1	peptidase M16, putative
+PBANKA_0926600	1	protein GCN20, putative
+PBANKA_0927200	1	conserved protein, unknown function
+PBANKA_0927300	1	palmitoyltransferase DHHC3
+PBANKA_0927800	1	tRNA nucleotidyltransferase, putative
+PBANKA_0930100	1	conserved Plasmodium protein, unknown function
+PBANKA_0931500	1	folate transporter 2, putative
+PBANKA_0931600	1	guanine nucleotide-exchange factor SEC12, putative
+PBANKA_0934000	1	conserved Plasmodium protein, unknown function
+PBANKA_0934800	1	conserved protein, unknown function
+PBANKA_0935700	1	Josephin domain-containing protein, putative
+PBANKA_0936100	1	acylphosphatase, putative
+PBANKA_0938100	1	tetratricopeptide repeat protein, putative
+PBANKA_0939000	1	mechanosensitive ion channel protein, putative
+PBANKA_0940200	1	DNA replication ATP-dependent helicase/nuclease DNA2, putative
+PBANKA_0942900	1	phenylalanine--tRNA ligase beta subunit, putative
+PBANKA_0943100	1	CCR4-NOT transcription complex subunit 1, putative
+PBANKA_0943700	1	fam-b protein
+PBANKA_1001000	1	conserved Plasmodium protein, unknown function
+PBANKA_1001600	1	SET domain protein, putative
+PBANKA_1002100	1	6-cysteine protein P36
+PBANKA_1005600	1	conserved Plasmodium protein, unknown function
+PBANKA_1006900	1	methyltransferase, putative
+PBANKA_1008100	1	ribosome biogenesis GTPase A, putative
+PBANKA_1008400	1	conserved Plasmodium protein, unknown function
+PBANKA_1010500	1	Hsp70/Hsp90 organizing protein, putative
+PBANKA_1010700	1	queuine tRNA-ribosyltransferase, putative
+PBANKA_1012300	1	conserved Plasmodium protein, unknown function
+PBANKA_1014200	1	conserved Plasmodium protein, unknown function
+PBANKA_1014800	1	ADP-dependent DNA helicase RecQ, putative
+PBANKA_1016000	1	heme/steroid binding domain containing protein, putative
+PBANKA_1017500	1	lipase, putative
+PBANKA_1017800	1	conserved Plasmodium protein, unknown function
+PBANKA_1018100	1	ABC transporter G family member 2, putative
+PBANKA_1019800	1	calcium-dependent protein kinase, putative
+PBANKA_1023000	1	myosin-specific chaperone UNC, putative
+PBANKA_1023300	1	YTH domain-containing protein 1, putative
+PBANKA_1023800	1	conserved Plasmodium protein, unknown function
+PBANKA_1025400	1	cysteine protease ATG4, putative
+PBANKA_1025500	1	NOT family protein, putative
+PBANKA_1026100	1	conserved Plasmodium protein, unknown function
+PBANKA_1027000	1	serine palmitoyltransferase, putative
+PBANKA_1027100	1	conserved Plasmodium protein, unknown function
+PBANKA_1029800	1	glycylpeptide N-tetradecanoyltransferase, putative
+PBANKA_1031500	1	conserved Plasmodium protein, unknown function
+PBANKA_1033800	1	conserved protein, unknown function
+PBANKA_1034700	1	multifunctional methyltransferase subunit TRM112, putative
+PBANKA_1036100	1	tubby domain-containing protein, putative
+PBANKA_1036600	1	ribonucleoside-diphosphate reductase small chain, putative
+PBANKA_1036800	1	DNA mismatch repair protein, putative
+PBANKA_1040100	1	choline kinase
+PBANKA_1100441	1	fam-b protein
+PBANKA_1100821	1	fam-a protein, pseudogene
+PBANKA_1101400	1	rhoptry-associated protein 2/3
+PBANKA_1101700	1	conserved protein, unknown function
+PBANKA_1101900	1	HCNGP-like protein, putative
+PBANKA_1104100	1	MOLO1 domain-containing protein, putative
+PBANKA_1104400	1	conserved Plasmodium protein, unknown function
+PBANKA_1108600	1	alpha-soluble NSF attachment protein, putative
+PBANKA_1109000	1	RNA polymerase I, putative
+PBANKA_1109200	1	asparagine--tRNA ligase, putative
+PBANKA_1109700	1	conserved protein, unknown function
+PBANKA_1110600	1	conserved Plasmodium protein, unknown function
+PBANKA_1113500	1	ras-related protein Rab-1A, putative
+PBANKA_1114100	1	conserved Plasmodium protein, unknown function
+PBANKA_1114200	1	ribose-5-phosphate isomerase, putative
+PBANKA_1114800	1	conserved Plasmodium protein, unknown function
+PBANKA_1115000	1	conserved protein, unknown function
+PBANKA_1115300	1	glideosome-associated protein 40, putative
+PBANKA_1121000	1	conserved Plasmodium protein, unknown function
+PBANKA_1121200	1	vacuolar transporter chaperone, putative
+PBANKA_1123200	1	CPW-WPC family protein
+PBANKA_1125400	1	conserved Plasmodium protein, unknown function
+PBANKA_1125500	1	ATPase, putative
+PBANKA_1125700	1	ribosomal protein L46, mitochondrial, putative
+PBANKA_1126700	1	6-pyruvoyltetrahydropterin synthase, putative
+PBANKA_1127200	1	conserved Plasmodium protein, unknown function
+PBANKA_1127300	1	DNA methyltransferase 1-associated protein 1, putative
+PBANKA_1129800	1	tetratricopeptide repeat protein, putative
+PBANKA_1129900	1	conserved Plasmodium protein, unknown function
+PBANKA_1130600	1	conserved Plasmodium protein, unknown function
+PBANKA_1130900	1	large subunit rRNA methyltransferase, putative
+PBANKA_1134300	1	patatin-like phospholipase, putative
+PBANKA_1134800	1	zinc finger protein, putative
+PBANKA_1134900	1	zinc finger protein, putative
+PBANKA_1135900	1	conserved Plasmodium protein, unknown function
+PBANKA_1137400	1	conserved Plasmodium protein, unknown function
+PBANKA_1138600	1	conserved protein, unknown function
+PBANKA_1138900	1	conserved Plasmodium protein, unknown function
+PBANKA_1139300	1	50S ribosomal protein L9, mitochondrial, putative
+PBANKA_1139400	1	polyubiquitin binding protein, putative
+PBANKA_1139500	1	CCR4 domain-containing protein 2, putative
+PBANKA_1140500	1	aldehyde reductase, putative
+PBANKA_1142100	1	conserved Plasmodium protein, unknown function
+PBANKA_1143200	1	conserved Plasmodium protein, unknown function
+PBANKA_1144200	1	conserved Plasmodium protein, unknown function
+PBANKA_1144300	1	ribosomal protein L1, putative
+PBANKA_1144400	1	heptatricopeptide repeat-containing protein, putative
+PBANKA_1145300	1	conserved Plasmodium protein, unknown function
+PBANKA_1145500	1	conserved protein, unknown function
+PBANKA_1146721	1	PIR protein
+PBANKA_1201000	1	conserved Plasmodium protein, unknown function
+PBANKA_1201100	1	conserved Plasmodium protein, unknown function
+PBANKA_1201800	1	conserved Plasmodium protein, unknown function
+PBANKA_1202500	1	WD repeat-containing protein, putative
+PBANKA_1202600	1	E3 ubiquitin-protein ligase, putative
+PBANKA_1205200	1	transmembrane protein 147, putative
+PBANKA_1206300	1	PHD finger protein PHD1, putative
+PBANKA_1206500	1	AP-5 complex subunit sigma-1, putative
+PBANKA_1207100	1	Plasmodium exported protein, unknown function
+PBANKA_1207300	1	diphthine methyl ester synthase, putative
+PBANKA_1207800	1	metalloprotease, putative
+PBANKA_1208500	1	PI31 domain-containing protein, putative
+PBANKA_1210200	1	PRE-binding protein, putative
+PBANKA_1212500	1	merozoite surface protein MSA180, putative
+PBANKA_1213900	1	nucleotidyltransferase, putative
+PBANKA_1214400	1	conserved Plasmodium protein, unknown function
+PBANKA_1215200	1	conserved protein, unknown function
+PBANKA_1215400	1	conserved Plasmodium protein, unknown function
+PBANKA_1215800	1	conserved Plasmodium protein, unknown function
+PBANKA_1217200	1	conserved Plasmodium protein, unknown function
+PBANKA_1217900	1	conserved protein, unknown function
+PBANKA_1218000	1	nicotinamidase, putative
+PBANKA_1219800	1	Cg2 protein, putative
+PBANKA_1220900	1	conserved protein, unknown function
+PBANKA_1221800	1	conserved Plasmodium protein, unknown function
+PBANKA_1224100	1	kinesin-like protein, putative
+PBANKA_1224500	1	Dpy-19-like C-mannosyltransferase, putative
+PBANKA_1225100	1	conserved Plasmodium protein, unknown function
+PBANKA_1225300	1	conserved Plasmodium protein, unknown function
+PBANKA_1225900	1	conserved Plasmodium protein, unknown function
+PBANKA_1227700	1	inositol 5-phosphatase, putative
+PBANKA_1228500	1	sentrin-specific protease 2, putative
+PBANKA_1229900	1	conserved protein, unknown function
+PBANKA_1231300	1	major facilitator superfamily domain-containing protein, putative
+PBANKA_1231400	1	sporozoite surface antigen MB2, putative
+PBANKA_1235500	1	conserved protein, unknown function
+PBANKA_1236200	1	conserved Plasmodium protein, unknown function
+PBANKA_1237600	1	zinc finger protein, putative
+PBANKA_1239000	1	conserved Plasmodium membrane protein, unknown function
+PBANKA_1240000	1	structural maintenance of chromosomes protein 6, putative
+PBANKA_1240100	1	conserved protein, unknown function
+PBANKA_1241100	1	WD repeat-containing protein 55, putative
+PBANKA_1244900	1	conserved Plasmodium protein, unknown function
+PBANKA_1245100	1	conserved Plasmodium protein, unknown function
+PBANKA_1245500	1	conserved Plasmodium protein, unknown function
+PBANKA_1246200	1	fam-b protein
+PBANKA_1246981	1	PIR protein, pseudogene
+PBANKA_1301100	1	conserved Plasmodium protein, unknown function
+PBANKA_1301200	1	mediator of RNA polymerase II transcription subunit 31, putative
+PBANKA_1303200	1	Sad1/UNC domain-containing protein, putative
+PBANKA_1304200	1	stromal-processing peptidase, putative
+PBANKA_1304600	1	AP-3 complex subunit mu, putative
+PBANKA_1305400	1	conserved Plasmodium protein, unknown function
+PBANKA_1306600	1	conserved Plasmodium protein, unknown function
+PBANKA_1307400	1	poly(A)-specific ribonuclease PARN, putative
+PBANKA_1308400	1	eukaryotic translation initiation factor 2-alpha kinase 1, putative
+PBANKA_1309100	1	ribosomal protein S29, mitochondrial, putative
+PBANKA_1310200	1	nucleoporin NUP313
+PBANKA_1310500	1	conserved Plasmodium protein, unknown function
+PBANKA_1310700	1	glutaminyl-peptide cyclotransferase, putative
+PBANKA_1312200	1	ubiquitin-protein ligase, putative
+PBANKA_1312600	1	conserved protein, unknown function
+PBANKA_1312900	1	conserved Plasmodium protein, unknown function
+PBANKA_1313100	1	crossover junction endonuclease MUS81, putative
+PBANKA_1314100	1	E3 ubiquitin-protein ligase ZNF598, putative
+PBANKA_1314700	1	conserved Plasmodium protein, unknown function
+PBANKA_1315200	1	pre-mRNA-splicing factor CWF18, putative
+PBANKA_1315900	1	aminomethyltransferase, putative
+PBANKA_1316100	1	conserved Plasmodium protein, unknown function
+PBANKA_1316300	1	conserved Plasmodium protein, unknown function
+PBANKA_1316600	1	conserved protein, unknown function
+PBANKA_1316900	1	conserved Plasmodium protein, unknown function
+PBANKA_1318300	1	ribosomal protein S11, mitochondrial, putative
+PBANKA_1318500	1	conserved Plasmodium protein, unknown function
+PBANKA_1318800	1	protein tyrosine phosphatase
+PBANKA_1321600	1	conserved Plasmodium protein, unknown function
+PBANKA_1322300	1	zinc finger protein, putative
+PBANKA_1323800	1	kelch domain-containing protein, putative
+PBANKA_1324800	1	conserved Plasmodium protein, unknown function
+PBANKA_1325400	1	conserved Plasmodium protein, unknown function
+PBANKA_1326700	1	conserved Plasmodium protein, unknown function
+PBANKA_1327200	1	ribosomal protein S6, mitochondrial, putative
+PBANKA_1327900	1	conserved Plasmodium protein, unknown function
+PBANKA_1329100	1	plasmepsin VIII
+PBANKA_1329400	1	conserved protein, unknown function
+PBANKA_1329900	1	conserved Plasmodium protein, unknown function
+PBANKA_1330300	1	conserved Plasmodium protein, unknown function
+PBANKA_1332800	1	acetyl-CoA carboxylase
+PBANKA_1333200	1	autophagy-related protein 12, putative
+PBANKA_1333900	1	conserved Plasmodium protein, unknown function
+PBANKA_1334500	1	RAP protein, putative
+PBANKA_1336100	1	dihydroorotase, putative
+PBANKA_1336200	1	conserved Plasmodium protein, unknown function
+PBANKA_1338500	1	N-acetyltransferase, GNAT family, putative
+PBANKA_1340600	1	conserved Plasmodium protein, unknown function
+PBANKA_1341000	1	conserved Plasmodium protein, unknown function
+PBANKA_1342300	1	conserved protein, unknown function
+PBANKA_1342900	1	regulator of nonsense transcripts 3B, putative
+PBANKA_1343700	1	conserved Plasmodium protein, unknown function
+PBANKA_1344100	1	myosin F
+PBANKA_1346300	1	CPW-WPC family protein
+PBANKA_1346400	1	conserved Plasmodium protein, unknown function
+PBANKA_1356100	1	conserved Plasmodium protein, unknown function
+PBANKA_1356500	1	conserved protein, unknown function
+PBANKA_1356800	1	conserved Plasmodium protein, unknown function
+PBANKA_1357200	1	endoplasmic reticulum chaperone GRP170, putative
+PBANKA_1359300	1	VPS13 domain-containing protein, putative
+PBANKA_1360000	1	DNA topoisomerase 3, putative
+PBANKA_1360700	1	conserved Plasmodium protein, unknown function
+PBANKA_1361100	1	elongation factor Tu, putative
+PBANKA_1362100	1	tyrosine kinase-like protein, putative
+PBANKA_1362800	1	conserved Plasmodium protein, unknown function
+PBANKA_1363500	1	N6-adenine-specific methylase, putative
+PBANKA_1363600	1	conserved Plasmodium protein, unknown function
+PBANKA_1400041	1	fam-b protein
+PBANKA_1401200	1	ATP-dependent RNA helicase DHR1, putative
+PBANKA_1402300	1	conserved Plasmodium protein, unknown function
+PBANKA_1403500	1	MCL1 domain-containing protein, putative
+PBANKA_1403600	1	protein AMR3, putative
+PBANKA_1403700	1	AP2 domain transcription factor, putative
+PBANKA_1403800	1	translational activator GCN1, putative
+PBANKA_1404000	1	mitogen-activated protein kinase phosphatase 1, putative
+PBANKA_1405800	1	ATP-dependent RNA helicase DBP6, putative
+PBANKA_1407100	1	conserved Plasmodium protein, unknown function
+PBANKA_1407400	1	mRNA-decapping enzyme 2, putative
+PBANKA_1408200	1	vacuolar protein sorting-associated protein 18, putative
+PBANKA_1409000	1	ER membrane protein complex subunit 7, putative
+PBANKA_1409700	1	alternative splicing regulator, putative
+PBANKA_1410100	1	conserved Plasmodium protein, unknown function
+PBANKA_1410600	1	GYF domain-containing protein, putative
+PBANKA_1411600	1	methionyl-tRNA formyltransferase, putative
+PBANKA_1412000	1	Clu domain-containing protein, putative
+PBANKA_1412200	1	conserved Plasmodium protein, unknown function
+PBANKA_1412800	1	MACRO domain-containing protein, putative
+PBANKA_1414400	1	exportin-T, putative
+PBANKA_1414500	1	protein kinase, putative
+PBANKA_1414900	1	SAS6-like protein
+PBANKA_1415200	1	conserved protein, unknown function
+PBANKA_1415700	1	AP2 domain transcription factor AP2-FG
+PBANKA_1416200	1	conserved Plasmodium protein, unknown function
+PBANKA_1418200	1	protein phosphatase PP2A regulatory subunit A, putative
+PBANKA_1418700	1	microsomal signal peptidase, putative
+PBANKA_1419300	1	conserved Plasmodium protein, unknown function
+PBANKA_1419400	1	protein kinase domain-containing protein, putative
+PBANKA_1419600	1	conserved Plasmodium protein, unknown function
+PBANKA_1420800	1	conserved Plasmodium protein, unknown function
+PBANKA_1421700	1	secreted ookinete protein, putative
+PBANKA_1422500	1	heptatricopeptide repeat and RAP domain-containing protein, putative
+PBANKA_1423700	1	GDP-mannose 4,6-dehydratase, putative
+PBANKA_1425400	1	proteasome activator complex subunit 4, putative
+PBANKA_1425500	1	conserved protein, unknown function
+PBANKA_1425700	1	conserved Plasmodium protein, unknown function
+PBANKA_1426700	1	hydroxymethyldihydropterin pyrophosphokinase-dihydropteroate synthase, putative
+PBANKA_1427100	1	aquaporin, putative
+PBANKA_1427300	1	ABC1 family, putative
+PBANKA_1428100	1	asparagine-rich antigen, putative
+PBANKA_1432900	1	GTP-binding protein EngA, putative
+PBANKA_1433800	1	symplekin domain-containing protein, putative
+PBANKA_1434700	1	clathrin heavy chain, putative
+PBANKA_1435400	1	conserved Plasmodium protein, unknown function
+PBANKA_1435500	1	conserved Plasmodium protein, unknown function
+PBANKA_1436200	1	histone-lysine N-methyltransferase, H3 lysine-4 specific, putative
+PBANKA_1436300	1	conserved Plasmodium protein, unknown function
+PBANKA_1436900	1	FbpA domain protein, putative
+PBANKA_1437200	1	conserved Plasmodium protein, unknown function
+PBANKA_1437700	1	conserved Plasmodium protein, unknown function
+PBANKA_1438200	1	DNA gyrase subunit A, putative
+PBANKA_1438400	1	conserved Plasmodium protein, unknown function
+PBANKA_1439100	1	BRO1 domain-containing protein, putative
+PBANKA_1439300	1	WD repeat-containing protein, putative
+PBANKA_1439500	1	cytochrome c heme lyase
+PBANKA_1440900	1	conserved protein, unknown function
+PBANKA_1441000	1	haloacid dehalogenase-like hydrolase, putative
+PBANKA_1441300	1	heptatricopeptide repeat and RAP domain-containing protein, putative
+PBANKA_1441800	1	conserved Plasmodium protein, unknown function
+PBANKA_1442700	1	conserved protein, unknown function
+PBANKA_1443200	1	RNA pseudouridylate synthase, putative
+PBANKA_1444400	1	conserved Plasmodium protein, unknown function
+PBANKA_1445700	1	conserved Plasmodium protein, unknown function
+PBANKA_1446100	1	amino acid transporter, putative
+PBANKA_1446500	1	asparagine-rich protein, putative
+PBANKA_1448000	1	pentatricopeptide repeat domain-containing protein 2, putative
+PBANKA_1449300	1	upregulated in late gametocytes ULG8, putative
+PBANKA_1450000	1	tetQ family GTPase, putative
+PBANKA_1453100	1	sphingomyelin phosphodiesterase, putative
+PBANKA_1453300	1	acyl-CoA synthetase, putative
+PBANKA_1453900	1	conserved protein, unknown function
+PBANKA_1454200	1	conserved Plasmodium protein, unknown function
+PBANKA_1454800	1	RNA-binding protein, putative
+PBANKA_1455000	1	mitochondrial carrier protein, putative
+PBANKA_1455500	1	conserved Plasmodium protein, unknown function
+PBANKA_1455600	1	queuine tRNA-ribosyltransferase, putative
+PBANKA_1458900	1	epsin-like protein, putative
+PBANKA_1460600	1	uroporphyrinogen-III synthase, putative
+PBANKA_1463000	1	osmiophilic body protein G377
+PBANKA_1465200	1	PIR protein
+PBANKA_1465700	1	fam-a protein
+PBANKA_0100500	2	PIR protein
+PBANKA_0100800	2	zinc finger protein, putative
+PBANKA_0101500	2	conserved Plasmodium protein, unknown function
+PBANKA_0102400	2	AT-rich interactive domain-containing protein, putative
+PBANKA_0102700	2	conserved Plasmodium protein, unknown function
+PBANKA_0104300	2	cyclin dependent kinase binding protein, putative
+PBANKA_0104400	2	nucleoside diphosphate kinase, putative
+PBANKA_0106300	2	conserved Plasmodium protein, unknown function
+PBANKA_0109900	2	basal complex transmembrane protein 1, putative
+PBANKA_0112100	2	AP2 domain transcription factor, putative
+PBANKA_0203600	2	conserved Plasmodium protein, unknown function
+PBANKA_0214000	2	dynein heavy chain, putative
+PBANKA_0304800	2	serine repeat antigen 4
+PBANKA_0402700	2	inner membrane complex protein 1e
+PBANKA_0406000	2	conserved Plasmodium protein, unknown function
+PBANKA_0407100	2	splicing factor 3B subunit 1, putative
+PBANKA_0411100	2	conserved Plasmodium protein, unknown function
+PBANKA_0411200	2	Ras-like G protein, putative
+PBANKA_0412500	2	conserved Plasmodium protein, unknown function
+PBANKA_0417200	2	PH domain-containing protein
+PBANKA_0417600	2	LCCL domain-containing protein
+PBANKA_0417800	2	conserved protein, unknown function
+PBANKA_0501100	2	early transcribed membrane protein
+PBANKA_0502500	2	serine/threonine protein phosphatase 8
+PBANKA_0503300	2	conserved Plasmodium protein, unknown function
+PBANKA_0503500	2	zinc finger protein, putative
+PBANKA_0506600	2	serine/arginine-rich splicing factor 4, putative
+PBANKA_0507300	2	dynein heavy chain, putative
+PBANKA_0509900	2	conserved protein, unknown function
+PBANKA_0516600	2	leucine-rich repeat protein, putative
+PBANKA_0517200	2	haloacid dehalogenase-like hydrolase, putative
+PBANKA_0517600	2	plasmepsin VII
+PBANKA_0518500	2	ADP-ribosylation factor, putative
+PBANKA_0520700	2	conserved Plasmodium protein, unknown function
+PBANKA_0521200	2	conserved Plasmodium protein, unknown function
+PBANKA_0523900	2	glideosome associated protein with multiple membrane spans 2, putative
+PBANKA_0600400	2	fam-a protein
+PBANKA_0600600	2	NIMA related kinase 3, putative
+PBANKA_0605500	2	conserved Plasmodium protein, unknown function
+PBANKA_0606200	2	41-3 protein, putative
+PBANKA_0611600	2	ribonucleoside-diphosphate reductase large subunit, putative
+PBANKA_0613700	2	RNA-binding protein, putative
+PBANKA_0615300	2	conserved Plasmodium protein, unknown function
+PBANKA_0620300	2	conserved protein, unknown function
+PBANKA_0621300	2	conserved Plasmodium protein, unknown function
+PBANKA_0622400	2	kinesin-20, putative
+PBANKA_0623600	2	PIR protein
+PBANKA_0700300	2	PIR protein
+PBANKA_0700900	2	reticulocyte binding protein, putative
+PBANKA_0703100	2	conserved Plasmodium protein, unknown function
+PBANKA_0704600	2	conserved Plasmodium protein, unknown function
+PBANKA_0704700	2	conserved Plasmodium protein, unknown function
+PBANKA_0704800	2	conserved protein, unknown function
+PBANKA_0704900	2	crystalloid-specific PH domain-containing protein, putative
+PBANKA_0706200	2	nucleoside transporter 2, putative
+PBANKA_0714200	2	chaperone protein ClpB1, putative
+PBANKA_0716000	2	structural maintenance of chromosomes protein 3, putative
+PBANKA_0717200	2	conserved Plasmodium protein, unknown function
+PBANKA_0722941	2	fam-b protein
+PBANKA_0801800	2	basal complex transmembrane protein 2, putative
+PBANKA_0802200	2	serine/threonine protein kinase, putative
+PBANKA_0803000	2	origin recognition complex subunit 2, putative
+PBANKA_0804200	2	conserved Plasmodium protein, unknown function
+PBANKA_0804500	2	rhoptry-associated membrane antigen, putative
+PBANKA_0805900	2	kinesin-8X
+PBANKA_0806300	2	P-type ATPase, putative
+PBANKA_0807500	2	conserved Plasmodium protein, unknown function
+PBANKA_0811200	2	SET domain protein, putative
+PBANKA_0811800	2	actin-like protein, putative
+PBANKA_0812500	2	conserved Plasmodium protein, unknown function
+PBANKA_0815100	2	conserved Plasmodium protein, unknown function
+PBANKA_0817000	2	major facilitator superfamily domain-containing protein, putative
+PBANKA_0818000	2	merozoite organizing protein, putative
+PBANKA_0818500	2	conserved protein, unknown function
+PBANKA_0819400	2	conserved Plasmodium protein, unknown function
+PBANKA_0824400	2	cyclin-dependent kinases regulatory subunit, putative
+PBANKA_0830200	2	high molecular weight rhoptry protein 2
+PBANKA_0830700	2	procollagen lysine 5-dioxygenase, putative
+PBANKA_0831600	2	conserved Plasmodium protein, unknown function
+PBANKA_0836300	2	cytoadherence linked asexual protein 9
+PBANKA_0901000	2	fam-a protein
+PBANKA_0903800	2	serine/threonine protein kinase, putative
+PBANKA_0907900	2	conserved Plasmodium protein, unknown function
+PBANKA_0908500	2	myosin K
+PBANKA_0910000	2	protein KIC5, putative
+PBANKA_0910300	2	guanylyl cyclase alpha, putative
+PBANKA_0910700	2	conserved Plasmodium protein, unknown function
+PBANKA_0911500	2	apical exonemal protein, putative
+PBANKA_0912500	2	conserved Plasmodium protein, unknown function
+PBANKA_0912600	2	conserved Plasmodium protein, unknown function
+PBANKA_0913000	2	condensin-2 complex subunit D3, putative
+PBANKA_0914600	2	RNA (uracil-5-)methyltransferase, putative
+PBANKA_0923300	2	conserved protein, unknown function
+PBANKA_0924200	2	BEACH domain-containing protein, putative
+PBANKA_0925100	2	leucine-rich repeat protein
+PBANKA_0925800	2	protein KIC10, putative
+PBANKA_0926400	2	serine/threonine protein kinase, putative
+PBANKA_0927600	2	conserved Plasmodium protein, unknown function
+PBANKA_0932000	2	rhoptry neck protein 4
+PBANKA_0932100	2	palmitoyltransferase DHHC9
+PBANKA_0932500	2	histone-lysine N-methyltransferase SET7, putative
+PBANKA_0932800	2	filamin domain-containing protein, putative
+PBANKA_0933400	2	GTPase-activating protein, putative
+PBANKA_0933700	2	mitogen-activated protein kinase 2
+PBANKA_0934100	2	GTP-binding protein, putative
+PBANKA_0937100	2	vacuolar protein sorting-associated protein 35, putative
+PBANKA_0938000	2	conserved Plasmodium protein, unknown function
+PBANKA_0940300	2	DEAD/DEAH box helicase, putative
+PBANKA_0941300	2	translocon component PTEX88
+PBANKA_0943400	2	CPW-WPC family protein
+PBANKA_0944000	2	PIR protein
+PBANKA_1001200	2	conserved Plasmodium protein, unknown function
+PBANKA_1001300	2	conserved Plasmodium protein, unknown function
+PBANKA_1001400	2	pre-mRNA-splicing factor CLF1, putative
+PBANKA_1002500	2	sporozoite-specific protein S10
+PBANKA_1003400	2	lysine decarboxylase, putative
+PBANKA_1004500	2	conserved Plasmodium protein, unknown function
+PBANKA_1006600	2	conserved Plasmodium protein, unknown function
+PBANKA_1007700	2	protein phosphatase PPM1
+PBANKA_1008300	2	GTP-binding protein, putative
+PBANKA_1008600	2	conserved Plasmodium protein, unknown function
+PBANKA_1009200	2	conserved Plasmodium protein, unknown function
+PBANKA_1009600	2	conserved protein, unknown function
+PBANKA_1011700	2	conserved Plasmodium protein, unknown function
+PBANKA_1016700	2	leucine-rich repeat protein
+PBANKA_1017300	2	conserved Plasmodium protein, unknown function
+PBANKA_1018300	2	dynein intermediate chain, putative
+PBANKA_1020300	2	ankyrin-repeat protein, putative
+PBANKA_1024900	2	DNA replication licensing factor MCM2, putative
+PBANKA_1025900	2	lysine--tRNA ligase, putative
+PBANKA_1026000	2	conserved protein, unknown function
+PBANKA_1028200	2	atypical protein kinase, ABC-1 family, putative
+PBANKA_1030500	2	mini-chromosome maintenance complex-binding protein, putative
+PBANKA_1031000	2	conserved Plasmodium protein, unknown function
+PBANKA_1031100	2	plastid replication-repair enzyme, putative
+PBANKA_1032200	2	WD repeat-containing protein, putative
+PBANKA_1033600	2	tRNA-dihydrouridine synthase, putative
+PBANKA_1034100	2	FANCJ-like helicase, putative
+PBANKA_1038200	2	nuclear formin-like protein MISFIT
+PBANKA_1039200	2	conserved Plasmodium protein, unknown function
+PBANKA_1039300	2	U2 snRNP-associated SURP motif-containing protein, putative
+PBANKA_1101200	2	Plasmodium exported protein, unknown function
+PBANKA_1101300	2	skeleton-binding protein 1
+PBANKA_1101500	2	anaphase-promoting complex subunit 3
+PBANKA_1101600	2	chromatin assembly factor 1 subunit A, putative
+PBANKA_1102100	2	conserved Plasmodium protein, unknown function
+PBANKA_1102300	2	conserved Plasmodium protein, unknown function
+PBANKA_1103500	2	conserved Plasmodium protein, unknown function
+PBANKA_1105100	2	DNA mismatch repair protein MSH6, putative
+PBANKA_1106000	2	conserved Plasmodium protein, unknown function
+PBANKA_1106100	2	conserved Plasmodium protein, unknown function
+PBANKA_1108000	2	conserved protein, unknown function
+PBANKA_1108500	2	conserved Plasmodium protein, unknown function
+PBANKA_1109300	2	conserved Plasmodium protein, unknown function
+PBANKA_1110100	2	topoisomerase I, putative
+PBANKA_1110200	2	conserved Plasmodium protein, unknown function
+PBANKA_1115200	2	gamete egress protein GEP
+PBANKA_1120400	2	inner membrane complex protein 1j, putative
+PBANKA_1121800	2	AP2 domain transcription factor AP2-SP3
+PBANKA_1125300	2	conserved Plasmodium protein, unknown function
+PBANKA_1125900	2	ankyrin-repeat protein, putative
+PBANKA_1126800	2	HECT-domain (ubiquitin-transferase), putative
+PBANKA_1127500	2	glutamyl-tRNA(Gln) amidotransferase subunit B, putative
+PBANKA_1127800	2	DnaJ protein, putative
+PBANKA_1127900	2	RAP protein, putative
+PBANKA_1129100	2	DNA polymerase epsilon catalytic subunit A, putative
+PBANKA_1132300	2	conserved Plasmodium protein, unknown function
+PBANKA_1132400	2	conserved Plasmodium protein, unknown function
+PBANKA_1132700	2	phosphatase 2A regulatory subunit-related protein, putative
+PBANKA_1133100	2	serine/threonine protein kinase ARK3, putative
+PBANKA_1136100	2	conserved Plasmodium protein, unknown function
+PBANKA_1136700	2	guanylyl cyclase beta
+PBANKA_1138400	2	calpain, putative
+PBANKA_1138700	2	conserved Plasmodium protein, unknown function
+PBANKA_1139100	2	conserved Plasmodium protein, unknown function
+PBANKA_1139800	2	nuclear fusion protein
+PBANKA_1144900	2	glycosylphosphatidylinositol anchor attachment 1 protein, putative
+PBANKA_1145200	2	conserved Plasmodium protein, unknown function
+PBANKA_1145600	2	conserved Plasmodium protein, unknown function
+PBANKA_1146000	2	tryptophan-rich protein
+PBANKA_1201200	2	DnaJ protein, putative
+PBANKA_1202200	2	U5 small nuclear ribonucleoprotein component, putative
+PBANKA_1202700	2	RNA-binding protein, putative
+PBANKA_1203700	2	regulator of nonsense transcripts 1, putative
+PBANKA_1206000	2	conserved Plasmodium protein, unknown function
+PBANKA_1206200	2	histone deacetylase 2, putative
+PBANKA_1206600	2	26S protease regulatory subunit 4, putative
+PBANKA_1207500	2	ribonuclease, putative
+PBANKA_1207900	2	protein phosphatase PPM10, putative
+PBANKA_1208200	2	kinesin-4, putative
+PBANKA_1210400	2	RING zinc finger protein, putative
+PBANKA_1211200	2	conserved Plasmodium protein, unknown function
+PBANKA_1212700	2	SPRY domain-containing protein, putative
+PBANKA_1213300	2	protein KIC8, putative
+PBANKA_1218200	2	T-complex protein 1 subunit epsilon, putative
+PBANKA_1218300	2	CPW-WPC family protein
+PBANKA_1219900	2	Cg7 protein, putative
+PBANKA_1225500	2	conserved protein, unknown function
+PBANKA_1230100	2	ribonuclease, putative
+PBANKA_1233400	2	WD repeat-containing protein 26, putative
+PBANKA_1237100	2	conserved Plasmodium protein, unknown function
+PBANKA_1237800	2	multidrug resistance protein 1, putative
+PBANKA_1239100	2	conserved Plasmodium protein, unknown function
+PBANKA_1240700	2	NIMA related kinase 2
+PBANKA_1242000	2	ubiquitin carboxyl-terminal hydrolase 14, putative
+PBANKA_1243900	2	conserved Plasmodium protein, unknown function
+PBANKA_1244200	2	conserved Plasmodium protein, unknown function
+PBANKA_1244700	2	conserved Plasmodium protein, unknown function
+PBANKA_1245900	2	Plasmodium exported protein, unknown function
+PBANKA_1300091	2	PIR protein
+PBANKA_1300200	2	PIR protein
+PBANKA_1300500	2	tubulin epsilon chain, putative
+PBANKA_1300700	2	LCCL domain-containing protein
+PBANKA_1301500	2	protein kinase, putative
+PBANKA_1301800	2	conserved Plasmodium protein, unknown function
+PBANKA_1302000	2	conserved Plasmodium protein, unknown function
+PBANKA_1302300	2	metacaspase-2, putative
+PBANKA_1303400	2	oocyst rupture protein 2
+PBANKA_1303900	2	conserved Plasmodium protein, unknown function
+PBANKA_1304300	2	zinc finger protein, putative
+PBANKA_1304500	2	protein SOC3
+PBANKA_1305200	2	serine/threonine protein kinase, putative
+PBANKA_1307000	2	conserved Plasmodium protein, unknown function
+PBANKA_1307300	2	WD repeat-containing protein, putative
+PBANKA_1308000	2	conserved Plasmodium protein, unknown function
+PBANKA_1314600	2	acetyl-CoA acetyltransferase, putative
+PBANKA_1314900	2	conserved Plasmodium protein, unknown function
+PBANKA_1315300	2	LCCL domain-containing protein
+PBANKA_1316800	2	dynactin subunit 4, putative
+PBANKA_1317200	2	NAD(P) transhydrogenase
+PBANKA_1319000	2	conserved protein, unknown function
+PBANKA_1319500	2	LCCL domain-containing protein
+PBANKA_1320100	2	conserved Plasmodium protein, unknown function
+PBANKA_1320200	2	STAG domain-containing protein, putative
+PBANKA_1320800	2	conserved Plasmodium protein, unknown function
+PBANKA_1322200	2	spindle assembly abnormal protein 4, putative
+PBANKA_1322400	2	exonuclease V, mitochondrial, putative
+PBANKA_1326900	2	DNA polymerase alpha subunit B, putative
+PBANKA_1328900	2	potassium channel K2
+PBANKA_1329200	2	dynein beta chain, putative
+PBANKA_1329600	2	conserved Plasmodium protein, unknown function
+PBANKA_1331300	2	conserved Plasmodium protein, unknown function
+PBANKA_1332600	2	conserved Plasmodium protein, unknown function
+PBANKA_1333300	2	conserved Plasmodium protein, unknown function
+PBANKA_1333700	2	cGMP-specific 3',5'-cyclic phosphodiesterase delta
+PBANKA_1334000	2	conserved Plasmodium protein, unknown function
+PBANKA_1334800	2	conserved Plasmodium protein, unknown function
+PBANKA_1334900	2	conserved Plasmodium protein, unknown function
+PBANKA_1335000	2	conserved Plasmodium protein, unknown function
+PBANKA_1335900	2	DNA-directed RNA polymerase, alpha subunit, putative
+PBANKA_1342400	2	ribonuclease P protein subunit RPR2, putative
+PBANKA_1353900	2	conserved Plasmodium protein, unknown function
+PBANKA_1355900	2	phosphoenolpyruvate carboxykinase, putative
+PBANKA_1356600	2	UDP-N-acetylglucosamine pyrophosphorylase, putative
+PBANKA_1356700	2	kelch protein K13, putative
+PBANKA_1357100	2	TLD domain-containing protein, putative, pseudogene
+PBANKA_1357900	2	conserved Plasmodium protein, unknown function
+PBANKA_1360800	2	conserved Plasmodium protein, unknown function
+PBANKA_1361200	2	conserved Plasmodium protein, unknown function
+PBANKA_1361600	2	E1-E2 ATPase, putative
+PBANKA_1365400	2	vacuolar fusion protein MON1, putative
+PBANKA_1365550	2	PIR protein, pseudogene
+PBANKA_1401000	2	AAA domain-containing protein, putative
+PBANKA_1402500	2	condensin complex subunit 2, putative
+PBANKA_1402900	2	PUB domain-containing protein, putative
+PBANKA_1403300	2	NLI interacting factor-like phosphatase
+PBANKA_1404300	2	conserved Plasmodium protein, unknown function
+PBANKA_1405000	2	MORN repeat protein, putative
+PBANKA_1407200	2	conserved Plasmodium protein, unknown function
+PBANKA_1407900	2	HORMA domain protein, putative
+PBANKA_1410900	2	translation initiation factor IF-2, putative
+PBANKA_1411200	2	conserved Plasmodium protein, unknown function
+PBANKA_1415100	2	choline-phosphate cytidylyltransferase
+PBANKA_1415400	2	conserved protein, unknown function
+PBANKA_1416900	2	structural maintenance of chromosomes protein 2
+PBANKA_1417000	2	conserved Plasmodium protein, unknown function
+PBANKA_1417100	2	conserved Plasmodium protein, unknown function
+PBANKA_1417200	2	protein AAP4, putative
+PBANKA_1417900	2	conserved Plasmodium protein, unknown function
+PBANKA_1418100	2	ACDC domain-containing protein, putative
+PBANKA_1418500	2	TBC domain protein, putative
+PBANKA_1418800	2	SNARE protein, putative
+PBANKA_1418900	2	ras-related protein Rab-11A
+PBANKA_1419100	2	dihydrolipoyllysine-residue succinyltransferase component of 2-oxoglutarate dehydrogenase complex, putative
+PBANKA_1420200	2	ribosomal protein S5, mitochondrial, putative
+PBANKA_1421400	2	C-Myc-binding protein, putative
+PBANKA_1421500	2	conserved Plasmodium protein, unknown function
+PBANKA_1421600	2	calcium/calmodulin-dependent protein kinase, putative
+PBANKA_1421900	2	GTP-binding translation elongation factor, putative
+PBANKA_1425600	2	RNA-binding protein, putative
+PBANKA_1425800	2	conserved Plasmodium protein, unknown function
+PBANKA_1427600	2	conserved Plasmodium protein, unknown function
+PBANKA_1427800	2	peptidase family C50, putative
+PBANKA_1430300	2	conserved Plasmodium protein, unknown function
+PBANKA_1434100	2	dynamin-like protein, putative
+PBANKA_1434600	2	formin 2, putative
+PBANKA_1434800	2	aminophospholipid-transporting P-ATPase, putative
+PBANKA_1436500	2	conserved Plasmodium protein, unknown function
+PBANKA_1436600	2	inner membrane complex protein 1h
+PBANKA_1437000	2	conserved protein, unknown function
+PBANKA_1437500	2	AP2 domain transcription factor AP2-G
+PBANKA_1443100	2	conserved Plasmodium protein, unknown function
+PBANKA_1444800	2	thioredoxin-like associated protein 1, putative
+PBANKA_1446000	2	conserved Plasmodium protein, unknown function
+PBANKA_1447900	2	conserved Plasmodium protein, unknown function
+PBANKA_1448900	2	DNA polymerase epsilon subunit B, putative
+PBANKA_1453000	2	conserved Plasmodium protein, unknown function
+PBANKA_1453700	2	AP2 domain transcription factor, putative
+PBANKA_1454400	2	3-hydroxyisobutyryl-CoA hydrolase, putative
+PBANKA_1455800	2	GAS8-like protein, putative
+PBANKA_1457200	2	double C2-like domain-containing protein, putative
+PBANKA_1457400	2	N-alpha-acetyltransferase 15, NatA auxiliary subunit, putative
+PBANKA_1458800	2	kinesin-15, putative
+PBANKA_1460700	2	dipeptidyl aminopeptidase 2
+PBANKA_1463300	2	conserved Plasmodium protein, unknown function
+PBANKA_0105900	3	uroporphyrinogen III decarboxylase
+PBANKA_0110800	3	conserved Plasmodium protein, unknown function
+PBANKA_0207200	3	V-type proton ATPase subunit C, putative
+PBANKA_0311300	3	conserved Plasmodium protein, unknown function
+PBANKA_0408700	3	trafficking protein particle complex subunit 4, putative
+PBANKA_0412700	3	zinc finger protein, putative
+PBANKA_0503900	3	conserved Plasmodium protein, unknown function
+PBANKA_0506500	3	ZIP domain-containing protein
+PBANKA_0521100	3	conserved Plasmodium protein, unknown function
+PBANKA_0609300	3	GPI mannosyltransferase 1, putative
+PBANKA_0610500	3	glutathione peroxidase-like thioredoxin peroxidase
+PBANKA_0611300	3	conserved Plasmodium protein, unknown function
+PBANKA_0714100	3	trafficking protein particle complex subunit 2-like protein, putative
+PBANKA_0718600	3	prohibitin-like protein PHBL
+PBANKA_0719800	3	conserved Plasmodium protein, unknown function
+PBANKA_0807200	3	conserved Plasmodium protein, unknown function
+PBANKA_0815700	3	major facilitator superfamily-related transporter, putative
+PBANKA_0822200	3	conserved protein, unknown function
+PBANKA_0825500	3	conserved Plasmodium protein, unknown function
+PBANKA_0828400	3	RNA-binding protein, putative
+PBANKA_0832300	3	conserved Plasmodium protein, unknown function
+PBANKA_0835400	3	conserved Plasmodium protein, unknown function
+PBANKA_0903200	3	conserved Plasmodium protein, unknown function
+PBANKA_0909300	3	adrenodoxin reductase, putative
+PBANKA_0913500	3	PQ-loop repeat-containing protein
+PBANKA_0914800	3	conserved Plasmodium protein, unknown function
+PBANKA_0927900	3	CorA-like Mg2+ transporter protein, putative
+PBANKA_0935800	3	peptidyl-prolyl cis-trans isomerase, putative
+PBANKA_0938200	3	conserved Plasmodium protein, unknown function
+PBANKA_0944101	3	PIR protein
+PBANKA_1003300	3	TMEM33 domain-containing protein, putative
+PBANKA_1006000	3	conserved protein, unknown function
+PBANKA_1022200	3	DIX domain-containing protein, putative
+PBANKA_1040151	3	fam-a protein, pseudogene
+PBANKA_1102800	3	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative
+PBANKA_1112700	3	conserved protein, unknown function
+PBANKA_1115400	3	BolA-like protein, putative
+PBANKA_1118100	3	phosphatidylinositol N-acetylglucosaminyltransferase subunit GPI1, putative
+PBANKA_1124000	3	sphingomyelin synthase 2, putative
+PBANKA_1131400	3	metacaspase-1
+PBANKA_1142000	3	conserved protein, unknown function
+PBANKA_1142600	3	conserved Plasmodium protein, unknown function
+PBANKA_1143400	3	NADH-cytochrome b5 reductase, putative
+PBANKA_1146600	3	fam-b protein
+PBANKA_1146781	3	fam-b protein
+PBANKA_1202800	3	conserved Plasmodium protein, unknown function
+PBANKA_1209400	3	inner membrane complex sub-compartment protein 1
+PBANKA_1213500	3	CWC16 domain-containing protein, putative
+PBANKA_1214600	3	Rab3 GTPase-activating protein non-catalytic subunit, putative
+PBANKA_1222000	3	histone deacetylase complex subunit SAP18, putative
+PBANKA_1227000	3	filament assembling protein, putative
+PBANKA_1233000	3	SWIB/MDM2 domain-containing protein, putative
+PBANKA_1314000	3	NADPH--cytochrome P450 reductase, putative
+PBANKA_1324700	3	conserved Plasmodium protein, unknown function
+PBANKA_1326600	3	mediator of RNA polymerase II transcription subunit 20, putative
+PBANKA_1413500	3	conserved Plasmodium protein, unknown function
+PBANKA_1438800	3	50S ribosomal protein L24, putative
+PBANKA_1444000	3	macrophage migration inhibitory factor
+PBANKA_1447500	3	conserved Plasmodium protein, unknown function
+PBANKA_0514400	4	conserved protein, unknown function
+PBANKA_0707000	4	lipoate-protein ligase B
+PBANKA_0805750	4	non-coding RNA
+PBANKA_0931400	4	dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3, putative
+PBANKA_0941800	4	histone H2B, putative
+PBANKA_1019580	4	small nucleolar RNA snoR23
+PBANKA_1110350	4	small nucleolar RNA snoR04
+PBANKA_API00380	4	apicoplast ribosomal protein L16
+PBANKA_MIT01800	4	cytochrome c oxidase subunit 1
+PBANKA_0301400	5	conserved Plasmodium protein, unknown function
+PBANKA_0309600	5	SRR1-like protein
+PBANKA_0502400	5	conserved Plasmodium protein, unknown function
+PBANKA_0508600	5	conserved Plasmodium protein, unknown function
+PBANKA_0521900	5	conserved Plasmodium protein, unknown function
+PBANKA_0614700	5	conserved Plasmodium membrane protein, unknown function
+PBANKA_0714400	5	EF-hand calcium-binding domain-containing protein, putative
+PBANKA_0800100	5	PIR protein
+PBANKA_0826700	5	parasitophorous vacuolar protein 5
+PBANKA_0829700	5	guanylate kinase, putative
+PBANKA_0830900	5	leucine-rich repeat protein
+PBANKA_0901700	5	conserved Plasmodium protein, unknown function
+PBANKA_0903100	5	conserved Plasmodium protein, unknown function
+PBANKA_0904800	5	conserved Plasmodium protein, unknown function
+PBANKA_0916100	5	nucleic acid binding protein, putative
+PBANKA_0934200	5	ubiquitin domain-containing protein DSK2, putative
+PBANKA_0936400	5	conserved protein, unknown function
+PBANKA_0937900	5	conserved Plasmodium protein, unknown function
+PBANKA_1007500	5	actin-like protein, putative
+PBANKA_1009700	5	ribonuclease H2 subunit B, putative
+PBANKA_1013600	5	PhIL1 interacting protein PIP2, putative
+PBANKA_1022400	5	dynein light chain, putative
+PBANKA_1031700	5	ankyrin-repeat protein, putative
+PBANKA_1033700	5	conserved Plasmodium protein, unknown function
+PBANKA_1040000	5	conserved protein, unknown function
+PBANKA_1101000	5	fam-a protein
+PBANKA_1125800	5	conserved Plasmodium protein, unknown function
+PBANKA_1137900	5	proliferating cell nuclear antigen 1, putative
+PBANKA_1143100	5	CLAMP domain-containing protein, putative
+PBANKA_1145700	5	U2 small nuclear ribonucleoprotein A', putative
+PBANKA_1203500	5	conserved Plasmodium protein, unknown function
+PBANKA_1210800	5	hypoxanthine-guanine phosphoribosyltransferase, putative
+PBANKA_1233600	5	secreted ookinete protein, putative
+PBANKA_1243500	5	conserved protein, unknown function
+PBANKA_1246400	5	PIR protein
+PBANKA_1308100	5	calmodulin-like protein
+PBANKA_1318700	5	protein phosphatase PPM3
+PBANKA_1325700	5	thioredoxin-like protein
+PBANKA_1328200	5	conserved Plasmodium protein, unknown function
+PBANKA_1335700	5	conserved Plasmodium protein, unknown function
+PBANKA_1338100	5	conserved protein, unknown function
+PBANKA_1340300	5	phosphoribosylpyrophosphate synthetase, putative
+PBANKA_1343100	5	conserved Plasmodium protein, unknown function
+PBANKA_1349300	5	conserved Plasmodium protein, unknown function
+PBANKA_1400100	5	PIR protein
+PBANKA_1450200	5	serine hydroxymethyltransferase, putative
+PBANKA_1451900	5	conserved Plasmodium protein, unknown function
+PBANKA_1464200	5	thymidylate kinase, putative
+PBANKA_0102500	6	phenylalanine--tRNA ligase, putative
+PBANKA_0205300	6	conserved protein, unknown function
+PBANKA_0211900	6	cation transporting ATPase, putative
+PBANKA_0214300	6	AP-4 complex subunit beta, putative
+PBANKA_0301100	6	conserved Plasmodium protein, unknown function
+PBANKA_0406400	6	zinc finger protein, putative
+PBANKA_0408400	6	phosphoglycerate mutase, putative
+PBANKA_0409400	6	kinase-related protein PKRP
+PBANKA_0416800	6	ubiquitin specific protease, putative
+PBANKA_0417300	6	AP-4 complex subunit epsilon, putative
+PBANKA_0506700	6	citrate synthase, mitochondrial, putative
+PBANKA_0516100	6	conserved protein, unknown function
+PBANKA_0516700	6	RNA polymerase II-associated protein 1, putative
+PBANKA_0518900	6	conserved Plasmodium membrane protein, unknown function
+PBANKA_0520000	6	pyruvate kinase 2, putative
+PBANKA_0520400	6	dynamin-like protein, putative
+PBANKA_0520500	6	TFIIH basal transcription factor complex helicase XPB subunit, putative
+PBANKA_0605400	6	conserved Plasmodium protein, unknown function
+PBANKA_0606700	6	cysteine repeat modular protein 3
+PBANKA_0607000	6	conserved Plasmodium protein, unknown function
+PBANKA_0614800	6	conserved Plasmodium protein, unknown function
+PBANKA_0704100	6	ubiquitin conjugation factor E4 B, putative
+PBANKA_0713500	6	conserved Plasmodium protein, unknown function
+PBANKA_0807000	6	DNA-directed RNA polymerase II subunit RPB1, putative
+PBANKA_0820800	6	regulator of chromosome condensation-PP1-interacting protein
+PBANKA_0827400	6	conserved Plasmodium protein, unknown function
+PBANKA_0913300	6	regulator of chromosome condensation, putative
+PBANKA_0918200	6	phosphoacetylglucosamine mutase, putative
+PBANKA_0936000	6	endonuclease/exonuclease/phosphatase family protein, putative
+PBANKA_0939800	6	nucleic acid binding protein, putative
+PBANKA_1002800	6	protein transport protein Sec24B, putative
+PBANKA_1004300	6	conserved Plasmodium protein, unknown function
+PBANKA_1005300	6	conserved Plasmodium protein, unknown function
+PBANKA_1007100	6	NAD(P)-binding protein, putative
+PBANKA_1007600	6	erythrocyte vesicle protein 1, putative
+PBANKA_1008700	6	conserved Plasmodium protein, unknown function
+PBANKA_1024200	6	conserved Plasmodium protein, unknown function
+PBANKA_1026600	6	protein SEY1, putative
+PBANKA_1031300	6	rhomboid protease ROM8
+PBANKA_1039600	6	26S proteasome regulatory subunit RPN6, putative
+PBANKA_1100781	6	PIR protein
+PBANKA_1107300	6	nuclear protein localization protein 4, putative
+PBANKA_1109400	6	phosphatidylinositol 4-kinase, putative
+PBANKA_1114900	6	phosphatidylinositol 3-kinase, putative
+PBANKA_1120100	6	conserved Plasmodium protein, unknown function
+PBANKA_1126900	6	eukaryotic translation initiation factor 2-alpha kinase
+PBANKA_1132000	6	NLI interacting factor-like phosphatase
+PBANKA_1132900	6	regulator of chromosome condensation, putative
+PBANKA_1136500	6	conserved Plasmodium protein, unknown function
+PBANKA_1139700	6	protein AMR1, putative
+PBANKA_1140000	6	conserved protein, unknown function
+PBANKA_1144700	6	DNA repair endonuclease XPF, putative
+PBANKA_1145000	6	conserved Plasmodium protein, unknown function
+PBANKA_1145100	6	conserved Plasmodium protein, unknown function
+PBANKA_1208000	6	tubulin--tyrosine ligase, putative
+PBANKA_1211900	6	phosphoinositide-specific phospholipase C
+PBANKA_1216200	6	diacylglycerol O-acyltransferase, putative
+PBANKA_1217000	6	peptidase, putative
+PBANKA_1225000	6	serine/threonine protein kinase, FIKK family
+PBANKA_1232500	6	eukaryotic translation initiation factor 3 subunit B, putative
+PBANKA_1238500	6	conserved Plasmodium protein, unknown function
+PBANKA_1241200	6	conserved Plasmodium protein, unknown function
+PBANKA_1244100	6	heptatricopeptide repeat-containing protein, putative
+PBANKA_1300800	6	cysteine repeat modular protein 4
+PBANKA_1301900	6	DNA repair metallo-beta-lactamase protein, putative
+PBANKA_1304100	6	porphobilinogen synthase, putative
+PBANKA_1307100	6	heptatricopeptide repeat-containing protein, putative
+PBANKA_1311600	6	calponin homology domain-containing protein, putative
+PBANKA_1313200	6	AP2 domain transcription factor AP2-O5, putative
+PBANKA_1319700	6	AP2 domain transcription factor, putative
+PBANKA_1322000	6	alpha/beta hydrolase, putative
+PBANKA_1328300	6	ATP-dependent zinc metalloprotease FTSH, putative
+PBANKA_1328500	6	conserved oligomeric Golgi complex subunit 6, putative
+PBANKA_1331400	6	MORC family protein, putative
+PBANKA_1331700	6	zinc finger protein, putative
+PBANKA_1344500	6	conserved protein, unknown function
+PBANKA_1355200	6	aconitate hydratase, putative
+PBANKA_1357300	6	zinc finger protein, putative
+PBANKA_1358700	6	conserved Plasmodium protein, unknown function
+PBANKA_1358900	6	dynactin subunit 2, putative
+PBANKA_1400061	6	PIR protein
+PBANKA_1406400	6	tripartite motif protein, putative
+PBANKA_1408400	6	conserved Plasmodium protein, unknown function
+PBANKA_1408600	6	conserved Plasmodium protein, unknown function
+PBANKA_1414600	6	inositol polyphosphate kinase, putative
+PBANKA_1419800	6	3',5'-cyclic nucleotide phosphodiesterase beta, putative
+PBANKA_1420900	6	palmitoyltransferase DHHC4, putative
+PBANKA_1422100	6	drug/metabolite transporter DMT1, putative
+PBANKA_1424500	6	conserved Plasmodium protein, unknown function
+PBANKA_1426500	6	cullin-1, putative
+PBANKA_1428000	6	conserved protein, unknown function
+PBANKA_1434300	6	conserved Plasmodium protein, unknown function
+PBANKA_1434500	6	WD repeat-containing protein, putative
+PBANKA_1439600	6	conserved Plasmodium protein, unknown function
+PBANKA_1441900	6	DNA helicase 60, putative
+PBANKA_1442000	6	potassium channel K1
+PBANKA_1442100	6	conserved Plasmodium protein, unknown function
+PBANKA_1449800	6	inorganic pyrophosphatase, putative
+PBANKA_1454000	6	DNA gyrase subunit B, putative
+PBANKA_0101200	7	elongation factor G, putative
+PBANKA_0103500	7	RAP protein, putative
+PBANKA_0103800	7	50S ribosomal protein L24, putative
+PBANKA_0105000	7	ubiquitin-conjugating enzyme E2 PEX4, putative
+PBANKA_0106400	7	GTP-binding protein, putative
+PBANKA_0106500	7	conserved Plasmodium protein, unknown function
+PBANKA_0106600	7	diphthine methyltransferase, putative
+PBANKA_0107700	7	zinc transporter ZIP1
+PBANKA_0110900	7	cytoplasmic tRNA 2-thiolation protein 1, putative
+PBANKA_0111100	7	6-cysteine protein
+PBANKA_0111600	7	rhoptry protein ROP14, putative
+PBANKA_0112200	7	myosin E
+PBANKA_0203400	7	FAD-linked sulfhydryl oxidase ERV1, putative
+PBANKA_0203500	7	selenocysteine-specific elongation factor, putative
+PBANKA_0204100	7	N-acetyltransferase, GNAT family, putative
+PBANKA_0204600	7	photosensitized INA-labeled protein PHIL1
+PBANKA_0204700	7	mitochondrial carrier protein, putative
+PBANKA_0204800	7	secreted ookinete protein, putative
+PBANKA_0205700	7	dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit OST3/OST6, putative
+PBANKA_0206100	7	CCR4 domain-containing protein 3, putative
+PBANKA_0207300	7	conserved protein, unknown function
+PBANKA_0207700	7	FtsJ-like methyltransferase, putative
+PBANKA_0209100	7	thrombospondin-related sporozoite protein
+PBANKA_0211500	7	proteasome subunit alpha type-5, putative
+PBANKA_0212900	7	conserved Plasmodium protein, unknown function
+PBANKA_0214900	7	fam-a protein
+PBANKA_0303100	7	PCI domain-containing protein, putative
+PBANKA_0303200	7	DNA-directed RNA polymerase II 16 kDa subunit, putative
+PBANKA_0303600	7	26S proteasome regulatory subunit RPN1, putative
+PBANKA_0305200	7	conserved Plasmodium protein, unknown function
+PBANKA_0306300	7	exosome complex component MTR3, putative
+PBANKA_0306800	7	ATP-dependent RNA helicase UAP56, putative
+PBANKA_0308400	7	UDP-N-acetylglucosamine transferase subunit ALG14, putative
+PBANKA_0308900	7	conserved Plasmodium protein, unknown function
+PBANKA_0309500	7	secreted protein with altered thrombospondin repeat domain
+PBANKA_0310000	7	protein SIS1, putative
+PBANKA_0310600	7	conserved protein, unknown function
+PBANKA_0311000	7	protein transport protein SEC31, putative
+PBANKA_0311500	7	conserved Plasmodium protein, unknown function
+PBANKA_0311900	7	RING zinc finger protein, putative
+PBANKA_0312500	7	origin recognition complex subunit 5, putative
+PBANKA_0312800	7	conserved Plasmodium protein, unknown function
+PBANKA_0313300	7	sugar transporter, putative
+PBANKA_0313500	7	TMEM121 domain-containing protein, putative
+PBANKA_0314100	7	conserved protein, unknown function
+PBANKA_0314300	7	conserved Plasmodium protein, unknown function
+PBANKA_0314400	7	E2F-associated phosphoprotein, putative
+PBANKA_0315100	7	ATP-dependent RNA helicase DDX47, putative
+PBANKA_0315430	7	small nucleolar RNA snoR01
+PBANKA_0401900	7	DNA-directed RNA polymerases I, II, and III subunit RPABC2, putative
+PBANKA_0402200	7	plasmoredoxin
+PBANKA_0402300	7	lipoamide acyltransferase component of branched-chain alpha-keto acid dehydrogenase complex, putative
+PBANKA_0402600	7	inner membrane complex protein 1a
+PBANKA_0402900	7	conserved Plasmodium protein, unknown function
+PBANKA_0403200	7	circumsporozoite (CS) protein
+PBANKA_0404600	7	activator of Hsp90 ATPase, putative
+PBANKA_0405300	7	40S ribosomal protein S23, putative
+PBANKA_0406650	7	U4 spliceosomal RNA
+PBANKA_0406900	7	conserved protein, unknown function
+PBANKA_0408200	7	calcium-dependent protein kinase 3
+PBANKA_0409000	7	conserved Plasmodium protein, unknown function
+PBANKA_0410400	7	glycogen synthase kinase 3, putative
+PBANKA_0410650	7	conserved Plasmodium protein, unknown function
+PBANKA_0412900	7	circumsporozoite- and TRAP-related protein
+PBANKA_0414200	7	CS domain-containing protein, putative
+PBANKA_0414300	7	kinetochore protein NUF2, putative
+PBANKA_0414400	7	formate-nitrite transporter, putative
+PBANKA_0415400	7	conserved Plasmodium protein, unknown function, pseudogene
+PBANKA_0417700	7	alpha tubulin 1
+PBANKA_0501800	7	myosin essential light chain ELC, putative
+PBANKA_0503700	7	TMEM94 domain-containing protein, putative
+PBANKA_0504600	7	rRNA (cytosine-C(5))-methyltransferase, putative
+PBANKA_0505000	7	dihydrolipoamide acyltransferase, putative
+PBANKA_0505100	7	ADP-ribosylation factor, putative
+PBANKA_0505200	7	conserved protein, unknown function
+PBANKA_0506300	7	methyltransferase, putative
+PBANKA_0507200	7	conserved Plasmodium protein, unknown function
+PBANKA_0508300	7	conserved Plasmodium protein, unknown function
+PBANKA_0508800	7	RAP protein, putative
+PBANKA_0509200	7	Eps15-like protein, putative
+PBANKA_0509600	7	conserved Plasmodium protein, unknown function
+PBANKA_0510700	7	conserved Plasmodium protein, unknown function
+PBANKA_0510900	7	40S ribosomal protein S2, putative
+PBANKA_0511000	7	biotin--protein ligase 1
+PBANKA_0511300	7	ribosomal protein S22, mitochondrial, putative
+PBANKA_0512100	7	methyltransferase, putative
+PBANKA_0513000	7	inner membrane complex protein 1m, putative
+PBANKA_0513100	7	conserved Plasmodium protein, unknown function
+PBANKA_0513700	7	conserved Plasmodium protein, unknown function
+PBANKA_0513800	7	heptatricopeptide repeat and RAP domain-containing protein, putative
+PBANKA_0515500	7	protein phosphatase inhibitor 3, putative
+PBANKA_0518100	7	thioredoxin-like associated protein 2, putative
+PBANKA_0519000	7	S-antigen, putative
+PBANKA_0519500	7	conserved Plasmodium protein, unknown function
+PBANKA_0523700	7	conserved Plasmodium protein, unknown function
+PBANKA_0524500	7	conserved rodent malaria protein, unknown function
+PBANKA_0602600	7	cytochrome c1 heme lyase
+PBANKA_0602700	7	nucleosome assembly protein, putative
+PBANKA_0603400	7	conserved protein, unknown function
+PBANKA_0603500	7	cytidine deaminase, putative
+PBANKA_0603600	7	conserved protein, unknown function
+PBANKA_0603900	7	HAD domain ookinete protein
+PBANKA_0604900	7	conserved Plasmodium protein, unknown function
+PBANKA_0605000	7	thiosulfate sulfurtransferase, putative
+PBANKA_0607600	7	U6 snRNA-associated Sm-like protein LSm7, putative
+PBANKA_0608700	7	conserved Plasmodium protein, unknown function
+PBANKA_0609600	7	HSP20-like chaperone, putative
+PBANKA_0610800	7	eukaryotic translation initiation factor eIF2A, putative
+PBANKA_0611200	7	conserved protein, unknown function
+PBANKA_0611400	7	pantothenate kinase 2, putative
+PBANKA_0611500	7	conserved Plasmodium protein, unknown function
+PBANKA_0612861	7	tRNA Glutamic acid
+PBANKA_0613400	7	ribosomal protein S12, mitochondrial, putative
+PBANKA_0616200	7	conserved Plasmodium protein, unknown function
+PBANKA_0616400	7	conserved protein, unknown function
+PBANKA_0616500	7	conserved protein, unknown function
+PBANKA_0617500	7	exosome complex component CSL4, putative
+PBANKA_0617800	7	conserved Plasmodium protein, unknown function
+PBANKA_0617900	7	apoptosis-inducing factor, putative
+PBANKA_0618400	7	tetratricopeptide repeat protein, putative
+PBANKA_0618700	7	conserved Plasmodium protein, unknown function
+PBANKA_0618800	7	ATP-dependent DNA helicase DDX31, putative
+PBANKA_0619200	7	secreted ookinete protein, putative
+PBANKA_0619300	7	conserved Plasmodium protein, unknown function
+PBANKA_0620000	7	pre-mRNA-splicing factor CWC15, putative
+PBANKA_0620500	7	tRNAHis guanylyltransferase, putative
+PBANKA_0620900	7	conserved Plasmodium protein, unknown function
+PBANKA_0621900	7	mitochondrial import inner membrane translocase subunit TIM14, putative
+PBANKA_0622300	7	kelch domain-containing protein, putative
+PBANKA_0622800	7	conserved protein, unknown function
+PBANKA_0701400	7	U6 snRNA-associated Sm-like protein LSm8, putative
+PBANKA_0701500	7	prohibitin 1
+PBANKA_0701600	7	coiled-coil domain-containing protein 124, putative
+PBANKA_0701800	7	conserved protein, unknown function
+PBANKA_0701900	7	GPI-anchored micronemal antigen, putative
+PBANKA_0703200	7	ribosomal protein L21, apicoplast, putative
+PBANKA_0706500	7	3'-5' exonuclease, putative
+PBANKA_0706600	7	conserved Plasmodium protein, unknown function
+PBANKA_0707500	7	RWD domain-containing protein, putative
+PBANKA_0708600	7	quinone oxidoreductase, putative
+PBANKA_0709200	7	polyribonucleotide 5'-hydroxyl-kinase Clp1, putative
+PBANKA_0709300	7	ribosomal RNA small subunit methyltransferase NEP1, putative
+PBANKA_0709400	7	conserved Plasmodium protein, unknown function
+PBANKA_0709500	7	ATP-dependent RNA helicase DHX36, putative
+PBANKA_0711400	7	perforin-like protein 4
+PBANKA_0711600	7	perforin-like protein 5
+PBANKA_0711900	7	heat shock protein 70
+PBANKA_0712400	7	rRNA-processing protein FCF1, putative
+PBANKA_0713400	7	phosphatase, putative
+PBANKA_0714300	7	small heat shock protein HSP20
+PBANKA_0714900	7	dihydrolipoyl dehydrogenase, apicoplast, putative
+PBANKA_0715300	7	conserved Plasmodium protein, unknown function
+PBANKA_0715700	7	lysine decarboxylase-like protein, putative
+PBANKA_0716300	7	Rab5-interacting protein, putative
+PBANKA_0716400	7	conserved Plasmodium protein, unknown function
+PBANKA_0716800	7	conserved Plasmodium protein, unknown function
+PBANKA_0716900	7	armadillo-domain containing rhoptry protein, putative
+PBANKA_0717600	7	GTP:AMP phosphotransferase, putative
+PBANKA_0717900	7	RNA-binding protein, putative
+PBANKA_0718100	7	glutamyl-tRNA(Gln) amidotransferase subunit A
+PBANKA_0718300	7	DNA helicase MCM9, putative
+PBANKA_0721900	7	60S ribosomal protein L7ae/L30e, putative
+PBANKA_0800500	7	chitinase
+PBANKA_0802800	7	conserved Plasmodium protein, unknown function
+PBANKA_0803900	7	conserved Plasmodium protein, unknown function
+PBANKA_0808100	7	6-cysteine protein
+PBANKA_0809300	7	peptide deformylase, putative
+PBANKA_0809500	7	apicoplast integral membrane protein, putative
+PBANKA_0814300	7	conserved protein, unknown function
+PBANKA_0814800	7	conserved Plasmodium protein, unknown function
+PBANKA_0815000	7	pseudouridylate synthase, putative
+PBANKA_0816500	7	conserved Plasmodium protein, unknown function
+PBANKA_0817900	7	zinc finger protein, putative
+PBANKA_0818400	7	conserved Plasmodium protein, unknown function
+PBANKA_0819100	7	cytochrome b5, putative
+PBANKA_0819200	7	50S ribosomal protein L3, apicoplast, putative
+PBANKA_0820200	7	thioredoxin-like protein 1, putative
+PBANKA_0820900	7	elongation of fatty acids protein, putative
+PBANKA_0821900	7	ubiquitin-conjugating enzyme E2, putative
+PBANKA_0823800	7	3-oxoacyl-[acyl-carrier-protein] reductase, putative
+PBANKA_0824200	7	perforin-like protein 3
+PBANKA_0824500	7	lipoate-protein ligase 2
+PBANKA_0824800	7	polyadenylate-binding protein 2, putative
+PBANKA_0825100	7	heptatricopeptide repeat-containing protein, putative
+PBANKA_0826200	7	protein phosphatase-beta, putative
+PBANKA_0826500	7	histone deacetylase 1, putative
+PBANKA_0827600	7	conserved Plasmodium protein, unknown function
+PBANKA_0828700	7	phosphatidylserine decarboxylase, putative
+PBANKA_0829300	7	conserved Plasmodium protein, unknown function
+PBANKA_0829600	7	serine/threonine protein kinase, putative
+PBANKA_0829800	7	transcription initiation factor TFIID subunit 7, putative
+PBANKA_0829900	7	conserved protein, unknown function
+PBANKA_0832100	7	conserved Plasmodium protein, unknown function
+PBANKA_0832200	7	PUB domain-containing protein, putative
+PBANKA_0832800	7	conserved Plasmodium protein, unknown function
+PBANKA_0833000	7	profilin
+PBANKA_0835900	7	protein kish, putative
+PBANKA_0903400	7	TMEM65 domain-containing protein, putative
+PBANKA_0904000	7	conserved Plasmodium protein, unknown function
+PBANKA_0904100	7	ras-related protein Rab-6
+PBANKA_0904500	7	SUMO-activating enzyme subunit 1, putative
+PBANKA_0905200	7	oocyst capsule protein Cap93
+PBANKA_0905600	7	translation initiation factor eIF-1A, putative
+PBANKA_0908600	7	conserved Plasmodium protein, unknown function
+PBANKA_0909800	7	RNA-binding protein, putative
+PBANKA_0911200	7	ribosomal protein S14, apicoplast, putative
+PBANKA_0911650	7	U2 spliceosomal RNA
+PBANKA_0912100	7	casein kinase 1, putative
+PBANKA_0915700	7	50S ribosomal protein L2, putative
+PBANKA_0916000	7	conserved Plasmodium protein, unknown function
+PBANKA_0916300	7	RNA-binding protein, putative
+PBANKA_0917800	7	conserved oligomeric Golgi complex subunit 2, putative
+PBANKA_0918000	7	60S acidic ribosomal protein P0, putative
+PBANKA_0921200	7	conserved Plasmodium protein, unknown function
+PBANKA_0921400	7	protein phosphatase, putative
+PBANKA_0921900	7	WD repeat-containing protein, putative
+PBANKA_0922200	7	autophagy-related protein 7, putative
+PBANKA_0922400	7	XTBD domain-containing protein, putative
+PBANKA_0922500	7	kelch domain-containing protein, putative
+PBANKA_0924800	7	golgi protein 2
+PBANKA_0925600	7	conserved Plasmodium protein, unknown function
+PBANKA_0928800	7	splicing factor U2AF small subunit, putative
+PBANKA_0929000	7	tRNA m(1)G methyltransferase, putative
+PBANKA_0929500	7	histone acetyltransferase MYST, putative
+PBANKA_0930600	7	conserved Plasmodium protein, unknown function
+PBANKA_0931100	7	conserved protein, unknown function
+PBANKA_0933200	7	conserved Plasmodium protein, unknown function
+PBANKA_0933500	7	rhomboid protease ROM1
+PBANKA_0936600	7	conserved Plasmodium protein, unknown function
+PBANKA_0939700	7	conserved protein, unknown function
+PBANKA_0941000	7	conserved Plasmodium protein, unknown function
+PBANKA_0941100	7	conserved Apicomplexan protein, unknown function
+PBANKA_0941900	7	histone H4, putative
+PBANKA_0942200	7	DNA-directed RNA polymerase III subunit RPC8, putative
+PBANKA_0942800	7	syntaxin, putative
+PBANKA_1005000	7	conserved Plasmodium protein, unknown function
+PBANKA_1006200	7	sporozoite invasion-associated protein 1
+PBANKA_1006300	7	perforin-like protein 1
+PBANKA_1006400	7	conserved Plasmodium protein, unknown function
+PBANKA_1006500	7	tRNA N6-adenosine threonylcarbamoyltransferase, putative
+PBANKA_1010100	7	mitochondrial import inner membrane translocase subunit TIM17, putative
+PBANKA_1010200	7	methionine aminopeptidase 2, putative
+PBANKA_1010400	7	conserved protein, unknown function
+PBANKA_1013300	7	mitogen-activated protein kinase 1
+PBANKA_1014100	7	endonuclease/exonuclease/phosphatase family protein, putative
+PBANKA_1014300	7	autophagy protein 5, putative
+PBANKA_1015200	7	diphthamide biosynthesis protein 2, putative
+PBANKA_1018000	7	conserved Plasmodium protein, unknown function
+PBANKA_1018500	7	transcription factor BTF3, putative
+PBANKA_1019100	7	DEAD/DEAH box helicase, putative
+PBANKA_1019200	7	conserved Plasmodium protein, unknown function
+PBANKA_1019320	7	Plasmodium RNA of unknown function RUF4
+PBANKA_1019330	7	small nucleolar RNA snoR30
+PBANKA_1020500	7	14-3-3 protein, putative
+PBANKA_1020600	7	actin-related protein, putative
+PBANKA_1021400	7	cytochrome c oxidase assembly protein COX14, putative
+PBANKA_1022500	7	surface protein P113
+PBANKA_1023100	7	conserved Plasmodium protein, unknown function
+PBANKA_1023400	7	glutathione reductase, putative
+PBANKA_1024311	7	signal recognition particle RNA
+PBANKA_1024400	7	calmodulin, putative
+PBANKA_1025700	7	inner membrane complex protein 1l, putative
+PBANKA_1025800	7	prefoldin subunit 2, putative
+PBANKA_1026200	7	NADP-specific glutamate dehydrogenase, putative
+PBANKA_1027600	7	conserved protein, unknown function
+PBANKA_1027900	7	small nuclear ribonucleoprotein-associated protein B, putative
+PBANKA_1028300	7	serine/threonine protein phosphatase PP1
+PBANKA_1028900	7	diphthamide biosynthesis protein 1, putative
+PBANKA_1032600	7	cytidine diphosphate-diacylglycerol synthase, putative
+PBANKA_1034200	7	conserved Plasmodium protein, unknown function
+PBANKA_1034500	7	conserved protein, unknown function
+PBANKA_1036200	7	RNA-binding protein 8A, putative
+PBANKA_1036400	7	ribosome biogenesis protein BOP1, putative
+PBANKA_1037200	7	conserved Plasmodium protein, unknown function
+PBANKA_1037700	7	ribosomal protein L16, mitochondrial, putative
+PBANKA_1037800	7	secreted ookinete adhesive protein
+PBANKA_1038000	7	cytochrome c, putative
+PBANKA_1103300	7	myosin B
+PBANKA_1103900	7	conserved Plasmodium protein, unknown function
+PBANKA_1104200	7	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative
+PBANKA_1105400	7	small ubiquitin-related modifier, putative
+PBANKA_1106400	7	transcription factor 25, putative
+PBANKA_1106900	7	PIMMS2 protein
+PBANKA_1107600	7	6-cysteine protein
+PBANKA_1109100	7	ERCC4 domain-containing protein, putative
+PBANKA_1110000	7	PDCD2 domain-containing protein, putative
+PBANKA_1111200	7	apical rhoptry neck protein, putative
+PBANKA_1111800	7	glutathione synthetase
+PBANKA_1112000	7	conserved Plasmodium protein, unknown function
+PBANKA_1112300	7	ras-related protein Rab-1B, putative
+PBANKA_1113100	7	GTP-binding protein YihA1, putative
+PBANKA_1113900	7	conserved Plasmodium protein, unknown function
+PBANKA_1116900	7	conserved Plasmodium protein, unknown function
+PBANKA_1117200	7	conserved Plasmodium protein, unknown function
+PBANKA_1117300	7	conserved Plasmodium protein, unknown function
+PBANKA_1118700	7	acyl-CoA synthetase, putative
+PBANKA_1118800	7	conserved Plasmodium protein, unknown function
+PBANKA_1119200	7	PIMMS43 protein
+PBANKA_1119400	7	conserved Plasmodium protein, unknown function
+PBANKA_1119600	7	merozoite surface protein 10, putative
+PBANKA_1122200	7	EGF-like membrane protein, putative
+PBANKA_1122500	7	splicing factor-like protein 1, putative
+PBANKA_1124600	7	conserved protein, unknown function
+PBANKA_1125100	7	3-oxoacyl-acyl-carrier protein synthase, putative
+PBANKA_1128900	7	alpha/beta hydrolase, putative
+PBANKA_1129700	7	ATP-dependent RNA helicase HAS1, putative
+PBANKA_1130800	7	phosphoinositide phosphatase SAC1, putative
+PBANKA_1131000	7	V-type proton ATPase 21 kDa proteolipid subunit, putative
+PBANKA_1131100	7	adenylosuccinate synthetase, putative
+PBANKA_1131300	7	conserved Plasmodium protein, unknown function
+PBANKA_1132200	7	RWD domain-containing protein, putative
+PBANKA_1132500	7	mitochondrial import inner membrane translocase subunit TIM23, putative
+PBANKA_1132600	7	ubiquitin-conjugating enzyme E2, putative
+PBANKA_1133200	7	cdc2-related kinase 2
+PBANKA_1138100	7	14-3-3 protein, putative
+PBANKA_1141800	7	conserved Plasmodium protein, unknown function
+PBANKA_1141900	7	DIP13 homolog, putative
+PBANKA_1143700	7	secreted ookinete protein, putative
+PBANKA_1200700	7	conserved Plasmodium protein, unknown function
+PBANKA_1202900	7	conserved Plasmodium protein, unknown function
+PBANKA_1203600	7	conserved Plasmodium protein, unknown function
+PBANKA_1209000	7	eukaryotic translation initiation factor 2 subunit beta, putative
+PBANKA_1209900	7	conserved protein, unknown function
+PBANKA_1213100	7	prohibitin 2
+PBANKA_1215000	7	survival motor neuron-like protein, putative
+PBANKA_1215500	7	translation machinery-associated protein 7, putative
+PBANKA_1217600	7	histone H2A.Z, putative
+PBANKA_1218100	7	oocyst capsule protein Cap380
+PBANKA_1221100	7	conserved protein, unknown function
+PBANKA_1221300	7	conserved Plasmodium protein, unknown function
+PBANKA_1221500	7	50S ribosomal protein L1, mitochondrial, putative
+PBANKA_1221700	7	conserved protein, unknown function
+PBANKA_1221900	7	conserved Plasmodium protein, unknown function
+PBANKA_1222800	7	tyrosine--tRNA ligase, putative
+PBANKA_1223900	7	protein tyrosine phosphatase
+PBANKA_1224600	7	conserved Plasmodium protein, unknown function
+PBANKA_1225400	7	gamete release protein
+PBANKA_1226200	7	methionine aminopeptidase 1c, putative
+PBANKA_1226500	7	proteasome subunit beta type-4, putative
+PBANKA_1228900	7	von Willebrand factor A domain-related protein
+PBANKA_1229700	7	conserved Plasmodium protein, unknown function
+PBANKA_1232000	7	conserved Plasmodium protein, unknown function
+PBANKA_1232100	7	serine/arginine-rich splicing factor 1, putative
+PBANKA_1232800	7	NOSIP domain-containing protein, putative
+PBANKA_1233300	7	ATP-dependent RNA helicase DDX23, putative
+PBANKA_1233700	7	conserved protein, unknown function
+PBANKA_1234000	7	V-type proton ATPase 16 kDa proteolipid subunit, putative
+PBANKA_1234200	7	40S ribosomal protein S24, putative
+PBANKA_1234600	7	EELM2 domain-containing protein, putative
+PBANKA_1234700	7	conserved protein, unknown function
+PBANKA_1236000	7	conserved protein, unknown function
+PBANKA_1236100	7	ribosomal large subunit pseudouridylate synthase, putative
+PBANKA_1239500	7	mitochondrial import receptor subunit TOM22, putative
+PBANKA_1240600	7	inner membrane complex protein 1g, putative
+PBANKA_1241000	7	ADP-ribosylation factor GTPase-activating protein 2, putative
+PBANKA_1241500	7	conserved protein, unknown function
+PBANKA_1242900	7	conserved protein, unknown function
+PBANKA_1243200	7	conserved Plasmodium protein, unknown function
+PBANKA_1243300	7	peptidyl-prolyl cis-trans isomerase, putative
+PBANKA_1243700	7	thioredoxin-like protein, putative
+PBANKA_1243800	7	apicoplast TIC22 protein, putative
+PBANKA_1244000	7	cell cycle regulator protein, putative
+PBANKA_1244300	7	RING zinc finger protein, putative
+PBANKA_1244400	7	conserved Plasmodium protein, unknown function
+PBANKA_1304000	7	cohesin complex subunit, putative
+PBANKA_1304400	7	allantoicase, putative
+PBANKA_1309700	7	ATP-dependent RNA helicase DDX5, putative
+PBANKA_1309750	7	U5 spliceosomal RNA
+PBANKA_1310100	7	pyruvate dehydrogenase E1 component subunit beta, putative
+PBANKA_1310800	7	40S ribosomal protein S5, putative
+PBANKA_1310900	7	conserved Plasmodium protein, unknown function
+PBANKA_1311100	7	ribosomal protein S14, mitochondrial, putative
+PBANKA_1311200	7	conserved Plasmodium protein, unknown function
+PBANKA_1312300	7	SNARE protein, putative
+PBANKA_1330400	7	DNA-3-methyladenine glycosylase, putative
+PBANKA_1330500	7	WD repeat-containing protein 79, putative
+PBANKA_1330600	7	1-deoxy-D-xylulose 5-phosphate reductoisomerase, putative
+PBANKA_1332700	7	duffy-binding protein
+PBANKA_1334200	7	RNA 3'-terminal phosphate cyclase-like protein, putative
+PBANKA_1336600	7	conserved protein, unknown function
+PBANKA_1336800	7	conserved Plasmodium protein, unknown function
+PBANKA_1340000	7	dihydrofolate synthase/folylpolyglutamate synthase, putative
+PBANKA_1342000	7	Qa-SNARE protein, putative
+PBANKA_1342200	7	conserved Plasmodium protein, unknown function
+PBANKA_1343750	7	Plasmodium RNA of unknown function RUF1
+PBANKA_1343800	7	transcriptional regulatory protein sir2a
+PBANKA_1344400	7	AMP deaminase
+PBANKA_1344700	7	apicoplast calcium binding protein 1, putative
+PBANKA_1345000	7	PITH domain-containing protein, putative
+PBANKA_1345400	7	ER lumen protein retaining receptor 1, putative
+PBANKA_1346500	7	protein tyrosine phosphatase-like protein
+PBANKA_1346800	7	Qa-SNARE protein, putative
+PBANKA_1347200	7	nucleotidyltransferase, putative
+PBANKA_1347400	7	DNA-(apurinic or apyrimidinic site) lyase 1, putative
+PBANKA_1347600	7	eukaryotic translation initiation factor 6, putative
+PBANKA_1347800	7	20 kDa chaperonin, putative
+PBANKA_1348500	7	Voldacs domain-containing protein, putative
+PBANKA_1349800	7	thrombospondin-related anonymous protein
+PBANKA_1350100	7	conserved Plasmodium protein, unknown function
+PBANKA_1350900	7	protein kinase 6
+PBANKA_1351500	7	calcium-dependent protein kinase 5
+PBANKA_1351600	7	conserved Plasmodium protein, unknown function
+PBANKA_1352200	7	conserved Plasmodium protein, unknown function
+PBANKA_1352600	7	serine/threonine protein kinase, putative
+PBANKA_1352700	7	conserved protein, unknown function
+PBANKA_1353400	7	secreted ookinete protein, putative
+PBANKA_1354100	7	ras-related protein Rab-11B, putative
+PBANKA_1354380	7	U6 spliceosomal RNA
+PBANKA_1354600	7	inner membrane complex suture component, putative
+PBANKA_1355500	7	casein kinase II beta chain, putative
+PBANKA_1358500	7	inner membrane complex protein, putative
+PBANKA_1362000	7	glutamate--tRNA ligase, putative
+PBANKA_1362700	7	conserved Plasmodium protein, unknown function
+PBANKA_1363000	7	small nuclear ribonucleoprotein E, putative
+PBANKA_1363100	7	conserved protein, unknown function
+PBANKA_1363700	7	AP2 domain transcription factor AP2-O4
+PBANKA_1364000	7	conserved Plasmodium protein, unknown function
+PBANKA_1364200	7	60S ribosomal protein L17, putative
+PBANKA_1400800	7	protein UIS3
+PBANKA_1404400	7	conserved Plasmodium protein, unknown function
+PBANKA_1406000	7	conserved Plasmodium protein, unknown function
+PBANKA_1409200	7	RNA-binding protein, putative
+PBANKA_1410200	7	cytochrome c, putative
+PBANKA_1410950	7	apical ring associated protein 1
+PBANKA_1416300	7	40S ribosomal protein S19, putative
+PBANKA_1420600	7	histone H2B variant, putative
+PBANKA_1422800	7	conserved Plasmodium protein, unknown function
+PBANKA_1423000	7	conserved protein, unknown function
+PBANKA_1424300	7	conserved protein, unknown function
+PBANKA_1427900	7	histone acetyltransferase subunit NuA4, putative
+PBANKA_1428980	7	U1 spliceosomal RNA
+PBANKA_1430200	7	ER membrane protein complex subunit 6, putative
+PBANKA_1432300	7	cell traversal protein for ookinetes and sporozoites
+PBANKA_1433600	7	thrombospondin-related apical membrane protein
+PBANKA_1438700	7	citrate/oxoglutarate carrier protein, putative
+PBANKA_1439000	7	conserved protein, unknown function
+PBANKA_1440800	7	conserved Plasmodium protein, unknown function
+PBANKA_1443000	7	NIMA related kinase 1, putative
+PBANKA_1443400	7	conserved Plasmodium protein, unknown function
+PBANKA_1445100	7	ATP-dependent protease subunit ClpQ, putative
+PBANKA_1449500	7	CHCH domain-containing protein, putative
+PBANKA_1449700	7	conserved protein, unknown function
+PBANKA_1450100	7	N6-adenosine-methyltransferase, putative
+PBANKA_1451200	7	p25-alpha family protein, putative
+PBANKA_1452500	7	conserved Plasmodium protein, unknown function
+PBANKA_1455200	7	ATP-dependent RNA helicase DBP9, putative
+PBANKA_1456700	7	conserved Plasmodium protein, unknown function
+PBANKA_1457550	7	ACEA small nucleolar RNA U3
+PBANKA_1457700	7	conserved Plasmodium protein, unknown function
+PBANKA_1459800	7	conserved Plasmodium protein, unknown function
+PBANKA_1460000	7	rac-beta serine/threonine protein kinase, putative
+PBANKA_1460100	7	conserved protein, unknown function
+PBANKA_1462400	7	protein CutA, putative
+PBANKA_0104000	8	acylphosphatase, putative
+PBANKA_0104100	8	serine/threonine protein kinase ARK1, putative
+PBANKA_0107200	8	conserved Plasmodium protein, unknown function
+PBANKA_0206300	8	centrin-1, putative
+PBANKA_0301300	8	conserved Plasmodium protein, unknown function
+PBANKA_0302500	8	hexose transporter
+PBANKA_0313400	8	autophagy-related protein 11, putative
+PBANKA_0317061	8	fam-a protein
+PBANKA_0404400	8	cytochrome b-c1 complex subunit 8, putative
+PBANKA_0405600	8	microtubule-associated protein RP/EB family, putative
+PBANKA_0406600	8	conserved Plasmodium protein, unknown function
+PBANKA_0407700	8	60S acidic ribosomal protein P2, putative
+PBANKA_0411300	8	conserved Plasmodium protein, unknown function
+PBANKA_0412100	8	serine/threonine protein phosphatase 6
+PBANKA_0412200	8	conserved Plasmodium protein, unknown function
+PBANKA_0415000	8	Maf-like protein, putative
+PBANKA_0504300	8	flagellar outer arm dynein-associated protein, putative
+PBANKA_0511800	8	centrin-3, putative
+PBANKA_0512800	8	merozoite TRAP-like protein
+PBANKA_0516300	8	DER1-like protein, putative
+PBANKA_0523800	8	apical asparagine-rich protein AARP, putative
+PBANKA_0524200	8	early transcribed membrane protein
+PBANKA_0524300	8	tryptophan-rich protein
+PBANKA_0601900	8	high mobility group protein B1, putative
+PBANKA_0604300	8	tetratricopeptide repeat protein, putative
+PBANKA_0609900	8	heat shock protein DNAJ homologue Pfj4, putative
+PBANKA_0610200	8	DNA replication licensing factor MCM5, putative
+PBANKA_0610900	8	HSP40, subfamily A, putative
+PBANKA_0618300	8	Ham1-like protein, putative
+PBANKA_0718800	8	small GTP-binding protein sar1, putative
+PBANKA_0720800	8	RNA-binding protein NOB1, putative
+PBANKA_0816100	8	SUMO-conjugating enzyme UBC9, putative
+PBANKA_0816200	8	ribonuclease H2 subunit C, putative
+PBANKA_0819450	8	telomerase RNA
+PBANKA_0828300	8	dynein light chain, putative
+PBANKA_0829200	8	conserved protein, unknown function
+PBANKA_0833700	8	conserved Plasmodium protein, unknown function
+PBANKA_0835300	8	V-type proton ATPase subunit E, putative
+PBANKA_0921300	8	deoxyuridine 5'-triphosphate nucleotidohydrolase, putative
+PBANKA_0926700	8	exported protein 1
+PBANKA_0936500	8	replication factor C subunit 5, putative
+PBANKA_0936900	8	actin-like protein, putative
+PBANKA_0943600	8	60S acidic ribosomal protein P1, putative
+PBANKA_1010600	8	calmodulin, putative
+PBANKA_1012200	8	protein-L-isoaspartate(D-aspartate) O-methyltransferase, putative
+PBANKA_1012400	8	RNA methyltransferase, putative
+PBANKA_1014600	8	serine/threonine protein phosphatase 2A activator, putative
+PBANKA_1018200	8	MORN repeat protein, putative
+PBANKA_1024700	8	ubiquitin fusion degradation protein 1, putative
+PBANKA_1028400	8	60S ribosomal protein L10, putative
+PBANKA_1029700	8	ubiquitin-conjugating enzyme E2, putative
+PBANKA_1033100	8	conserved protein, unknown function
+PBANKA_1034900	8	pre-mRNA-splicing factor 38B, putative
+PBANKA_1108300	8	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative
+PBANKA_1108900	8	conserved Plasmodium protein, unknown function
+PBANKA_1117500	8	ribosomal protein L27a, putative
+PBANKA_1119100	8	splicing factor 3A subunit 2, putative
+PBANKA_1119300	8	ATP synthase-associated protein, putative
+PBANKA_1123400	8	anaphase-promoting complex subunit 11, putative
+PBANKA_1130300	8	reactive oxygen species modulator 1, putative
+PBANKA_1141500	8	SNARE associated Golgi protein, putative
+PBANKA_1142400	8	nucleoside diphosphate kinase b, putative
+PBANKA_1204200	8	IMP1-like protein, putative
+PBANKA_1205400	8	rho GTPase-activating protein, putative
+PBANKA_1208900	8	ankyrin-repeat protein, putative
+PBANKA_1218500	8	protein phosphatase inhibitor 2, putative
+PBANKA_1221200	8	60S ribosomal protein L34, putative
+PBANKA_1224200	8	DnaJ protein, putative
+PBANKA_1224800	8	conserved protein, unknown function
+PBANKA_1239200	8	ribosome-interacting GTPase 1, putative
+PBANKA_1303800	8	triosephosphate isomerase, putative
+PBANKA_1305000	8	conserved Plasmodium protein, unknown function
+PBANKA_1308600	8	fructose-bisphosphate aldolase 2
+PBANKA_1324300	8	inner membrane complex sub-compartment protein 3
+PBANKA_1325000	8	40S ribosomal protein S28e, putative
+PBANKA_1335200	8	pre-mRNA-splicing factor ISY1, putative
+PBANKA_1338400	8	V-type proton ATPase subunit G, putative
+PBANKA_1344300	8	chromatin assembly factor 1 subunit B, putative
+PBANKA_1350500	8	parasitophorous vacuolar protein 3
+PBANKA_1352621	8	tRNA Methionine
+PBANKA_1355000	8	V-type proton ATPase subunit D, putative
+PBANKA_1360200	8	conserved Plasmodium protein, unknown function
+PBANKA_1362500	8	peptidase, putative
+PBANKA_1438600	8	vacuolar iron transporter
+PBANKA_1448400	8	conserved protein, unknown function
+PBANKA_1457900	8	conserved protein, unknown function
+PBANKA_1463900	8	HSP20-like chaperone, putative
+PBANKA_0207600	9	asparagine-rich antigen, putative
+PBANKA_0305500	9	conserved Plasmodium protein, unknown function
+PBANKA_0401200	9	ABC transporter B family member 4, putative
+PBANKA_0503200	9	eukaryotic translation initiation factor subunit eIF2A, putative
+PBANKA_0518800	9	U2 snRNA/tRNA pseudouridine synthase, putative
+PBANKA_0521700	9	AP2 domain transcription factor, putative
+PBANKA_0618500	9	conserved Plasmodium protein, unknown function
+PBANKA_0722700	9	PIR protein, pseudogene
+PBANKA_0804341	9	tRNA Histidine
+PBANKA_0804900	9	E3 ubiquitin-protein ligase, putative
+PBANKA_0808000	9	cdc2-related protein kinase 4, putative
+PBANKA_0811100	9	helicase SKI2W, putative
+PBANKA_0914500	9	conserved Plasmodium protein, unknown function
+PBANKA_0916600	9	oxysterol-binding protein, putative
+PBANKA_0929800	9	insulinase, putative
+PBANKA_0944041	9	reticulocyte binding protein, putative
+PBANKA_1016200	9	protein kinase, putative
+PBANKA_1138800	9	conserved Plasmodium protein, unknown function
+PBANKA_1140400	9	exosome complex component RRP45, putative
+PBANKA_1205900	9	AP2 domain transcription factor AP2-I, putative
+PBANKA_1211100	9	NLI interacting factor-like phosphatase
+PBANKA_1212300	9	translation initiation factor eIF-2B subunit delta, putative
+PBANKA_1217400	9	conserved Plasmodium protein, unknown function
+PBANKA_1244800	9	conserved Plasmodium protein, unknown function
+PBANKA_1306100	9	GTP-binding protein YihA2, putative
+PBANKA_1318000	9	SNF1-related serine/threonine protein kinase KIN
+PBANKA_1319400	9	conserved Plasmodium protein, unknown function
+PBANKA_1324200	9	conserved Plasmodium protein, unknown function
+PBANKA_1336300	9	GTPase-activating protein, putative
+PBANKA_1339200	9	conserved Plasmodium protein, unknown function
+PBANKA_1352641	9	tRNA Proline
+PBANKA_1400051	9	PIR protein
+PBANKA_1402000	9	sodium/hydrogen exchanger, putative
+PBANKA_1452100	9	conserved Plasmodium protein, unknown function
+PBANKA_1454300	9	vacuolar protein sorting-associated protein 16, putative
+PBANKA_1457300	9	glucose inhibited division protein a homologue, putative
+PBANKA_1462600	9	conserved Plasmodium protein, unknown function
+PBANKA_API00270	9	probable protein, unknown function
+PBANKA_API00330	9	apicoplast ribosomal protein S5
+PBANKA_API00340	9	apicoplast ribosomal protein L6
+PBANKA_API00370	9	apicoplast ribosomal protein S17
+PBANKA_API00390	9	ribosomal protein S3, putative
+PBANKA_API00430	9	50S ribosomal protein L4, putative
+PBANKA_0105500	10	glutaredoxin-like protein
+PBANKA_0202600	10	conserved protein, unknown function
+PBANKA_0206000	10	ATP synthase-associated protein, putative
+PBANKA_0208300	10	novel putative transporter 1
+PBANKA_0213900	10	dynein light chain, putative
+PBANKA_0214100	10	conserved protein, unknown function
+PBANKA_0305900	10	conserved Plasmodium protein, unknown function
+PBANKA_0306900	10	Sec61-gamma subunit of protein translocation complex, putative
+PBANKA_0309700	10	multidrug efflux pump, putative
+PBANKA_0310100	10	conserved protein, unknown function
+PBANKA_0405700	10	ATP-dependent Clp protease proteolytic subunit, putative
+PBANKA_0502700	10	pre-mRNA-splicing factor RDS3, putative
+PBANKA_0511700	10	meiotic recombination protein SPO11-2, putative
+PBANKA_0606400	10	conserved Plasmodium protein, unknown function
+PBANKA_0611900	10	histidine triad protein, putative
+PBANKA_0700081	10	PIR protein
+PBANKA_0708400	10	small nuclear ribonucleoprotein G, putative
+PBANKA_0709100	10	60S ribosomal protein L22, putative
+PBANKA_0719100	10	conserved Plasmodium protein, unknown function
+PBANKA_0818300	10	conserved protein, unknown function
+PBANKA_0825900	10	conserved Plasmodium protein, unknown function
+PBANKA_0836100	10	phosphatidylinositol N-acetylglucosaminyltransferase subunit P, putative
+PBANKA_0905300	10	conserved Plasmodium protein, unknown function
+PBANKA_0906500	10	60S ribosomal protein L28, putative
+PBANKA_0926200	10	GPI transamidase component GPI16
+PBANKA_0931800	10	pyridoxine biosynthesis protein PDX2, putative
+PBANKA_0932300	10	AP2 domain transcription factor, putative
+PBANKA_1001900	10	conserved Plasmodium protein, unknown function
+PBANKA_1015100	10	conserved Plasmodium protein, unknown function
+PBANKA_1019540	10	small nucleolar RNA snoR25
+PBANKA_1031400	10	conserved Plasmodium protein, unknown function
+PBANKA_1103700	10	AN1-type zinc finger protein, putative
+PBANKA_1111300	10	EKC/KEOPS complex subunit CGI121, putative
+PBANKA_1123000	10	conserved protein, unknown function
+PBANKA_1130200	10	ER lumen protein retaining receptor, putative
+PBANKA_1134700	10	conserved Plasmodium protein, unknown function
+PBANKA_1204800	10	phosducin-like protein 3
+PBANKA_1208700	10	succinate dehydrogenase subunit 4, putative
+PBANKA_1210300	10	heme oxygenase, putative
+PBANKA_1238300	10	dynein light chain Tctex-type, putative
+PBANKA_1300096	10	fam-b protein
+PBANKA_1305800	10	RNA polymerase II transcription factor B subunit 5, putative
+PBANKA_1313500	10	conserved protein, unknown function
+PBANKA_1319800	10	serine hydroxymethyltransferase, putative
+PBANKA_1322600	10	golgi apparatus membrane protein TVP23, putative
+PBANKA_1323400	10	bax inhibitor 1, putative
+PBANKA_1348100	10	AMMECR1 domain-containing protein, putative
+PBANKA_1351200	10	zinc finger protein, putative
+PBANKA_1351700	10	LMBR1 domain-containing protein, putative
+PBANKA_1412500	10	conserved Plasmodium protein, unknown function
+PBANKA_1435800	10	conserved Plasmodium protein, unknown function
+PBANKA_1436400	10	conserved Plasmodium protein, unknown function
+PBANKA_1446200	10	mitosis protein dim1, putative
+PBANKA_1451400	10	protein-S-isoprenylcysteine O-methyltransferase, putative
+PBANKA_0100041	11	conserved rodent malaria protein, unknown function
+PBANKA_0102000	11	mitochondrial chaperone BCS1, putative
+PBANKA_0103100	11	conserved Plasmodium protein, unknown function
+PBANKA_0112300	11	filamin domain-containing protein, putative
+PBANKA_0201051	11	conserved rodent malaria protein, unknown function
+PBANKA_0213700	11	COX assembly mitochondrial protein, putative
+PBANKA_0312100	11	conserved Plasmodium protein, unknown function
+PBANKA_0400800	11	fam-a protein, pseudogene
+PBANKA_0407500	11	N2227-like protein, putative
+PBANKA_0515350	11	OTU-like cysteine protease, putative
+PBANKA_0523200	11	serpentine receptor, putative
+PBANKA_0604200	11	zinc finger protein, putative
+PBANKA_0611000	11	trafficking protein particle complex subunit 5, putative
+PBANKA_0612841	11	tRNA Alanine
+PBANKA_0615500	11	conserved Plasmodium protein, unknown function
+PBANKA_0722100	11	PIR protein, pseudogene
+PBANKA_0722921	11	PIR protein
+PBANKA_0810200	11	conserved Plasmodium protein, unknown function
+PBANKA_0816400	11	ATP-dependent 6-phosphofructokinase, putative
+PBANKA_0917980	11	small nucleolar RNA snoR14a
+PBANKA_0918300	11	major facilitator superfamily-related transporter, putative
+PBANKA_0925500	11	calcium-dependent protein kinase 6
+PBANKA_0925900	11	conserved Plasmodium protein, unknown function
+PBANKA_0929600	11	nucleolar protein 56, putative
+PBANKA_1000651	11	tRNA Asparagine
+PBANKA_1015600	11	ribosomal protein L15, apicoplast, putative
+PBANKA_1015800	11	conserved Plasmodium protein, unknown function
+PBANKA_1017600	11	conserved Plasmodium protein, unknown function
+PBANKA_1019520	11	small nucleolar RNA snoR26
+PBANKA_1024500	11	conserved Plasmodium protein, unknown function
+PBANKA_1031800	11	conserved protein, unknown function
+PBANKA_1032700	11	CUGBP Elav-like family member 2, putative
+PBANKA_1036700	11	COBW domain-containing protein 1, putative
+PBANKA_1039450	11	small nucleolar RNA snoR22
+PBANKA_1107200	11	protein CAF40, putative
+PBANKA_1107700	11	SET domain protein, putative
+PBANKA_1114051	11	tRNA Phenylalanine
+PBANKA_1119921	11	tRNA Alanine
+PBANKA_1138500	11	3'-5' exonuclease, putative
+PBANKA_1142500	11	signal recognition particle receptor subunit alpha, putative
+PBANKA_1209500	11	conserved Plasmodium protein, unknown function
+PBANKA_1237300	11	magnesium transporter NIPA, putative
+PBANKA_1239800	11	zinc finger protein, putative
+PBANKA_1240900	11	conserved Plasmodium protein, unknown function
+PBANKA_1242700	11	AP-1/2 complex subunit beta, putative
+PBANKA_1243600	11	conserved Plasmodium protein, unknown function
+PBANKA_1309600	11	conserved Plasmodium protein, unknown function
+PBANKA_1319200	11	AP-1 complex subunit gamma, putative
+PBANKA_1323100	11	conserved Plasmodium protein, unknown function
+PBANKA_1331500	11	telomere length and silencing protein 1, putative
+PBANKA_1350800	11	mitochondrial intermediate peptidase, putative
+PBANKA_1363300	11	conserved Plasmodium protein, unknown function
+PBANKA_1364250	11	small nucleolar RNA snoR21
+PBANKA_1364800	11	ABC transporter B family member 6, putative
+PBANKA_1365721	11	conserved rodent malaria protein, unknown function
+PBANKA_1411000	11	conserved Plasmodium protein, unknown function
+PBANKA_1412300	11	ankyrin-repeat protein, putative
+PBANKA_1419900	11	cGMP-specific 3',5'-cyclic phosphodiesterase gamma, putative
+PBANKA_1422300	11	FAD-dependent monooxygenase, putative
+PBANKA_1430500	11	conserved protein, unknown function
+PBANKA_1433700	11	conserved Plasmodium protein, unknown function
+PBANKA_1450900	11	conserved protein, unknown function
+PBANKA_1462500	11	leucine-rich repeat protein
+PBANKA_1464100	11	coronin
+PBANKA_0111800	12	AP-3 complex subunit beta, putative
+PBANKA_0313100	12	vacuolar protein sorting-associated protein 45, putative
+PBANKA_0405310	12	small nucleolar RNA snoR03
+PBANKA_0408600	12	eukaryotic translation initiation factor 3 subunit K, putative
+PBANKA_0413200	12	conserved Plasmodium protein, unknown function
+PBANKA_0509100	12	conserved Plasmodium protein, unknown function
+PBANKA_0509500	12	conserved protein, unknown function
+PBANKA_0523000	12	conserved Plasmodium protein, unknown function
+PBANKA_0600700	12	conserved Plasmodium protein, unknown function
+PBANKA_0601500	12	trimethylguanosine synthase, putative
+PBANKA_0601700	12	conserved Plasmodium protein, unknown function
+PBANKA_0619800	12	zinc finger protein, putative
+PBANKA_0621700	12	type 2A phosphatase-associated protein 42, putative
+PBANKA_0709900	12	conserved Plasmodium protein, unknown function
+PBANKA_0710000	12	conserved Plasmodium protein, unknown function
+PBANKA_0713700	12	tRNA modification GTPase, putative
+PBANKA_0715100	12	ubiquitin, putative
+PBANKA_0718900	12	conserved Plasmodium protein, unknown function
+PBANKA_0817600	12	methyltransferase, putative
+PBANKA_0825600	12	splicing factor 3A subunit 3, putative
+PBANKA_0826100	12	proline--tRNA ligase, putative
+PBANKA_0914900	12	conserved Plasmodium protein, unknown function
+PBANKA_0926000	12	conserved Plasmodium protein, unknown function
+PBANKA_1012500	12	leucine-rich repeat protein
+PBANKA_1015300	12	rRNA (adenosine-2'-O-)-methyltransferase, putative
+PBANKA_1021100	12	DnaJ protein, putative
+PBANKA_1021700	12	conserved Plasmodium protein, unknown function
+PBANKA_1027200	12	conserved Plasmodium protein, unknown function
+PBANKA_1028500	12	conserved Plasmodium protein, unknown function
+PBANKA_1030700	12	conserved Plasmodium protein, unknown function
+PBANKA_1104000	12	ATP-dependent helicase, putative
+PBANKA_1105600	12	conserved Plasmodium protein, unknown function
+PBANKA_1105800	12	TATA-box binding protein, putative
+PBANKA_1107900	12	triose phosphate transporter
+PBANKA_1115900	12	conserved Plasmodium protein, unknown function
+PBANKA_1118900	12	F-box protein FBXO1, putative
+PBANKA_1142300	12	rhoptry protein RHOP148, putative
+PBANKA_1203300	12	methionine--tRNA ligase, putative
+PBANKA_1203900	12	peptidase, putative
+PBANKA_1212100	12	conserved Plasmodium protein, unknown function
+PBANKA_1212800	12	MO15-related protein kinase
+PBANKA_1236700	12	conserved Plasmodium protein, unknown function
+PBANKA_1311900	12	conserved Plasmodium protein, unknown function
+PBANKA_1320000	12	conserved Plasmodium protein, unknown function
+PBANKA_1342100	12	conserved Plasmodium protein, unknown function
+PBANKA_1344900	12	conserved Plasmodium protein, unknown function
+PBANKA_1364900	12	U3 small nucleolar RNA-associated protein 15, putative
+PBANKA_1440400	12	small subunit rRNA processing factor, putative
+PBANKA_1447100	12	CWC16 domain-containing protein, putative
+PBANKA_1459000	12	ankyrin-repeat protein, putative
+PBANKA_1460300	12	GPI mannosyltransferase 2, putative
+PBANKA_1462800	12	ribosomal RNA small subunit methyltransferase A2, putative
+PBANKA_0110700	13	conserved Plasmodium protein, unknown function
+PBANKA_0201800	13	TatD-like deoxyribonuclease
+PBANKA_0302000	13	conserved Plasmodium protein, unknown function
+PBANKA_0304600	13	iron-sulfur assembly protein, putative
+PBANKA_0503100	13	conserved Plasmodium protein, unknown function
+PBANKA_0512500	13	ribosome biogenesis protein RPF2, putative
+PBANKA_0602400	13	major facilitator superfamily domain-containing protein, putative
+PBANKA_0608500	13	SNARE protein, putative
+PBANKA_0612700	13	conserved Plasmodium protein, unknown function
+PBANKA_0619500	13	conserved Plasmodium protein, unknown function
+PBANKA_0721200	13	conserved Plasmodium protein, unknown function
+PBANKA_0802600	13	peptide chain release factor 2, putative
+PBANKA_0807400	13	26S proteasome non-ATPase regulatory subunit 9, putative
+PBANKA_0813800	13	tRNA (adenine(58)-N(1))-methyltransferase non-catalytic subunit TRM6, putative
+PBANKA_0814100	13	heptatricopeptide repeat-containing protein, putative
+PBANKA_0905700	13	DNA-directed RNA polymerases I and III subunit RPAC1, putative
+PBANKA_0910400	13	conserved protein, unknown function
+PBANKA_0915400	13	conserved Plasmodium protein, unknown function
+PBANKA_0918700	13	A/G-specific adenine glycosylase, putative
+PBANKA_0921000	13	conserved Plasmodium protein, unknown function
+PBANKA_0926100	13	JmjC domain-containing protein, putative
+PBANKA_1003200	13	conserved Plasmodium protein, unknown function
+PBANKA_1016400	13	major facilitator superfamily domain-containing protein, putative
+PBANKA_1019560	13	small nucleolar RNA snoR24
+PBANKA_1105700	13	60S ribosomal subunit protein L24, putative
+PBANKA_1111500	13	conserved Plasmodium protein, unknown function
+PBANKA_1112400	13	orotate phosphoribosyltransferase, putative
+PBANKA_1113200	13	mitochondrial import inner membrane translocase subunit TIM16, putative
+PBANKA_1113600	13	conserved protein, unknown function
+PBANKA_1114000	13	aspartate--tRNA ligase, putative
+PBANKA_1128300	13	amino acid transporter AAT1, putative
+PBANKA_1143500	13	ribosome biogenesis protein MRT4, putative
+PBANKA_1205700	13	conserved Plasmodium protein, unknown function
+PBANKA_1210600	13	rhoptry associated adhesin, putative
+PBANKA_1214900	13	BSD domain-containing protein, putative
+PBANKA_1219400	13	protein SCO1, putative
+PBANKA_1233200	13	cyclin
+PBANKA_1317000	13	Yos1-like protein, putative
+PBANKA_1332400	13	shewanella-like protein phosphatase 1
+PBANKA_1339800	13	conserved Plasmodium protein, unknown function
+PBANKA_1353500	13	exosome complex component RRP42, putative
+PBANKA_1426800	13	conserved Plasmodium protein, unknown function
+PBANKA_1438100	13	nucleus export protein BRR6, putative
+PBANKA_1451000	13	conserved Plasmodium protein, unknown function
+PBANKA_1458600	13	50S ribosomal protein L3, mitochondrial, putative
+PBANKA_1460900	13	tRNA-splicing endonuclease, putative
+PBANKA_1462000	13	conserved protein, unknown function
+PBANKA_MIT01100	13	cytochrome c oxidase subunit 3
+PBANKA_0107000	14	conserved Plasmodium protein, unknown function
+PBANKA_0111500	14	conserved Plasmodium protein, unknown function
+PBANKA_0112000	14	syntaxin-binding protein, putative
+PBANKA_0112400	14	cytosolic Fe-S cluster assembly factor NAR1, putative
+PBANKA_0201700	14	conserved Plasmodium protein, unknown function
+PBANKA_0202000	14	eukaryotic translation initiation factor 4E, putative
+PBANKA_0202200	14	conserved Plasmodium protein, unknown function
+PBANKA_0203650	14	conserved protein, unknown function
+PBANKA_0203750	14	phosphatidate cytidylyltransferase, putative
+PBANKA_0204900	14	DnaJ domain-containing protein, putative
+PBANKA_0205500	14	conserved Plasmodium protein, unknown function
+PBANKA_0207900	14	conserved Plasmodium protein, unknown function
+PBANKA_0209800	14	conserved protein, unknown function
+PBANKA_0209900	14	nucleoside transporter 4, putative
+PBANKA_0210300	14	seipin domain-containing protein, putative
+PBANKA_0302300	14	aspartate aminotransferase, putative
+PBANKA_0304200	14	DNA-directed RNA polymerase III subunit RPC10, putative
+PBANKA_0304300	14	adenylosuccinate lyase, putative
+PBANKA_0305300	14	KRR1 small subunit processome component, putative
+PBANKA_0305700	14	ribosome-recycling factor, putative
+PBANKA_0305800	14	SHS2 domain-containing protein, putative
+PBANKA_0308500	14	tyrosine kinase-like protein, putative
+PBANKA_0310400	14	tetratricopeptide repeat protein, putative
+PBANKA_0311200	14	conserved protein, unknown function
+PBANKA_0312900	14	Alba domain-containing protein, putative
+PBANKA_0314000	14	AP-2 complex subunit sigma, putative
+PBANKA_0314900	14	SUZ domain-containing protein, putative
+PBANKA_0315400	14	pre-mRNA-processing protein 45, putative
+PBANKA_0315410	14	ribonuclease P
+PBANKA_0315700	14	conserved Plasmodium protein, unknown function
+PBANKA_0403100	14	1-cys-glutaredoxin-like protein-1, putative
+PBANKA_0403400	14	conserved protein, unknown function
+PBANKA_0413600	14	zinc finger protein, putative
+PBANKA_0414800	14	arginase
+PBANKA_0505500	14	apicoplast integral membrane protein, putative
+PBANKA_0508700	14	conserved Plasmodium protein, unknown function
+PBANKA_0509400	14	ATP synthase mitochondrial F1 complex assembly factor 2, putative
+PBANKA_0510400	14	conserved protein, unknown function
+PBANKA_0512300	14	RING zinc finger protein, putative
+PBANKA_0512400	14	rRNA-processing protein EBP2, putative
+PBANKA_0513200	14	WD repeat-containing protein, putative
+PBANKA_0513300	14	conserved protein, unknown function
+PBANKA_0515800	14	ribosome maturation factor RimM, putative
+PBANKA_0522800	14	40S ribosomal protein S19, putative
+PBANKA_0601800	14	DNA/RNA-binding protein, putative
+PBANKA_0604000	14	conserved Plasmodium protein, unknown function
+PBANKA_0608000	14	porphobilinogen deaminase
+PBANKA_0612500	14	mediator of RNA polymerase II transcription subunit 8, putative
+PBANKA_0613900	14	PDCD2 domain-containing protein, putative
+PBANKA_0615100	14	queuine tRNA-ribosyltransferase, putative
+PBANKA_0616600	14	ATP synthase F0 subunit a-like protein, putative
+PBANKA_0616800	14	actin-related protein, putative
+PBANKA_0617600	14	pre-rRNA-processing protein ESF2, putative
+PBANKA_0617700	14	conserved protein, unknown function
+PBANKA_0619400	14	V-type ATPase V0 subunit e, putative
+PBANKA_0619900	14	Obg-like ATPase 1, putative
+PBANKA_0702600	14	conserved Plasmodium protein, unknown function
+PBANKA_0703400	14	conserved Plasmodium protein, unknown function
+PBANKA_0709700	14	protein kinase 1
+PBANKA_0709800	14	conserved Plasmodium protein, unknown function
+PBANKA_0710300	14	protein transport protein YIF1, putative
+PBANKA_0710700	14	RNA-binding protein, putative
+PBANKA_0710900	14	U6 snRNA-associated Sm-like protein LSm3, putative
+PBANKA_0711100	14	conserved Plasmodium protein, unknown function
+PBANKA_0712000	14	U3 small nucleolar ribonucleoprotein protein IMP4, putative
+PBANKA_0712700	14	zinc finger protein, putative
+PBANKA_0713100	14	rhoptry neck protein 5
+PBANKA_0714700	14	phosphopantothenoylcysteine decarboxylase, putative
+PBANKA_0714800	14	ribosome assembly protein RRB1, putative
+PBANKA_0717700	14	conserved Plasmodium protein, unknown function
+PBANKA_0719600	14	memo-like protein
+PBANKA_0805300	14	conserved Plasmodium protein, unknown function
+PBANKA_0808420	14	tubulin-specific chaperone, putative
+PBANKA_0809200	14	ribosomal protein L35, apicoplast, putative
+PBANKA_0820400	14	major facilitator superfamily domain-containing protein, putative
+PBANKA_0820600	14	pyridoxal phosphate homeostasis protein, putative
+PBANKA_0821000	14	chaperone, putative
+PBANKA_0825000	14	conserved Plasmodium protein, unknown function
+PBANKA_0834500	14	conserved Plasmodium protein, unknown function
+PBANKA_0834800	14	histidine--tRNA ligase, putative
+PBANKA_0834900	14	TFIIH basal transcription factor complex helicase XPD subunit, putative
+PBANKA_0835800	14	U2 small nuclear ribonucleoprotein B'', putative
+PBANKA_0836941	14	fam-b protein
+PBANKA_0906300	14	methyltransferase, putative
+PBANKA_0906800	14	conserved Plasmodium protein, unknown function
+PBANKA_0912800	14	conserved Plasmodium protein, unknown function
+PBANKA_0912900	14	conserved Plasmodium protein, unknown function
+PBANKA_0917000	14	conserved Plasmodium protein, unknown function
+PBANKA_0917700	14	methyltransferase, putative
+PBANKA_0917990	14	small nucleolar RNA snoR13
+PBANKA_0918100	14	60S ribosomal protein L38, putative
+PBANKA_0922800	14	small nuclear ribonucleoprotein Sm D1, putative
+PBANKA_0923000	14	DNA-directed RNA polymerase, putative
+PBANKA_0923500	14	ribosome biogenesis regulatory protein, putative
+PBANKA_0923900	14	U6 snRNA-associated Sm-like protein LSm1, putative
+PBANKA_0924400	14	13 kDa ribonucleoprotein-associated protein, putative
+PBANKA_0927100	14	conserved protein, unknown function
+PBANKA_0928000	14	conserved Plasmodium protein, unknown function
+PBANKA_0929100	14	acyl-CoA-binding protein, putative
+PBANKA_0939400	14	prefoldin, putative
+PBANKA_0940400	14	conserved Plasmodium protein, unknown function
+PBANKA_0942100	14	metabolite/drug transporter, putative
+PBANKA_1002200	14	6-cysteine protein P52
+PBANKA_1004900	14	transcription factor, putative
+PBANKA_1006700	14	U4/U6 small nuclear ribonucleoprotein PRP31, putative
+PBANKA_1006800	14	protein SOF1, putative
+PBANKA_1012100	14	HP12 protein homolog, putative
+PBANKA_1012900	14	SNARE protein, putative
+PBANKA_1013500	14	large subunit GTPase 1, putative
+PBANKA_1014700	14	conserved protein, unknown function
+PBANKA_1015700	14	protein archease, putative
+PBANKA_1019360	14	small nucleolar RNA snoR29
+PBANKA_1019600	14	vacuolar protein sorting-associated protein 3, putative
+PBANKA_1020900	14	ERAD-associated E3 ubiquitin-protein ligase HRD1, putative
+PBANKA_1021900	14	DNA-directed RNA polymerase III subunit RPC6, putative
+PBANKA_1027500	14	DNA-directed RNA polymerases I and III subunit RPAC2, putative
+PBANKA_1028800	14	DnaJ protein, putative
+PBANKA_1037400	14	cysteine-rich small secreted protein CSS, putative
+PBANKA_1104800	14	actin-like protein, putative
+PBANKA_1105900	14	conserved protein, unknown function
+PBANKA_1111900	14	CDK-activating kinase assembly factor MAT1, putative
+PBANKA_1114500	14	conserved Plasmodium protein, unknown function
+PBANKA_1116100	14	conserved protein, unknown function
+PBANKA_1116800	14	BFR1 domain-containing protein, putative
+PBANKA_1117600	14	LMBR1 domain-containing protein, putative
+PBANKA_1118200	14	conserved protein, unknown function
+PBANKA_1118300	14	conserved Plasmodium protein, unknown function
+PBANKA_1120700	14	nascent polypeptide-associated complex subunit alpha, putative
+PBANKA_1123100	14	SURP domain-containing protein, putative
+PBANKA_1129500	14	bifunctional methylenetetrahydrofolate dehydrogenase/cyclohydrolase, putative
+PBANKA_1130100	14	RNA polymerase II transcription factor B subunit 4, putative
+PBANKA_1131200	14	60S ribosomal protein L7-2, putative
+PBANKA_1201900	14	40S ribosomal protein S20e, putative
+PBANKA_1203450	14	conserved Plasmodium protein, unknown function
+PBANKA_1216000	14	iron-sulfur assembly protein, putative
+PBANKA_1220300	14	prodrug activation and resistance esterase, putative
+PBANKA_1222300	14	coatomer subunit epsilon, putative
+PBANKA_1224000	14	conserved Plasmodium protein, unknown function
+PBANKA_1227300	14	conserved Plasmodium protein, unknown function
+PBANKA_1229100	14	pre-mRNA-splicing factor CWF7, putative
+PBANKA_1230600	14	conserved oligomeric Golgi complex subunit 4, putative
+PBANKA_1234100	14	protoheme IX farnesyltransferase, putative
+PBANKA_1241400	14	conserved Plasmodium protein, unknown function
+PBANKA_1311800	14	U3 small nucleolar RNA-associated protein 12, putative
+PBANKA_1312400	14	HSP20-like chaperone, putative
+PBANKA_1330100	14	60S ribosome subunit biogenesis protein NIP7, putative
+PBANKA_1330800	14	DNA/RNA-binding protein KIN17, putative
+PBANKA_1337800	14	palmitoyltransferase DHHC5
+PBANKA_1338300	14	60S ribosomal protein L6, putative
+PBANKA_1339100	14	protein BCP1, putative
+PBANKA_1340800	14	conserved Plasmodium protein, unknown function
+PBANKA_1341900	14	conserved Apicomplexan protein, unknown function
+PBANKA_1345100	14	conserved Plasmodium protein, unknown function
+PBANKA_1346700	14	60S ribosomal protein L23, putative
+PBANKA_1347300	14	SAM-dependent RNA methyltransferase, putative
+PBANKA_1347500	14	ATP-dependent RNA helicase DBP8, putative
+PBANKA_1349500	14	conserved Plasmodium protein, unknown function
+PBANKA_1352800	14	cytochrome c oxidase subunit ApiCOX14, putative
+PBANKA_1353000	14	conserved Plasmodium protein, unknown function
+PBANKA_1355800	14	DNA-directed RNA polymerases I, II, and III subunit RPABC4, putative
+PBANKA_1361700	14	conserved Plasmodium protein, unknown function
+PBANKA_1362200	14	cytidine and deoxycytidylate deaminase, putative
+PBANKA_1362600	14	GPN-loop GTPase, putative
+PBANKA_1414000	14	conserved protein, unknown function
+PBANKA_1440300	14	rRNA-processing protein, putative
+PBANKA_1447600	14	nucleotidyltransferase, putative
+PBANKA_1447700	14	elongation factor G, putative
+PBANKA_1447800	14	conserved protein, unknown function
+PBANKA_1448100	14	conserved Plasmodium protein, unknown function
+PBANKA_1449200	14	protein TOC75, putative
+PBANKA_1456300	14	mitochondrial import inner membrane translocase subunit TIM13, putative
+PBANKA_1461000	14	methyltransferase, putative
+PBANKA_1461100	14	pre-mRNA-splicing factor RBM22, putative
+PBANKA_1461900	14	conserved Plasmodium protein, unknown function
+PBANKA_1462300	14	conserved Plasmodium protein, unknown function
+PBANKA_1462900	14	rRNA-processing protein FCF2, putative
+PBANKA_0202700	15	kinesin-8B
+PBANKA_0206700	15	conserved Plasmodium protein, unknown function
+PBANKA_0302900	15	MORN repeat protein, putative
+PBANKA_0303000	15	conserved Plasmodium protein, unknown function
+PBANKA_0304900	15	serine repeat antigen 3
+PBANKA_0305100	15	serine repeat antigen 1
+PBANKA_0306100	15	6-cysteine protein P230
+PBANKA_0311800	15	acyl-CoA synthetase, putative
+PBANKA_0317181	15	PIR protein
+PBANKA_0400500	15	PIR protein
+PBANKA_0400600	15	PIR protein
+PBANKA_0406200	15	conserved Plasmodium protein, unknown function
+PBANKA_0406300	15	DNA polymerase delta small subunit, putative
+PBANKA_0413400	15	zinc finger protein, putative
+PBANKA_0416100	15	dynein heavy chain, putative
+PBANKA_0507800	15	conserved protein, unknown function
+PBANKA_0507900	15	conserved Plasmodium protein, unknown function
+PBANKA_0510600	15	cell division cycle protein 20 homolog
+PBANKA_0519100	15	conserved Plasmodium protein, unknown function
+PBANKA_0519200	15	conserved Plasmodium protein, unknown function
+PBANKA_0522700	15	alpha tubulin 2
+PBANKA_0600031	15	PIR protein
+PBANKA_0600086	15	PIR protein
+PBANKA_0600900	15	conserved protein, unknown function
+PBANKA_0602900	15	conserved Plasmodium protein, unknown function
+PBANKA_0610700	15	conserved Plasmodium protein, unknown function
+PBANKA_0622000	15	conserved Plasmodium protein, unknown function
+PBANKA_0700061	15	PIR protein
+PBANKA_0705500	15	ankyrin-repeat protein, putative
+PBANKA_0712100	15	DNA helicase, putative
+PBANKA_0716500	15	RNA-binding protein, putative
+PBANKA_0800200	15	fam-a protein, pseudogene
+PBANKA_0801500	15	conserved Plasmodium protein, unknown function
+PBANKA_0805600	15	EKC/KEOPS complex subunit BUD32, putative
+PBANKA_0806800	15	coiled-coil domain-containing protein CCDC148/CCDC112, putative
+PBANKA_0824600	15	conserved protein, unknown function
+PBANKA_0824700	15	thioredoxin reductase, putative
+PBANKA_0825800	15	conserved Plasmodium protein, unknown function
+PBANKA_0828900	15	conserved Plasmodium protein, unknown function
+PBANKA_0831000	15	merozoite surface protein 1
+PBANKA_0835600	15	cAMP-dependent protein kinase catalytic subunit, putative
+PBANKA_0902000	15	dynein light chain, putative
+PBANKA_0902400	15	kinesin-X4, putative
+PBANKA_0908800	15	conserved Plasmodium protein, unknown function
+PBANKA_0911000	15	calcium-binding protein, putative
+PBANKA_0911100	15	conserved Plasmodium protein, unknown function
+PBANKA_0912400	15	conserved Plasmodium protein, unknown function
+PBANKA_0915000	15	apical membrane antigen 1
+PBANKA_0920700	15	conserved Plasmodium protein, unknown function
+PBANKA_0925400	15	dynein heavy chain, putative
+PBANKA_0927700	15	DDRGK domain-containing protein, putative
+PBANKA_0934700	15	conserved protein, unknown function
+PBANKA_0936800	15	conserved Plasmodium protein, unknown function
+PBANKA_0941200	15	tRNA-splicing ligase RtcB, putative
+PBANKA_0941400	15	centrin-4
+PBANKA_0942300	15	radial spoke head protein, putative
+PBANKA_0942400	15	WD repeat-containing protein, putative
+PBANKA_1000600	15	erythrocyte membrane antigen 1
+PBANKA_1002400	15	dipeptidyl aminopeptidase 3, putative
+PBANKA_1002600	15	6-cysteine protein P41, putative
+PBANKA_1002900	15	ag-1 blood stage membrane protein homologue
+PBANKA_1006100	15	flap endonuclease 1, putative
+PBANKA_1026700	15	conserved Plasmodium protein, unknown function
+PBANKA_1029400	15	conserved Plasmodium protein, unknown function
+PBANKA_1029600	15	conserved Plasmodium protein, unknown function
+PBANKA_1030100	15	actin II
+PBANKA_1030400	15	conserved Plasmodium protein, unknown function
+PBANKA_1030600	15	p1/s1 nuclease, putative
+PBANKA_1035700	15	WD repeat-containing protein 65, putative
+PBANKA_1037500	15	adenylyl cyclase alpha
+PBANKA_1038600	15	conserved Plasmodium protein, unknown function
+PBANKA_1038700	15	tetratricopeptide repeat protein, putative
+PBANKA_1102900	15	cell division control protein 6, putative
+PBANKA_1110300	15	WD repeat-containing protein, putative
+PBANKA_1123700	15	conserved Plasmodium protein, unknown function
+PBANKA_1123800	15	GAS8-like protein, putative
+PBANKA_1129600	15	TPH domain-containing protein, putative
+PBANKA_1145400	15	Plasmodium exported protein (PHIST), unknown function
+PBANKA_1145800	15	membrane associated histidine-rich protein 1a
+PBANKA_1200400	15	PIR protein
+PBANKA_1202300	15	dynein attachment factor-domain containing protein, putative
+PBANKA_1205300	15	roadblock/LC7 domain-containing protein, putative
+PBANKA_1206900	15	tubulin beta chain, putative
+PBANKA_1211800	15	conserved Plasmodium protein, unknown function
+PBANKA_1228800	15	protein kinase, putative
+PBANKA_1230200	15	cdc2-related protein kinase 5
+PBANKA_1232200	15	FACT complex subunit SPT16
+PBANKA_1241800	15	DNA replication licensing factor MCM3, putative
+PBANKA_1302700	15	OST-HTH associated domain protein, putative
+PBANKA_1316400	15	U1 snRNP-associated protein, putative
+PBANKA_1318900	15	methyltransferase, putative
+PBANKA_1326100	15	conserved Plasmodium protein, unknown function
+PBANKA_1330000	15	enkurin domain-containing protein, putative
+PBANKA_1331600	15	leucine-rich repeat protein
+PBANKA_1333100	15	protein MGET, putative
+PBANKA_1334400	15	inorganic anion antiporter, putative
+PBANKA_1336500	15	CKK domain-containing protein, putative
+PBANKA_1340400	15	lactate dehydrogenase, putative
+PBANKA_1341400	15	conserved Plasmodium protein, unknown function
+PBANKA_1344200	15	conserved Plasmodium protein, unknown function
+PBANKA_1349000	15	MSP7-like protein
+PBANKA_1349100	15	MSP7-like protein
+PBANKA_1349400	15	DNA replication complex GINS protein, putative
+PBANKA_1352100	15	SprT-like domain-containing protein, putative
+PBANKA_1360600	15	leucine-rich repeat protein
+PBANKA_1361500	15	WD repeat-containing protein 16, putative
+PBANKA_1402400	15	Sld5 domain-containing protein, putative
+PBANKA_1405900	15	conserved Plasmodium protein, unknown function
+PBANKA_1409600	15	meiosis-specific nuclear structural protein 1, putative
+PBANKA_1418400	15	ATP-dependent Clp protease adapter protein ClpS, putative
+PBANKA_1429100	15	conserved Plasmodium protein, unknown function
+PBANKA_1431400	15	conserved Plasmodium protein, unknown function
+PBANKA_1431500	15	radial spoke head protein 9, putative
+PBANKA_1442300	15	conserved Plasmodium protein, unknown function
+PBANKA_1449000	15	microgamete surface protein MiGS, putative
+PBANKA_1465600	15	PIR protein
+PBANKA_1466100	15	PIR protein
+PBANKA_0403500	16	elongation factor (EF-TS), putative
+PBANKA_0515100	16	conserved Plasmodium protein, unknown function
+PBANKA_0516900	16	S-adenosylmethionine decarboxylase/ornithine decarboxylase, putative
+PBANKA_0836550	16	PIR protein, pseudogene
+PBANKA_1021800	16	mitochondrial import inner membrane translocase subunit TIM8, putative
+PBANKA_1027400	16	RNA-binding protein Nova-1, putative
+PBANKA_1119941	16	tRNA Leucine
+PBANKA_1204000	16	conserved Plasmodium protein, unknown function
+PBANKA_1351000	16	1-deoxy-D-xylulose 5-phosphate synthase, putative
+PBANKA_1354000	16	RNA lariat debranching enzyme, putative
+PBANKA_1402100	16	conserved Plasmodium protein, unknown function
+PBANKA_1410500	16	malonyl CoA-acyl carrier protein transacylase, putative
+PBANKA_1433300	16	conserved Plasmodium protein, unknown function
+PBANKA_1437900	16	conserved Plasmodium protein, unknown function
+PBANKA_0300800	17	octaprenyl pyrophosphate synthase, putative
+PBANKA_0401000	17	pre-mRNA-splicing factor PRP46, putative
+PBANKA_0410800	17	ubiquitin-protein ligase, putative
+PBANKA_0607300	17	zinc finger protein, putative
+PBANKA_0614900	17	conserved Plasmodium protein, unknown function
+PBANKA_0615000	17	transcription initiation factor IIE subunit alpha, putative
+PBANKA_0705300	17	SAYSvFN domain-containing protein, putative
+PBANKA_0805000	17	RAP protein, putative
+PBANKA_0806100	17	CCR4 domain-containing protein 4, putative
+PBANKA_0806600	17	cleavage and polyadenylation specificity factor, putative
+PBANKA_0811500	17	conserved protein, unknown function
+PBANKA_0901800	17	conserved Plasmodium protein, unknown function
+PBANKA_0913800	17	DNA-directed RNA polymerase I subunit RPA2, putative
+PBANKA_1003100	17	pre-mRNA-processing-splicing factor 8, putative
+PBANKA_1014400	17	acid phosphatase, putative
+PBANKA_1017100	17	DNA mismatch repair protein MSH2, putative
+PBANKA_1021600	17	conserved Plasmodium protein, unknown function
+PBANKA_1033200	17	DNA damage-inducible protein 1, putative
+PBANKA_1108100	17	guanidine nucleotide exchange factor, putative
+PBANKA_1124800	17	conserved Plasmodium protein, unknown function
+PBANKA_1126000	17	E3 ubiquitin-protein ligase RNF5, putative
+PBANKA_1131800	17	histone-lysine N-methyltransferase, putative
+PBANKA_1216900	17	ATP-dependent RNA helicase DDX42, putative
+PBANKA_1231100	17	tRNA pseudouridine synthase, putative
+PBANKA_1300600	17	bromodomain protein 4, putative
+PBANKA_1303000	17	DEAD/DEAH box helicase, putative
+PBANKA_1315100	17	transcriptional regulatory protein sir2b
+PBANKA_1317300	17	RAP protein, putative
+PBANKA_1322500	17	DNA-directed RNA polymerase III subunit RPC5, putative
+PBANKA_1327500	17	conserved Plasmodium protein, unknown function
+PBANKA_1338800	17	conserved protein, unknown function
+PBANKA_1357600	17	conserved Plasmodium protein, unknown function
+PBANKA_1405600	17	U3 small nucleolar RNA-associated protein 6, putative
+PBANKA_1408000	17	H/ACA ribonucleoprotein complex subunit 1, putative
+PBANKA_1414300	17	transcription factor MYB1, putative
+PBANKA_1416100	17	conserved Plasmodium protein, unknown function
+PBANKA_1422200	17	cation diffusion facilitator family protein, putative
+PBANKA_1429300	17	integral membrane protein GPR180, putative
+PBANKA_1433400	17	diphthamide biosynthesis protein 3, putative
+PBANKA_1454900	17	conserved Plasmodium protein, unknown function
+PBANKA_0100600	18	schizont membrane associated cytoadherence protein
+PBANKA_0100700	18	Plasmodium exported protein, unknown function
+PBANKA_0106200	18	spindle assembly abnormal protein 6
+PBANKA_0112500	18	major facilitator superfamily-related transporter, putative
+PBANKA_0300300	18	PIR protein
+PBANKA_0300500	18	PIR protein, pseudogene
+PBANKA_0302800	18	conserved Plasmodium protein, unknown function
+PBANKA_0416600	18	replication protein A1, small fragment
+PBANKA_0501300	18	DNA polymerase delta catalytic subunit, putative
+PBANKA_0517100	18	conserved protein, unknown function
+PBANKA_0600051	18	PIR protein
+PBANKA_0602000	18	origin recognition complex subunit 1, putative
+PBANKA_0708100	18	dynein light chain 1
+PBANKA_0804300	18	DNA mismatch repair protein MSH2
+PBANKA_0804400	18	conserved Plasmodium protein, unknown function
+PBANKA_0806400	18	conserved protein, unknown function
+PBANKA_0806900	18	conserved Plasmodium protein, unknown function
+PBANKA_0830300	18	CH domain-containing protein, putative
+PBANKA_0910800	18	conserved Plasmodium protein, unknown function
+PBANKA_0913600	18	conserved Plasmodium protein, unknown function
+PBANKA_0925700	18	conserved Plasmodium protein, unknown function
+PBANKA_0931200	18	heat shock protein 101
+PBANKA_0932900	18	glycerol-3-phosphate dehydrogenase, putative
+PBANKA_1005800	18	conserved Plasmodium protein, unknown function
+PBANKA_1011400	18	DNA topoisomerase 2, putative
+PBANKA_1037900	18	conserved Plasmodium protein, unknown function
+PBANKA_1039000	18	radial spoke protein 3, putative
+PBANKA_1109600	18	conserved Plasmodium protein, unknown function
+PBANKA_1136900	18	E3 SUMO-protein ligase PIAS, putative
+PBANKA_1212200	18	conserved Plasmodium protein, unknown function
+PBANKA_1212600	18	male gamete fusion factor HAP2
+PBANKA_1213200	18	conserved Plasmodium protein, unknown function
+PBANKA_1302600	18	DNA primase small subunit, putative
+PBANKA_1305300	18	FACT complex subunit SSRP1, putative
+PBANKA_1315000	18	E3 SUMO-protein ligase NSE2, putative
+PBANKA_1315700	18	rhoptry neck protein 2
+PBANKA_1316500	18	conserved Plasmodium protein, unknown function
+PBANKA_1321500	18	conserved Plasmodium protein, unknown function
+PBANKA_1326200	18	conserved Plasmodium protein, unknown function
+PBANKA_1327700	18	conserved Plasmodium protein, unknown function
+PBANKA_1328000	18	serine/threonine protein phosphatase UIS2
+PBANKA_1329000	18	conserved Plasmodium protein, unknown function
+PBANKA_1330900	18	conserved Plasmodium protein, unknown function
+PBANKA_1333000	18	conserved Plasmodium protein, unknown function
+PBANKA_1343200	18	conserved Plasmodium protein, unknown function
+PBANKA_1356300	18	CDT1-like protein, putative
+PBANKA_1356400	18	DNA repair protein RAD5, putative
+PBANKA_1357500	18	lipoyl synthase
+PBANKA_1357800	18	conserved Plasmodium protein, unknown function
+PBANKA_1359900	18	WD repeat-containing protein 92, putative
+PBANKA_1402600	18	DNA ligase I, putative
+PBANKA_1413600	18	serine/threonine protein kinase PK9, putative
+PBANKA_1417700	18	conserved Plasmodium protein, unknown function
+PBANKA_1420100	18	conserved Plasmodium protein, unknown function
+PBANKA_1420700	18	MAATS1 domain-containing protein, putative
+PBANKA_1421000	18	calmodulin, putative
+PBANKA_1425900	18	conserved protein, unknown function
+PBANKA_1428300	18	WD repeat-containing protein, putative
+PBANKA_1429400	18	dynein light chain 1, putative
+PBANKA_1437100	18	conserved Plasmodium protein, unknown function
+PBANKA_0515200	19	MORN repeat-containing protein 1, putative
+PBANKA_1008500	19	translocon component PTEX150
+PBANKA_1032300	19	CTP synthase, putative
+PBANKA_1211600	19	conserved Plasmodium protein, unknown function
+PBANKA_1358300	19	conserved Plasmodium protein, unknown function
+PBANKA_1408900	19	conserved Plasmodium protein, unknown function
+PBANKA_1427200	19	protein phosphatase PPM5
+PBANKA_0008201	20	PIR protein
+PBANKA_0105400	20	coatomer alpha subunit, putative
+PBANKA_0211300	20	cysteine desulfurase IscS, putative
+PBANKA_0213400	20	60S ribosomal export protein NMD3, putative
+PBANKA_0416300	20	nucleoporin NUP221
+PBANKA_0600071	20	conserved rodent malaria protein, unknown function
+PBANKA_0801900	20	methyltransferase, putative
+PBANKA_0803600	20	importin-7, putative
+PBANKA_0831800	20	elongation factor Tu, putative
+PBANKA_0910500	20	conserved protein, unknown function
+PBANKA_1001500	20	alpha/beta hydrolase, putative
+PBANKA_1001800	20	AP2 domain transcription factor AP2-SP2
+PBANKA_1017000	20	CorA-like Mg2+ transporter protein, putative
+PBANKA_1019380	20	small nucleolar RNA snoR27
+PBANKA_1125200	20	CRAL/TRIO domain-containing protein, putative
+PBANKA_1140100	20	nucleoporin NUP205
+PBANKA_1210100	20	DNA repair protein RAD23, putative
+PBANKA_1212900	20	conserved Plasmodium protein, unknown function
+PBANKA_1216600	20	cyclic amine resistance locus protein, putative
+PBANKA_1317600	20	conserved Plasmodium protein, unknown function
+PBANKA_1354351	20	tRNA Arginine
+PBANKA_1411500	20	conserved Plasmodium protein, unknown function
+PBANKA_1415500	20	U4/U6.U5 tri-snRNP-associated protein 2, putative
+PBANKA_1416800	20	conserved Plasmodium protein, unknown function
+PBANKA_1435300	20	pre-mRNA-processing factor 17, putative
+PBANKA_1445200	20	WD repeat-containing protein, putative
+PBANKA_1450800	20	conserved Plasmodium protein, unknown function
+PBANKA_API00320	20	probable protein, unknown function
+PBANKA_0106000	21	G-protein associated signal transduction protein, putative
+PBANKA_0106800	21	conserved Plasmodium protein, unknown function
+PBANKA_0110000	21	60S ribosomal protein L39, putative
+PBANKA_0311100	21	ribosomal protein L13, mitochondrial, putative
+PBANKA_0315000	21	rRNA methyltransferase, putative
+PBANKA_0417500	21	60S ribosomal protein L32, putative
+PBANKA_0505800	21	deoxyribose-phosphate aldolase, putative
+PBANKA_0511600	21	conserved Plasmodium protein, unknown function
+PBANKA_0617200	21	40S ribosomal protein S10, putative
+PBANKA_0620700	21	conserved Plasmodium protein, unknown function
+PBANKA_0622700	21	mago nashi protein homologue, putative
+PBANKA_0814200	21	elongation factor 1-beta, putative
+PBANKA_0829100	21	conserved Plasmodium protein, unknown function
+PBANKA_0831700	21	NifU-like protein, putative
+PBANKA_0832400	21	conserved protein, unknown function
+PBANKA_0833400	21	apicoplast ribosomal protein S6, putative
+PBANKA_1018600	21	60S ribosomal protein L21, putative
+PBANKA_1019000	21	conserved Plasmodium protein, unknown function
+PBANKA_1220400	21	conserved protein, unknown function
+PBANKA_1223200	21	coenzyme Q-binding protein COQ10 homolog, mitochondrial, putative
+PBANKA_1223700	21	conserved protein, unknown function
+PBANKA_1242600	21	proteasome maturation factor UMP1, putative
+PBANKA_1324900	21	U3 small nucleolar ribonucleoprotein protein IMP3, putative
+PBANKA_1333500	21	conserved Plasmodium protein, unknown function
+PBANKA_1339600	21	PRELI domain-containing protein, putative
+PBANKA_1352900	21	ribosomal protein L49, mitochondrial, putative
+PBANKA_1420000	21	GPCR-like receptor SR25, putative
+PBANKA_1421300	21	phosphoglycolate phosphatase
+PBANKA_1452300	21	conserved protein, unknown function
+PBANKA_1460200	21	conserved protein, unknown function
+PBANKA_0208900	22	StAR-related lipid transfer protein, putative
+PBANKA_0210800	22	conserved Plasmodium protein, unknown function
+PBANKA_0210900	22	dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit OST2, putative
+PBANKA_0308800	22	GDP-fructose:GMP antiporter, putative
+PBANKA_0310500	22	conserved Plasmodium protein, unknown function
+PBANKA_0313900	22	conserved Plasmodium protein, unknown function
+PBANKA_0402100	22	spindle pole body protein, putative
+PBANKA_0407900	22	YTH domain-containing protein 2, putative
+PBANKA_0413000	22	conserved Plasmodium protein, unknown function
+PBANKA_0504800	22	conserved Plasmodium protein, unknown function
+PBANKA_0505400	22	conserved Plasmodium protein, unknown function
+PBANKA_0507700	22	conserved Plasmodium protein, unknown function
+PBANKA_0522100	22	conserved Plasmodium protein, unknown function
+PBANKA_0711000	22	conserved Plasmodium protein, unknown function
+PBANKA_0808600	22	conserved Plasmodium protein, unknown function
+PBANKA_0809000	22	translation initiation factor SUI1, putative
+PBANKA_0813700	22	conserved Plasmodium protein, unknown function
+PBANKA_0822900	22	dynein intermediate chain, putative
+PBANKA_0829500	22	conserved Plasmodium protein, unknown function
+PBANKA_0837101	22	PIR protein
+PBANKA_0905500	22	conserved Plasmodium protein, unknown function
+PBANKA_0935400	22	ubiquinone biosynthesis protein COQ4, putative
+PBANKA_0939900	22	U6 snRNA-associated Sm-like protein LSm4, putative
+PBANKA_1012700	22	conserved Plasmodium protein, unknown function
+PBANKA_1024371	22	tRNA Proline
+PBANKA_1029500	22	conserved Plasmodium protein, unknown function
+PBANKA_1040521	22	fam-b protein
+PBANKA_1104900	22	UDP-N-acetylglucosamine transporter, putative
+PBANKA_1118000	22	heptatricopeptide repeat-containing protein, putative
+PBANKA_1119800	22	conserved Plasmodium protein, unknown function
+PBANKA_1145721	22	tRNA Arginine
+PBANKA_1145741	22	tRNA Arginine
+PBANKA_1203100	22	ADP/ATP carrier protein, putative
+PBANKA_1208800	22	MORN repeat protein, putative
+PBANKA_1223400	22	conserved Plasmodium protein, unknown function
+PBANKA_1224700	22	AAA family ATPase, putative
+PBANKA_1226470	22	C/D small nucleolar RNA
+PBANKA_1239300	22	conserved Plasmodium protein, unknown function
+PBANKA_1331000	22	conserved Plasmodium protein, unknown function
+PBANKA_1342800	22	nicotinamide/nicotinic acid mononucleotide adenylyltransferase, putative
+PBANKA_1344800	22	conserved Plasmodium protein, unknown function
+PBANKA_1409500	22	protein ISD11, putative
+PBANKA_1413100	22	lipoate-protein ligase 1
+PBANKA_1452400	22	ubiquitin-like modifier HUB1, putative
+PBANKA_0008101	23	fam-a protein
+PBANKA_0215900	23	PIR protein, pseudogene
+PBANKA_0306700	23	transporter, putative
+PBANKA_0317121	23	fam-a protein, pseudogene
+PBANKA_0405900	23	conserved Plasmodium protein, unknown function
+PBANKA_0511100	23	conserved Plasmodium protein, unknown function
+PBANKA_0520300	23	conserved Plasmodium protein, unknown function
+PBANKA_0601000	23	ATP-dependent DNA/RNA helicase PSH2, putative
+PBANKA_0703000	23	magnesium transporter, putative
+PBANKA_0813100	23	conserved Plasmodium protein, unknown function
+PBANKA_0916500	23	conserved Plasmodium protein, unknown function
+PBANKA_0919500	23	GPI-anchor transamidase, putative
+PBANKA_0938050	23	small nucleolar RNA snoR07
+PBANKA_0943300	23	actin-like protein, putative
+PBANKA_1040581	23	PIR protein
+PBANKA_1129200	23	conserved Plasmodium protein, unknown function
+PBANKA_1209700	23	protein ARV1, putative
+PBANKA_1230700	23	protein phosphatase, putative
+PBANKA_1238600	23	divalent metal transporter, putative
+PBANKA_1325800	23	conserved Plasmodium protein, unknown function
+PBANKA_1410400	23	V-type proton ATPase catalytic subunit A, putative
+PBANKA_1429900	23	GPI ethanolamine phosphate transferase 3, putative
+PBANKA_1435900	23	conserved Plasmodium protein, unknown function
+PBANKA_1443600	23	conserved Plasmodium protein, unknown function
+PBANKA_1457000	23	ubiquitin-conjugating enzyme E2, putative
+PBANKA_1465300	23	PIR protein, pseudogene
+PBANKA_0008901	24	PIR protein, pseudogene
+PBANKA_0104200	24	calcium-binding protein, putative
+PBANKA_0201100	24	PIR protein, pseudogene
+PBANKA_0316900	24	PIR protein
+PBANKA_0400100	24	PIR protein
+PBANKA_0600011	24	PIR protein
+PBANKA_0600200	24	PIR protein
+PBANKA_0700071	24	PIR protein
+PBANKA_0832700	24	adenylate kinase-like protein 2, putative
+PBANKA_0836900	24	PIR protein
+PBANKA_0837061	24	tryptophan-rich protein, fragment
+PBANKA_0904900	24	mitochondrial large subunit ribosomal protein, putative
+PBANKA_0931700	24	peptidyl-prolyl cis-trans isomerase, putative
+PBANKA_0933600	24	dynein light chain Tctex-type, putative
+PBANKA_0934900	24	conserved Plasmodium protein, unknown function
+PBANKA_0943000	24	RIIa domain-containing protein, putative
+PBANKA_1013900	24	PhIL1 interacting protein PIP3, putative
+PBANKA_1040500	24	PIR protein, pseudogene
+PBANKA_1040541	24	PIR protein
+PBANKA_1100400	24	PIR protein
+PBANKA_1108800	24	leucine-rich repeat protein
+PBANKA_1133600	24	dynein light chain, putative
+PBANKA_1137500	24	actin-depolymerizing factor 2
+PBANKA_1146200	24	Plasmodium exported protein, unknown function
+PBANKA_1146261	24	PIR protein
+PBANKA_1146700	24	PIR protein
+PBANKA_1217100	24	pseudo protein kinase 1, putative
+PBANKA_1300100	24	PIR protein
+PBANKA_1365700	24	PIR protein
+PBANKA_1408700	24	conserved Plasmodium protein, unknown function
+PBANKA_1413300	24	ubiquitin-like protein, putative
+PBANKA_1465821	24	PIR protein
+PBANKA_1465921	24	PIR protein
+PBANKA_0000600	25	PIR protein
+PBANKA_0112621	25	PIR protein, pseudogene
+PBANKA_0201300	25	lysophospholipase, putative
+PBANKA_0201400	25	fam-a protein, pseudogene
+PBANKA_0216000	25	PIR protein
+PBANKA_0304700	25	serine repeat antigen 5
+PBANKA_0410561	25	tRNA Isoleucine
+PBANKA_0418500	25	Plasmodium exported protein, unknown function
+PBANKA_0508000	25	conserved Plasmodium protein, unknown function
+PBANKA_0600041	25	PIR protein
+PBANKA_0600061	25	fam-b protein
+PBANKA_0600091	25	fam-c protein
+PBANKA_0943541	25	tRNA Leucine
+PBANKA_0943561	25	tRNA Glycine
+PBANKA_1004200	25	conserved protein, unknown function
+PBANKA_1016800	25	exosome complex component RRP41, putative
+PBANKA_1100750	25	fam-a protein
+PBANKA_1200081	25	PIR protein
+PBANKA_1225200	25	N-acetyltransferase, GNAT family, putative
+PBANKA_1244051	25	tRNA Arginine
+PBANKA_1346750	25	small nucleolar RNA snoR18
+PBANKA_1354550	25	small nucleolar RNA snoR20
+PBANKA_1400071	25	PIR protein
+PBANKA_1416700	25	glycerol-3-phosphate 1-O-acyltransferase
+PBANKA_1421261	25	tRNA Serine
+PBANKA_1464841	25	tRNA Valine
+PBANKA_1466141	25	fam-a protein
