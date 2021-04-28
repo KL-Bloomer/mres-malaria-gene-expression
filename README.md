@@ -185,7 +185,7 @@ snakemake --prioritize count_reads_in_genes --jobs 1 ...
 [normalisation](https://hbctraining.github.io/DGE_workshop/lessons/02_DGE_count_normalization.html)
 
 #Barplot of library sizes - prior to normalisation, sorted by time
-# Code can be found in Script_for_barplot.R
+#Code can be found in Script_for_barplot.R
 
 #idxstats workflow - make data analysis easier (see Snakefile) - did not work as expected
 
