@@ -16,7 +16,7 @@ morecols <- colorRampPalette(mypalette)
 
 # Set up colour vector for time variable
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
-libraryid_and_time <- fread("libraryid_and_time.txt") #created from y$samples
+libraryid_and_time <- fread("libraryid_and_time_minoutliers.txt") #created from y$samples
 libraryid_and_time$group <- as.factor(libraryid_and_time$group)
 col.cell <- c("purple","orange","green","black", "red", "pink", "blue", "grey")[libraryid_and_time$group] #need to run script_for_RNAseq_plots.R for y
 
