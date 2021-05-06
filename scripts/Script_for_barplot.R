@@ -7,6 +7,11 @@ library(edgeR)
 library(RColorBrewer)
 library(ggplot2)
 
+# Input and output files:
+ss <- snakemake@input[['sample_sheet.tsv']]
+counts <- snakemake@input[['counts.tsv']]
+barplot_libsizes_beforenorm <- 'Plots/barplot_libsizes_beforenorm.png'
+
 #read the sample sheet
 setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/')
 ss <- fread('sample_sheet.tsv')
@@ -67,7 +72,7 @@ gg <- ggplot(sizes, aes(label, LibrarySize/1000000)) +
 gg + theme(axis.title=element_text(size=10,face="bold"), legend.title = element_text(size = 10, face="bold"),
            plot.title=element_text(size=15, face="bold"),axis.text = element_text(face="bold"))
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
-ggsave('barplot_libsizes_before norm_timetest.png', width = 10, height = 8)
+ggsave('barplot_libsizes_beforenorm.png', width = 10, height = 8)
 
 
 
