@@ -52,7 +52,8 @@ rule final_output:
         expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
         'idxstats/idxstats.tsv',
         expand('bigwig/{library_id}.bw', library_id= sample_sheet['library_id']),
-        
+        'barplot_libsizes_beforenorm.png'
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -284,117 +285,12 @@ Rscript {rule}.$$.tmp.R
 rm {rule}.$$.tmp.R
         """
 
-rule analyse_differential_gene_expression:
+rule library_size_barplot:
     input:
         sample_sheet= config['ss'],
-        counts= 'featureCounts/counts.tsv', 
+        counts= 'counts.tsv',
     output:
-        mds= 'edger/mds_plot.pdf',
-        dge_table= 'edger/differential_gene_expression.tsv',
-        maplot= 'edger/maplot.png',
-    shell:
-        r"""
-cat <<'EOF' > {rule}.$$.tmp.R
-
-library(data.table)
-library(edgeR)
-
-ss <- fread('{input.sample_sheet}')
-counts <- fread(cmd= 'grep -v "^#" {input.counts}')
-
-setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
-counts <- counts[, c('Geneid', ss$library_id), with= FALSE]
-
-mat <- as.matrix(counts, rownames= 'Geneid')
-ss[, group := paste(stage, genotype, sep= '_')]
-
-design <- model.matrix(~0 + ss$group)
-colnames(design) <- sub('ss$group', '', colnames(design), fixed= TRUE)
-
-y <- DGEList(counts= mat, group= ss$group)
-keep <- filterByExpr(y)
-y <- y[keep, , keep.lib.sizes=FALSE]
-y <- calcNormFactors(y)
-y <- estimateDisp(y, design)
-
-# MDS plot before and after batch correction
-
-pdf('{output.mds}', width= 14/2.54, height= 14/2.54)
-mds <- plotMDS(y, col= as.numeric(as.factor(ss$group)))
-dev.off()
-
-# Differential expression
-# =======================
-
-# These must be the same as those for ATAC
-contrasts <- makeContrasts(
-    ES_820_vs_ES_G2098= ES_820 - ES_G2098,
-    LS_820_vs_LS_G2098= LS_820 - LS_G2098,
-    ES_820_vs_ES_G2107= ES_820 - ES_G2107,
-    LS_820_vs_LS_G2107= LS_820 - LS_G2107,
-    levels= design)
-stopifnot(all(abs(colSums(contrasts)) < 1e-6))
-
-fit <- glmFit(y, design, prior.count= 1)
-dge <- list()
-for(cntr in colnames(contrasts)){{
-    print(cntr)
-    lfc <- glmTreat(fit, contrast= contrasts[, cntr], lfc= log2(1.5))
-    detable <- topTags(lfc, n= nrow(y))$table
-    detable$gene_id <- row.names(detable)
-    detable <- data.table(detable)
-    detable[, contrast := cntr]
-    dge[[length(dge)+1]] <- detable
-}}
-dge <- rbindlist(dge)
-dge[, unshrunk.logFC := NULL]
-
-gz <- gzfile('{output.dge_table}', 'w')
-write.table(dge, gz, sep= '\t', row.names= FALSE, quote= FALSE)
-close(gz)
-
-xord <- c('inf_mosq_percent', 'is_inf_mosq', 'log2_oocysts_per_mosq', 'is_oocysts_per_mosq', 'log2_exfl_XA_per_ml', 'is_exfl', 'log2_exfl_XA_per_ml_only_pos')
-dge[, trait := factor(trait, xord)]
-nsig <- dge[, list(n_up= sum(FDR < 0.01 & logFC > 0), n_down= sum(FDR < 0.01 & logFC < 0)), trait]
-nsig[, n_up:= sprintf('Up = %s', n_up)]
-nsig[, n_down:= sprintf('Down = %s', n_down)]
-
-gg <- ggplot(data= dge, aes(x= logCPM, y= logFC)) +
-    geom_point(alpha= 0.5, pch= '.') +
-    geom_point(data= dge[FDR < 0.01], alpha= 0.5, colour= 'red', pch= '.') +
-    geom_smooth(se= FALSE, col= 'grey60', size= 0.1) +
-    geom_hline(yintercept= 0, colour= 'blue') +
-    geom_text(data= nsig, x= Inf, y= Inf, aes(label= n_up), vjust= 1.3, hjust= 1.1, size= 3) +
-    geom_text(data= nsig, x= Inf, y= -Inf, aes(label= n_down), vjust= -1.2, hjust= 1.1, size= 3) +
-    facet_wrap(~trait, scales= 'free_y', ncol= 2) +
-    theme_light() +
-    theme(strip.text= element_text(colour= 'black'))
-ggsave('{output.maplot}', width= 16, height= 20, units= 'cm')
-
-xdge <- dcast(dge, gene_id ~ trait, value.var= c('FDR', 'logFC'))
-exfl_keep <- unique(c(
-    xdge[FDR_is_exfl < 0.01 & abs(logFC_is_exfl) > 2]$gene_id,
-    xdge[FDR_is_exfl < 0.01 & FDR_log2_exfl_XA_per_ml_only_pos < 0.01]$gene_id
-))
-xdge <- xdge[gene_id %in% exfl_keep][order(logFC_log2_exfl_XA_per_ml)]
-
-dat <- logcpm[gene_id %in% exfl_keep & !is.na(log2_exfl_XA_per_ml) ]
-dat[, gene_id := factor(gene_id, xdge$gene_id)]
-
-gg <- ggplot(data= dat, aes(x= log2_exfl_XA_per_ml, y= logcpm)) +
-    geom_point(pch= '.') +
-    facet_wrap(~ gene_id, ncol= 5, scales= 'free_y') +
-    geom_smooth(method= 'lm', size= 0.5) +
-    theme_minimal() +
-    theme(axis.text= element_text(size= 6))
-
-dge_genes <- merge(xdge, genes, by= 'gene_id', sort= FALSE)[, list(gene_id, logFC_is_exfl, logFC_log2_exfl_XA_per_ml, description)]
-dge_genes[, logFC_is_exfl := sprintf('%.2f', logFC_is_exfl)]
-dge_genes[, logFC_log2_exfl_XA_per_ml := sprintf('%.2f', logFC_log2_exfl_XA_per_ml)]
-
-EOF
-Rscript {rule}.$$.tmp.R
-rm {rule}.$$.tmp.R
-        """
-
-
+        barplot_libsizes_beforenorm_timetest = Plots/barplot_libsizes_beforenorm_timetest.png,
+    script:
+        os.path.join(workflow.basedir, 'scripts/Script_for_barplot')
+   
