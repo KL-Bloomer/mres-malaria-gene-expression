@@ -2,6 +2,8 @@ import pandas
 import os
 
 sample_sheet = pandas.read_csv(config['ss'], sep= '\t', comment= '#')
+sample_sheet['R1'] = [os.path.join(config['datadir'], fq) for fq in sample_sheet['R1']]
+sample_sheet['R2'] = [os.path.join(config['datadir'], fq) for fq in sample_sheet['R2']]
 
 def get_fastq_basenames(fastq_file_list):
     """fastq_file_list is a list of fastq file names. Extract from each
@@ -46,7 +48,6 @@ rule final_output:
     # generate this files.
     input:
         'multiqc/fastqc_report.html',
-        expand('hisat2/{library_id}.bam', library_id= sample_sheet['library_id']),
         'featureCounts/counts.tsv',
         expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
         'idxstats/idxstats.tsv',
@@ -122,7 +123,7 @@ rule prepare_reference_annotation:
 
 rule index_genome:
     input:
-     fasta= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
+        fasta= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
     output:
         index= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa.8.ht2',
     shell:
@@ -281,7 +282,6 @@ write.table(smry, '{output.summary}', sep= '\t', row.names= FALSE, quote= FALSE)
 EOF
 Rscript {rule}.$$.tmp.R
 rm {rule}.$$.tmp.R
->>>>>>> 43759273c6b7fd574b59631d514b04aa36f3e253
         """
 
 rule analyse_differential_gene_expression:
