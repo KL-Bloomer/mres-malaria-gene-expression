@@ -1,0 +1,7 @@
+#tell gt to ignore some files
+
+/data
+/output/
+nohup.out
+.RData
+.RHistory

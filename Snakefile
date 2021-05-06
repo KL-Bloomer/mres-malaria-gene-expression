@@ -52,7 +52,8 @@ rule final_output:
         expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
         'idxstats/idxstats.tsv',
         expand('bigwig/{library_id}.bw', library_id= sample_sheet['library_id']),
-        
+        'barplot_libsizes_beforenorm.png'
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -292,3 +293,4 @@ rule library_size_barplot:
         barplot_libsizes_beforenorm_timetest = Plots/barplot_libsizes_beforenorm_timetest.png,
     script:
         os.path.join(workflow.basedir, 'scripts/Script_for_barplot')
+
