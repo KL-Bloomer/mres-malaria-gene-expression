@@ -290,7 +290,7 @@ rule library_size_barplot:
         sample_sheet= config['ss'],
         counts= 'counts.tsv',
     output:
-        barplot_libsizes_beforenorm_timetest = Plots/barplot_libsizes_beforenorm_timetest.png,
+        barplot_libsizes_beforenorm = Plots/barplot_libsizes_beforenorm.png,
     script:
         os.path.join(workflow.basedir, 'scripts/Script_for_barplot')
 
