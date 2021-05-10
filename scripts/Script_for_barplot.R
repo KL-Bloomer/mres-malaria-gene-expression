@@ -1,6 +1,5 @@
 ### Barplot for visualisation of library size - before library size normalisation, 
 
-rm(list=ls())
 #Packages required
 library(data.table)
 library(edgeR)
@@ -8,13 +7,12 @@ library(RColorBrewer)
 library(ggplot2)
 
 # Input and output files:
-ss <- snakemake@input[['sample_sheet.tsv']]
-counts <- snakemake@input[['counts.tsv']]
-barplot_libsizes_beforenorm <- 'Plots/barplot_libsizes_beforenorm.png'
+ss <- snakemake@input[['sample_sheet']]
+counts_file <- snakemake@input[['counts']]
+barplot_libsizes_beforenorm <- snakemake@output[['barplot_libsizes_beforenorm']]
 
 #read the sample sheet
-setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/')
-ss <- fread('sample_sheet.tsv')
+ss <- fread(ss)
 ss[, Time := sprintf('%.2d', Time)]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
@@ -23,8 +21,7 @@ ss$Time <- as.factor(ss$Time)
 stopifnot(is.factor(ss$Time))
 
 #read the counts table
-setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/featureCounts/')
-counts <- fread(cmd= 'grep -v "^#" counts.tsv')
+counts <- fread(cmd= paste('grep -v "^#"', counts_file))
 setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
 counts <- counts[, c('Geneid', ss$library_id), with= FALSE]
 
@@ -71,8 +68,7 @@ gg <- ggplot(sizes, aes(label, LibrarySize/1000000)) +
   #theme_bw()
 gg + theme(axis.title=element_text(size=10,face="bold"), legend.title = element_text(size = 10, face="bold"),
            plot.title=element_text(size=15, face="bold"),axis.text = element_text(face="bold"))
-setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
-ggsave('barplot_libsizes_beforenorm.png', width = 10, height = 8)
+ggsave(barplot_libsizes_beforenorm, width = 10, height = 8)
 
 
 
