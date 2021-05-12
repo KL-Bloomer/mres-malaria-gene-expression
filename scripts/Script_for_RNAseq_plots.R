@@ -165,7 +165,6 @@ write.table(dge_table, dge_table_file, sep= '\t', row.names= FALSE, quote= FALSE
 #order the contrasts appropriately
 xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs12', 'h24vs16')
 dge_table[, contrast_order := factor(contrast, xord)]
-
 nsig <- dge_table[, list(n_up= sum(FDR < 0.01 & logFC > 0), n_down= sum(FDR < 0.01 & logFC < 0)), contrast_order]
 nsig[, n_up:= sprintf('Up = %s', n_up)]
 nsig[, n_down:= sprintf('Down = %s', n_down)]

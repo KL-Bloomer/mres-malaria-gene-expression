@@ -55,7 +55,7 @@ dev.off()
 
 #Identifying which clusters the genes fall into
 hc <- as.hclust(hm$rowDendrogram)
-groups <- cutree(hc, k = 8)
+groups <- cutree(hc, k = 6)
 groups <- as.data.table(groups, keep.rownames = "Geneid")
 
 #loading a table which contains the gene ids and their descriptions
@@ -64,7 +64,7 @@ gene_id_desc_table_cut <- gene_id_descr_table[gene_id_descr_table$Geneid %in% gr
 
 groups <- merge(groups, gene_id_desc_table_cut, by = "Geneid") #table with geneid, cluster no. & description
 groups <- groups[order(groups)]
-write.table(groups, file="clusters_scaled_8clusters.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+write.table(groups, file="clusters_scaled_6clusters.txt", row.names = FALSE, sep= '\t', quote= FALSE)
 
 #Heatmap for all the genes - correlation distance matrix and default for hclust = "complete" method
 logrpkm_table.mat <- as.matrix(logrpkm_table, rownames = "Geneid")
@@ -156,3 +156,6 @@ ggplot(data= avg_clst, aes(x= Time, y= Logrpkm_counts, group =1)) +
   scale_x_continuous(breaks = c(0, 4, 8, 12, 16, 24))
 
 ggsave('testing_gene_expression_changes_8clusters_timecontinuous_DEgenes.png', width= 30, height= 20, units= 'cm')
+setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
+ggsave('testing_gene_expression_changes_8clusters_timecontinuous_DEgenes.png', width= 30, height= 20, units= 'cm')
+
