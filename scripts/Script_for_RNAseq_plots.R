@@ -6,6 +6,13 @@ rm(list=ls())
 library(data.table)
 library(edgeR)
 
+#input and output files
+ss_min_outliers <- fread('sample_sheet_minusoutliers.tsv')
+counts <- fread(cmd= 'grep -v "^#" counts.tsv') 
+GFF <- fread(cmd = 'grep -v "^#" PlasmoDB-49_PbergheiANKA.gff')
+dge_table= 'edger/differential_gene_expression.tsv'
+rpkm_table= 'edger/logrpkm.tsv'
+
 #read the sample sheet
 setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/')
 
@@ -104,13 +111,16 @@ mdsout_min_outliers$library_id <- mdsout_min_outliers [, gsub("F[1-3].*", "RFP-0
 
 # MDS plot - dim1 vs dim2:
 library(ggrepel)
-ggplot(data= mdsout_min_outliers, aes(x= V1, y= V2, label= library_id, colour= Time, shape= Strain)) +
+gg <- ggplot(data= mdsout_min_outliers, aes(x= V1, y= V2, label= library_id, colour= Time, shape= Strain)) +
   geom_point() +
   geom_text_repel(size = 3) +
-  ggtitle("MDS plot without outliers following rRNA removal - no batch correction") +
+  ggtitle("MDS plot with outliers following rRNA removal - no batch correction") +
   xlab("Leading logFC dim 1") +
-  ylab("Leading logFC dim 2") +
-  theme_light()
+  ylab("Leading logFC dim 2") 
+gg + theme(axis.title=element_text(size=10,face="bold"), legend.title = element_text(size = 10, face="bold"),
+           axis.text = element_text(face="bold")) #plot.title=element_text(size=15, face="bold")
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/Plots/')
+ggsave('MDSplot_nooutliers_batchcorrection.png', width = 6, height = 8)
 
 ####Plotting in 3 dimensions now
 mds3_min_outliers <- plotMDS(y, ndim = 3, plot=FALSE)
@@ -164,10 +174,10 @@ design_glm
 
 # These must be the same as those for ATAC
 contrasts <- makeContrasts("h24vs16"= group24 - group16,
-                           "h24vs12"= group24 - group12,
+                           #"h24vs12"= group24 - group12,
                            "h16vs12"= group16 - group12,
-                           "h16vs8"= group16 - group08,
-                           "h16vs4"= group16 - group04,
+                           #"h16vs8"= group16 - group08,
+                           #"h16vs4"= group16 - group04,
                            "h12vs8"= group12 - group08,
                            "h8vs4"= group08 - group04,
                            "h4vs0"= group04 - group00,
@@ -236,8 +246,8 @@ close(gz)
 dge_descr
 is.data.table(dge_descr) == TRUE
 
-#order the contrasts appropriately
-xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12', 'h24vs16')
+#order the contrasts appropriately - only adjacent timepoints
+xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs12', 'h24vs16')
 dge_descr[, contrast_order := factor(contrast, xord)]
 
 nsig <- dge_descr[, list(n_up= sum(FDR < 0.01 & logFC > 0), n_down= sum(FDR < 0.01 & logFC < 0)), contrast_order]
@@ -255,12 +265,13 @@ gg <- ggplot(data= dge_descr, aes(x= logCPM, y= logFC)) +
   geom_text(data= nsig, x= Inf, y= -Inf, aes(label= n_down), vjust= -1.2, hjust= 1.1, size= 3) +
   facet_wrap(~contrast_order, ncol= 2) +
   #free_y - individual axes
-  ggtitle("MA plot without batch correction") +
-  theme_light() +
-  theme(strip.text= element_text(colour= 'black'))
+  ggtitle("MA plot with batch correction") 
+  gg + 
+    theme(strip.text= element_text(colour= 'black'), axis.title=element_text(size=10,face="bold"), legend.title = element_text(size = 10, face="bold"),
+             axis.text = element_text(face="bold"))
 gg
-
-ggsave('MAplot_order_extracontrasts_nobatchcorrection_9Apr.png', width= 16, height= 20, units= 'cm')
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/Plots/')
+ggsave('MAplot_batchcorrection_adj_contrasts.png', width= 12, height= 12, units= 'cm')
 
 ###Volcano plot
 #Another common visualisation is the volcano plot which displays a 
