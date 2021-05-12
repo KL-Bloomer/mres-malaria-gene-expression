@@ -52,7 +52,14 @@ rule final_output:
         expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
         'idxstats/idxstats.tsv',
         expand('bigwig/{library_id}.bw', library_id= sample_sheet['library_id']),
-        'barplot_libsizes_beforenorm.png'
+        'barplot_libsizes_beforenorm.png',
+        'edger/differential_gene_expression.tsv',
+        'edger/logrpkm_long.tsv',
+        'edger/MDSplot_nooutliers_batch.png',
+        'edger/MDSplot_nooutliers_nobatch.png',
+        'edger/MDSplot_outliers_nobatch.png',
+        'edger/MAplot_consecutive_contrasts.png',
+        'edger/Volcano_plot_consecutive_contrasts.png',
 
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -288,9 +295,24 @@ rm {rule}.$$.tmp.R
 rule library_size_barplot:
     input:
         sample_sheet= config['ss'],
-        counts= 'counts.tsv',
+        counts= 'featureCounts/counts.tsv',
     output:
-        barplot_libsizes_beforenorm = Plots/barplot_libsizes_beforenorm.png,
+        barplot_libsizes_beforenorm= 'barplot_libsizes_beforenorm.png',
     script:
-        os.path.join(workflow.basedir, 'scripts/Script_for_barplot')
+        os.path.join(workflow.basedir, 'scripts/Script_for_barplot.R')
 
+rule differential_gene_expression:
+    input:
+        sample_sheet= config['ss'],
+        counts= 'featureCounts/counts.tsv',
+        gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
+    output:
+        dge_table= 'edger/differential_gene_expression.tsv',
+        logrpkm_table= 'edger/logrpkm_long.tsv',
+        MDSplot_nooutliers_batch= 'edger/MDSplot_nooutliers_batch.png',
+        MDSplot_nooutliers_nobatch= 'edger/MDSplot_nooutliers_nobatch.png',
+        MDSplot_outliers_nobatch= 'edger/MDSplot_outliers_nobatch.png',
+        MA_plot= 'edger/MAplot_consecutive_contrasts.png',
+        Volcano_plot= 'edger/Volcano_plot_consecutive_contrasts.png',
+    script:
+        os.path.join(workflow.basedir, 'scripts/Script_for_RNAseq_plots.R')
