@@ -10,6 +10,7 @@ r-data.table =1.14.0
 r-ggplot2 =3.3.3
 r-r.utils =2.10.1
 r-ggrepel =0.9.1
+r-gplots =3.1.1
 samtools =1.11
 snakemake =6.0.0
 subread =2.0.1

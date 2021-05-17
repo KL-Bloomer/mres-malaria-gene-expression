@@ -19,13 +19,14 @@ MDSplot_nooutliers_batch <- snakemake@output[['MDSplot_nooutliers_batch']]
 MDSplot_outliers_nobatch <- snakemake@output[['MDSplot_outliers_nobatch']]
 MDSplot_nooutliers_nobatch <- snakemake@output[['MDSplot_nooutliers_nobatch']]
 dge_table_file <- snakemake@output[['dge_table']]
+geneid_desc_table <- snakemake@output[['geneid_desc_table']]
 logrpkm_table_file <- snakemake@output[['logrpkm_table']]
 MAplot <- snakemake@output[['MA_plot']]
 Volcano_plot <- snakemake@output[['Volcano_plot']]
 
 #read the sample sheet
 ss_min_outliers <- fread(ss)
-ss_min_outliers[Outliers == FALSE,]
+ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
 ss_min_outliers[, Time := sprintf('%.2d', Time)]
 ss_min_outliers[, group := paste(Time)]
 ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
@@ -53,7 +54,6 @@ mat <- as.matrix(counts, rownames= 'Geneid')
 raw_counts <- mat
 
 # Sanity check that sample sheet and count matrix are in the same order
-#issue with this command...
 stopifnot(identical(ss_min_outliers$library_id, colnames(raw_counts)))
 
 #sva for batch correction
@@ -107,7 +107,7 @@ ggplot(data= mdsout_min_outliers, aes(x= V1, y= V2, label= library_id, colour= T
   xlab("Leading logFC dim 1") +
   ylab("Leading logFC dim 2") +
   theme_light()
-ggsave(MDSplot_nooutliers_batch, width = 6, height = 8, units = "cm")
+ggsave(MDSplot_nooutliers_batch, width = 20, height = 20, units = "cm")
 
 # Differential expression
 # =======================
@@ -156,6 +156,7 @@ colnames(gene_id_descr_table) <- c("Geneid", "description")
 
 #decoding description column
 gene_id_descr_table[, description := sapply(description, URLdecode)]
+write.table(gene_id_descr_table, geneid_desc_table, sep= '\t', row.names= FALSE, quote= FALSE)
 
 #now merge the decription table with the dge table
 dge_table <- merge(dge, gene_id_descr_table, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
@@ -220,7 +221,7 @@ ggsave(Volcano_plot, width= 12, height= 12, units= 'cm')
 
 #read the sample sheet
 ss_min_outliers <- fread(ss)
-ss_min_outliers[Outliers == FALSE,]
+ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
 ss_min_outliers[, Time := sprintf('%.2d', Time)]
 ss_min_outliers[, group := paste(Time)]
 ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
@@ -250,7 +251,7 @@ write.table(logrpkm_table, file=logrpkm_table_file, row.names = FALSE, sep= '\t'
  
 #read the sample sheet
 ss_min_outliers <- fread(ss)
-ss_min_outliers[Outliers == FALSE,]
+ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
 ss_min_outliers[, Time := sprintf('%.2d', Time)]
 ss_min_outliers[, group := paste(Time)]
 ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
@@ -323,7 +324,7 @@ ggplot(data= mdsout_min_outliers, aes(x= V1, y= V2, label= library_id, colour= T
   xlab("Leading logFC dim 1") +
   ylab("Leading logFC dim 2") +
   theme_light()
-ggsave(MDSplot_nooutliers_nobatch, width = 6, height = 8, units = "cm")
+ggsave(MDSplot_nooutliers_nobatch, width = 20, height = 20, units = "cm")
 
 ### MDS plot with outliers
 #read the sample sheet
@@ -401,7 +402,7 @@ ggplot(data= mdsout, aes(x= V1, y= V2, label= library_id, colour= Time, shape= S
   xlab("Leading logFC dim 1") +
   ylab("Leading logFC dim 2") +
   theme_light()
-ggsave(MDSplot_outliers_nobatch, width = 6, height = 8, units = "cm")
+ggsave(MDSplot_outliers_nobatch, width = 20, height = 20, units = "cm")
 
 
 

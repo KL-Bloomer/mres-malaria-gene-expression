@@ -34,8 +34,6 @@ y <- DGEList(counts= mat,
              group= ss$group)
 keep <- filterByExpr(y)
 y <- y[keep, , keep.lib.sizes=FALSE]
-y <- calcNormFactors(y)
-y <- estimateDisp(y, design)
 
 ## Creating bar plot of lib sizes; prior to normalisation etc. 
 # Create a new data frame
@@ -44,9 +42,6 @@ sizes <- data.frame(LibraryID = ss$library_id, LibrarySize = y$samples$lib.size,
 
 #Check if sizes is a data table
 setDT(sizes)
-class(sizes$LibrarySize)
-#OR
-is.data.table(sizes) == TRUE
 
 #Make a nice label to print and plot; unique and informative
 sizes[, label := paste(LibraryID, Time)]

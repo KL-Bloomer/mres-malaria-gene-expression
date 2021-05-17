@@ -1,7 +1,8 @@
-#tell gt to ignore some files
+#tell git to ignore some files
 
 /data
 /output/
 nohup.out
 .RData
 .RHistory
+.snakemake
