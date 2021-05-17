@@ -19,10 +19,14 @@ mypalette <- brewer.pal(11,"RdYlBu")
 morecols <- colorRampPalette(mypalette)
 
 # Set up colour vector for time variable
-setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
-libraryid_and_time <- fread("libraryid_and_time_minoutliers.txt") #created from y$samples
-libraryid_and_time$group <- as.factor(libraryid_and_time$group)
-col.cell <- c("purple","orange","green","black", "red", "pink", "blue", "grey")[libraryid_and_time$group] #need to run script_for_RNAseq_plots.R for y
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/')
+ss_min_outliers <- fread("sample_sheet.tsv") #created from y$samples
+ss_min_outliers <- ss_min_outliers[Outliers == TRUE, ]
+ss_min_outliers[, Time := sprintf('%.2d', Time)]
+ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
+
+
+col.cell <- c("purple","orange","green","black", "red", "pink", "blue", "grey")[ss_min_outliers$Time] #need to run script_for_RNAseq_plots.R for y
 
 # a function to assign colors based on treatment time 
 # http://www.rapidtables.com/web/color/RGB_Color.htm
@@ -32,6 +36,7 @@ treatment_colours_options <- c("purple","orange","green","black", "red", "pink",
 
 #### Clustering & heatmap for DE genes with FDR < 0.01
 ## using logrpkm table that has been filtered for DG with FDR<0.01
+setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/')
 dge_descr <- fread('dge_descr_table_time0_additionalcontrasts_batchcorrection_9April (1)', header = TRUE)
 DE_filter <- dge_descr %>% #requires dplyr library
   filter(FDR < 0.01)
@@ -40,7 +45,7 @@ logrpkm_table_DE <- logrpkm_table[logrpkm_table$Geneid %in% DE_filter$gene_id] #
 logrpkm_table_DE.mat <- as.matrix(logrpkm_table_DE, rownames = "Geneid")
 
 #Heatmap: DEG with FDR<0.01; correlation distance matrix and "complete" hierarchical clustering
-png(file="Heatmap_DE_genes_FDR<0.01_logrpkm_forproject.png", width= 800, height= 750)
+png(file="AAtestHeatmap_DE_genes_FDR<0.01_logrpkm_forproject.png", width= 800, height= 750)
 par(cex.main = 1.5)
 hm <- heatmap.2(logrpkm_table_DE.mat, col=brewer.pal(11,"RdBu"),
                 distfun = function(logrpkm_table_DE.mat) as.dist(1-cor(t(logrpkm_table_DE.mat))),
