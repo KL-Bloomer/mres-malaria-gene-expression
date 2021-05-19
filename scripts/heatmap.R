@@ -21,7 +21,8 @@ Heatmap_genes <- snakemake@output[['Heatmap_genes']]
 #Use rpkm table to cluster all the genes 
 logrpkm_table <- fread(logrpkm_table_long)
 #convert to wide format
-logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ Time, value.var = 'logrpkm')
+logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ library_id, value.var = 'logrpkm')
+logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 
 # Set up colour vector for time variable
 ss <- fread(ss)
@@ -78,7 +79,7 @@ write.table(groups, file=clusters_table, row.names = FALSE, sep= '\t', quote= FA
 
 logrpkm_table_long <- hm$carpet
 logrpkm_table_long <- as.data.table(logrpkm_table_long, keep.rownames = "Time")
-logrpkm_table_long <- melt(logrpkm_table_long, variable.name = "Geneid", id.vars = "Time",
+logrpkm_table_long <- melt(logrpkm_table_long, variable.name = "Geneid", id.vars = "library_id",
                            value.name = "logrpkm")
 logrpkm_table_long <- data.table(logrpkm_table_long)
 
