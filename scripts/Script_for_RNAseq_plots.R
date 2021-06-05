@@ -246,7 +246,6 @@ logrpkm_table <- melt(logrpkm, variable.name = "library_id", id.vars = "gene_id"
 logrpkm_table <- data.table(logrpkm_table)
 write.table(logrpkm_table, file=logrpkm_table_file, row.names = FALSE, sep= '\t', quote= FALSE)
 
-
 ### MDS plot - minus outliers, no batch correction
  
 #read the sample sheet

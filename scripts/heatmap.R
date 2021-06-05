@@ -21,12 +21,6 @@ Heatmap_AP2_genes_FDR <- snakemake@output[['Heatmap_AP2_genes_FDR']]
 Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
 
 
-#Use rpkm table to cluster all the genes 
-logrpkm_table <- fread(logrpkm_table_long)
-#convert to wide format
-logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ library_id, value.var = 'logrpkm')
-logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
-
 # Set up colour vector for time variable
 ss <- fread(ss)
 ss <- ss[Outliers == FALSE, ]
@@ -34,6 +28,12 @@ ss[, Time := sprintf('%.2d', Time)]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
 ss$Time <- factor(c("00", "00", "00","00","00","00","02","04","04","04","04","06","08","08","08","08","12","12","16","16","16","16","24","24","24","24"))
+
+#Use rpkm table to cluster all the genes 
+logrpkm_table <- fread(logrpkm_table_long)
+#convert to wide format
+logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ library_id, value.var = 'logrpkm')
+logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
@@ -100,7 +100,6 @@ groups <- groups[order(groups)]
 write.table(groups, file=clusters_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
 ### Creating a plot showing the average gene Z-score in each cluster - SCALED values
-
 logrpkm_table <- hm$carpet
 logrpkm_table <- as.data.table(logrpkm_table, keep.rownames = "Time")
 logrpkm_table_long <- melt(logrpkm_table, variable.name = "gene_id", id.vars = "library_id",
