@@ -65,8 +65,9 @@ rule final_output:
         'edger/clusters_table.tsv',
         'edger/avergene_expr_clusters.png',
         'edger/Heatmap_DE_genes_logFC.png',
-        'edger/Heatmap_genes',
-        
+        'edger/Heatmap_genes.png',
+        'gene_expression_changes_keygenes.png',
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -335,6 +336,16 @@ rule heatmap_and_clustering:
         clusters_table= 'edger/clusters_table.tsv',
         avergene_expr_clusters= 'edger/avergene_expr_clusters.png',
         Heatmap_DE_genes_logFC= 'edger/Heatmap_DE_genes_logFC.png',
-        Heatmap_genes= 'edger/Heatmap_genes',        
+        Heatmap_genes= 'edger/Heatmap_genes.png',        
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
+
+rule interesting_gene_plot:
+    input:
+        logrpkm_table= 'edger/logrpkm_long.tsv',
+        interesting_genes= os.path.join(workflow.basedir, 'Interesting_genes.txt'),
+        gaf_file= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
+    output:
+        gene_expression_changes_keygenes= 'gene_expression_changes_keygenes.png',
+    script:
+         os.path.join(workflow.basedir, 'scripts/gene_expression_interesting_genes.R')
