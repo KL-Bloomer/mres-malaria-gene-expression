@@ -1,4 +1,4 @@
-Geneid	description
+gene_id	description
 PBANKA_0932200	peptidyl-prolyl cis-trans isomerase, putative
 PBANKA_0832100	conserved Plasmodium protein, unknown function
 PBANKA_1112300	ras-related protein Rab-1B, putative

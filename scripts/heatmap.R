@@ -18,16 +18,17 @@ avergene_expr_clusters <- snakemake@output[['avergene_expr_clusters']]
 Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
 Heatmap_genes <- snakemake@output[['Heatmap_genes']]
 
-#Use rpkm table to cluster all the genes 
-logrpkm_table <- fread(logrpkm_table_long)
-#convert to wide format
-#logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ Time, value.var = 'logrpkm')
-
 # Set up colour vector for time variable
 ss <- fread(ss)
 ss <- ss[Outliers == FALSE, ]
 ss[, Time := sprintf('%.2d', Time)]
 ss$Time <- as.factor(ss$Time)
+
+#Use rpkm table to cluster all the genes 
+logrpkm_table <- fread(logrpkm_table_long)
+#convert to wide format
+logrpkm_table <- dcast(data = logrpkm_table, gene_id ~ library_id, value.var = 'logrpkm')
+logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
@@ -64,21 +65,21 @@ dev.off()
 #Clustering the genes into 8 clusters
 hc <- as.hclust(hm$rowDendrogram)
 groups <- cutree(hc, k = 8)
-groups <- as.data.table(groups, keep.rownames = "Geneid")
+groups <- as.data.table(groups, keep.rownames = "gene_id")
 
 #loading a table which contains the gene ids and their descriptions
 gene_id_descr_table <- fread(geneid_desc_table)
-gene_id_desc_table_cut <- gene_id_descr_table[gene_id_descr_table$Geneid %in% groups$Geneid]
+gene_id_desc_table_cut <- gene_id_descr_table[gene_id_descr_table$gene_id %in% groups$gene_id]
 
-groups <- merge(groups, gene_id_desc_table_cut, by = "Geneid") #table with geneid, cluster no. & description
+groups <- merge(groups, gene_id_desc_table_cut, by = "gene_id") #table with geneid, cluster no. & description
 groups <- groups[order(groups)]
 write.table(groups, file=clusters_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
 ### Creating a plot showing the average gene Z-score in each cluster
 
 logrpkm_table_long <- hm$carpet
-logrpkm_table_long <- as.data.table(logrpkm_table_long, keep.rownames = "Time")
-logrpkm_table_long <- melt(logrpkm_table_long, variable.name = "Geneid", id.vars = "Time",
+logrpkm_table_long <- as.data.table(logrpkm_table_long, keep.rownames = "library_id")
+logrpkm_table_long <- melt(logrpkm_table_long, variable.name = "gene_id", id.vars = "library_id",
                            value.name = "logrpkm")
 logrpkm_table_long <- data.table(logrpkm_table_long)
 
