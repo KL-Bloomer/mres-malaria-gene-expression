@@ -152,14 +152,14 @@ gene_id_only <- gene[, gene_id := sub(".*;gene_id=", "", attributes)]
 gene_id_descr <- gene_id_only[, description := sub(".*;description=", "", attributes)]
 gene_id_descr <- gene_id_descr[, description := sub(";.*", "", description)]
 gene_id_descr_table <- data.table(gene_id_descr$gene_id, gene_id_descr$description)
-colnames(gene_id_descr_table) <- c("Geneid", "description")
+colnames(gene_id_descr_table) <- c("gene_id", "description")
 
 #decoding description column
 gene_id_descr_table[, description := sapply(description, URLdecode)]
 write.table(gene_id_descr_table, geneid_desc_table, sep= '\t', row.names= FALSE, quote= FALSE)
 
 #now merge the decription table with the dge table
-dge_table <- merge(dge, gene_id_descr_table, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
+dge_table <- merge(dge, gene_id_descr_table, by.x= 'gene_id', by.y= 'gene_id', all.x= TRUE, sort= FALSE)
 write.table(dge_table, dge_table_file, sep= '\t', row.names= FALSE, quote= FALSE)
 
 ##Creating an MA plot
