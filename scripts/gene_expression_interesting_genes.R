@@ -27,7 +27,7 @@ genes <- set(genes, i=16L, 5L, "von Willebrand factor A domain-related protein")
 ss <- fread(ss)
 ss <- ss[Outliers == FALSE,]
 
-#Use rpkm table to cluster all the genes
+#Use rpkm table to cluster all the genes 
 logrpkm_table_long <- fread(logrpkm_table)
 
 key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
@@ -47,11 +47,12 @@ gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, group = gene_name)) +
   xlab("Time (hr)") +
   ylab("Normalised expression (log2 RPKM)")
 
-gg <- gg +
+gg <- gg + 
   geom_text_repel(data= labels, xlim= c(max(labels$Time), NA), aes(x = Time, y=logrpkm, label= gene_name), inherit.aes = FALSE, hjust= 1, segment.colour= 'grey57') +
   scale_x_continuous(expand = expansion(mult = c(0.1, 0.5), add = 0), breaks= unique(avg$Time))+
   theme(axis.text=element_text(size=14),
         axis.title=element_text(size=14,face="bold"),
         strip.text = element_text(size = 14, face="bold"))+
-  guides(y.sec = guide_axis())
+  guides(y.sec = guide_axis()) 
 ggsave(gene_expression_changes_keygenes, width= 30, height= 20, units= 'cm')
+
