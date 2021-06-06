@@ -1,4 +1,5 @@
-### Plots and tables for quality control and data visualisation where rRNA was removed
+
+### Plots and tables for quality control and data visualisation where rRNA was removed 
 #subsequently, outliers were removed and a batch correction was performed for downstream analyses
 #These include: MA, volcano and global expression plot, the DGE and gene_id-description table
 
@@ -39,7 +40,7 @@ counts <- counts[, c('Geneid', ss_min_outliers$library_id), with= FALSE]
 #read the annotation file
 GFF <- fread(cmd=paste('grep -v "^#"', GFF_file))
 rRNA_GFF <- GFF[V3 == "rRNA"]
-rRNA_ID <- subset(rRNA_GFF, select= V9)
+rRNA_ID <- subset(rRNA_GFF, select= V9) 
 RNA_ID_sep <- separate(data = rRNA_ID, col = V9, into = c("Geneid_Feature", "Parent", "Description", "Geneid"), sep = "([;])")
 RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid)
 class(RNA_Gene_ID)
@@ -122,9 +123,9 @@ library(dplyr)
 #read the annotation file
 GFF <- fread(cmd=paste('grep -v "^#"', GFF_file))
 rRNA_GFF <- GFF[V3 == "rRNA"]
-rRNA_ID <- subset(rRNA_GFF, select= V9)
+rRNA_ID <- subset(rRNA_GFF, select= V9) 
 RNA_ID_sep <- separate(data = rRNA_ID, col = V9, into = c("Geneid_Feature", "Parent", "Description", "Geneid"), sep = "([;])")
-RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid)
+RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid) 
 RNA_Gene_ID <- gsub("gene_id=", "", RNA_Gene_ID$Geneid)
 counts_min_outliers <- counts_min_outliers[!counts_min_outliers$Geneid %in% RNA_Gene_ID]
 
@@ -141,9 +142,9 @@ stopifnot(identical(ss_min_outliers$library_id, colnames(raw_counts)))
 #load sva for batch correction
 adj_counts <- ComBat_seq(raw_counts, batch= ss_min_outliers$Batch, group= ss_min_outliers$Time)
 
-#raw_counts is the matrix of counts with rRNA and failed libraries removed;
-#ss_min_outliers is the sample sheet with column batch as prepared above and Time as factor as before.
-#adj_counts is the adjusted matrix of counts that can be used for everything else
+#raw_counts is the matrix of counts with rRNA and failed libraries removed; 
+#ss_min_outliers is the sample sheet with column batch as prepared above and Time as factor as before. 
+#adj_counts is the adjusted matrix of counts that can be used for everything else 
 #from now on.
 
 design <- model.matrix(~0 + ss_min_outliers$group)
@@ -342,3 +343,4 @@ logrpkm_table <- melt(logrpkm, variable.name = "library_id", id.vars = "gene_id"
                            value.name = "logrpkm")
 logrpkm_table <- data.table(logrpkm_table)
 write.table(logrpkm_table, file=logrpkm_table_file, row.names = FALSE, sep= '\t', quote= FALSE)
+
