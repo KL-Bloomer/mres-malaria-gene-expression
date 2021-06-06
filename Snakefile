@@ -49,17 +49,16 @@ rule final_output:
     input:
         'multiqc/fastqc_report.html',
         'featureCounts/counts.tsv',
-        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
+        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']),
         'idxstats/idxstats.tsv',
         'barplot_libsizes_beforenorm.png',
         'edger/differential_gene_expression.tsv',
         'edger/geneid_desc_table.tsv',
         'edger/logrpkm_long.tsv',
-        'edger/MDSplot_nooutliers_batch.png',
-        'edger/MDSplot_nooutliers_nobatch.png',
-        'edger/MDSplot_outliers_nobatch.png',
+        'edger/MDSplots_concatenated.png',
         'edger/MAplot_consecutive_contrasts.png',
         'edger/Volcano_plot_consecutive_contrasts.png',
+        'edger/globalexpression.png',
         'edger/Heatmap_DE_genes.png',
         'edger/clusters_table.tsv',
         'edger/avergene_expr_clusters.png',
@@ -153,7 +152,7 @@ rule align_reads:
         genome= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
         index= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa.8.ht2',
     output:
-        bam= 'hisat2/{library_id}.bam',       
+        bam= 'hisat2/{library_id}.bam',
         bai= 'hisat2/{library_id}.bam.bai',
         log= 'hisat2/{library_id}.log',
     shell:
@@ -317,11 +316,10 @@ rule differential_gene_expression:
         dge_table= 'edger/differential_gene_expression.tsv',
         geneid_desc_table= 'edger/geneid_desc_table.tsv',
         logrpkm_table= 'edger/logrpkm_long.tsv',
-        MDSplot_nooutliers_batch= 'edger/MDSplot_nooutliers_batch.png',
-        MDSplot_nooutliers_nobatch= 'edger/MDSplot_nooutliers_nobatch.png',
-        MDSplot_outliers_nobatch= 'edger/MDSplot_outliers_nobatch.png',
+        MDSplots_concatenated= 'edger/MDSplots_concatenated.png',
         MA_plot= 'edger/MAplot_consecutive_contrasts.png',
         Volcano_plot= 'edger/Volcano_plot_consecutive_contrasts.png',
+        globalexpression= 'edger/globalexpression.png',
     script:
         os.path.join(workflow.basedir, 'scripts/Script_for_RNAseq_plots.R')
 
@@ -339,7 +337,7 @@ rule heatmap_and_clustering:
         Heatmap_AP2_genes= 'edger/Heatmap_AP2_genes.png',
         Heatmap_AP2_genes_FDR= 'edger/Heatmap_AP2_genes_FDR.png',
         Heatmap_DE_genes_logFC= 'edger/Heatmap_DE_genes_logFC.png',
-        Heatmap_genes= 'edger/Heatmap_genes.png',      
+        Heatmap_genes= 'edger/Heatmap_genes.png',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
