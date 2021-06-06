@@ -72,4 +72,13 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 # introduction, methods
 # project proposal
 					
+##Week 10 (3-7 May) - week 14 (1-4 June)
+#Write up lab report and project proposal for submission on 1 June
+#fix graphs, organise cluster and scripts
+#write up poster abstract for BSP conference & submit
+#plan for the following 3 months of research
 
+##Week 15 (7-11 June)
+#GO and motif enrichment
+#plan figures for poster & prepare for JC presenttaion
+# read literature so that you can be prepared for viva on 18 June
