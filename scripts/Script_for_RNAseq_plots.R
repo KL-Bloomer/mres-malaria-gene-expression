@@ -1,3 +1,4 @@
+
 ### Plots and tables for quality control and data visualisation where rRNA was removed 
 #subsequently, outliers were removed and a batch correction was performed for downstream analyses
 #These include: MA, volcano and global expression plot, the DGE and gene_id-description table
@@ -41,7 +42,7 @@ GFF <- fread(cmd=paste('grep -v "^#"', GFF_file))
 rRNA_GFF <- GFF[V3 == "rRNA"]
 rRNA_ID <- subset(rRNA_GFF, select= V9) 
 RNA_ID_sep <- separate(data = rRNA_ID, col = V9, into = c("Geneid_Feature", "Parent", "Description", "Geneid"), sep = "([;])")
-RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid) 
+RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid)
 class(RNA_Gene_ID)
 RNA_Gene_ID <- gsub("gene_id=", "", RNA_Gene_ID$Geneid)
 counts <- counts[!counts$Geneid %in% RNA_Gene_ID]
@@ -201,7 +202,7 @@ contrasts <- makeContrasts("h24vs16"= group24 - group16,
                            "h4vs0"= group04 - group00,
                            levels= make.names(colnames(design_glm)))
 
-stopifnot(all(abs(colSums(contrasts)) < 1e-6)) 
+stopifnot(all(abs(colSums(contrasts)) < 1e-6))
 fit <- glmFit(y, design_glm, prior.count= 1)
 
 #Create the dge table
@@ -219,7 +220,7 @@ dge <- rbindlist(dge)
 class(dge)
 dge[, unshrunk.logFC := NULL]
 
-#merge dge table with the gene description table so one can see on the same line 
+#merge dge table with the gene description table so one can see on the same line
 #the gene_id, the difference between time points and the gene description
 
 ### Create the Gene-ID vs Description table
@@ -342,5 +343,4 @@ logrpkm_table <- melt(logrpkm, variable.name = "library_id", id.vars = "gene_id"
                            value.name = "logrpkm")
 logrpkm_table <- data.table(logrpkm_table)
 write.table(logrpkm_table, file=logrpkm_table_file, row.names = FALSE, sep= '\t', quote= FALSE)
-
 

@@ -49,7 +49,7 @@ rule final_output:
     input:
         'multiqc/fastqc_report.html',
         'featureCounts/counts.tsv',
-        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']), 
+        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']),
         'idxstats/idxstats.tsv',
         'barplot_libsizes_beforenorm.png',
         'edger/differential_gene_expression.tsv',
@@ -153,7 +153,7 @@ rule align_reads:
         genome= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa',
         index= 'ref/PlasmoDB-49_PbergheiANKA-Mus_musculus_GRCm38.fa.8.ht2',
     output:
-        bam= 'hisat2/{library_id}.bam',       
+        bam= 'hisat2/{library_id}.bam',
         bai= 'hisat2/{library_id}.bam.bai',
         log= 'hisat2/{library_id}.log',
     shell:
@@ -338,7 +338,7 @@ rule heatmap_and_clustering:
         Heatmap_AP2_genes= 'Heatmap_AP2_genes.png',
         Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
         Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
-        Heatmap_genes= 'Heatmap_genes.png',      
+        Heatmap_genes= 'Heatmap_genes.png',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
