@@ -59,13 +59,14 @@ rule final_output:
         'edger/MAplot_consecutive_contrasts.png',
         'edger/Volcano_plot_consecutive_contrasts.png',
         'edger/globalexpression.png',
-        'edger/Heatmap_DE_genes.png',
-        'edger/clusters_table.tsv',
-        'edger/avergene_expr_clusters.png',
-        'edger/Heatmap_AP2_genes.png',
-        'edger/Heatmap_AP2_genes_FDR.png',
-        'edger/Heatmap_DE_genes_logFC.png',
-        'edger/Heatmap_genes.png',
+        'Heatmap_DE_genes.png',
+        'clusters_table.tsv',
+        'avergene_expr_clusters.png',
+        'Heatmap_AP2_genes.png',
+        'Heatmap_AP2_genes_FDR.png',
+        'Heatmap_DE_genes_logFC.png',
+        'Heatmap_genes.png',
+        'gene_expression_changes_keygenes.png',
 
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -331,13 +332,13 @@ rule heatmap_and_clustering:
         geneid_desc_table= 'edger/geneid_desc_table.tsv',
         GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
     output:
-        Heatmap_DE_genes= 'edger/Heatmap_DE_genes.png',
-        clusters_table= 'edger/clusters_table.tsv',
-        avergene_expr_clusters= 'edger/avergene_expr_clusters.png',
-        Heatmap_AP2_genes= 'edger/Heatmap_AP2_genes.png',
-        Heatmap_AP2_genes_FDR= 'edger/Heatmap_AP2_genes_FDR.png',
-        Heatmap_DE_genes_logFC= 'edger/Heatmap_DE_genes_logFC.png',
-        Heatmap_genes= 'edger/Heatmap_genes.png',      
+        Heatmap_DE_genes= 'Heatmap_DE_genes.png',
+        clusters_table= 'clusters_table.tsv',
+        avergene_expr_clusters= 'avergene_expr_clusters.png',
+        Heatmap_AP2_genes= 'Heatmap_AP2_genes.png',
+        Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
+        Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
+        Heatmap_genes= 'Heatmap_genes.png',      
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
@@ -345,7 +346,7 @@ rule interesting_gene_plot:
     input:
         logrpkm_table= 'edger/logrpkm_long.tsv',
         interesting_genes= os.path.join(workflow.basedir, 'Interesting_genes.txt'),
-        gaf_file= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
+        GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
     output:
         gene_expression_changes_keygenes= 'gene_expression_changes_keygenes.png',
     script:
