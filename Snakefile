@@ -56,9 +56,9 @@ rule final_output:
         'edger/geneid_desc_table.tsv',
         'edger/logrpkm_long.tsv',
         'edger/MDSplots_concatenated.png',
-        'edger/MAplot_consecutive_contrasts.png',
-        'edger/Volcano_plot_consecutive_contrasts.png',
-        'edger/globalexpression.png',
+        'edger/MAplot_all_contrasts.png',
+        'edger/Volcano_plot_all_contrasts.png',
+        'edger/globalexpression_all_contrasts.png',
         'Heatmap_DE_genes.png',
         'clusters_table.tsv',
         'avergene_expr_clusters.png',
@@ -67,6 +67,7 @@ rule final_output:
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
         'gene_expression_changes_keygenes.png',
+        'topGO_table_clusters.tsv', 
 
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -318,9 +319,9 @@ rule differential_gene_expression:
         geneid_desc_table= 'edger/geneid_desc_table.tsv',
         logrpkm_table= 'edger/logrpkm_long.tsv',
         MDSplots_concatenated= 'edger/MDSplots_concatenated.png',
-        MA_plot= 'edger/MAplot_consecutive_contrasts.png',
-        Volcano_plot= 'edger/Volcano_plot_consecutive_contrasts.png',
-        globalexpression= 'edger/globalexpression.png',
+        MA_plot= 'edger/MAplot_all_contrasts.png',
+        Volcano_plot= 'edger/Volcano_plot_all_contrasts.png',
+        globalexpression= 'edger/globalexpression_all_contrasts.png',
     script:
         os.path.join(workflow.basedir, 'scripts/Script_for_RNAseq_plots.R')
 
@@ -344,6 +345,7 @@ rule heatmap_and_clustering:
 
 rule interesting_gene_plot:
     input:
+        sample_sheet= config['ss'],
         logrpkm_table= 'edger/logrpkm_long.tsv',
         interesting_genes= os.path.join(workflow.basedir, 'Interesting_genes.txt'),
         GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
@@ -351,3 +353,13 @@ rule interesting_gene_plot:
         gene_expression_changes_keygenes= 'gene_expression_changes_keygenes.png',
     script:
          os.path.join(workflow.basedir, 'scripts/gene_expression_interesting_genes.R')
+
+rule topGO_clusters:
+    input:
+        clust= 'clusters_table.tsv',
+        gene_id_table= 'edger/geneid_desc_table.tsv',
+        GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
+    output:
+        topGO_table_clusters= 'topGO_table_clusters.tsv',
+    script:
+        os.path.join(workflow.basedir, 'scripts/GO.R')

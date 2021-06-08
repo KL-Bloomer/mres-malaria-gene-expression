@@ -7,7 +7,7 @@
 library(data.table)
 library(edgeR)
 library(sva)
-library(dplyr)
+library(tidyr)
 library(ggrepel)
 library(ggplot2)
 library(ggbeeswarm)
@@ -68,25 +68,25 @@ mdsout_min_outliers_nobatch[, sample_set := 'B) No outliers - no batch correctio
 
 ### MDS plot with outliers
 #read the sample sheet
-ss <- fread(ss)
-ss[, Time := sprintf('%.2d', Time)]
-ss[, group := paste(Time)]
-ss$Time <- as.factor(ss$Time)
+ss_outliers <- fread(ss)
+ss_outliers[, Time := sprintf('%.2d', Time)]
+ss_outliers[, group := paste(Time)]
+ss_outliers$Time <- as.factor(ss_outliers$Time)
 
 #read the counts table
 counts <- fread(cmd= paste('grep -v "^#"', counts_file))
 setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
-counts <- counts[, c('Geneid', ss$library_id), with= FALSE]
+counts <- counts[, c('Geneid', ss_outliers$library_id), with= FALSE]
 
 #Removing the rRNA contamination
 counts <- counts[!counts$Geneid %in% RNA_Gene_ID]
 
 #create a matrix of the counts
 mat <- as.matrix(counts, rownames= 'Geneid')
-design <- model.matrix(~0 + ss$group)
-colnames(design) <- sub('ss$group', '', colnames(design), fixed= TRUE)
+design <- model.matrix(~0 + ss_outliers$group)
+colnames(design) <- sub('ss_outliers$group', '', colnames(design), fixed= TRUE)
 y <- DGEList(counts= mat,
-             group= ss$group)
+             group= ss_outliers$group)
 keep <- filterByExpr(y)
 y <- y[keep, , keep.lib.sizes=FALSE]
 y <- calcNormFactors(y)
@@ -169,7 +169,7 @@ mdsout_min_outliers_batch[, sample_set := 'C) No outliers - with batch correctio
 mdsdata <- rbind(mdsout_min_outliers_batch, mdsout_min_outliers_nobatch, mdsout)
 
 # Add library characteristics from sample sheet
-mdsdata <- merge(mdsdata, ss, by= "library_id")
+mdsdata <- merge(mdsdata, ss_outliers, by= "library_id")
 
 gg <- ggplot(data= mdsdata, aes(x= V1, y= V2, label= Time, colour= Time, shape= Strain)) +
   geom_point() +
@@ -196,7 +196,10 @@ design_glm <- model.matrix(~0+group, data=y$samples)
 
 # These must be the same as those for ATAC
 contrasts <- makeContrasts("h24vs16"= group24 - group16,
+                           "h24vs12" = group24 - group12,
                            "h16vs12"= group16 - group12,
+                           "h16vs8" = group16 - group08,
+                           "h16vs4" = group16 - group04, 
                            "h12vs8"= group12 - group08,
                            "h8vs4"= group08 - group04,
                            "h4vs0"= group04 - group00,
@@ -243,7 +246,7 @@ write.table(dge_table, dge_table_file, sep= '\t', row.names= FALSE, quote= FALSE
 
 ##Creating an MA plot
 #order the contrasts appropriately
-xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs12', 'h24vs16')
+xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12','h24vs16')
 dge_table[, contrast_order := factor(contrast, xord)]
 nsig <- dge_table[, list(n_up= sum(FDR < 0.01 & logFC > 0), n_down= sum(FDR < 0.01 & logFC < 0)), contrast_order]
 nsig[, n_up:= sprintf('Up = %s', n_up)]
@@ -264,7 +267,7 @@ ggsave(MAplot, width= 12, height= 12, units = "cm")
 
 ###Volcano plot
 #order the contrasts appropriately
-xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs12', 'h24vs16')
+xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12','h24vs16')
 dge_table[, contrast_order := factor(contrast, xord)]
 
 dge_volcano <- dge_table
@@ -298,7 +301,7 @@ ggsave(Volcano_plot, width= 12, height= 12, units= 'cm')
 
 ### Global expression plot
 
-global <- data.table(dge_descr$gene_id, dge_descr$contrast_order, dge_descr$logFC)
+global <- data.table(dge_table$gene_id, dge_table$contrast_order, dge_table$logFC)
 global <- rename(global, gene_id = V1, contrast = V2, logFC = V3)
 qq <- quantile(global$logFC, p= 0.995)
 global[, col := ifelse(abs(global$logFC) > qq, qq, abs(logFC))]

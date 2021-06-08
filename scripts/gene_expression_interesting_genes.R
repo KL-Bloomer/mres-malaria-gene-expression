@@ -7,6 +7,7 @@ library(ggrepel)
 
 interesting_genes <- snakemake@input[['interesting_genes']]
 GAF <- snakemake@input[['GAF']]
+ss_file <- snakemake@input[['sample_sheet']]
 logrpkm_table <- snakemake@input[['logrpkm_table']]
 gene_expression_changes_keygenes <- snakemake@output[['gene_expression_changes_keygenes']]
 
@@ -24,7 +25,7 @@ genes <- merge(genes, gaf, by.x= 'gene_id', by.y = "Geneid", all.x = TRUE)
 genes <- set(genes, i=16L, 4L, "WARP")
 genes <- set(genes, i=16L, 5L, "von Willebrand factor A domain-related protein")
 
-ss <- fread(ss)
+ss <- fread(ss_file)
 ss <- ss[Outliers == FALSE,]
 
 #Use rpkm table to cluster all the genes 
