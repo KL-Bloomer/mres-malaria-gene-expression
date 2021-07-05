@@ -80,5 +80,21 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 
 ##Week 15 (7-11 June)
 #GO and motif enrichment
-#plan figures for poster & prepare for JC presenttaion
+#plan figures for poster & prepare for JC presentation
 # read literature so that you can be prepared for viva on 18 June
+
+##Week 16 (14-18 June)
+#JC presentation (15 June)
+#Prepare poster for conference
+
+##Week 17 (21-25 June)
+#BSP conference
+#AP2 and pathway enrichment analysis
+
+##Week 18 (28 June-2 July)
+#HOLIDAY
+
+##Week 19 (5-9 July)
+#Motif enrichment analysis
+#Custom scripts
+
