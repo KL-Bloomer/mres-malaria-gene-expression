@@ -1,0 +1,2008 @@
+cluster_id	target	count_both	count_only_cluster	count_only_target	count_none	p.value	fdr
+1	FALSE	124	78	1135	2476	2.34604595798543e-17	4.28046748879705e-15
+1	Genes coding for components involved in ribosome assembly	5	197	127	3484	0.554023846224947	1
+1	mRNA degradation	3	199	26	3585	0.196485476668798	0.91170462817262
+1	Splicing of pre-mRNA	3	199	103	3508	0.374949917660342	1
+1	RNA Degradation Factors	4	198	35	3576	0.149197635555452	0.845874730394895
+1	Phosphoproteome - Treeck et al 2011	41	161	813	2798	0.489097222413616	1
+1	Phosphoproteome - Pease et al 2013	31	171	568	3043	1	1
+1	S-nitrosylated proteins	6	196	241	3370	0.0383464421073685	0.427562829497158
+1	S-Glutathionylated proteins	8	194	287	3324	0.0411451385216521	0.43408361474488
+1	Transcription related proteins encoding genes	7	195	162	3449	0.599864172698256	1
+1	Translation in prokaryotes � a template for apicoplast and mitochondrion	4	198	44	3567	0.320253866485382	1
+1	Nuclear genes with apicoplast signal sequences	11	191	219	3392	0.879067001296724	1
+1	Terpenoid metabolism	0	202	13	3598	1	1
+1	N-myristoylation_ S-acylation and prenylation of proteins	0	202	20	3591	0.622389678716757	1
+1	Proteins of detergent-resistant membranes	3	199	102	3509	0.373855133046029	1
+1	Genes coding for transport proteins	9	193	123	3488	0.425334186492258	1
+1	Chromatin modifying proteins	1	201	30	3581	1	1
+1	Histone lysine methylation	1	201	15	3596	0.582165578797149	1
+1	Plasmodium falciparum chromatin landscape	1	201	17	3594	1	1
+1	Topogenesis of the Rieske FeS protein	2	200	8	3603	0.0949621205908747	0.69955161028924
+1	Nuclear genes with mitochondrial signal sequences	9	193	261	3350	0.158086163206863	0.861058481992835
+1	Porphyrin metabolism	1	201	16	3595	0.60439432598782	1
+1	Pyrimidine metabolism	0	202	21	3590	0.624520145596657	1
+1	Mitochondrial electron flow	0	202	24	3587	0.63558136526112	1
+1	Phosphoproteome - Lasonder et al 2011	20	182	486	3125	0.165818263244762	0.861058481992835
+1	Established and putative Maurer�s clefts proteins	1	201	48	3563	0.517804574679171	1
+1	The acidocalcisome	4	198	32	3579	0.120383176500845	0.764585554548091
+1	ATP-dependent chromatin remodeling complexes	0	202	34	3577	0.258505773965673	0.995802991004494
+1	Phenylalanine and Tyrosine metabolism	0	202	9	3602	1	1
+1	Modification of proteins by adenylylation and ADP-ribosylation	0	202	48	3563	0.179936698176245	0.885129787352262
+1	Protein biosynthesis	0	202	55	3556	0.117643801466057	0.763016298221872
+1	DNA binding proteins with AP2 domain(s)	2	200	17	3594	0.266584875118339	1
+1	Heterochromatin structure of the telomeric and subtelomeric regions	0	202	5	3606	1	1
+1	Total palmitome of Plasmodium falciparum	3	199	306	3305	5.26563572378822e-05	0.00234847353280955
+1	Ribosomal structure	1	201	144	3467	0.00675729570072157	0.127942381805172
+1	Glyoxalase metabolism	0	202	6	3605	1	1
+1	The phosphoproteome of Plasmodium falciparum infected RBCs	10	192	304	3307	0.0870096341714677	0.666520365580671
+1	Proteins involved in steps during passage through prophase	0	202	21	3590	0.624520145596657	1
+1	Protein phosphorylation	3	199	74	3537	0.7975157539944	1
+1	Protein kinase coding genes	4	198	80	3531	1	1
+1	Pre-replicative complex formation and transition to replication	0	202	20	3591	0.622389678716757	1
+1	Dolichol metabolism	0	202	6	3605	1	1
+1	Purine metabolism	1	201	32	3579	1	1
+1	Double strand break repair and homologous recombination	0	202	11	3600	1	1
+1	Genes involved in excision-repair	1	201	77	3534	0.127218496313347	0.783213257978182
+1	Genes coding for enzymes/proteins involved in DNA replication	1	201	57	3554	0.369732143073869	1
+1	Fatty acids elongation in the endoplasmic reticulum	0	202	12	3599	1	1
+1	Fatty acid synthesis in the apicoplast	2	200	26	3585	0.658162162600936	1
+1	Genes coding for components of the proteasome degradation machinery & their timed transcription	4	198	100	3511	0.658491588056531	1
+1	Subcellular location of adaptor proteins	3	199	22	3589	0.143559929920004	0.835313724489376
+1	Classical COPI-mediated vesicular transport	1	201	29	3582	1	1
+1	Genes coding for protein traffic related proteins	3	199	57	3554	1	1
+1	Thioredoxin_ Glutaredoxin and Peroxiredoxin	0	202	24	3587	0.63558136526112	1
+1	Redox Metabolism	0	202	35	3576	0.258873996444896	0.995802991004494
+1	Initiation of translation	2	200	40	3571	1	1
+1	Quality control mechanisms during ribosome maturation	0	202	12	3599	1	1
+1	Signaling machinery in malaria parasites	0	202	17	3594	1	1
+1	Ubiquinone metabolism	1	201	6	3605	0.317046988900855	1
+1	Import of proteins into the mitochondrion	2	200	23	3588	0.385207282725873	1
+1	Peptidases and proteases	6	196	106	3505	1	1
+1	Genes coding for chaperones and their regulators	0	202	102	3509	0.00609826956485315	0.117684875160195
+1	Centrosome proteins	0	202	75	3536	0.0326658756939854	0.376783979987521
+1	Tubulin and microtubules	0	202	24	3587	0.63558136526112	1
+1	Proteins targeted by the thioredoxin superfamily enzymes	1	201	37	3574	0.72057289189892	1
+1	Arginine and proline metabolism	0	202	6	3605	1	1
+1	Pyridoxal phosphate (Vitamin B6) metabolism	2	200	20	3591	0.326566245904256	1
+1	Transporters of the plasma membrane	4	198	57	3554	0.563421526451596	1
+1	Mitochondrial TCA cycle	0	202	18	3593	0.621068959244392	1
+1	Possible paths for apoptosis	0	202	20	3591	0.622389678716757	1
+1	Phosphatidylethanolamine and phosphatidylserine metabolism	1	201	30	3581	1	1
+1	Structure and organization of centromeric chromatin	0	202	11	3600	1	1
+1	Chaperone-mediated modulation of nucleosome-histone interactions	0	202	13	3598	1	1
+1	Acetylation recognition by the bromodomain and other modules	0	202	12	3599	1	1
+1	Putative organization of the kinetochore	0	202	35	3576	0.258873996444896	0.995802991004494
+1	Plasmodium falciparum histone acetylation and methylation	0	202	7	3604	1	1
+1	Histone acetylation	0	202	24	3587	0.63558136526112	1
+1	Protein arginine methylation	0	202	10	3601	1	1
+1	Nucleosome assembly and regulation	1	201	37	3574	0.72057289189892	1
+1	Compartmentalization of transcription site in the nucleus	0	202	4	3607	1	1
+1	Pentose Phosphate Cycle	0	202	9	3602	1	1
+1	Thiamine metabolism	2	200	13	3598	0.186952302208623	0.896882302019027
+1	RNA polymerase II transcribes mRNA	1	201	37	3574	0.72057289189892	1
+1	tRNA thiolation	0	202	7	3604	1	1
+1	Genes coding for GPI-anchored membrane proteins	0	202	25	3586	0.640534534880822	1
+1	Subcellular localization of proteins involved in invasion	0	202	39	3572	0.267586931748166	1
+1	Functional annotation of merozoite invasion-related proteins	0	202	42	3569	0.169159006966642	0.862121041324534
+1	Maturation and export of 60S and 40S ribosomal subunits	3	199	84	3527	0.627100859101259	1
+1	Pre-ribosomal particles along the 60S assembly pathway	2	200	22	3589	0.365875494501404	1
+1	Structure of the mitotic centrosome	0	202	30	3581	0.404501552930813	1
+1	Centriole proteins	1	201	18	3593	1	1
+1	Classical clathrin-mediated vesicular transport	2	200	36	3575	1	1
+1	Molecular model of vesicle exocytosis	0	202	18	3593	0.621068959244392	1
+1	Molecular motor prototypes	0	202	41	3570	0.169245485940143	0.862121041324534
+1	Genes coding for Fe-S containing proteins	0	202	17	3594	1	1
+1	Maturation of cytosolic and nuclear Fe-S proteins	1	201	13	3598	0.533911543094999	1
+1	Nucleotide excision repair	1	201	28	3583	1	1
+1	DNA Replication	0	202	38	3573	0.264394135842219	1
+1	Kinetochores power chromosome movements in mitosis	0	202	39	3572	0.267586931748166	1
+1	Regulation of spindle microtubule dynamics	0	202	45	3566	0.172236819061583	0.862806282753574
+1	Control of the mitotic spindle organization by kinesins	0	202	10	3601	1	1
+1	Control of microtubule assembly	0	202	21	3590	0.624520145596657	1
+1	Pre-ribosomal particles along the 40S assembly pathway	0	202	15	3596	1	1
+1	Transcription and processing of snRNAs	0	202	21	3590	0.624520145596657	1
+1	Proteins containing histone post translational modification-binding modules	0	202	25	3586	0.640534534880822	1
+1	Histone chaperones	0	202	25	3586	0.640534534880822	1
+1	Phosphoinositides and membrane traffic	1	201	22	3589	1	1
+1	Calcium � calmodulin activation of protein kinases	0	202	20	3591	0.622389678716757	1
+1	Inositol Phosphate metabolism	2	200	22	3589	0.365875494501404	1
+1	The structures of RNA polymerases	0	202	21	3590	0.624520145596657	1
+1	Mechanism of Fe�S-protein biogenesis	2	200	17	3594	0.266584875118339	1
+1	Selenocysteine biosynthesis	0	202	10	3601	1	1
+1	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	0	202	10	3601	1	1
+1	Pyruvate metabolism	1	201	16	3595	0.60439432598782	1
+1	Chaperone-assisted protein folding	1	201	70	3541	0.181871504504108	0.88811705484123
+1	Sphingomyelin and ceramide metabolism	0	202	18	3593	0.621068959244392	1
+1	Generation of polyphosphates	0	202	14	3597	1	1
+1	Cleavage and polyadenylation of pre-mRNA	0	202	15	3596	1	1
+1	Protein factors in pre-mRNA 3�-end processing	0	202	18	3593	0.621068959244392	1
+1	Oxidative protein folding in the endoplasmic reticulum	0	202	9	3602	1	1
+1	Transporters of the mitochondrial and apicoplast membranes	2	200	28	3583	0.671616631650805	1
+1	Phosphatases of Plasmodium falciparum and their timed expression	2	200	39	3572	1	1
+1	Transporters of the ER/Golgi and digestive vacuole membranes	2	200	28	3583	0.671616631650805	1
+1	CCR4 � NOT complex	1	201	17	3594	1	1
+1	Encoded proteins that could be constituents of P-bodies	2	200	41	3570	1	1
+1	Isoprenoids metabolism	1	201	13	3598	0.533911543094999	1
+1	Rab and other proteins involved in intracellular traffic	0	202	16	3595	1	1
+1	Rab proteins	0	202	13	3598	1	1
+1	Endosome maturation	0	202	12	3599	1	1
+1	Rab cycle	1	201	42	3569	0.726641867495641	1
+1	Molecular markers of resistance to antimalarial drugs	1	201	11	3600	0.480115573620331	1
+1	ATP synthase complex	1	201	19	3592	1	1
+1	DNA mismatch repair system	1	201	24	3587	1	1
+1	Base excision repair of AP sites	1	201	36	3575	0.720474189282141	1
+1	Actin and filaments	2	200	26	3585	0.658162162600936	1
+1	A model for UbpX function in the regulation of PCNA deubiquitylation	1	201	15	3596	0.582165578797149	1
+1	Model for translesion DNA synthesis	1	201	11	3600	0.480115573620331	1
+1	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	2	200	20	3591	0.326566245904256	1
+1	Phosphatidylcholine metabolism	0	202	13	3598	1	1
+1	Components of the linear motor responsible for merozoite motility in invasion	1	201	33	3578	1	1
+1	Parasite encoded proteins associated with the membrane of infected erythrocytes	0	202	34	3577	0.258505773965673	0.995802991004494
+1	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	2	200	33	3578	0.708452265011941	1
+1	Asparagine and Aspartate metabolism	0	202	8	3603	1	1
+1	Biosynthesis of Fe-S proteins in the apicoplast	1	201	13	3598	0.533911543094999	1
+1	Methionine and Polyamine metabolism	1	201	18	3593	1	1
+1	Signal recognition particle-mediated targeting of membrane and secretory proteins	1	201	11	3600	0.480115573620331	1
+1	Karyopherin/exportin-mediated nuclear export pathways	2	200	16	3595	0.246515009718635	0.993854130169466
+1	tRNA modifications	2	200	41	3570	1	1
+1	Schematic depiction of pseudouridylation	1	201	14	3597	0.558694346015454	1
+1	The HSP70 chaperone cycle	0	202	7	3604	1	1
+1	Organization of chaperone pathways in the cytosol	0	202	30	3581	0.404501552930813	1
+1	The ATG autophagic pathway	0	202	13	3598	1	1
+1	Glutamate metabolism	0	202	14	3597	1	1
+1	Glycolysis	1	201	27	3584	1	1
+1	Model for metabolic compartmentalization of PI biosynthesis	0	202	12	3599	1	1
+1	Shikimate biosynthesis	0	202	5	3606	1	1
+1	CoA biosynthesis	0	202	8	3603	1	1
+1	Utilization of phospholipids	1	201	25	3586	1	1
+1	Structure and processing of pre rRNA	2	200	23	3588	0.385207282725873	1
+1	Bulk mRNA transport through the nuclear pore	0	202	4	3607	1	1
+1	Posttranslational translocation in eukaryotes	0	202	27	3584	0.398232587269465	1
+1	SRP independent translocation of GPI anchored proteins	0	202	9	3602	1	1
+1	Proteasome-mediated proteolysis of ubiquinated proteins	1	201	37	3574	0.72057289189892	1
+1	Aminosugars metabolism	0	202	8	3603	1	1
+1	Quality control in mRNA biogenesis	2	200	20	3591	0.326566245904256	1
+1	Leucine_ Isoleucine and Valine metabolism	0	202	11	3600	1	1
+1	Classical COPII-mediated vesicular transport	0	202	25	3586	0.640534534880822	1
+1	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	0	202	11	3600	1	1
+1	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	0	202	14	3597	1	1
+1	Assisted assembly of Sm-class snRNPs	0	202	11	3600	1	1
+1	Lysine metabolism	0	202	5	3606	1	1
+1	Mitochondrial division	0	202	4	3607	1	1
+1	Import and export through the nuclear pore	1	201	23	3588	1	1
+1	Putative SUMO substrates	0	202	21	3590	0.624520145596657	1
+1	RNA polymerase I transcribes rRNA	0	202	9	3602	1	1
+1	Lipoic acid metabolism	0	202	6	3605	1	1
+1	Acetyl-CoA production in the mitochondrion	0	202	6	3605	1	1
+1	Mitochondrial antioxidant system	0	202	14	3597	1	1
+1	Chaperone network and protein quality control of the mitochondrion	1	201	35	3576	1	1
+1	Proteome of the parasitophorous vacuole	0	202	24	3587	0.63558136526112	1
+1	Proteins with ER retention sequences	0	202	12	3599	1	1
+1	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	202	3	3608	1	1
+1	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	0	202	16	3595	1	1
+1	Interactions between modified host cell membrane and endothelial cell	0	202	3	3608	1	1
+1	Rosette formation between normal and infected RBC	0	202	3	3608	1	1
+1	Domains of merozoite surface proteins	0	202	7	3604	1	1
+1	Nitrogen metabolism	0	202	9	3602	1	1
+1	RNA polymerase III transcribes tRNA and 5S rRNA	0	202	14	3597	1	1
+1	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	202	7	3604	1	1
+1	Structure of the nuclear pore	1	201	3	3608	0.195725166253375	0.91141626141653
+1	Biogenesis of cytochrome oxidase	0	202	20	3591	0.622389678716757	1
+1	Protein N-terminal acetylation	1	201	8	3603	0.387626450858714	1
+1	Mannose and Fructose metabolism	0	202	7	3604	1	1
+1	tRNA-wybutosine biosynthesis	0	202	4	3607	1	1
+1	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	1	201	5	3606	0.278778886753274	1
+1	Anaphase promoting complex ubiquitin-ligase	0	202	10	3601	1	1
+1	Lsm proteins and RNA processing	0	202	11	3600	1	1
+1	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	2	200	12	3599	0.167569643115192	0.861058481992835
+1	Exported parasite proteins associated with Maurer�s clefts	0	202	4	3607	1	1
+1	Translocon of exported proteins (PTEX)	0	202	6	3605	1	1
+1	Post-translational modification �SUMOylation	0	202	9	3602	1	1
+1	Activation of eiF5A	0	202	3	3608	1	1
+1	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	0	202	5	3606	1	1
+1	Different kinesins with different roles	0	202	5	3606	1	1
+1	Catabolism of polyphosphates	0	202	8	3603	1	1
+1	Glycine and Serine metabolism	0	202	10	3601	1	1
+1	Pathways of peptide export from the mitochondrion	0	202	5	3606	1	1
+1	Role of perforin 1 in merozoite egress	0	202	5	3606	1	1
+1	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	0	202	15	3596	1	1
+1	14-3-3 protein	0	202	3	3608	1	1
+1	Roles of rhoptry neck proteins during invasion	0	202	4	3607	1	1
+1	Folate biosynthesis	0	202	11	3600	1	1
+1	Telomerase and some telomerase associated proteins	0	202	8	3603	1	1
+1	Nicotinate and nicotinamide metabolism	0	202	6	3605	1	1
+1	ER-to Golgi_ translocation and quality control	0	202	15	3596	1	1
+1	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	202	9	3602	1	1
+1	Transcription in prokaryotes	0	202	3	3608	1	1
+1	Various features of C/D and H/ACA snoRNAs	0	202	6	3605	1	1
+1	Merozoite egress	0	202	3	3608	1	1
+1	Riboflavin metabolism	0	202	3	3608	1	1
+1	Post-translational modification of elongation factor 2	0	202	5	3606	1	1
+1	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	0	202	10	3601	1	1
+1	Structure of telomere and sub-telomeric regions	0	202	1	3610	1	1
+1	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	202	2	3609	1	1
+2	FALSE	158	123	1101	2431	1.3007099387786e-16	2.17543737260721e-14
+2	Genes coding for components involved in ribosome assembly	3	278	129	3403	0.0168758546808713	0.240662892518522
+2	mRNA degradation	0	281	29	3503	0.268862793211402	1
+2	Splicing of pre-mRNA	6	275	100	3432	0.704324102746704	1
+2	RNA Degradation Factors	1	280	38	3494	0.361649289490151	1
+2	Phosphoproteome - Treeck et al 2011	39	242	815	2717	0.000253717859069622	0.00936761181576469
+2	Phosphoproteome - Pease et al 2013	23	258	576	2956	0.000162173248056691	0.00650963417699558
+2	S-nitrosylated proteins	13	268	234	3298	0.209430393858129	0.942436772361581
+2	S-Glutathionylated proteins	15	266	280	3252	0.131344308159001	0.798812201439741
+2	Transcription related proteins encoding genes	3	278	166	3366	0.00218700902746686	0.0522538942634045
+2	Translation in prokaryotes � a template for apicoplast and mitochondrion	0	281	48	3484	0.0470799682142763	0.472781583450483
+2	Nuclear genes with apicoplast signal sequences	7	274	223	3309	0.00608759892460749	0.117684875160195
+2	Terpenoid metabolism	0	281	13	3519	0.616999658040064	1
+2	N-myristoylation_ S-acylation and prenylation of proteins	1	280	19	3513	1	1
+2	Proteins of detergent-resistant membranes	9	272	96	3436	0.570881492230097	1
+2	Genes coding for transport proteins	10	271	122	3410	0.86551659820455	1
+2	Chromatin modifying proteins	1	280	30	3502	0.724770826228489	1
+2	Histone lysine methylation	1	280	15	3517	1	1
+2	Plasmodium falciparum chromatin landscape	0	281	18	3514	0.638396468525932	1
+2	Topogenesis of the Rieske FeS protein	0	281	10	3522	1	1
+2	Nuclear genes with mitochondrial signal sequences	6	275	264	3268	0.000240216897495475	0.00927144833218113
+2	Porphyrin metabolism	0	281	17	3515	0.631288726250086	1
+2	Pyrimidine metabolism	3	278	18	3514	0.198157738211349	0.914258805954431
+2	Mitochondrial electron flow	0	281	24	3508	0.25384101795852	0.993854130169466
+2	Phosphoproteome - Lasonder et al 2011	19	262	487	3045	0.000475388639047729	0.0161712711621829
+2	Established and putative Maurer�s clefts proteins	6	275	43	3489	0.171487008770134	0.862806282753574
+2	The acidocalcisome	4	277	32	3500	0.334756018188707	1
+2	ATP-dependent chromatin remodeling complexes	5	276	29	3503	0.100841173165265	0.728015232167935
+2	Phenylalanine and Tyrosine metabolism	0	281	9	3523	1	1
+2	Modification of proteins by adenylylation and ADP-ribosylation	1	280	47	3485	0.25899808734646	0.995802991004494
+2	Protein biosynthesis	1	280	54	3478	0.184975836678876	0.891922078257846
+2	DNA binding proteins with AP2 domain(s)	0	281	19	3513	0.393013190799678	1
+2	Heterochromatin structure of the telomeric and subtelomeric regions	0	281	5	3527	1	1
+2	Total palmitome of Plasmodium falciparum	14	267	295	3237	0.0524788266188606	0.489642989414428
+2	Ribosomal structure	6	275	139	3393	0.145387380287357	0.835313724489376
+2	Glyoxalase metabolism	0	281	6	3526	1	1
+2	The phosphoproteome of Plasmodium falciparum infected RBCs	11	270	303	3229	0.00454095667825153	0.0939556706520703
+2	Proteins involved in steps during passage through prophase	5	276	16	3516	0.0160048246594962	0.232603577572214
+2	Protein phosphorylation	2	279	75	3457	0.122885421668059	0.770722004024358
+2	Protein kinase coding genes	5	276	79	3453	0.832063016692686	1
+2	Pre-replicative complex formation and transition to replication	3	278	17	3515	0.178966218184529	0.884692610582143
+2	Dolichol metabolism	1	280	5	3527	0.368479753916147	1
+2	Purine metabolism	3	278	30	3502	0.731895864365899	1
+2	Double strand break repair and homologous recombination	0	281	11	3521	1	1
+2	Genes involved in excision-repair	4	277	74	3458	0.658972109293862	1
+2	Genes coding for enzymes/proteins involved in DNA replication	2	279	56	3476	0.440731725179779	1
+2	Fatty acids elongation in the endoplasmic reticulum	1	280	11	3521	0.601482534960384	1
+2	Fatty acid synthesis in the apicoplast	1	280	27	3505	0.718471326101781	1
+2	Genes coding for components of the proteasome degradation machinery & their timed transcription	4	277	100	3432	0.248997318115345	0.993854130169466
+2	Subcellular location of adaptor proteins	0	281	25	3507	0.25403446376529	0.993854130169466
+2	Classical COPI-mediated vesicular transport	1	280	29	3503	0.722026743933651	1
+2	Genes coding for protein traffic related proteins	0	281	60	3472	0.0209408196787128	0.279740707844812
+2	Thioredoxin_ Glutaredoxin and Peroxiredoxin	1	280	23	3509	1	1
+2	Redox Metabolism	1	280	34	3498	0.513582448469987	1
+2	Initiation of translation	0	281	42	3490	0.0711327901458758	0.59307466757708
+2	Quality control mechanisms during ribosome maturation	1	280	11	3521	0.601482534960384	1
+2	Signaling machinery in malaria parasites	2	279	15	3517	0.359907349129572	1
+2	Ubiquinone metabolism	0	281	7	3525	1	1
+2	Import of proteins into the mitochondrion	0	281	25	3507	0.25403446376529	0.993854130169466
+2	Peptidases and proteases	6	275	106	3426	0.579603298592581	1
+2	Genes coding for chaperones and their regulators	4	277	98	3434	0.245878694464912	0.993854130169466
+2	Centrosome proteins	12	269	63	3469	0.0109348887730499	0.187575399722317
+2	Tubulin and microtubules	4	277	20	3512	0.095504305540235	0.69955161028924
+2	Proteins targeted by the thioredoxin superfamily enzymes	0	281	38	3494	0.110602240748699	0.74194912251237
+2	Arginine and proline metabolism	0	281	6	3526	1	1
+2	Pyridoxal phosphate (Vitamin B6) metabolism	0	281	22	3510	0.402521673629187	1
+2	Transporters of the plasma membrane	5	276	56	3476	0.802660506736787	1
+2	Mitochondrial TCA cycle	0	281	18	3514	0.638396468525932	1
+2	Possible paths for apoptosis	0	281	20	3512	0.394417939282742	1
+2	Phosphatidylethanolamine and phosphatidylserine metabolism	2	279	29	3503	1	1
+2	Structure and organization of centromeric chromatin	1	280	10	3522	0.569678102220784	1
+2	Chaperone-mediated modulation of nucleosome-histone interactions	0	281	13	3519	0.616999658040064	1
+2	Acetylation recognition by the bromodomain and other modules	0	281	12	3520	1	1
+2	Putative organization of the kinetochore	9	272	26	3506	0.000720620444552734	0.0229569084478943
+2	Plasmodium falciparum histone acetylation and methylation	0	281	7	3525	1	1
+2	Histone acetylation	0	281	24	3508	0.25384101795852	0.993854130169466
+2	Protein arginine methylation	0	281	10	3522	1	1
+2	Nucleosome assembly and regulation	4	277	34	3498	0.359720671982439	1
+2	Compartmentalization of transcription site in the nucleus	0	281	4	3528	1	1
+2	Pentose Phosphate Cycle	0	281	9	3523	1	1
+2	Thiamine metabolism	0	281	15	3517	0.62081066966669	1
+2	RNA polymerase II transcribes mRNA	0	281	38	3494	0.110602240748699	0.74194912251237
+2	tRNA thiolation	1	280	6	3526	0.415093147441118	1
+2	Genes coding for GPI-anchored membrane proteins	2	279	23	3509	0.706435628203101	1
+2	Subcellular localization of proteins involved in invasion	6	275	33	3499	0.063243890324007	0.547114171897767
+2	Functional annotation of merozoite invasion-related proteins	6	275	36	3496	0.124215194872209	0.771826303741559
+2	Maturation and export of 60S and 40S ribosomal subunits	0	281	87	3445	0.00263701448749722	0.0608331962805393
+2	Pre-ribosomal particles along the 60S assembly pathway	1	280	23	3509	1	1
+2	Structure of the mitotic centrosome	10	271	20	3512	3.21638406879982e-05	0.00150122856420494
+2	Centriole proteins	6	275	13	3519	0.00181281653114373	0.0454790347250682
+2	Classical clathrin-mediated vesicular transport	0	281	38	3494	0.110602240748699	0.74194912251237
+2	Molecular model of vesicle exocytosis	0	281	18	3514	0.638396468525932	1
+2	Molecular motor prototypes	8	273	33	3499	0.00883568054278101	0.161211007721468
+2	Genes coding for Fe-S containing proteins	0	281	17	3515	0.631288726250086	1
+2	Maturation of cytosolic and nuclear Fe-S proteins	0	281	14	3518	0.617930023243205	1
+2	Nucleotide excision repair	2	279	27	3505	1	1
+2	DNA Replication	3	278	35	3497	0.756760089480816	1
+2	Kinetochores power chromosome movements in mitosis	12	269	27	3505	1.30520107415149e-05	0.000707983393465416
+2	Regulation of spindle microtubule dynamics	9	272	36	3496	0.00470825723138325	0.0954492147816786
+2	Control of the mitotic spindle organization by kinesins	2	279	8	3524	0.164729265560328	0.861058481992835
+2	Control of microtubule assembly	5	276	16	3516	0.0160048246594962	0.232603577572214
+2	Pre-ribosomal particles along the 40S assembly pathway	1	280	14	3518	1	1
+2	Transcription and processing of snRNAs	0	281	21	3511	0.397647968766825	1
+2	Proteins containing histone post translational modification-binding modules	0	281	25	3507	0.25403446376529	0.993854130169466
+2	Histone chaperones	3	278	22	3510	0.425336657203505	1
+2	Phosphoinositides and membrane traffic	0	281	23	3509	0.408867296441635	1
+2	Calcium � calmodulin activation of protein kinases	1	280	19	3513	1	1
+2	Inositol Phosphate metabolism	2	279	22	3510	0.695690285395009	1
+2	The structures of RNA polymerases	0	281	21	3511	0.397647968766825	1
+2	Mechanism of Fe�S-protein biogenesis	1	280	18	3514	1	1
+2	Selenocysteine biosynthesis	0	281	10	3522	1	1
+2	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	0	281	10	3522	1	1
+2	Pyruvate metabolism	0	281	17	3515	0.631288726250086	1
+2	Chaperone-assisted protein folding	3	278	68	3464	0.487078836507842	1
+2	Sphingomyelin and ceramide metabolism	2	279	16	3516	0.38710417648731	1
+2	Generation of polyphosphates	1	280	13	3519	1	1
+2	Cleavage and polyadenylation of pre-mRNA	0	281	15	3517	0.62081066966669	1
+2	Protein factors in pre-mRNA 3�-end processing	0	281	18	3514	0.638396468525932	1
+2	Oxidative protein folding in the endoplasmic reticulum	0	281	9	3523	1	1
+2	Transporters of the mitochondrial and apicoplast membranes	1	280	29	3503	0.722026743933651	1
+2	Phosphatases of Plasmodium falciparum and their timed expression	2	279	39	3493	0.766087266046356	1
+2	Transporters of the ER/Golgi and digestive vacuole membranes	6	275	24	3508	0.0199817027073831	0.272811410433455
+2	CCR4 � NOT complex	0	281	18	3514	0.638396468525932	1
+2	Encoded proteins that could be constituents of P-bodies	1	280	42	3490	0.369941886632763	1
+2	Isoprenoids metabolism	1	280	13	3519	1	1
+2	Rab and other proteins involved in intracellular traffic	0	281	16	3516	0.625350025876754	1
+2	Rab proteins	0	281	13	3519	0.616999658040064	1
+2	Endosome maturation	0	281	12	3520	1	1
+2	Rab cycle	1	280	42	3490	0.369941886632763	1
+2	Molecular markers of resistance to antimalarial drugs	0	281	12	3520	1	1
+2	ATP synthase complex	3	278	17	3515	0.178966218184529	0.884692610582143
+2	DNA mismatch repair system	1	280	24	3508	1	1
+2	Base excision repair of AP sites	1	280	36	3496	0.519639777825325	1
+2	Actin and filaments	4	277	24	3508	0.146918657072621	0.835313724489376
+2	A model for UbpX function in the regulation of PCNA deubiquitylation	1	280	15	3517	1	1
+2	Model for translesion DNA synthesis	1	280	11	3521	0.601482534960384	1
+2	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	3	278	19	3513	0.217814342542616	0.971451967740069
+2	Phosphatidylcholine metabolism	1	280	12	3520	1	1
+2	Components of the linear motor responsible for merozoite motility in invasion	3	278	31	3501	0.736164784382692	1
+2	Parasite encoded proteins associated with the membrane of infected erythrocytes	2	279	32	3500	1	1
+2	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	0	281	35	3497	0.107917407891216	0.74194912251237
+2	Asparagine and Aspartate metabolism	0	281	8	3524	1	1
+2	Biosynthesis of Fe-S proteins in the apicoplast	0	281	14	3518	0.617930023243205	1
+2	Methionine and Polyamine metabolism	1	280	18	3514	1	1
+2	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	281	12	3520	1	1
+2	Karyopherin/exportin-mediated nuclear export pathways	0	281	18	3514	0.638396468525932	1
+2	tRNA modifications	1	280	42	3490	0.369941886632763	1
+2	Schematic depiction of pseudouridylation	0	281	15	3517	0.62081066966669	1
+2	The HSP70 chaperone cycle	1	280	6	3526	0.415093147441118	1
+2	Organization of chaperone pathways in the cytosol	1	280	29	3503	0.722026743933651	1
+2	The ATG autophagic pathway	0	281	13	3519	0.616999658040064	1
+2	Glutamate metabolism	0	281	14	3518	0.617930023243205	1
+2	Glycolysis	4	277	24	3508	0.146918657072621	0.835313724489376
+2	Model for metabolic compartmentalization of PI biosynthesis	1	280	11	3521	0.601482534960384	1
+2	Shikimate biosynthesis	0	281	5	3527	1	1
+2	CoA biosynthesis	0	281	8	3524	1	1
+2	Utilization of phospholipids	1	280	25	3507	1	1
+2	Structure and processing of pre rRNA	0	281	25	3507	0.25403446376529	0.993854130169466
+2	Bulk mRNA transport through the nuclear pore	0	281	4	3528	1	1
+2	Posttranslational translocation in eukaryotes	0	281	27	3505	0.258833226991692	0.995802991004494
+2	SRP independent translocation of GPI anchored proteins	1	280	8	3524	0.498283613799382	1
+2	Proteasome-mediated proteolysis of ubiquinated proteins	2	279	36	3496	1	1
+2	Aminosugars metabolism	0	281	8	3524	1	1
+2	Quality control in mRNA biogenesis	0	281	22	3510	0.402521673629187	1
+2	Leucine_ Isoleucine and Valine metabolism	0	281	11	3521	1	1
+2	Classical COPII-mediated vesicular transport	1	280	24	3508	1	1
+2	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	2	279	9	3523	0.192016266321988	0.900647937521626
+2	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	0	281	14	3518	0.617930023243205	1
+2	Assisted assembly of Sm-class snRNPs	0	281	11	3521	1	1
+2	Lysine metabolism	0	281	5	3527	1	1
+2	Mitochondrial division	0	281	4	3528	1	1
+2	Import and export through the nuclear pore	0	281	24	3508	0.25384101795852	0.993854130169466
+2	Putative SUMO substrates	0	281	21	3511	0.397647968766825	1
+2	RNA polymerase I transcribes rRNA	1	280	8	3524	0.498283613799382	1
+2	Lipoic acid metabolism	1	280	5	3527	0.368479753916147	1
+2	Acetyl-CoA production in the mitochondrion	0	281	6	3526	1	1
+2	Mitochondrial antioxidant system	1	280	13	3519	1	1
+2	Chaperone network and protein quality control of the mitochondrion	1	280	35	3497	0.516185273309406	1
+2	Proteome of the parasitophorous vacuole	4	277	20	3512	0.095504305540235	0.69955161028924
+2	Proteins with ER retention sequences	0	281	12	3520	1	1
+2	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	281	3	3529	1	1
+2	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	0	281	16	3516	0.625350025876754	1
+2	Interactions between modified host cell membrane and endothelial cell	0	281	3	3529	1	1
+2	Rosette formation between normal and infected RBC	0	281	3	3529	1	1
+2	Domains of merozoite surface proteins	1	280	6	3526	0.415093147441118	1
+2	Nitrogen metabolism	0	281	9	3523	1	1
+2	RNA polymerase III transcribes tRNA and 5S rRNA	1	280	13	3519	1	1
+2	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	281	7	3525	1	1
+2	Structure of the nuclear pore	0	281	4	3528	1	1
+2	Biogenesis of cytochrome oxidase	0	281	20	3512	0.394417939282742	1
+2	Protein N-terminal acetylation	0	281	9	3523	1	1
+2	Mannose and Fructose metabolism	0	281	7	3525	1	1
+2	tRNA-wybutosine biosynthesis	0	281	4	3528	1	1
+2	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	0	281	6	3526	1	1
+2	Anaphase promoting complex ubiquitin-ligase	2	279	8	3524	0.164729265560328	0.861058481992835
+2	Lsm proteins and RNA processing	1	280	10	3522	0.569678102220784	1
+2	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	0	281	14	3518	0.617930023243205	1
+2	Exported parasite proteins associated with Maurer�s clefts	0	281	4	3528	1	1
+2	Translocon of exported proteins (PTEX)	0	281	6	3526	1	1
+2	Post-translational modification �SUMOylation	1	280	8	3524	0.498283613799382	1
+2	Activation of eiF5A	0	281	3	3529	1	1
+2	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	1	280	4	3528	0.318165835813067	1
+2	Different kinesins with different roles	1	280	4	3528	0.318165835813067	1
+2	Catabolism of polyphosphates	0	281	8	3524	1	1
+2	Glycine and Serine metabolism	0	281	10	3522	1	1
+2	Pathways of peptide export from the mitochondrion	0	281	5	3527	1	1
+2	Role of perforin 1 in merozoite egress	0	281	5	3527	1	1
+2	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	2	279	13	3519	0.304324770707596	1
+2	14-3-3 protein	0	281	3	3529	1	1
+2	Roles of rhoptry neck proteins during invasion	1	280	3	3529	0.263858749606568	1
+2	Folate biosynthesis	0	281	11	3521	1	1
+2	Telomerase and some telomerase associated proteins	0	281	8	3524	1	1
+2	Nicotinate and nicotinamide metabolism	1	280	5	3527	0.368479753916147	1
+2	ER-to Golgi_ translocation and quality control	0	281	15	3517	0.62081066966669	1
+2	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	281	9	3523	1	1
+2	Transcription in prokaryotes	0	281	3	3529	1	1
+2	Various features of C/D and H/ACA snoRNAs	0	281	6	3526	1	1
+2	Merozoite egress	1	280	2	3530	0.205242798526785	0.927752920367698
+2	Riboflavin metabolism	0	281	3	3529	1	1
+2	Post-translational modification of elongation factor 2	0	281	5	3527	1	1
+2	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	0	281	10	3522	1	1
+2	Structure of telomere and sub-telomeric regions	0	281	1	3531	1	1
+2	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	281	2	3530	1	1
+3	FALSE	346	287	913	2267	6.37100702579905e-35	4.43969363618824e-32
+3	Genes coding for components involved in ribosome assembly	13	620	119	3061	0.0320260226378728	0.373698996710527
+3	mRNA degradation	3	630	26	3154	0.46060016001092	1
+3	Splicing of pre-mRNA	6	627	100	3080	0.00126870994807675	0.0344094711593249
+3	RNA Degradation Factors	6	627	33	3147	1	1
+3	Phosphoproteome - Treeck et al 2011	72	561	782	2398	1.47507784029926e-14	2.2772932503697e-12
+3	Phosphoproteome - Pease et al 2013	57	576	542	2638	1.19361411031553e-07	1.08890159972876e-05
+3	S-nitrosylated proteins	14	619	233	2947	1.9292256763844e-07	1.68345910108847e-05
+3	S-Glutathionylated proteins	23	610	272	2908	6.35646894573507e-06	0.000364498090688294
+3	Transcription related proteins encoding genes	27	606	142	3038	0.915836276870757	1
+3	Translation in prokaryotes � a template for apicoplast and mitochondrion	5	628	43	3137	0.328626067258785	1
+3	Nuclear genes with apicoplast signal sequences	32	601	198	2982	0.274075943459987	1
+3	Terpenoid metabolism	3	630	10	3170	0.463434579449076	1
+3	N-myristoylation_ S-acylation and prenylation of proteins	3	630	17	3163	1	1
+3	Proteins of detergent-resistant membranes	8	625	97	3083	0.0108410799566052	0.187569374766436
+3	Genes coding for transport proteins	24	609	108	3072	0.633647985140037	1
+3	Chromatin modifying proteins	3	630	28	3152	0.464726483829759	1
+3	Histone lysine methylation	3	630	13	3167	0.739232391619975	1
+3	Plasmodium falciparum chromatin landscape	3	630	15	3165	1	1
+3	Topogenesis of the Rieske FeS protein	0	633	10	3170	0.385158537544699	1
+3	Nuclear genes with mitochondrial signal sequences	31	602	239	2941	0.0174658870686616	0.242116461498371
+3	Porphyrin metabolism	3	630	14	3166	0.753576784861212	1
+3	Pyrimidine metabolism	4	629	17	3163	0.767664839250511	1
+3	Mitochondrial electron flow	2	631	22	3158	0.409737309959785	1
+3	Phosphoproteome - Lasonder et al 2011	49	584	457	2723	2.56475990292367e-06	0.000166047520166704
+3	Established and putative Maurer�s clefts proteins	4	629	45	3135	0.123853419278353	0.771826303741559
+3	The acidocalcisome	7	626	29	3151	0.651753361946852	1
+3	ATP-dependent chromatin remodeling complexes	4	629	30	3150	0.642489194966434	1
+3	Phenylalanine and Tyrosine metabolism	2	631	7	3173	0.650104516146614	1
+3	Modification of proteins by adenylylation and ADP-ribosylation	7	626	41	3139	0.846181162638447	1
+3	Protein biosynthesis	4	629	51	3129	0.0669552606605987	0.567000878252412
+3	DNA binding proteins with AP2 domain(s)	5	628	14	3166	0.22763824987567	0.99037136475191
+3	Heterochromatin structure of the telomeric and subtelomeric regions	1	632	4	3176	0.596749740996402	1
+3	Total palmitome of Plasmodium falciparum	24	609	285	2895	3.18551537455117e-06	0.000188039098727182
+3	Ribosomal structure	10	623	135	3045	0.000848416957130784	0.0254145198949475
+3	Glyoxalase metabolism	1	632	5	3175	1	1
+3	The phosphoproteome of Plasmodium falciparum infected RBCs	30	603	284	2896	0.000256710837004015	0.00936761181576469
+3	Proteins involved in steps during passage through prophase	1	632	20	3160	0.234838778488889	0.993854130169466
+3	Protein phosphorylation	8	625	69	3111	0.163785343689218	0.861058481992835
+3	Protein kinase coding genes	11	622	73	3107	0.459284012746592	1
+3	Pre-replicative complex formation and transition to replication	2	631	18	3162	0.559100398125457	1
+3	Dolichol metabolism	1	632	5	3175	1	1
+3	Purine metabolism	1	632	32	3148	0.0325699546034867	0.376783979987521
+3	Double strand break repair and homologous recombination	1	632	10	3170	1	1
+3	Genes involved in excision-repair	10	623	68	3112	0.442796680836799	1
+3	Genes coding for enzymes/proteins involved in DNA replication	7	626	51	3129	0.47578017405178	1
+3	Fatty acids elongation in the endoplasmic reticulum	2	631	10	3170	1	1
+3	Fatty acid synthesis in the apicoplast	3	630	25	3155	0.608877778042844	1
+3	Genes coding for components of the proteasome degradation machinery & their timed transcription	5	628	99	3081	0.000414341365195678	0.0143376399990987
+3	Subcellular location of adaptor proteins	2	631	23	3157	0.414736613321101	1
+3	Classical COPI-mediated vesicular transport	1	632	29	3151	0.0484073557336047	0.47391981930412
+3	Genes coding for protein traffic related proteins	7	626	53	3127	0.382215623515297	1
+3	Thioredoxin_ Glutaredoxin and Peroxiredoxin	4	629	20	3160	1	1
+3	Redox Metabolism	6	627	29	3151	0.822830006969746	1
+3	Initiation of translation	4	629	38	3142	0.296056320210403	1
+3	Quality control mechanisms during ribosome maturation	0	633	12	3168	0.236286987445768	0.993854130169466
+3	Signaling machinery in malaria parasites	0	633	17	3163	0.0945162162778804	0.69955161028924
+3	Ubiquinone metabolism	0	633	7	3173	0.608672545306944	1
+3	Import of proteins into the mitochondrion	2	631	23	3157	0.414736613321101	1
+3	Peptidases and proteases	11	622	101	3079	0.0526970033450505	0.489642989414428
+3	Genes coding for chaperones and their regulators	9	624	93	3087	0.030599001702732	0.3612482142199
+3	Centrosome proteins	4	629	71	3109	0.00460731678517344	0.0943559672228887
+3	Tubulin and microtubules	1	632	23	3157	0.162414040635057	0.861058481992835
+3	Proteins targeted by the thioredoxin superfamily enzymes	2	631	36	3144	0.0758734884588723	0.61651049124274
+3	Arginine and proline metabolism	0	633	6	3174	0.597808696508491	1
+3	Pyridoxal phosphate (Vitamin B6) metabolism	4	629	18	3162	0.77567506214777	1
+3	Transporters of the plasma membrane	10	623	51	3129	1	1
+3	Mitochondrial TCA cycle	1	632	17	3163	0.339683480781935	1
+3	Possible paths for apoptosis	3	630	17	3163	1	1
+3	Phosphatidylethanolamine and phosphatidylserine metabolism	3	630	28	3152	0.464726483829759	1
+3	Structure and organization of centromeric chromatin	0	633	11	3169	0.229523116025596	0.990651384652411
+3	Chaperone-mediated modulation of nucleosome-histone interactions	0	633	13	3167	0.144139375651289	0.835313724489376
+3	Acetylation recognition by the bromodomain and other modules	0	633	12	3168	0.236286987445768	0.993854130169466
+3	Putative organization of the kinetochore	1	632	34	3146	0.0217266550105805	0.283151926014513
+3	Plasmodium falciparum histone acetylation and methylation	0	633	7	3173	0.608672545306944	1
+3	Histone acetylation	2	631	22	3158	0.409737309959785	1
+3	Protein arginine methylation	0	633	10	3170	0.385158537544699	1
+3	Nucleosome assembly and regulation	3	630	35	3145	0.188880572595825	0.897521414984889
+3	Compartmentalization of transcription site in the nucleus	0	633	4	3176	1	1
+3	Pentose Phosphate Cycle	1	632	8	3172	1	1
+3	Thiamine metabolism	0	633	15	3165	0.153450537486084	0.857303877730102
+3	RNA polymerase II transcribes mRNA	3	630	35	3145	0.188880572595825	0.897521414984889
+3	tRNA thiolation	0	633	7	3173	0.608672545306944	1
+3	Genes coding for GPI-anchored membrane proteins	1	632	24	3156	0.10657417703297	0.74194912251237
+3	Subcellular localization of proteins involved in invasion	2	631	37	3143	0.0517764789490559	0.487865696012935
+3	Functional annotation of merozoite invasion-related proteins	1	632	41	3139	0.0102799250267098	0.180830300580267
+3	Maturation and export of 60S and 40S ribosomal subunits	6	627	81	3099	0.0123623045151589	0.196913850491459
+3	Pre-ribosomal particles along the 60S assembly pathway	1	632	23	3157	0.162414040635057	0.861058481992835
+3	Structure of the mitotic centrosome	1	632	29	3151	0.0484073557336047	0.47391981930412
+3	Centriole proteins	0	633	19	3161	0.0586832169163439	0.521138125447355
+3	Classical clathrin-mediated vesicular transport	3	630	35	3145	0.188880572595825	0.897521414984889
+3	Molecular model of vesicle exocytosis	3	630	15	3165	1	1
+3	Molecular motor prototypes	7	626	34	3146	0.835506370673626	1
+3	Genes coding for Fe-S containing proteins	1	632	16	3164	0.337035537433171	1
+3	Maturation of cytosolic and nuclear Fe-S proteins	0	633	14	3166	0.146013636044483	0.835313724489376
+3	Nucleotide excision repair	3	630	26	3154	0.46060016001092	1
+3	DNA Replication	8	625	30	3150	0.508507656379392	1
+3	Kinetochores power chromosome movements in mitosis	3	630	36	3144	0.191099297419337	0.900319929391103
+3	Regulation of spindle microtubule dynamics	4	629	41	3139	0.224420327841769	0.987744732408839
+3	Control of the mitotic spindle organization by kinesins	1	632	9	3171	1	1
+3	Control of microtubule assembly	2	631	19	3161	0.559422606963188	1
+3	Pre-ribosomal particles along the 40S assembly pathway	1	632	14	3166	0.490191404387069	1
+3	Transcription and processing of snRNAs	0	633	21	3159	0.0368131544704807	0.414064143172241
+3	Proteins containing histone post translational modification-binding modules	2	631	23	3157	0.414736613321101	1
+3	Histone chaperones	1	632	24	3156	0.10657417703297	0.74194912251237
+3	Phosphoinositides and membrane traffic	3	630	20	3160	1	1
+3	Calcium � calmodulin activation of protein kinases	3	630	17	3163	1	1
+3	Inositol Phosphate metabolism	2	631	22	3158	0.409737309959785	1
+3	The structures of RNA polymerases	2	631	19	3161	0.559422606963188	1
+3	Mechanism of Fe�S-protein biogenesis	2	631	17	3163	0.75659383273385	1
+3	Selenocysteine biosynthesis	0	633	10	3170	0.385158537544699	1
+3	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	0	633	10	3170	0.385158537544699	1
+3	Pyruvate metabolism	0	633	17	3163	0.0945162162778804	0.69955161028924
+3	Chaperone-assisted protein folding	3	630	68	3112	0.00204949294332402	0.0506036334844748
+3	Sphingomyelin and ceramide metabolism	4	629	14	3166	0.523082467618809	1
+3	Generation of polyphosphates	1	632	13	3167	0.489114293204813	1
+3	Cleavage and polyadenylation of pre-mRNA	0	633	15	3165	0.153450537486084	0.857303877730102
+3	Protein factors in pre-mRNA 3�-end processing	0	633	18	3162	0.0577495835440216	0.518301869903715
+3	Oxidative protein folding in the endoplasmic reticulum	0	633	9	3171	0.371334965821572	1
+3	Transporters of the mitochondrial and apicoplast membranes	3	630	27	3153	0.46120191783685	1
+3	Phosphatases of Plasmodium falciparum and their timed expression	6	627	35	3145	1	1
+3	Transporters of the ER/Golgi and digestive vacuole membranes	1	632	29	3151	0.0484073557336047	0.47391981930412
+3	CCR4 � NOT complex	4	629	14	3166	0.523082467618809	1
+3	Encoded proteins that could be constituents of P-bodies	7	626	36	3144	1	1
+3	Isoprenoids metabolism	1	632	13	3167	0.489114293204813	1
+3	Rab and other proteins involved in intracellular traffic	1	632	15	3165	0.496771487248947	1
+3	Rab proteins	1	632	12	3168	0.707706353292759	1
+3	Endosome maturation	0	633	12	3168	0.236286987445768	0.993854130169466
+3	Rab cycle	5	628	38	3142	0.535150672607439	1
+3	Molecular markers of resistance to antimalarial drugs	3	630	9	3171	0.432993699111525	1
+3	ATP synthase complex	1	632	19	3161	0.231067477863642	0.993854130169466
+3	DNA mismatch repair system	3	630	22	3158	0.78699887903131	1
+3	Base excision repair of AP sites	4	629	33	3147	0.503692272401982	1
+3	Actin and filaments	3	630	25	3155	0.608877778042844	1
+3	A model for UbpX function in the regulation of PCNA deubiquitylation	1	632	15	3165	0.496771487248947	1
+3	Model for translesion DNA synthesis	0	633	12	3168	0.236286987445768	0.993854130169466
+3	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	1	632	21	3159	0.157353243600181	0.861058481992835
+3	Phosphatidylcholine metabolism	2	631	11	3169	1	1
+3	Components of the linear motor responsible for merozoite motility in invasion	3	630	31	3149	0.350921133399137	1
+3	Parasite encoded proteins associated with the membrane of infected erythrocytes	2	631	32	3148	0.105886293636847	0.74194912251237
+3	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	4	629	31	3149	0.500781953981713	1
+3	Asparagine and Aspartate metabolism	2	631	6	3174	0.627033003169203	1
+3	Biosynthesis of Fe-S proteins in the apicoplast	0	633	14	3166	0.146013636044483	0.835313724489376
+3	Methionine and Polyamine metabolism	5	628	14	3166	0.22763824987567	0.99037136475191
+3	Signal recognition particle-mediated targeting of membrane and secretory proteins	1	632	11	3169	0.703443589845269	1
+3	Karyopherin/exportin-mediated nuclear export pathways	2	631	16	3164	0.754225950338395	1
+3	tRNA modifications	10	623	33	3147	0.221081076740369	0.983835301591841
+3	Schematic depiction of pseudouridylation	2	631	13	3167	1	1
+3	The HSP70 chaperone cycle	1	632	6	3174	1	1
+3	Organization of chaperone pathways in the cytosol	4	629	26	3154	0.807138477728683	1
+3	The ATG autophagic pathway	2	631	11	3169	1	1
+3	Glutamate metabolism	1	632	13	3167	0.489114293204813	1
+3	Glycolysis	2	631	26	3154	0.302884122562254	1
+3	Model for metabolic compartmentalization of PI biosynthesis	4	629	8	3172	0.123457115969302	0.771826303741559
+3	Shikimate biosynthesis	0	633	5	3175	1	1
+3	CoA biosynthesis	1	632	7	3173	1	1
+3	Utilization of phospholipids	4	629	22	3158	1	1
+3	Structure and processing of pre rRNA	1	632	24	3156	0.10657417703297	0.74194912251237
+3	Bulk mRNA transport through the nuclear pore	0	633	4	3176	1	1
+3	Posttranslational translocation in eukaryotes	3	630	24	3156	0.606206361866139	1
+3	SRP independent translocation of GPI anchored proteins	2	631	7	3173	0.650104516146614	1
+3	Proteasome-mediated proteolysis of ubiquinated proteins	4	629	34	3146	0.386412255289183	1
+3	Aminosugars metabolism	0	633	8	3172	0.367107673304767	1
+3	Quality control in mRNA biogenesis	2	631	20	3160	0.563375132823672	1
+3	Leucine_ Isoleucine and Valine metabolism	0	633	11	3169	0.229523116025596	0.990651384652411
+3	Classical COPII-mediated vesicular transport	1	632	24	3156	0.10657417703297	0.74194912251237
+3	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	1	632	10	3170	1	1
+3	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	2	631	12	3168	1	1
+3	Assisted assembly of Sm-class snRNPs	1	632	10	3170	1	1
+3	Lysine metabolism	0	633	5	3175	1	1
+3	Mitochondrial division	0	633	4	3176	1	1
+3	Import and export through the nuclear pore	2	631	22	3158	0.409737309959785	1
+3	Putative SUMO substrates	2	631	19	3161	0.559422606963188	1
+3	RNA polymerase I transcribes rRNA	2	631	7	3173	0.650104516146614	1
+3	Lipoic acid metabolism	0	633	6	3174	0.597808696508491	1
+3	Acetyl-CoA production in the mitochondrion	0	633	6	3174	0.597808696508491	1
+3	Mitochondrial antioxidant system	1	632	13	3167	0.489114293204813	1
+3	Chaperone network and protein quality control of the mitochondrion	2	631	34	3146	0.1102075061829	0.74194912251237
+3	Proteome of the parasitophorous vacuole	1	632	23	3157	0.162414040635057	0.861058481992835
+3	Proteins with ER retention sequences	1	632	11	3169	0.703443589845269	1
+3	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	633	3	3177	1	1
+3	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	0	633	16	3164	0.0912438620774946	0.685866783481392
+3	Interactions between modified host cell membrane and endothelial cell	0	633	3	3177	1	1
+3	Rosette formation between normal and infected RBC	1	632	2	3178	0.420020164093134	1
+3	Domains of merozoite surface proteins	0	633	7	3173	0.608672545306944	1
+3	Nitrogen metabolism	1	632	8	3172	1	1
+3	RNA polymerase III transcribes tRNA and 5S rRNA	2	631	12	3168	1	1
+3	The Atg8 and Atg12 ubiquitin-like conjugation systems	2	631	5	3175	0.328358092317605	1
+3	Structure of the nuclear pore	0	633	4	3176	1	1
+3	Biogenesis of cytochrome oxidase	4	629	16	3164	0.761190389398091	1
+3	Protein N-terminal acetylation	1	632	8	3172	1	1
+3	Mannose and Fructose metabolism	1	632	6	3174	1	1
+3	tRNA-wybutosine biosynthesis	1	632	3	3177	0.516379018720181	1
+3	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	1	632	5	3175	1	1
+3	Anaphase promoting complex ubiquitin-ligase	0	633	10	3170	0.385158537544699	1
+3	Lsm proteins and RNA processing	1	632	10	3170	1	1
+3	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	3	630	11	3169	0.715616229609354	1
+3	Exported parasite proteins associated with Maurer�s clefts	0	633	4	3176	1	1
+3	Translocon of exported proteins (PTEX)	0	633	6	3174	0.597808696508491	1
+3	Post-translational modification �SUMOylation	2	631	7	3173	0.650104516146614	1
+3	Activation of eiF5A	0	633	3	3177	1	1
+3	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	2	631	3	3177	0.194896129615297	0.909666353809071
+3	Different kinesins with different roles	0	633	5	3175	1	1
+3	Catabolism of polyphosphates	2	631	6	3174	0.627033003169203	1
+3	Glycine and Serine metabolism	1	632	9	3171	1	1
+3	Pathways of peptide export from the mitochondrion	2	631	3	3177	0.194896129615297	0.909666353809071
+3	Role of perforin 1 in merozoite egress	0	633	5	3175	1	1
+3	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	0	633	15	3165	0.153450537486084	0.857303877730102
+3	14-3-3 protein	0	633	3	3177	1	1
+3	Roles of rhoptry neck proteins during invasion	0	633	4	3176	1	1
+3	Folate biosynthesis	4	629	7	3173	0.0941557536546513	0.69955161028924
+3	Telomerase and some telomerase associated proteins	0	633	8	3172	0.367107673304767	1
+3	Nicotinate and nicotinamide metabolism	1	632	5	3175	1	1
+3	ER-to Golgi_ translocation and quality control	1	632	14	3166	0.490191404387069	1
+3	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	3	630	6	3174	0.176518663419792	0.876913261097829
+3	Transcription in prokaryotes	0	633	3	3177	1	1
+3	Various features of C/D and H/ACA snoRNAs	1	632	5	3175	1	1
+3	Merozoite egress	0	633	3	3177	1	1
+3	Riboflavin metabolism	0	633	3	3177	1	1
+3	Post-translational modification of elongation factor 2	1	632	4	3176	0.596749740996402	1
+3	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	1	632	9	3171	1	1
+3	Structure of telomere and sub-telomeric regions	0	633	1	3179	1	1
+3	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	633	2	3178	1	1
+4	FALSE	245	236	1014	2318	3.29483887870124e-18	6.61274162955339e-16
+4	Genes coding for components involved in ribosome assembly	6	475	126	3206	0.00296456375560974	0.0653832907418543
+4	mRNA degradation	2	479	27	3305	0.57178010799488	1
+4	Splicing of pre-mRNA	7	474	99	3233	0.0729610253261455	0.59997067783352
+4	RNA Degradation Factors	1	480	38	3294	0.053563576440113	0.493128889519756
+4	Phosphoproteome - Treeck et al 2011	105	376	749	2583	0.770240367424818	1
+4	Phosphoproteome - Pease et al 2013	80	401	519	2813	0.546679418901789	1
+4	S-nitrosylated proteins	18	463	229	3103	0.00730251208103005	0.134460016024104
+4	S-Glutathionylated proteins	10	471	285	3047	2.46656622165263e-08	2.47519920342841e-06
+4	Transcription related proteins encoding genes	16	465	153	3179	0.236409797810459	0.993854130169466
+4	Translation in prokaryotes � a template for apicoplast and mitochondrion	2	479	46	3286	0.0806820500643648	0.629929616172102
+4	Nuclear genes with apicoplast signal sequences	19	462	211	3121	0.0402135493858152	0.43408361474488
+4	Terpenoid metabolism	0	481	13	3319	0.392489008501209	1
+4	N-myristoylation_ S-acylation and prenylation of proteins	3	478	17	3315	0.732579771319208	1
+4	Proteins of detergent-resistant membranes	8	473	97	3235	0.135840336001694	0.813825535389254
+4	Genes coding for transport proteins	15	466	117	3215	0.789423800755996	1
+4	Chromatin modifying proteins	2	479	29	3303	0.419283518545654	1
+4	Histone lysine methylation	2	479	14	3318	1	1
+4	Plasmodium falciparum chromatin landscape	3	478	15	3317	0.48869519118672	1
+4	Topogenesis of the Rieske FeS protein	0	481	10	3322	0.624806423540944	1
+4	Nuclear genes with mitochondrial signal sequences	17	464	253	3079	0.000591647127799067	0.0194661604179136
+4	Porphyrin metabolism	3	478	14	3318	0.465224945666755	1
+4	Pyrimidine metabolism	3	478	18	3314	0.741756374001817	1
+4	Mitochondrial electron flow	1	480	23	3309	0.351639026710237	1
+4	Phosphoproteome - Lasonder et al 2011	71	410	435	2897	0.314026060457336	1
+4	Established and putative Maurer�s clefts proteins	4	477	45	3287	0.513472590722811	1
+4	The acidocalcisome	1	480	35	3297	0.0783989846378859	0.629387048672948
+4	ATP-dependent chromatin remodeling complexes	2	479	32	3300	0.306201512788039	1
+4	Phenylalanine and Tyrosine metabolism	1	480	8	3324	1	1
+4	Modification of proteins by adenylylation and ADP-ribosylation	4	477	44	3288	0.511177847310353	1
+4	Protein biosynthesis	1	480	54	3278	0.011921168252495	0.195248564943333
+4	DNA binding proteins with AP2 domain(s)	4	477	15	3317	0.287696231636386	1
+4	Heterochromatin structure of the telomeric and subtelomeric regions	0	481	5	3327	1	1
+4	Total palmitome of Plasmodium falciparum	25	456	284	3048	0.0120344268838393	0.195248564943333
+4	Ribosomal structure	2	479	143	3189	1.17490828336273e-06	8.1311756024448e-05
+4	Glyoxalase metabolism	0	481	6	3326	1	1
+4	The phosphoproteome of Plasmodium falciparum infected RBCs	45	436	269	3063	0.329748428582595	1
+4	Proteins involved in steps during passage through prophase	7	474	14	3318	0.0115506096196369	0.193183945888428
+4	Protein phosphorylation	16	465	61	3271	0.0366420744357583	0.414064143172241
+4	Protein kinase coding genes	14	467	70	3262	0.246000656174987	0.993854130169466
+4	Pre-replicative complex formation and transition to replication	4	477	16	3316	0.306386079287441	1
+4	Dolichol metabolism	1	480	5	3327	0.554977223965929	1
+4	Purine metabolism	5	476	28	3304	0.599530251697121	1
+4	Double strand break repair and homologous recombination	4	477	7	3325	0.039905852911368	0.43408361474488
+4	Genes involved in excision-repair	12	469	66	3266	0.488636403870516	1
+4	Genes coding for enzymes/proteins involved in DNA replication	11	470	47	3285	0.159595776644476	0.861058481992835
+4	Fatty acids elongation in the endoplasmic reticulum	0	481	12	3320	0.383091839057246	1
+4	Fatty acid synthesis in the apicoplast	1	480	27	3305	0.246781777154921	0.993854130169466
+4	Genes coding for components of the proteasome degradation machinery & their timed transcription	8	473	96	3236	0.135823045998568	0.813825535389254
+4	Subcellular location of adaptor proteins	3	478	22	3310	1	1
+4	Classical COPI-mediated vesicular transport	1	480	29	3303	0.167094153477735	0.861058481992835
+4	Genes coding for protein traffic related proteins	6	475	54	3278	0.695266572565238	1
+4	Thioredoxin_ Glutaredoxin and Peroxiredoxin	1	480	23	3309	0.351639026710237	1
+4	Redox Metabolism	2	479	33	3299	0.306788712614103	1
+4	Initiation of translation	2	479	40	3292	0.15971954005426	0.861058481992835
+4	Quality control mechanisms during ribosome maturation	0	481	12	3320	0.383091839057246	1
+4	Signaling machinery in malaria parasites	5	476	12	3320	0.0532086772729717	0.492118964455549
+4	Ubiquinone metabolism	1	480	6	3326	1	1
+4	Import of proteins into the mitochondrion	0	481	25	3307	0.064531419327062	0.551125781231547
+4	Peptidases and proteases	11	470	101	3231	0.469210037158779	1
+4	Genes coding for chaperones and their regulators	5	476	97	3235	0.0146933163724006	0.22511057984281
+4	Centrosome proteins	10	471	65	3267	0.860099891738528	1
+4	Tubulin and microtubules	2	479	22	3310	0.759891917884556	1
+4	Proteins targeted by the thioredoxin superfamily enzymes	1	480	37	3295	0.0804744707154237	0.629929616172102
+4	Arginine and proline metabolism	0	481	6	3326	1	1
+4	Pyridoxal phosphate (Vitamin B6) metabolism	1	480	21	3311	0.348699093490946	1
+4	Transporters of the plasma membrane	9	472	52	3280	0.561463608426065	1
+4	Mitochondrial TCA cycle	3	478	15	3317	0.48869519118672	1
+4	Possible paths for apoptosis	3	478	17	3315	0.732579771319208	1
+4	Phosphatidylethanolamine and phosphatidylserine metabolism	2	479	29	3303	0.419283518545654	1
+4	Structure and organization of centromeric chromatin	0	481	11	3321	0.378922923512307	1
+4	Chaperone-mediated modulation of nucleosome-histone interactions	2	479	11	3321	0.674642154044915	1
+4	Acetylation recognition by the bromodomain and other modules	0	481	12	3320	0.383091839057246	1
+4	Putative organization of the kinetochore	7	474	28	3304	0.196695617338687	0.91170462817262
+4	Plasmodium falciparum histone acetylation and methylation	0	481	7	3325	0.606411429759202	1
+4	Histone acetylation	1	480	23	3309	0.351639026710237	1
+4	Protein arginine methylation	0	481	10	3322	0.624806423540944	1
+4	Nucleosome assembly and regulation	3	478	35	3297	0.620282514958025	1
+4	Compartmentalization of transcription site in the nucleus	0	481	4	3328	1	1
+4	Pentose Phosphate Cycle	0	481	9	3323	0.613564161141629	1
+4	Thiamine metabolism	0	481	15	3317	0.241993710257862	0.993854130169466
+4	RNA polymerase II transcribes mRNA	4	477	34	3298	1	1
+4	tRNA thiolation	0	481	7	3325	0.606411429759202	1
+4	Genes coding for GPI-anchored membrane proteins	1	480	24	3308	0.357349969851271	1
+4	Subcellular localization of proteins involved in invasion	5	476	34	3298	1	1
+4	Functional annotation of merozoite invasion-related proteins	7	474	35	3297	0.479183489428946	1
+4	Maturation and export of 60S and 40S ribosomal subunits	2	479	85	3247	0.00150735514654749	0.0387854074246257
+4	Pre-ribosomal particles along the 60S assembly pathway	1	480	23	3309	0.351639026710237	1
+4	Structure of the mitotic centrosome	7	474	23	3309	0.0918779754404796	0.68805633100389
+4	Centriole proteins	1	480	18	3314	0.499069637389495	1
+4	Classical clathrin-mediated vesicular transport	4	477	34	3298	1	1
+4	Molecular model of vesicle exocytosis	0	481	18	3314	0.154100598109591	0.857303877730102
+4	Molecular motor prototypes	11	470	30	3302	0.0142831011435839	0.222218480582735
+4	Genes coding for Fe-S containing proteins	2	479	15	3317	1	1
+4	Maturation of cytosolic and nuclear Fe-S proteins	0	481	14	3318	0.240213649823613	0.993854130169466
+4	Nucleotide excision repair	5	476	24	3308	0.402464535532073	1
+4	DNA Replication	7	474	31	3301	0.31996087711972	1
+4	Kinetochores power chromosome movements in mitosis	11	470	28	3304	0.00699338228407648	0.129960354112421
+4	Regulation of spindle microtubule dynamics	13	468	32	3300	0.00275367639869883	0.0620969497998714
+4	Control of the mitotic spindle organization by kinesins	1	480	9	3323	1	1
+4	Control of microtubule assembly	3	478	18	3314	0.741756374001817	1
+4	Pre-ribosomal particles along the 40S assembly pathway	1	480	14	3318	0.709909396314753	1
+4	Transcription and processing of snRNAs	2	479	19	3313	1	1
+4	Proteins containing histone post translational modification-binding modules	1	480	24	3308	0.357349969851271	1
+4	Histone chaperones	2	479	23	3309	0.761571216954511	1
+4	Phosphoinositides and membrane traffic	6	475	17	3315	0.0603366404115386	0.528801909633004
+4	Calcium � calmodulin activation of protein kinases	3	478	17	3315	0.732579771319208	1
+4	Inositol Phosphate metabolism	5	476	19	3313	0.215927125051188	0.967334241021729
+4	The structures of RNA polymerases	1	480	20	3312	0.505357737891431	1
+4	Mechanism of Fe�S-protein biogenesis	0	481	19	3313	0.157726676112859	0.861058481992835
+4	Selenocysteine biosynthesis	0	481	10	3322	0.624806423540944	1
+4	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	2	479	8	3324	0.365603044211746	1
+4	Pyruvate metabolism	3	478	14	3318	0.465224945666755	1
+4	Chaperone-assisted protein folding	3	478	68	3264	0.0290491611886317	0.347033729199904
+4	Sphingomyelin and ceramide metabolism	2	479	16	3316	1	1
+4	Generation of polyphosphates	1	480	13	3319	1	1
+4	Cleavage and polyadenylation of pre-mRNA	2	479	13	3319	1	1
+4	Protein factors in pre-mRNA 3�-end processing	3	478	15	3317	0.48869519118672	1
+4	Oxidative protein folding in the endoplasmic reticulum	0	481	9	3323	0.613564161141629	1
+4	Transporters of the mitochondrial and apicoplast membranes	1	480	29	3303	0.167094153477735	0.861058481992835
+4	Phosphatases of Plasmodium falciparum and their timed expression	6	475	35	3297	0.637301108391176	1
+4	Transporters of the ER/Golgi and digestive vacuole membranes	4	477	26	3306	0.785670826612885	1
+4	CCR4 � NOT complex	0	481	18	3314	0.154100598109591	0.857303877730102
+4	Encoded proteins that could be constituents of P-bodies	2	479	41	3291	0.161574163010039	0.861058481992835
+4	Isoprenoids metabolism	1	480	13	3319	1	1
+4	Rab and other proteins involved in intracellular traffic	2	479	14	3318	1	1
+4	Rab proteins	1	480	12	3320	1	1
+4	Endosome maturation	2	479	10	3322	0.656261504419351	1
+4	Rab cycle	4	477	39	3293	0.647758439484809	1
+4	Molecular markers of resistance to antimalarial drugs	1	480	11	3321	1	1
+4	ATP synthase complex	0	481	20	3312	0.164349635009786	0.861058481992835
+4	DNA mismatch repair system	6	475	19	3313	0.119375743717822	0.763016298221872
+4	Base excision repair of AP sites	8	473	29	3303	0.128174635008007	0.785072870268077
+4	Actin and filaments	3	478	25	3307	1	1
+4	A model for UbpX function in the regulation of PCNA deubiquitylation	3	478	13	3319	0.443255471392498	1
+4	Model for translesion DNA synthesis	3	478	9	3323	0.185317143315158	0.891922078257846
+4	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	1	480	21	3311	0.348699093490946	1
+4	Phosphatidylcholine metabolism	2	479	11	3321	0.674642154044915	1
+4	Components of the linear motor responsible for merozoite motility in invasion	6	475	28	3304	0.430743241554577	1
+4	Parasite encoded proteins associated with the membrane of infected erythrocytes	2	479	32	3300	0.306201512788039	1
+4	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	3	478	32	3300	0.61398663933077	1
+4	Asparagine and Aspartate metabolism	0	481	8	3324	0.606913719804551	1
+4	Biosynthesis of Fe-S proteins in the apicoplast	0	481	14	3318	0.240213649823613	0.993854130169466
+4	Methionine and Polyamine metabolism	0	481	19	3313	0.157726676112859	0.861058481992835
+4	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	481	12	3320	0.383091839057246	1
+4	Karyopherin/exportin-mediated nuclear export pathways	2	479	16	3316	1	1
+4	tRNA modifications	4	477	39	3293	0.647758439484809	1
+4	Schematic depiction of pseudouridylation	0	481	15	3317	0.241993710257862	0.993854130169466
+4	The HSP70 chaperone cycle	0	481	7	3325	0.606411429759202	1
+4	Organization of chaperone pathways in the cytosol	0	481	30	3302	0.0265224299806659	0.332690731069978
+4	The ATG autophagic pathway	1	480	12	3320	1	1
+4	Glutamate metabolism	1	480	13	3319	1	1
+4	Glycolysis	2	479	26	3306	0.568834658733403	1
+4	Model for metabolic compartmentalization of PI biosynthesis	0	481	12	3320	0.383091839057246	1
+4	Shikimate biosynthesis	1	480	4	3328	0.490638193225806	1
+4	CoA biosynthesis	0	481	8	3324	0.606913719804551	1
+4	Utilization of phospholipids	3	478	23	3309	1	1
+4	Structure and processing of pre rRNA	1	480	24	3308	0.357349969851271	1
+4	Bulk mRNA transport through the nuclear pore	0	481	4	3328	1	1
+4	Posttranslational translocation in eukaryotes	1	480	26	3306	0.242949375663154	0.993854130169466
+4	SRP independent translocation of GPI anchored proteins	0	481	9	3323	0.613564161141629	1
+4	Proteasome-mediated proteolysis of ubiquinated proteins	2	479	36	3296	0.221719770886989	0.98449464639422
+4	Aminosugars metabolism	2	479	6	3326	0.26725366740074	1
+4	Quality control in mRNA biogenesis	1	480	21	3311	0.348699093490946	1
+4	Leucine_ Isoleucine and Valine metabolism	1	480	10	3322	1	1
+4	Classical COPII-mediated vesicular transport	2	479	23	3309	0.761571216954511	1
+4	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	2	479	9	3323	0.639378101490721	1
+4	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	0	481	14	3318	0.240213649823613	0.993854130169466
+4	Assisted assembly of Sm-class snRNPs	0	481	11	3321	0.378922923512307	1
+4	Lysine metabolism	2	479	3	3329	0.122544700049143	0.770722004024358
+4	Mitochondrial division	1	480	3	3329	0.417019494590474	1
+4	Import and export through the nuclear pore	2	479	22	3310	0.759891917884556	1
+4	Putative SUMO substrates	4	477	17	3315	0.327115835197268	1
+4	RNA polymerase I transcribes rRNA	0	481	9	3323	0.613564161141629	1
+4	Lipoic acid metabolism	1	480	5	3327	0.554977223965929	1
+4	Acetyl-CoA production in the mitochondrion	0	481	6	3326	1	1
+4	Mitochondrial antioxidant system	1	480	13	3319	1	1
+4	Chaperone network and protein quality control of the mitochondrion	5	476	31	3301	0.799837464686741	1
+4	Proteome of the parasitophorous vacuole	3	478	21	3311	1	1
+4	Proteins with ER retention sequences	0	481	12	3320	0.383091839057246	1
+4	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	1	480	2	3330	0.332785903992101	1
+4	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	2	479	14	3318	1	1
+4	Interactions between modified host cell membrane and endothelial cell	2	479	1	3331	0.0436597957220117	0.449360051354243
+4	Rosette formation between normal and infected RBC	1	480	2	3330	0.332785903992101	1
+4	Domains of merozoite surface proteins	0	481	7	3325	0.606411429759202	1
+4	Nitrogen metabolism	0	481	9	3323	0.613564161141629	1
+4	RNA polymerase III transcribes tRNA and 5S rRNA	0	481	14	3318	0.240213649823613	0.993854130169466
+4	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	481	7	3325	0.606411429759202	1
+4	Structure of the nuclear pore	0	481	4	3328	1	1
+4	Biogenesis of cytochrome oxidase	0	481	20	3312	0.164349635009786	0.861058481992835
+4	Protein N-terminal acetylation	1	480	8	3324	1	1
+4	Mannose and Fructose metabolism	0	481	7	3325	0.606411429759202	1
+4	tRNA-wybutosine biosynthesis	0	481	4	3328	1	1
+4	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	0	481	6	3326	1	1
+4	Anaphase promoting complex ubiquitin-ligase	1	480	9	3323	1	1
+4	Lsm proteins and RNA processing	0	481	11	3321	0.378922923512307	1
+4	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	1	480	13	3319	1	1
+4	Exported parasite proteins associated with Maurer�s clefts	1	480	3	3329	0.417019494590474	1
+4	Translocon of exported proteins (PTEX)	2	479	4	3328	0.168943039525193	0.862121041324534
+4	Post-translational modification �SUMOylation	1	480	8	3324	1	1
+4	Activation of eiF5A	0	481	3	3329	1	1
+4	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	0	481	5	3327	1	1
+4	Different kinesins with different roles	1	480	4	3328	0.490638193225806	1
+4	Catabolism of polyphosphates	0	481	8	3324	0.606913719804551	1
+4	Glycine and Serine metabolism	0	481	10	3322	0.624806423540944	1
+4	Pathways of peptide export from the mitochondrion	1	480	4	3328	0.490638193225806	1
+4	Role of perforin 1 in merozoite egress	0	481	5	3327	1	1
+4	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	2	479	13	3319	1	1
+4	14-3-3 protein	0	481	3	3329	1	1
+4	Roles of rhoptry neck proteins during invasion	2	479	2	3330	0.0800851321969836	0.629929616172102
+4	Folate biosynthesis	0	481	11	3321	0.378922923512307	1
+4	Telomerase and some telomerase associated proteins	0	481	8	3324	0.606913719804551	1
+4	Nicotinate and nicotinamide metabolism	1	480	5	3327	0.554977223965929	1
+4	ER-to Golgi_ translocation and quality control	1	480	14	3318	0.709909396314753	1
+4	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	481	9	3323	0.613564161141629	1
+4	Transcription in prokaryotes	1	480	2	3330	0.332785903992101	1
+4	Various features of C/D and H/ACA snoRNAs	1	480	5	3327	0.554977223965929	1
+4	Merozoite egress	0	481	3	3329	1	1
+4	Riboflavin metabolism	0	481	3	3329	1	1
+4	Post-translational modification of elongation factor 2	0	481	5	3327	1	1
+4	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	3	478	7	3325	0.121794943985645	0.76868695779619
+4	Structure of telomere and sub-telomeric regions	0	481	1	3331	1	1
+4	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	481	2	3330	1	1
+0	FALSE	0	1408	1259	1146	0	0
+0	Genes coding for components involved in ribosome assembly	69	1339	63	2342	0.000310968528610351	0.0111448899450174
+0	mRNA degradation	16	1392	13	2392	0.0522754566092433	0.489642989414428
+0	Splicing of pre-mRNA	61	1347	45	2360	1.41786186711317e-05	0.000748854938762139
+0	RNA Degradation Factors	19	1389	20	2385	0.135003775869755	0.813671405917712
+0	Phosphoproteome - Treeck et al 2011	471	937	383	2022	6.636313357531e-35	4.43969363618824e-32
+0	Phosphoproteome - Pease et al 2013	330	1078	269	2136	7.97588959003609e-23	2.3827658712491e-20
+0	S-nitrosylated proteins	165	1243	82	2323	7.74781426795345e-23	2.3827658712491e-20
+0	S-Glutathionylated proteins	199	1209	96	2309	2.34075993855074e-28	1.17447629916783e-25
+0	Transcription related proteins encoding genes	89	1319	80	2325	2.76474123740771e-05	0.00132115134844697
+0	Translation in prokaryotes � a template for apicoplast and mitochondrion	19	1389	29	2376	0.763784434599564	1
+0	Nuclear genes with apicoplast signal sequences	122	1286	108	2297	3.16197787982871e-07	2.53843584192649e-05
+0	Terpenoid metabolism	8	1400	5	2400	0.0838799806517838	0.649988884819035
+0	N-myristoylation_ S-acylation and prenylation of proteins	10	1398	10	2395	0.249090252920146	0.993854130169466
+0	Proteins of detergent-resistant membranes	61	1347	44	2361	8.35433461220392e-06	0.000465754154630368
+0	Genes coding for transport proteins	62	1346	70	2335	0.0169075574714059	0.240662892518522
+0	Chromatin modifying proteins	18	1390	13	2392	0.0231587509211293	0.297946237812222
+0	Histone lysine methylation	7	1401	9	2396	0.608485060215299	1
+0	Plasmodium falciparum chromatin landscape	9	1399	9	2396	0.32719537884462	1
+0	Topogenesis of the Rieske FeS protein	6	1402	4	2401	0.187241497033369	0.896882302019027
+0	Nuclear genes with mitochondrial signal sequences	154	1254	116	2289	3.57171647576876e-12	5.12031069061993e-10
+0	Porphyrin metabolism	6	1402	11	2394	1	1
+0	Pyrimidine metabolism	9	1399	12	2393	0.651531908776001	1
+0	Mitochondrial electron flow	18	1390	6	2399	0.000175477597838424	0.00690555958552385
+0	Phosphoproteome - Lasonder et al 2011	279	1129	227	2178	3.72383365001625e-19	9.34216766947826e-17
+0	Established and putative Maurer�s clefts proteins	29	1379	20	2385	0.00158734069319459	0.0403264907752093
+0	The acidocalcisome	16	1392	20	2385	0.386718471136917	1
+0	ATP-dependent chromatin remodeling complexes	21	1387	13	2392	0.00375518235448398	0.0801771381430783
+0	Phenylalanine and Tyrosine metabolism	4	1404	5	2400	0.733410387903413	1
+0	Modification of proteins by adenylylation and ADP-ribosylation	29	1379	19	2386	0.00129347535074177	0.0346134003858498
+0	Protein biosynthesis	39	1369	16	2389	3.14003223128458e-07	2.53843584192649e-05
+0	DNA binding proteins with AP2 domain(s)	7	1401	12	2393	1	1
+0	Heterochromatin structure of the telomeric and subtelomeric regions	2	1406	3	2402	1	1
+0	Total palmitome of Plasmodium falciparum	196	1212	113	2292	8.3105934722191e-23	2.3827658712491e-20
+0	Ribosomal structure	93	1315	52	2353	1.52057477165438e-11	2.03452904447356e-09
+0	Glyoxalase metabolism	5	1403	1	2404	0.0284182403265904	0.34152939123034
+0	The phosphoproteome of Plasmodium falciparum infected RBCs	189	1219	125	2280	3.17515239960069e-18	6.61274162955339e-16
+0	Proteins involved in steps during passage through prophase	7	1401	14	2391	0.82361669312858	1
+0	Protein phosphorylation	34	1374	43	2362	0.1908083243123	0.900319929391103
+0	Protein kinase coding genes	35	1373	49	2356	0.362688758821803	1
+0	Pre-replicative complex formation and transition to replication	7	1401	13	2392	1	1
+0	Dolichol metabolism	3	1405	3	2402	0.676053870668833	1
+0	Purine metabolism	17	1391	16	2389	0.101909682507288	0.733092232229846
+0	Double strand break repair and homologous recombination	5	1403	6	2399	0.5477461520041	1
+0	Genes involved in excision-repair	42	1366	36	2369	0.00278868211304366	0.0621876111208736
+0	Genes coding for enzymes/proteins involved in DNA replication	33	1375	25	2380	0.00227840994238566	0.0537972794631532
+0	Fatty acids elongation in the endoplasmic reticulum	7	1401	5	2400	0.140783366406859	0.827774043065323
+0	Fatty acid synthesis in the apicoplast	15	1393	13	2392	0.0774219811323836	0.62403982382608
+0	Genes coding for components of the proteasome degradation machinery & their timed transcription	67	1341	37	2368	1.11757542912743e-08	1.24609660347708e-06
+0	Subcellular location of adaptor proteins	15	1393	10	2395	0.0213255248132816	0.279740707844812
+0	Classical COPI-mediated vesicular transport	22	1386	8	2397	6.91360359035153e-05	0.00301643530561642
+0	Genes coding for protein traffic related proteins	33	1375	27	2378	0.00441468737354915	0.092294557903262
+0	Thioredoxin_ Glutaredoxin and Peroxiredoxin	12	1396	12	2393	0.205225650007221	0.927752920367698
+0	Redox Metabolism	18	1390	17	2388	0.0801442396384158	0.629929616172102
+0	Initiation of translation	28	1380	14	2391	0.00013815893402493	0.00565887715485783
+0	Quality control mechanisms during ribosome maturation	10	1398	2	2403	0.00135421480376141	0.0352975209240149
+0	Signaling machinery in malaria parasites	8	1400	9	2396	0.451950449459774	1
+0	Ubiquinone metabolism	4	1404	3	2402	0.434811718564163	1
+0	Import of proteins into the mitochondrion	14	1394	11	2394	0.0602031674489032	0.528801909633004
+0	Peptidases and proteases	70	1338	42	2363	3.9994513040819e-08	3.82233274632971e-06
+0	Genes coding for chaperones and their regulators	71	1337	31	2374	1.96830854089579e-11	2.46899702598615e-09
+0	Centrosome proteins	38	1370	37	2368	0.0153628174654792	0.230098318307588
+0	Tubulin and microtubules	12	1396	12	2393	0.205225650007221	0.927752920367698
+0	Proteins targeted by the thioredoxin superfamily enzymes	29	1379	9	2396	1.3028410887623e-06	8.71600688381977e-05
+0	Arginine and proline metabolism	4	1404	2	2403	0.202105201473028	0.924673194090343
+0	Pyridoxal phosphate (Vitamin B6) metabolism	9	1399	13	2392	0.825158319379114	1
+0	Transporters of the plasma membrane	27	1381	34	2371	0.231776844506747	0.993854130169466
+0	Mitochondrial TCA cycle	13	1395	5	2400	0.00271891835978813	0.0620098766828953
+0	Possible paths for apoptosis	10	1398	10	2395	0.249090252920146	0.993854130169466
+0	Phosphatidylethanolamine and phosphatidylserine metabolism	18	1390	13	2392	0.0231587509211293	0.297946237812222
+0	Structure and organization of centromeric chromatin	7	1401	4	2401	0.112599715672112	0.748303408456715
+0	Chaperone-mediated modulation of nucleosome-histone interactions	6	1402	7	2398	0.567999153866378	1
+0	Acetylation recognition by the bromodomain and other modules	7	1401	5	2400	0.140783366406859	0.827774043065323
+0	Putative organization of the kinetochore	13	1395	22	2383	1	1
+0	Plasmodium falciparum histone acetylation and methylation	3	1405	4	2401	0.713970969494672	1
+0	Histone acetylation	13	1395	11	2394	0.0907816320449709	0.685866783481392
+0	Protein arginine methylation	8	1400	2	2403	0.00697639934538071	0.129960354112421
+0	Nucleosome assembly and regulation	19	1389	19	2386	0.127041550627582	0.783213257978182
+0	Compartmentalization of transcription site in the nucleus	2	1406	2	2403	0.629248993001911	1
+0	Pentose Phosphate Cycle	6	1402	3	2402	0.084413057658869	0.651603872005192
+0	Thiamine metabolism	10	1398	5	2400	0.0281650702936611	0.34152939123034
+0	RNA polymerase II transcribes mRNA	23	1385	15	2390	0.0035921780717954	0.0775215203235847
+0	tRNA thiolation	5	1403	2	2403	0.108891313798337	0.74194912251237
+0	Genes coding for GPI-anchored membrane proteins	10	1398	15	2390	0.835843448284815	1
+0	Subcellular localization of proteins involved in invasion	17	1391	22	2383	0.40677054704364	1
+0	Functional annotation of merozoite invasion-related proteins	19	1389	23	2382	0.264539389340779	1
+0	Maturation and export of 60S and 40S ribosomal subunits	55	1353	32	2373	7.40794527170019e-07	5.3099093429651e-05
+0	Pre-ribosomal particles along the 60S assembly pathway	14	1394	10	2395	0.0343600747270741	0.391821988507033
+0	Structure of the mitotic centrosome	9	1399	21	2384	0.569366929028471	1
+0	Centriole proteins	7	1401	12	2393	1	1
+0	Classical clathrin-mediated vesicular transport	24	1384	14	2391	0.00111700226865095	0.0315749796222881
+0	Molecular model of vesicle exocytosis	10	1398	8	2397	0.139628348590864	0.827774043065323
+0	Molecular motor prototypes	12	1396	29	2376	0.33391456613	1
+0	Genes coding for Fe-S containing proteins	12	1396	5	2400	0.00921725990654465	0.165170005646742
+0	Maturation of cytosolic and nuclear Fe-S proteins	11	1397	3	2402	0.00336738607633493	0.0734602592956979
+0	Nucleotide excision repair	14	1394	15	2390	0.246306427050545	0.993854130169466
+0	DNA Replication	19	1389	19	2386	0.127041550627582	0.783213257978182
+0	Kinetochores power chromosome movements in mitosis	10	1398	29	2376	0.181713541285056	0.88811705484123
+0	Regulation of spindle microtubule dynamics	17	1391	28	2377	0.878081222850833	1
+0	Control of the mitotic spindle organization by kinesins	5	1403	5	2400	0.513660174191755	1
+0	Control of microtubule assembly	5	1403	16	2389	0.260997387726465	1
+0	Pre-ribosomal particles along the 40S assembly pathway	9	1399	6	2399	0.103819358753925	0.74151406768373
+0	Transcription and processing of snRNAs	15	1393	6	2399	0.00216997589712922	0.0522538942634045
+0	Proteins containing histone post translational modification-binding modules	16	1392	9	2396	0.00645185902238524	0.123322676742163
+0	Histone chaperones	15	1393	10	2395	0.0213255248132816	0.279740707844812
+0	Phosphoinositides and membrane traffic	12	1396	11	2394	0.1346817029504	0.813671405917712
+0	Calcium � calmodulin activation of protein kinases	6	1402	14	2391	0.645013214123547	1
+0	Inositol Phosphate metabolism	12	1396	12	2393	0.205225650007221	0.927752920367698
+0	The structures of RNA polymerases	10	1398	11	2394	0.36552197827836	1
+0	Mechanism of Fe�S-protein biogenesis	8	1400	11	2394	0.640224110225633	1
+0	Selenocysteine biosynthesis	9	1399	1	2404	0.000840291011765767	0.0254145198949475
+0	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	3	1405	7	2398	0.753839113436051	1
+0	Pyruvate metabolism	8	1400	9	2396	0.451950449459774	1
+0	Chaperone-assisted protein folding	50	1358	21	2384	1.24562737096511e-08	1.31577585975104e-06
+0	Sphingomyelin and ceramide metabolism	8	1400	10	2395	0.6253433533095	1
+0	Generation of polyphosphates	9	1399	5	2400	0.048933564961972	0.474442825500859
+0	Cleavage and polyadenylation of pre-mRNA	9	1399	6	2399	0.103819358753925	0.74151406768373
+0	Protein factors in pre-mRNA 3�-end processing	11	1397	7	2398	0.0475034981832254	0.472781583450483
+0	Oxidative protein folding in the endoplasmic reticulum	8	1400	1	2404	0.00206751267848876	0.0506036334844748
+0	Transporters of the mitochondrial and apicoplast membranes	20	1388	10	2395	0.00102582927921151	0.0294119909053929
+0	Phosphatases of Plasmodium falciparum and their timed expression	18	1390	23	2382	0.416074316829511	1
+0	Transporters of the ER/Golgi and digestive vacuole membranes	15	1393	15	2390	0.182402323033653	0.888547238661511
+0	CCR4 � NOT complex	11	1397	7	2398	0.0475034981832254	0.472781583450483
+0	Encoded proteins that could be constituents of P-bodies	24	1384	19	2386	0.0160181685789046	0.232603577572214
+0	Isoprenoids metabolism	8	1400	6	2399	0.16312889230081	0.861058481992835
+0	Rab and other proteins involved in intracellular traffic	10	1398	6	2399	0.0397163225621113	0.43408361474488
+0	Rab proteins	7	1401	6	2399	0.251597439895639	0.993854130169466
+0	Endosome maturation	9	1399	3	2402	0.0122584143372231	0.196821100598454
+0	Rab cycle	24	1384	19	2386	0.0160181685789046	0.232603577572214
+0	Molecular markers of resistance to antimalarial drugs	7	1401	5	2400	0.140783366406859	0.827774043065323
+0	ATP synthase complex	13	1395	7	2398	0.0174922206862301	0.242116461498371
+0	DNA mismatch repair system	10	1398	15	2390	0.835843448284815	1
+0	Base excision repair of AP sites	18	1390	19	2386	0.170058083511314	0.862806282753574
+0	Actin and filaments	8	1400	20	2385	0.434468136043606	1
+0	A model for UbpX function in the regulation of PCNA deubiquitylation	8	1400	8	2397	0.3048923418547	1
+0	Model for translesion DNA synthesis	5	1403	7	2398	0.769141462332264	1
+0	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	12	1396	10	2395	0.118762017916461	0.763016298221872
+0	Phosphatidylcholine metabolism	7	1401	6	2399	0.251597439895639	0.993854130169466
+0	Components of the linear motor responsible for merozoite motility in invasion	13	1395	21	2384	0.860174547527633	1
+0	Parasite encoded proteins associated with the membrane of infected erythrocytes	25	1383	9	2396	1.74791624420706e-05	0.000889285457973605
+0	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	23	1385	12	2393	0.000629952745233509	0.0203921799948976
+0	Asparagine and Aspartate metabolism	4	1404	4	2401	0.477742754600186	1
+0	Biosynthesis of Fe-S proteins in the apicoplast	12	1396	2	2403	0.000248420401154139	0.00936761181576469
+0	Methionine and Polyamine metabolism	10	1398	9	2396	0.160714915202281	0.861058481992835
+0	Signal recognition particle-mediated targeting of membrane and secretory proteins	10	1398	2	2403	0.00135421480376141	0.0352975209240149
+0	Karyopherin/exportin-mediated nuclear export pathways	11	1397	7	2398	0.0475034981832254	0.472781583450483
+0	tRNA modifications	15	1393	28	2377	0.874313714137644	1
+0	Schematic depiction of pseudouridylation	8	1400	7	2398	0.192066426138145	0.900647937521626
+0	The HSP70 chaperone cycle	3	1405	4	2401	0.713970969494672	1
+0	Organization of chaperone pathways in the cytosol	19	1389	11	2394	0.00380876687448747	0.080465211758909
+0	The ATG autophagic pathway	7	1401	6	2399	0.251597439895639	0.993854130169466
+0	Glutamate metabolism	9	1399	5	2400	0.048933564961972	0.474442825500859
+0	Glycolysis	19	1389	9	2396	0.00119328083293342	0.0332627032180191
+0	Model for metabolic compartmentalization of PI biosynthesis	7	1401	5	2400	0.140783366406859	0.827774043065323
+0	Shikimate biosynthesis	4	1404	1	2404	0.0653743639726079	0.555959103784001
+0	CoA biosynthesis	5	1403	3	2402	0.154482645925259	0.857303877730102
+0	Utilization of phospholipids	15	1393	11	2394	0.0394330996652182	0.43408361474488
+0	Structure and processing of pre rRNA	12	1396	13	2392	0.298873674910501	1
+0	Bulk mRNA transport through the nuclear pore	2	1406	2	2403	0.629248993001911	1
+0	Posttranslational translocation in eukaryotes	21	1387	6	2399	2.06552132684716e-05	0.00101109787877616
+0	SRP independent translocation of GPI anchored proteins	5	1403	4	2401	0.304366715175414	1
+0	Proteasome-mediated proteolysis of ubiquinated proteins	22	1386	16	2389	0.0103614771134682	0.180830300580267
+0	Aminosugars metabolism	4	1404	4	2401	0.477742754600186	1
+0	Quality control in mRNA biogenesis	14	1394	8	2397	0.013329789231247	0.210652653441832
+0	Leucine_ Isoleucine and Valine metabolism	8	1400	3	2402	0.0235480460190383	0.299119799748163
+0	Classical COPII-mediated vesicular transport	18	1390	7	2398	0.000525200179170628	0.0175679459932575
+0	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	5	1403	6	2399	0.5477461520041	1
+0	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	8	1400	6	2399	0.16312889230081	0.861058481992835
+0	Assisted assembly of Sm-class snRNPs	6	1402	5	2400	0.229476684537204	0.990651384652411
+0	Lysine metabolism	2	1406	3	2402	1	1
+0	Mitochondrial division	2	1406	2	2403	0.629248993001911	1
+0	Import and export through the nuclear pore	17	1391	7	2398	0.000975879695315185	0.0283853702680808
+0	Putative SUMO substrates	12	1396	9	2396	0.0687112275314876	0.579426191830654
+0	RNA polymerase I transcribes rRNA	2	1406	7	2398	0.499311384781098	1
+0	Lipoic acid metabolism	0	1408	6	2399	0.0912368305349747	0.685866783481392
+0	Acetyl-CoA production in the mitochondrion	5	1403	1	2404	0.0284182403265904	0.34152939123034
+0	Mitochondrial antioxidant system	6	1402	8	2397	0.782450299274356	1
+0	Chaperone network and protein quality control of the mitochondrion	19	1389	17	2388	0.0561061925406539	0.511841492859511
+0	Proteome of the parasitophorous vacuole	15	1393	9	2396	0.0174196629721474	0.242116461498371
+0	Proteins with ER retention sequences	11	1397	1	2404	0.000135136077746625	0.00565037725078074
+0	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	2	1406	1	2404	0.559125675198901	1
+0	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	11	1397	5	2400	0.0161095651631977	0.232603577572214
+0	Interactions between modified host cell membrane and endothelial cell	0	1408	3	2402	0.301093156482118	1
+0	Rosette formation between normal and infected RBC	0	1408	3	2402	0.301093156482118	1
+0	Domains of merozoite surface proteins	3	1405	4	2401	0.713970969494672	1
+0	Nitrogen metabolism	5	1403	4	2401	0.304366715175414	1
+0	RNA polymerase III transcribes tRNA and 5S rRNA	7	1401	7	2398	0.405817636850101	1
+0	The Atg8 and Atg12 ubiquitin-like conjugation systems	3	1405	4	2401	0.713970969494672	1
+0	Structure of the nuclear pore	3	1405	1	2404	0.145504709221881	0.835313724489376
+0	Biogenesis of cytochrome oxidase	13	1395	7	2398	0.0174922206862301	0.242116461498371
+0	Protein N-terminal acetylation	4	1404	5	2400	0.733410387903413	1
+0	Mannose and Fructose metabolism	6	1402	1	2404	0.0120631898619697	0.195248564943333
+0	tRNA-wybutosine biosynthesis	3	1405	1	2404	0.145504709221881	0.835313724489376
+0	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	3	1405	3	2402	0.676053870668833	1
+0	Anaphase promoting complex ubiquitin-ligase	4	1404	6	2399	1	1
+0	Lsm proteins and RNA processing	5	1403	6	2399	0.5477461520041	1
+0	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	7	1401	7	2398	0.405817636850101	1
+0	Exported parasite proteins associated with Maurer�s clefts	2	1406	2	2403	0.629248993001911	1
+0	Translocon of exported proteins (PTEX)	3	1405	3	2402	0.676053870668833	1
+0	Post-translational modification �SUMOylation	3	1405	6	2399	1	1
+0	Activation of eiF5A	3	1405	0	2405	0.0502832600576295	0.482863650409868
+0	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	1	1407	4	2401	0.657622297948076	1
+0	Different kinesins with different roles	3	1405	2	2403	0.365372390226426	1
+0	Catabolism of polyphosphates	6	1402	2	2403	0.0581055907963806	0.518301869903715
+0	Glycine and Serine metabolism	7	1401	3	2402	0.0449385600748272	0.460161684031522
+0	Pathways of peptide export from the mitochondrion	1	1407	4	2401	0.657622297948076	1
+0	Role of perforin 1 in merozoite egress	1	1407	4	2401	0.657622297948076	1
+0	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	10	1398	5	2400	0.0281650702936611	0.34152939123034
+0	14-3-3 protein	1	1407	2	2403	1	1
+0	Roles of rhoptry neck proteins during invasion	0	1408	4	2401	0.303626853896847	1
+0	Folate biosynthesis	4	1404	7	2398	1	1
+0	Telomerase and some telomerase associated proteins	6	1402	2	2403	0.0581055907963806	0.518301869903715
+0	Nicotinate and nicotinamide metabolism	2	1406	4	2401	1	1
+0	ER-to Golgi_ translocation and quality control	11	1397	4	2401	0.00550996202270199	0.108483006483842
+0	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	5	1403	4	2401	0.304366715175414	1
+0	Transcription in prokaryotes	1	1407	2	2403	1	1
+0	Various features of C/D and H/ACA snoRNAs	3	1405	3	2402	0.676053870668833	1
+0	Merozoite egress	2	1406	1	2404	0.559125675198901	1
+0	Riboflavin metabolism	2	1406	1	2404	0.559125675198901	1
+0	Post-translational modification of elongation factor 2	1	1407	4	2401	0.657622297948076	1
+0	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	5	1403	5	2400	0.513660174191755	1
+0	Structure of telomere and sub-telomeric regions	0	1408	1	2404	1	1
+0	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	1408	2	2403	0.534062104321412	1
+5	FALSE	216	246	1043	2308	6.4758753949903e-11	7.64534230455619e-09
+5	Genes coding for components involved in ribosome assembly	17	445	115	3236	0.78568899142491	1
+5	mRNA degradation	3	459	26	3325	1	1
+5	Splicing of pre-mRNA	12	450	94	3257	1	1
+5	RNA Degradation Factors	4	458	35	3316	1	1
+5	Phosphoproteome - Treeck et al 2011	84	378	770	2581	0.0202391247117477	0.274458941192416
+5	Phosphoproteome - Pease et al 2013	54	408	545	2806	0.0114761831763825	0.193183945888428
+5	S-nitrosylated proteins	23	439	224	3127	0.189436346052752	0.897521414984889
+5	S-Glutathionylated proteins	25	437	270	3081	0.0505554387900565	0.483165550722111
+5	Transcription related proteins encoding genes	15	447	154	3197	0.227039688267649	0.99037136475191
+5	Translation in prokaryotes � a template for apicoplast and mitochondrion	11	451	37	3314	0.0403913822721689	0.43408361474488
+5	Nuclear genes with apicoplast signal sequences	25	437	205	3146	0.603287226107536	1
+5	Terpenoid metabolism	1	461	12	3339	1	1
+5	N-myristoylation_ S-acylation and prenylation of proteins	2	460	18	3333	1	1
+5	Proteins of detergent-resistant membranes	10	452	95	3256	0.54287989372753	1
+5	Genes coding for transport proteins	7	455	125	3226	0.0136505687074817	0.214036651530592
+5	Chromatin modifying proteins	4	458	27	3324	0.784511521099122	1
+5	Histone lysine methylation	0	462	16	3335	0.245041851745643	0.993854130169466
+5	Plasmodium falciparum chromatin landscape	1	461	17	3334	0.714964045965535	1
+5	Topogenesis of the Rieske FeS protein	2	460	8	3343	0.346291612574447	1
+5	Nuclear genes with mitochondrial signal sequences	36	426	234	3117	0.499323647805119	1
+5	Porphyrin metabolism	3	459	14	3337	0.450913362862843	1
+5	Pyrimidine metabolism	0	462	21	3330	0.0996941716153727	0.724950008811786
+5	Mitochondrial electron flow	3	459	21	3330	1	1
+5	Phosphoproteome - Lasonder et al 2011	46	416	460	2891	0.0234412102086672	0.299119799748163
+5	Established and putative Maurer�s clefts proteins	4	458	45	3306	0.511265388651848	1
+5	The acidocalcisome	3	459	33	3318	0.61508698417298	1
+5	ATP-dependent chromatin remodeling complexes	1	461	33	3318	0.115509081680879	0.758820395538536
+5	Phenylalanine and Tyrosine metabolism	1	461	8	3343	1	1
+5	Modification of proteins by adenylylation and ADP-ribosylation	4	458	44	3307	0.653786711823672	1
+5	Protein biosynthesis	6	456	49	3302	1	1
+5	DNA binding proteins with AP2 domain(s)	1	461	18	3333	0.720044900761158	1
+5	Heterochromatin structure of the telomeric and subtelomeric regions	1	461	4	3347	0.47594007574458	1
+5	Total palmitome of Plasmodium falciparum	34	428	275	3076	0.585763542355964	1
+5	Ribosomal structure	18	444	127	3224	0.896722580735873	1
+5	Glyoxalase metabolism	0	462	6	3345	1	1
+5	The phosphoproteome of Plasmodium falciparum infected RBCs	20	442	294	3057	0.000772217051884321	0.0238436865097205
+5	Proteins involved in steps during passage through prophase	1	461	20	3331	0.502466704643871	1
+5	Protein phosphorylation	11	451	66	3285	0.5948665834333	1
+5	Protein kinase coding genes	12	450	72	3279	0.500140927043764	1
+5	Pre-replicative complex formation and transition to replication	3	459	17	3334	0.726653106992825	1
+5	Dolichol metabolism	0	462	6	3345	1	1
+5	Purine metabolism	3	459	30	3321	0.790759952732473	1
+5	Double strand break repair and homologous recombination	1	461	10	3341	1	1
+5	Genes involved in excision-repair	3	459	75	3276	0.0211517570287663	0.279740707844812
+5	Genes coding for enzymes/proteins involved in DNA replication	2	460	56	3295	0.0407279810482025	0.43408361474488
+5	Fatty acids elongation in the endoplasmic reticulum	2	460	10	3341	0.648496552532275	1
+5	Fatty acid synthesis in the apicoplast	5	457	23	3328	0.375799309056736	1
+5	Genes coding for components of the proteasome degradation machinery & their timed transcription	10	452	94	3257	0.541697994502582	1
+5	Subcellular location of adaptor proteins	0	462	25	3326	0.0642114363865713	0.550736550546362
+5	Classical COPI-mediated vesicular transport	2	460	28	3323	0.572083635552352	1
+5	Genes coding for protein traffic related proteins	6	456	54	3297	0.841202923114164	1
+5	Thioredoxin_ Glutaredoxin and Peroxiredoxin	5	457	19	3332	0.201448036333852	0.924673194090343
+5	Redox Metabolism	6	456	29	3322	0.306824839563893	1
+5	Initiation of translation	5	457	37	3314	1	1
+5	Quality control mechanisms during ribosome maturation	0	462	12	3339	0.381738997592311	1
+5	Signaling machinery in malaria parasites	1	461	16	3335	0.711698246332312	1
+5	Ubiquinone metabolism	0	462	7	3344	1	1
+5	Import of proteins into the mitochondrion	6	456	19	3332	0.112140378130027	0.747726707332105
+5	Peptidases and proteases	7	455	105	3246	0.0553620844177017	0.507359376375924
+5	Genes coding for chaperones and their regulators	10	452	92	3259	0.540970567955815	1
+5	Centrosome proteins	10	452	65	3286	0.720473126713661	1
+5	Tubulin and microtubules	2	460	22	3329	0.760227343988159	1
+5	Proteins targeted by the thioredoxin superfamily enzymes	3	459	35	3316	0.616530280479667	1
+5	Arginine and proline metabolism	0	462	6	3345	1	1
+5	Pyridoxal phosphate (Vitamin B6) metabolism	2	460	20	3331	1	1
+5	Transporters of the plasma membrane	3	459	58	3293	0.109883839205836	0.74194912251237
+5	Mitochondrial TCA cycle	1	461	17	3334	0.714964045965535	1
+5	Possible paths for apoptosis	3	459	17	3334	0.726653106992825	1
+5	Phosphatidylethanolamine and phosphatidylserine metabolism	3	459	28	3323	1	1
+5	Structure and organization of centromeric chromatin	2	460	9	3342	0.633328913997924	1
+5	Chaperone-mediated modulation of nucleosome-histone interactions	4	458	9	3342	0.0623639603494845	0.541837525633833
+5	Acetylation recognition by the bromodomain and other modules	4	458	8	3343	0.0475843945475823	0.472781583450483
+5	Putative organization of the kinetochore	2	460	33	3318	0.429455983925808	1
+5	Plasmodium falciparum histone acetylation and methylation	4	458	3	3348	0.00551333665239255	0.108483006483842
+5	Histone acetylation	8	454	16	3335	0.0054936755025766	0.108483006483842
+5	Protein arginine methylation	2	460	8	3343	0.346291612574447	1
+5	Nucleosome assembly and regulation	7	455	31	3320	0.214421754715259	0.962739287949722
+5	Compartmentalization of transcription site in the nucleus	2	460	2	3349	0.0744073375561358	0.607054985671401
+5	Pentose Phosphate Cycle	0	462	9	3342	0.611536247873692	1
+5	Thiamine metabolism	2	460	13	3338	0.701916415333221	1
+5	RNA polymerase II transcribes mRNA	1	461	37	3314	0.0792673818137523	0.629929616172102
+5	tRNA thiolation	1	461	6	3345	0.595402502795144	1
+5	Genes coding for GPI-anchored membrane proteins	10	452	15	3336	0.000371967170449871	0.0130971598437349
+5	Subcellular localization of proteins involved in invasion	7	455	32	3319	0.317585166673977	1
+5	Functional annotation of merozoite invasion-related proteins	7	455	35	3316	0.341553696930458	1
+5	Maturation and export of 60S and 40S ribosomal subunits	8	454	79	3272	0.506029697437085	1
+5	Pre-ribosomal particles along the 60S assembly pathway	3	459	21	3330	1	1
+5	Structure of the mitotic centrosome	1	461	29	3322	0.252786918994107	0.993854130169466
+5	Centriole proteins	3	459	16	3335	0.495082186646359	1
+5	Classical clathrin-mediated vesicular transport	2	460	36	3315	0.312559164547658	1
+5	Molecular model of vesicle exocytosis	2	460	16	3335	1	1
+5	Molecular motor prototypes	2	460	39	3312	0.225221815322817	0.989103245848784
+5	Genes coding for Fe-S containing proteins	1	461	16	3335	0.711698246332312	1
+5	Maturation of cytosolic and nuclear Fe-S proteins	0	462	14	3337	0.399210582422044	1
+5	Nucleotide excision repair	0	462	29	3322	0.0418802056622193	0.435510739710228
+5	DNA Replication	0	462	38	3313	0.0113289408996377	0.192688003267566
+5	Kinetochores power chromosome movements in mitosis	1	461	38	3313	0.08024590278522	0.629929616172102
+5	Regulation of spindle microtubule dynamics	1	461	44	3307	0.03692948760729	0.414064143172241
+5	Control of the mitotic spindle organization by kinesins	1	461	9	3342	1	1
+5	Control of microtubule assembly	6	456	15	3336	0.0338147562665841	0.387806947583054
+5	Pre-ribosomal particles along the 40S assembly pathway	2	460	13	3338	0.701916415333221	1
+5	Transcription and processing of snRNAs	1	461	20	3331	0.502466704643871	1
+5	Proteins containing histone post translational modification-binding modules	4	458	21	3330	0.534497636338648	1
+5	Histone chaperones	3	459	22	3329	1	1
+5	Phosphoinositides and membrane traffic	1	461	22	3329	0.349931072877199	1
+5	Calcium � calmodulin activation of protein kinases	6	456	14	3337	0.0268084974332502	0.33419039968033
+5	Inositol Phosphate metabolism	1	461	23	3328	0.350075702806715	1
+5	The structures of RNA polymerases	3	459	18	3333	0.734519695807357	1
+5	Mechanism of Fe�S-protein biogenesis	3	459	16	3335	0.495082186646359	1
+5	Selenocysteine biosynthesis	1	461	9	3342	1	1
+5	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	4	458	6	3345	0.0245596536887162	0.310007704108512
+5	Pyruvate metabolism	4	458	13	3338	0.1414681100007	0.827774043065323
+5	Chaperone-assisted protein folding	7	455	64	3287	0.713344620359927	1
+5	Sphingomyelin and ceramide metabolism	2	460	16	3335	1	1
+5	Generation of polyphosphates	2	460	12	3339	0.68336581717421	1
+5	Cleavage and polyadenylation of pre-mRNA	2	460	13	3338	0.701916415333221	1
+5	Protein factors in pre-mRNA 3�-end processing	2	460	16	3335	1	1
+5	Oxidative protein folding in the endoplasmic reticulum	1	461	8	3343	1	1
+5	Transporters of the mitochondrial and apicoplast membranes	1	461	29	3322	0.252786918994107	0.993854130169466
+5	Phosphatases of Plasmodium falciparum and their timed expression	4	458	37	3314	0.811798910056877	1
+5	Transporters of the ER/Golgi and digestive vacuole membranes	2	460	28	3323	0.572083635552352	1
+5	CCR4 � NOT complex	1	461	17	3334	0.714964045965535	1
+5	Encoded proteins that could be constituents of P-bodies	3	459	40	3311	0.47707761691911	1
+5	Isoprenoids metabolism	1	461	13	3338	1	1
+5	Rab and other proteins involved in intracellular traffic	3	459	13	3338	0.431187244930755	1
+5	Rab proteins	4	458	9	3342	0.0623639603494845	0.541837525633833
+5	Endosome maturation	0	462	12	3339	0.381738997592311	1
+5	Rab cycle	7	455	36	3315	0.35213765257453	1
+5	Molecular markers of resistance to antimalarial drugs	0	462	12	3339	0.381738997592311	1
+5	ATP synthase complex	2	460	18	3333	1	1
+5	DNA mismatch repair system	2	460	23	3328	0.760537997396942	1
+5	Base excision repair of AP sites	3	459	34	3317	0.615150764793612	1
+5	Actin and filaments	5	457	23	3328	0.375799309056736	1
+5	A model for UbpX function in the regulation of PCNA deubiquitylation	0	462	16	3335	0.245041851745643	0.993854130169466
+5	Model for translesion DNA synthesis	1	461	11	3340	1	1
+5	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	1	461	21	3330	0.507227855906279	1
+5	Phosphatidylcholine metabolism	0	462	13	3338	0.388282893688216	1
+5	Components of the linear motor responsible for merozoite motility in invasion	8	454	26	3325	0.0580658719450654	0.518301869903715
+5	Parasite encoded proteins associated with the membrane of infected erythrocytes	3	459	31	3320	0.791593960681017	1
+5	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	1	461	34	3317	0.116072676347948	0.758820395538536
+5	Asparagine and Aspartate metabolism	1	461	7	3344	1	1
+5	Biosynthesis of Fe-S proteins in the apicoplast	1	461	13	3338	1	1
+5	Methionine and Polyamine metabolism	1	461	18	3333	0.720044900761158	1
+5	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	462	12	3339	0.381738997592311	1
+5	Karyopherin/exportin-mediated nuclear export pathways	0	462	18	3333	0.154630794089834	0.857303877730102
+5	tRNA modifications	6	456	37	3314	0.640141741071019	1
+5	Schematic depiction of pseudouridylation	1	461	14	3337	1	1
+5	The HSP70 chaperone cycle	1	461	6	3345	0.595402502795144	1
+5	Organization of chaperone pathways in the cytosol	3	459	27	3324	1	1
+5	The ATG autophagic pathway	3	459	10	3341	0.202257863580299	0.924673194090343
+5	Glutamate metabolism	2	460	12	3339	0.68336581717421	1
+5	Glycolysis	0	462	28	3323	0.0415266836228286	0.43408361474488
+5	Model for metabolic compartmentalization of PI biosynthesis	0	462	12	3339	0.381738997592311	1
+5	Shikimate biosynthesis	0	462	5	3346	1	1
+5	CoA biosynthesis	1	461	7	3344	1	1
+5	Utilization of phospholipids	2	460	24	3327	0.762104653444457	1
+5	Structure and processing of pre rRNA	5	457	20	3331	0.21697576142709	0.969867156312182
+5	Bulk mRNA transport through the nuclear pore	1	461	3	3348	0.403601956531552	1
+5	Posttranslational translocation in eukaryotes	2	460	25	3326	0.764805868100356	1
+5	SRP independent translocation of GPI anchored proteins	1	461	8	3343	1	1
+5	Proteasome-mediated proteolysis of ubiquinated proteins	4	458	34	3317	1	1
+5	Aminosugars metabolism	2	460	6	3345	0.25161156586385	0.993854130169466
+5	Quality control in mRNA biogenesis	2	460	20	3331	1	1
+5	Leucine_ Isoleucine and Valine metabolism	2	460	9	3342	0.633328913997924	1
+5	Classical COPII-mediated vesicular transport	3	459	22	3329	1	1
+5	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	1	461	10	3341	1	1
+5	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	3	459	11	3340	0.235802279658827	0.993854130169466
+5	Assisted assembly of Sm-class snRNPs	3	459	8	3343	0.13937708999371	0.827774043065323
+5	Lysine metabolism	1	461	4	3347	0.47594007574458	1
+5	Mitochondrial division	0	462	4	3347	1	1
+5	Import and export through the nuclear pore	0	462	24	3327	0.106076783677772	0.74194912251237
+5	Putative SUMO substrates	2	460	19	3332	1	1
+5	RNA polymerase I transcribes rRNA	1	461	8	3343	1	1
+5	Lipoic acid metabolism	4	458	2	3349	0.00261196485389963	0.0608331962805393
+5	Acetyl-CoA production in the mitochondrion	1	461	5	3346	0.539520875378509	1
+5	Mitochondrial antioxidant system	4	458	10	3341	0.0792616712923645	0.629929616172102
+5	Chaperone network and protein quality control of the mitochondrion	4	458	32	3319	1	1
+5	Proteome of the parasitophorous vacuole	1	461	23	3328	0.350075702806715	1
+5	Proteins with ER retention sequences	0	462	12	3339	0.381738997592311	1
+5	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	462	3	3348	1	1
+5	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	2	460	14	3337	1	1
+5	Interactions between modified host cell membrane and endothelial cell	1	461	2	3349	0.321303301787698	1
+5	Rosette formation between normal and infected RBC	1	461	2	3349	0.321303301787698	1
+5	Domains of merozoite surface proteins	3	459	4	3347	0.042548494315508	0.440179526243426
+5	Nitrogen metabolism	3	459	6	3345	0.085001713642745	0.65363386697697
+5	RNA polymerase III transcribes tRNA and 5S rRNA	2	460	12	3339	0.68336581717421	1
+5	The Atg8 and Atg12 ubiquitin-like conjugation systems	2	460	5	3346	0.2042311108787	0.927752920367698
+5	Structure of the nuclear pore	0	462	4	3347	1	1
+5	Biogenesis of cytochrome oxidase	2	460	18	3333	1	1
+5	Protein N-terminal acetylation	2	460	7	3344	0.299214380784166	1
+5	Mannose and Fructose metabolism	0	462	7	3344	1	1
+5	tRNA-wybutosine biosynthesis	0	462	4	3347	1	1
+5	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	0	462	6	3345	1	1
+5	Anaphase promoting complex ubiquitin-ligase	2	460	8	3343	0.346291612574447	1
+5	Lsm proteins and RNA processing	2	460	9	3342	0.633328913997924	1
+5	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	0	462	14	3337	0.399210582422044	1
+5	Exported parasite proteins associated with Maurer�s clefts	1	461	3	3348	0.403601956531552	1
+5	Translocon of exported proteins (PTEX)	1	461	5	3346	0.539520875378509	1
+5	Post-translational modification �SUMOylation	2	460	7	3344	0.299214380784166	1
+5	Activation of eiF5A	0	462	3	3348	1	1
+5	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	1	461	4	3347	0.47594007574458	1
+5	Different kinesins with different roles	0	462	5	3346	1	1
+5	Catabolism of polyphosphates	0	462	8	3343	0.607096072078521	1
+5	Glycine and Serine metabolism	1	461	9	3342	1	1
+5	Pathways of peptide export from the mitochondrion	1	461	4	3347	0.47594007574458	1
+5	Role of perforin 1 in merozoite egress	4	458	1	3350	0.00096288715356184	0.0283853702680808
+5	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	0	462	15	3336	0.241711169992302	0.993854130169466
+5	14-3-3 protein	2	460	1	3350	0.0404213597983723	0.43408361474488
+5	Roles of rhoptry neck proteins during invasion	0	462	4	3347	1	1
+5	Folate biosynthesis	1	461	10	3341	1	1
+5	Telomerase and some telomerase associated proteins	0	462	8	3343	0.607096072078521	1
+5	Nicotinate and nicotinamide metabolism	1	461	5	3346	0.539520875378509	1
+5	ER-to Golgi_ translocation and quality control	2	460	13	3338	0.701916415333221	1
+5	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	462	9	3342	0.611536247873692	1
+5	Transcription in prokaryotes	0	462	3	3348	1	1
+5	Various features of C/D and H/ACA snoRNAs	0	462	6	3345	1	1
+5	Merozoite egress	0	462	3	3348	1	1
+5	Riboflavin metabolism	0	462	3	3348	1	1
+5	Post-translational modification of elongation factor 2	2	460	3	3348	0.11424947967944	0.756761405005402
+5	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	0	462	10	3341	0.620681644071081	1
+5	Structure of telomere and sub-telomeric regions	1	461	0	3351	0.121164437450826	0.767119955721792
+5	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	1	461	1	3350	0.227675987791256	0.99037136475191
+6	FALSE	123	135	1136	2419	4.6528521803544e-07	3.45862012073011e-05
+6	Genes coding for components involved in ribosome assembly	17	241	115	3440	0.0118461909410382	0.195248564943333
+6	mRNA degradation	2	256	27	3528	1	1
+6	Splicing of pre-mRNA	7	251	99	3456	1	1
+6	RNA Degradation Factors	2	256	37	3518	1	1
+6	Phosphoproteome - Treeck et al 2011	27	231	827	2728	3.94724987426711e-07	3.0469732683285e-05
+6	Phosphoproteome - Pease et al 2013	16	242	583	2972	3.11169782890898e-06	0.000188039098727182
+6	S-nitrosylated proteins	3	255	244	3311	3.69914587530986e-05	0.00168731494812429
+6	S-Glutathionylated proteins	10	248	285	3270	0.015103613850093	0.229643583311641
+6	Transcription related proteins encoding genes	7	251	162	3393	0.208483049977732	0.940281980461365
+6	Translation in prokaryotes � a template for apicoplast and mitochondrion	7	251	41	3514	0.0405159645690089	0.43408361474488
+6	Nuclear genes with apicoplast signal sequences	12	246	218	3337	0.415753833333638	1
+6	Terpenoid metabolism	0	258	13	3542	1	1
+6	N-myristoylation_ S-acylation and prenylation of proteins	1	257	19	3536	1	1
+6	Proteins of detergent-resistant membranes	5	253	100	3455	0.55332381749671	1
+6	Genes coding for transport proteins	4	254	128	3427	0.108840368302091	0.74194912251237
+6	Chromatin modifying proteins	0	258	31	3524	0.266935548801165	1
+6	Histone lysine methylation	1	257	15	3540	1	1
+6	Plasmodium falciparum chromatin landscape	0	258	18	3537	0.629168984932916	1
+6	Topogenesis of the Rieske FeS protein	0	258	10	3545	1	1
+6	Nuclear genes with mitochondrial signal sequences	16	242	254	3301	0.705505782586835	1
+6	Porphyrin metabolism	1	257	16	3539	1	1
+6	Pyrimidine metabolism	0	258	21	3534	0.39468619538028	1
+6	Mitochondrial electron flow	0	258	24	3531	0.403971631319931	1
+6	Phosphoproteome - Lasonder et al 2011	15	243	491	3064	8.74799945052257e-05	0.00373558189302102
+6	Established and putative Maurer�s clefts proteins	0	258	49	3506	0.0762220132775887	0.616845083258551
+6	The acidocalcisome	0	258	36	3519	0.17162835560301	0.862806282753574
+6	ATP-dependent chromatin remodeling complexes	0	258	34	3521	0.167256377668078	0.861058481992835
+6	Phenylalanine and Tyrosine metabolism	1	257	8	3547	0.468066721151144	1
+6	Modification of proteins by adenylylation and ADP-ribosylation	3	255	45	3510	1	1
+6	Protein biosynthesis	4	254	51	3504	0.786286569670186	1
+6	DNA binding proteins with AP2 domain(s)	0	258	19	3536	0.635075355074813	1
+6	Heterochromatin structure of the telomeric and subtelomeric regions	0	258	5	3550	1	1
+6	Total palmitome of Plasmodium falciparum	8	250	301	3254	0.00126180081622668	0.0344094711593249
+6	Ribosomal structure	15	243	130	3425	0.0899969176771406	0.685866783481392
+6	Glyoxalase metabolism	0	258	6	3549	1	1
+6	The phosphoproteome of Plasmodium falciparum infected RBCs	5	253	309	3246	1.77236762924485e-05	0.000889285457973605
+6	Proteins involved in steps during passage through prophase	0	258	21	3534	0.39468619538028	1
+6	Protein phosphorylation	2	256	75	3480	0.17098941412487	0.862806282753574
+6	Protein kinase coding genes	3	255	81	3474	0.374604483090807	1
+6	Pre-replicative complex formation and transition to replication	1	257	19	3536	1	1
+6	Dolichol metabolism	0	258	6	3549	1	1
+6	Purine metabolism	1	257	32	3523	0.723464901931018	1
+6	Double strand break repair and homologous recombination	0	258	11	3544	1	1
+6	Genes involved in excision-repair	4	254	74	3481	0.818330255191446	1
+6	Genes coding for enzymes/proteins involved in DNA replication	1	257	57	3498	0.181867414826105	0.88811705484123
+6	Fatty acids elongation in the endoplasmic reticulum	0	258	12	3543	1	1
+6	Fatty acid synthesis in the apicoplast	1	257	27	3528	1	1
+6	Genes coding for components of the proteasome degradation machinery & their timed transcription	3	255	101	3454	0.160863094762269	0.861058481992835
+6	Subcellular location of adaptor proteins	2	256	23	3532	0.684869008380548	1
+6	Classical COPI-mediated vesicular transport	1	257	29	3526	0.71885960622215	1
+6	Genes coding for protein traffic related proteins	5	253	55	3500	0.600169035564313	1
+6	Thioredoxin_ Glutaredoxin and Peroxiredoxin	1	257	23	3532	1	1
+6	Redox Metabolism	1	257	34	3521	0.729159782103437	1
+6	Initiation of translation	1	257	41	3514	0.363027995584517	1
+6	Quality control mechanisms during ribosome maturation	1	257	11	3544	0.569149204315627	1
+6	Signaling machinery in malaria parasites	1	257	16	3539	1	1
+6	Ubiquinone metabolism	1	257	6	3549	0.387881074878867	1
+6	Import of proteins into the mitochondrion	1	257	24	3531	1	1
+6	Peptidases and proteases	0	258	112	3443	0.000770532410381707	0.0238436865097205
+6	Genes coding for chaperones and their regulators	3	255	99	3456	0.158413784173121	0.861058481992835
+6	Centrosome proteins	0	258	75	3480	0.00895258284062785	0.161872376226487
+6	Tubulin and microtubules	2	256	22	3533	0.675461473908194	1
+6	Proteins targeted by the thioredoxin superfamily enzymes	2	256	36	3519	1	1
+6	Arginine and proline metabolism	2	256	4	3551	0.0570597755385564	0.51818538237956
+6	Pyridoxal phosphate (Vitamin B6) metabolism	3	255	19	3536	0.183175515263685	0.888888043518577
+6	Transporters of the plasma membrane	2	256	59	3496	0.436313121611719	1
+6	Mitochondrial TCA cycle	0	258	18	3537	0.629168984932916	1
+6	Possible paths for apoptosis	1	257	19	3536	1	1
+6	Phosphatidylethanolamine and phosphatidylserine metabolism	2	256	29	3526	1	1
+6	Structure and organization of centromeric chromatin	0	258	11	3544	1	1
+6	Chaperone-mediated modulation of nucleosome-histone interactions	0	258	13	3542	1	1
+6	Acetylation recognition by the bromodomain and other modules	0	258	12	3543	1	1
+6	Putative organization of the kinetochore	2	256	33	3522	1	1
+6	Plasmodium falciparum histone acetylation and methylation	0	258	7	3548	1	1
+6	Histone acetylation	0	258	24	3531	0.403971631319931	1
+6	Protein arginine methylation	0	258	10	3545	1	1
+6	Nucleosome assembly and regulation	1	257	37	3518	0.514506784604709	1
+6	Compartmentalization of transcription site in the nucleus	0	258	4	3551	1	1
+6	Pentose Phosphate Cycle	1	257	8	3547	0.468066721151144	1
+6	Thiamine metabolism	1	257	14	3541	1	1
+6	RNA polymerase II transcribes mRNA	4	254	34	3521	0.322629729196431	1
+6	tRNA thiolation	0	258	7	3548	1	1
+6	Genes coding for GPI-anchored membrane proteins	1	257	24	3531	1	1
+6	Subcellular localization of proteins involved in invasion	2	256	37	3518	1	1
+6	Functional annotation of merozoite invasion-related proteins	2	256	40	3515	1	1
+6	Maturation and export of 60S and 40S ribosomal subunits	12	246	75	3480	0.0152601875638182	0.230098318307588
+6	Pre-ribosomal particles along the 60S assembly pathway	2	256	22	3533	0.675461473908194	1
+6	Structure of the mitotic centrosome	1	257	29	3526	0.71885960622215	1
+6	Centriole proteins	1	257	18	3537	1	1
+6	Classical clathrin-mediated vesicular transport	2	256	36	3519	1	1
+6	Molecular model of vesicle exocytosis	3	255	15	3540	0.117752964424906	0.763016298221872
+6	Molecular motor prototypes	0	258	41	3514	0.110904203664031	0.74194912251237
+6	Genes coding for Fe-S containing proteins	1	257	16	3539	1	1
+6	Maturation of cytosolic and nuclear Fe-S proteins	2	256	12	3543	0.243923880376976	0.993854130169466
+6	Nucleotide excision repair	3	255	26	3529	0.442599651783716	1
+6	DNA Replication	0	258	38	3517	0.108945163365862	0.74194912251237
+6	Kinetochores power chromosome movements in mitosis	1	257	38	3517	0.516726959291845	1
+6	Regulation of spindle microtubule dynamics	0	258	45	3510	0.0715653265356101	0.593519051061858
+6	Control of the mitotic spindle organization by kinesins	0	258	10	3545	1	1
+6	Control of microtubule assembly	0	258	21	3534	0.39468619538028	1
+6	Pre-ribosomal particles along the 40S assembly pathway	1	257	14	3541	1	1
+6	Transcription and processing of snRNAs	1	257	20	3535	1	1
+6	Proteins containing histone post translational modification-binding modules	1	257	24	3531	1	1
+6	Histone chaperones	0	258	25	3530	0.409709331666395	1
+6	Phosphoinositides and membrane traffic	0	258	23	3532	0.399466447837467	1
+6	Calcium � calmodulin activation of protein kinases	0	258	20	3535	0.394694673116768	1
+6	Inositol Phosphate metabolism	0	258	24	3531	0.403971631319931	1
+6	The structures of RNA polymerases	4	254	17	3538	0.0491886054863602	0.474622746207331
+6	Mechanism of Fe�S-protein biogenesis	3	255	16	3539	0.133193975036048	0.807614223254828
+6	Selenocysteine biosynthesis	0	258	10	3545	1	1
+6	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	0	258	10	3545	1	1
+6	Pyruvate metabolism	1	257	16	3539	1	1
+6	Chaperone-assisted protein folding	4	254	67	3488	1	1
+6	Sphingomyelin and ceramide metabolism	0	258	18	3537	0.629168984932916	1
+6	Generation of polyphosphates	0	258	14	3541	0.618262937646301	1
+6	Cleavage and polyadenylation of pre-mRNA	1	257	14	3541	1	1
+6	Protein factors in pre-mRNA 3�-end processing	1	257	17	3538	1	1
+6	Oxidative protein folding in the endoplasmic reticulum	0	258	9	3546	1	1
+6	Transporters of the mitochondrial and apicoplast membranes	2	256	28	3527	1	1
+6	Phosphatases of Plasmodium falciparum and their timed expression	1	257	40	3515	0.523294618422231	1
+6	Transporters of the ER/Golgi and digestive vacuole membranes	0	258	30	3525	0.262368241113848	1
+6	CCR4 � NOT complex	0	258	18	3537	0.629168984932916	1
+6	Encoded proteins that could be constituents of P-bodies	3	255	40	3515	0.765647900926924	1
+6	Isoprenoids metabolism	1	257	13	3542	1	1
+6	Rab and other proteins involved in intracellular traffic	0	258	16	3539	0.620766666362277	1
+6	Rab proteins	0	258	13	3542	1	1
+6	Endosome maturation	1	257	11	3544	0.569149204315627	1
+6	Rab cycle	0	258	43	3512	0.115321976779239	0.758820395538536
+6	Molecular markers of resistance to antimalarial drugs	0	258	12	3543	1	1
+6	ATP synthase complex	0	258	20	3535	0.394694673116768	1
+6	DNA mismatch repair system	0	258	25	3530	0.409709331666395	1
+6	Base excision repair of AP sites	2	256	35	3520	1	1
+6	Actin and filaments	2	256	26	3529	0.714143985096046	1
+6	A model for UbpX function in the regulation of PCNA deubiquitylation	1	257	15	3540	1	1
+6	Model for translesion DNA synthesis	0	258	12	3543	1	1
+6	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	2	256	20	3535	0.65765774237398	1
+6	Phosphatidylcholine metabolism	1	257	12	3543	0.598394009705411	1
+6	Components of the linear motor responsible for merozoite motility in invasion	0	258	34	3521	0.167256377668078	0.861058481992835
+6	Parasite encoded proteins associated with the membrane of infected erythrocytes	0	258	34	3521	0.167256377668078	0.861058481992835
+6	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	2	256	33	3522	1	1
+6	Asparagine and Aspartate metabolism	1	257	7	3548	0.429375211158755	1
+6	Biosynthesis of Fe-S proteins in the apicoplast	0	258	14	3541	0.618262937646301	1
+6	Methionine and Polyamine metabolism	1	257	18	3537	1	1
+6	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	258	12	3543	1	1
+6	Karyopherin/exportin-mediated nuclear export pathways	0	258	18	3537	0.629168984932916	1
+6	tRNA modifications	4	254	39	3516	0.532384777942475	1
+6	Schematic depiction of pseudouridylation	1	257	14	3541	1	1
+6	The HSP70 chaperone cycle	0	258	7	3548	1	1
+6	Organization of chaperone pathways in the cytosol	2	256	28	3527	1	1
+6	The ATG autophagic pathway	0	258	13	3542	1	1
+6	Glutamate metabolism	1	257	13	3542	1	1
+6	Glycolysis	0	258	28	3527	0.256471303671046	0.995802991004494
+6	Model for metabolic compartmentalization of PI biosynthesis	0	258	12	3543	1	1
+6	Shikimate biosynthesis	0	258	5	3550	1	1
+6	CoA biosynthesis	1	257	7	3548	0.429375211158755	1
+6	Utilization of phospholipids	0	258	26	3529	0.255391531572948	0.995283114304671
+6	Structure and processing of pre rRNA	2	256	23	3532	0.684869008380548	1
+6	Bulk mRNA transport through the nuclear pore	1	257	3	3552	0.244487643901877	0.993854130169466
+6	Posttranslational translocation in eukaryotes	0	258	27	3528	0.255290954853039	0.995283114304671
+6	SRP independent translocation of GPI anchored proteins	0	258	9	3546	1	1
+6	Proteasome-mediated proteolysis of ubiquinated proteins	1	257	37	3518	0.514506784604709	1
+6	Aminosugars metabolism	0	258	8	3547	1	1
+6	Quality control in mRNA biogenesis	1	257	21	3534	1	1
+6	Leucine_ Isoleucine and Valine metabolism	0	258	11	3544	1	1
+6	Classical COPII-mediated vesicular transport	0	258	25	3530	0.409709331666395	1
+6	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	0	258	11	3544	1	1
+6	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	1	257	13	3542	1	1
+6	Assisted assembly of Sm-class snRNPs	1	257	10	3545	0.537783655419869	1
+6	Lysine metabolism	0	258	5	3550	1	1
+6	Mitochondrial division	0	258	4	3551	1	1
+6	Import and export through the nuclear pore	1	257	23	3532	1	1
+6	Putative SUMO substrates	0	258	21	3534	0.39468619538028	1
+6	RNA polymerase I transcribes rRNA	2	256	7	3548	0.119843131219641	0.763571950342281
+6	Lipoic acid metabolism	0	258	6	3549	1	1
+6	Acetyl-CoA production in the mitochondrion	0	258	6	3549	1	1
+6	Mitochondrial antioxidant system	1	257	13	3542	1	1
+6	Chaperone network and protein quality control of the mitochondrion	3	255	33	3522	0.732659881453453	1
+6	Proteome of the parasitophorous vacuole	0	258	24	3531	0.403971631319931	1
+6	Proteins with ER retention sequences	0	258	12	3543	1	1
+6	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	258	3	3552	1	1
+6	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	0	258	16	3539	0.620766666362277	1
+6	Interactions between modified host cell membrane and endothelial cell	0	258	3	3552	1	1
+6	Rosette formation between normal and infected RBC	0	258	3	3552	1	1
+6	Domains of merozoite surface proteins	0	258	7	3548	1	1
+6	Nitrogen metabolism	0	258	9	3546	1	1
+6	RNA polymerase III transcribes tRNA and 5S rRNA	2	256	12	3543	0.243923880376976	0.993854130169466
+6	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	258	7	3548	1	1
+6	Structure of the nuclear pore	0	258	4	3551	1	1
+6	Biogenesis of cytochrome oxidase	1	257	19	3536	1	1
+6	Protein N-terminal acetylation	0	258	9	3546	1	1
+6	Mannose and Fructose metabolism	0	258	7	3548	1	1
+6	tRNA-wybutosine biosynthesis	0	258	4	3551	1	1
+6	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	1	257	5	3550	0.34338215048291	1
+6	Anaphase promoting complex ubiquitin-ligase	0	258	10	3545	1	1
+6	Lsm proteins and RNA processing	2	256	9	3546	0.167749808898455	0.861058481992835
+6	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	1	257	13	3542	1	1
+6	Exported parasite proteins associated with Maurer�s clefts	0	258	4	3551	1	1
+6	Translocon of exported proteins (PTEX)	0	258	6	3549	1	1
+6	Post-translational modification �SUMOylation	0	258	9	3546	1	1
+6	Activation of eiF5A	0	258	3	3552	1	1
+6	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	0	258	5	3550	1	1
+6	Different kinesins with different roles	0	258	5	3550	1	1
+6	Catabolism of polyphosphates	0	258	8	3547	1	1
+6	Glycine and Serine metabolism	0	258	10	3545	1	1
+6	Pathways of peptide export from the mitochondrion	0	258	5	3550	1	1
+6	Role of perforin 1 in merozoite egress	0	258	5	3550	1	1
+6	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	1	257	14	3541	1	1
+6	14-3-3 protein	0	258	3	3552	1	1
+6	Roles of rhoptry neck proteins during invasion	1	257	3	3552	0.244487643901877	0.993854130169466
+6	Folate biosynthesis	1	257	10	3545	0.537783655419869	1
+6	Telomerase and some telomerase associated proteins	1	257	7	3548	0.429375211158755	1
+6	Nicotinate and nicotinamide metabolism	0	258	6	3549	1	1
+6	ER-to Golgi_ translocation and quality control	0	258	15	3540	0.618664871905163	1
+6	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	258	9	3546	1	1
+6	Transcription in prokaryotes	1	257	2	3553	0.189610901820425	0.897521414984889
+6	Various features of C/D and H/ACA snoRNAs	0	258	6	3549	1	1
+6	Merozoite egress	0	258	3	3552	1	1
+6	Riboflavin metabolism	0	258	3	3552	1	1
+6	Post-translational modification of elongation factor 2	0	258	5	3550	1	1
+6	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	1	257	9	3546	0.504144214827013	1
+6	Structure of telomere and sub-telomeric regions	0	258	1	3554	1	1
+6	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	258	2	3553	1	1
+7	FALSE	15	25	1244	2529	0.612404766151141	1
+7	Genes coding for components involved in ribosome assembly	2	38	130	3643	0.648402255469655	1
+7	mRNA degradation	0	40	29	3744	1	1
+7	Splicing of pre-mRNA	3	37	103	3670	0.0984507468335624	0.718511450527126
+7	RNA Degradation Factors	1	39	38	3735	0.33857724643749	1
+7	Phosphoproteome - Treeck et al 2011	11	29	843	2930	0.446234958947379	1
+7	Phosphoproteome - Pease et al 2013	4	36	595	3178	0.388952242832203	1
+7	S-nitrosylated proteins	1	39	246	3527	0.51561492620655	1
+7	S-Glutathionylated proteins	0	40	295	3478	0.0706498489196864	0.59307466757708
+7	Transcription related proteins encoding genes	5	35	164	3609	0.0302042139401362	0.358697380934044
+7	Translation in prokaryotes � a template for apicoplast and mitochondrion	0	40	48	3725	1	1
+7	Nuclear genes with apicoplast signal sequences	2	38	228	3545	1	1
+7	Terpenoid metabolism	1	39	12	3761	0.128302890606841	0.785072870268077
+7	N-myristoylation_ S-acylation and prenylation of proteins	0	40	20	3753	1	1
+7	Proteins of detergent-resistant membranes	0	40	105	3668	0.627535479258757	1
+7	Genes coding for transport proteins	1	39	131	3642	1	1
+7	Chromatin modifying proteins	2	38	29	3744	0.0412032851273732	0.43408361474488
+7	Histone lysine methylation	1	39	15	3758	0.155548519054352	0.860016192126955
+7	Plasmodium falciparum chromatin landscape	1	39	17	3756	0.173249094145337	0.862806282753574
+7	Topogenesis of the Rieske FeS protein	0	40	10	3763	1	1
+7	Nuclear genes with mitochondrial signal sequences	1	39	269	3504	0.362356178928006	1
+7	Porphyrin metabolism	0	40	17	3756	1	1
+7	Pyrimidine metabolism	0	40	21	3752	1	1
+7	Mitochondrial electron flow	0	40	24	3749	1	1
+7	Phosphoproteome - Lasonder et al 2011	4	36	502	3271	0.813517961842252	1
+7	Established and putative Maurer�s clefts proteins	0	40	49	3724	1	1
+7	The acidocalcisome	1	39	35	3738	0.317104130597437	1
+7	ATP-dependent chromatin remodeling complexes	1	39	33	3740	0.302412694000186	1
+7	Phenylalanine and Tyrosine metabolism	0	40	9	3764	1	1
+7	Modification of proteins by adenylylation and ADP-ribosylation	0	40	48	3725	1	1
+7	Protein biosynthesis	0	40	55	3718	1	1
+7	DNA binding proteins with AP2 domain(s)	0	40	19	3754	1	1
+7	Heterochromatin structure of the telomeric and subtelomeric regions	1	39	4	3769	0.0513895272853106	0.486503685196313
+7	Total palmitome of Plasmodium falciparum	0	40	309	3464	0.0725275268862753	0.599023647986644
+7	Ribosomal structure	0	40	145	3628	0.403721239017608	1
+7	Glyoxalase metabolism	0	40	6	3767	1	1
+7	The phosphoproteome of Plasmodium falciparum infected RBCs	3	37	311	3462	1	1
+7	Proteins involved in steps during passage through prophase	0	40	21	3752	1	1
+7	Protein phosphorylation	0	40	77	3696	1	1
+7	Protein kinase coding genes	0	40	84	3689	1	1
+7	Pre-replicative complex formation and transition to replication	0	40	20	3753	1	1
+7	Dolichol metabolism	0	40	6	3767	1	1
+7	Purine metabolism	0	40	33	3740	1	1
+7	Double strand break repair and homologous recombination	0	40	11	3762	1	1
+7	Genes involved in excision-repair	1	39	77	3696	0.564404206341945	1
+7	Genes coding for enzymes/proteins involved in DNA replication	1	39	57	3716	0.460062393710597	1
+7	Fatty acids elongation in the endoplasmic reticulum	0	40	12	3761	1	1
+7	Fatty acid synthesis in the apicoplast	0	40	28	3745	1	1
+7	Genes coding for components of the proteasome degradation machinery & their timed transcription	2	38	102	3671	0.298240741846945	1
+7	Subcellular location of adaptor proteins	0	40	25	3748	1	1
+7	Classical COPI-mediated vesicular transport	1	39	29	3744	0.272099543976892	1
+7	Genes coding for protein traffic related proteins	0	40	60	3713	1	1
+7	Thioredoxin_ Glutaredoxin and Peroxiredoxin	0	40	24	3749	1	1
+7	Redox Metabolism	0	40	35	3738	1	1
+7	Initiation of translation	0	40	42	3731	1	1
+7	Quality control mechanisms during ribosome maturation	0	40	12	3761	1	1
+7	Signaling machinery in malaria parasites	0	40	17	3756	1	1
+7	Ubiquinone metabolism	0	40	7	3766	1	1
+7	Import of proteins into the mitochondrion	0	40	25	3748	1	1
+7	Peptidases and proteases	1	39	111	3662	1	1
+7	Genes coding for chaperones and their regulators	0	40	102	3671	0.626522572398871	1
+7	Centrosome proteins	0	40	75	3698	1	1
+7	Tubulin and microtubules	1	39	23	3750	0.224207918388997	0.987744732408839
+7	Proteins targeted by the thioredoxin superfamily enzymes	0	40	38	3735	1	1
+7	Arginine and proline metabolism	0	40	6	3767	1	1
+7	Pyridoxal phosphate (Vitamin B6) metabolism	0	40	22	3751	1	1
+7	Transporters of the plasma membrane	1	39	60	3713	0.477138734713904	1
+7	Mitochondrial TCA cycle	0	40	18	3755	1	1
+7	Possible paths for apoptosis	0	40	20	3753	1	1
+7	Phosphatidylethanolamine and phosphatidylserine metabolism	0	40	31	3742	1	1
+7	Structure and organization of centromeric chromatin	1	39	10	3763	0.109664965042572	0.74194912251237
+7	Chaperone-mediated modulation of nucleosome-histone interactions	0	40	13	3760	1	1
+7	Acetylation recognition by the bromodomain and other modules	1	39	11	3762	0.119031982769636	0.763016298221872
+7	Putative organization of the kinetochore	0	40	35	3738	1	1
+7	Plasmodium falciparum histone acetylation and methylation	0	40	7	3766	1	1
+7	Histone acetylation	0	40	24	3749	1	1
+7	Protein arginine methylation	0	40	10	3763	1	1
+7	Nucleosome assembly and regulation	0	40	38	3735	1	1
+7	Compartmentalization of transcription site in the nucleus	0	40	4	3769	1	1
+7	Pentose Phosphate Cycle	0	40	9	3764	1	1
+7	Thiamine metabolism	0	40	15	3758	1	1
+7	RNA polymerase II transcribes mRNA	2	38	36	3737	0.0595104599314331	0.526156357191128
+7	tRNA thiolation	0	40	7	3766	1	1
+7	Genes coding for GPI-anchored membrane proteins	0	40	25	3748	1	1
+7	Subcellular localization of proteins involved in invasion	0	40	39	3734	1	1
+7	Functional annotation of merozoite invasion-related proteins	0	40	42	3731	1	1
+7	Maturation and export of 60S and 40S ribosomal subunits	1	39	86	3687	0.604676326516305	1
+7	Pre-ribosomal particles along the 60S assembly pathway	0	40	24	3749	1	1
+7	Structure of the mitotic centrosome	0	40	30	3743	1	1
+7	Centriole proteins	0	40	19	3754	1	1
+7	Classical clathrin-mediated vesicular transport	1	39	37	3736	0.331493736359177	1
+7	Molecular model of vesicle exocytosis	0	40	18	3755	1	1
+7	Molecular motor prototypes	0	40	41	3732	1	1
+7	Genes coding for Fe-S containing proteins	0	40	17	3756	1	1
+7	Maturation of cytosolic and nuclear Fe-S proteins	0	40	14	3759	1	1
+7	Nucleotide excision repair	0	40	29	3744	1	1
+7	DNA Replication	0	40	38	3735	1	1
+7	Kinetochores power chromosome movements in mitosis	0	40	39	3734	1	1
+7	Regulation of spindle microtubule dynamics	0	40	45	3728	1	1
+7	Control of the mitotic spindle organization by kinesins	0	40	10	3763	1	1
+7	Control of microtubule assembly	0	40	21	3752	1	1
+7	Pre-ribosomal particles along the 40S assembly pathway	0	40	15	3758	1	1
+7	Transcription and processing of snRNAs	2	38	19	3754	0.0198706711227415	0.272811410433455
+7	Proteins containing histone post translational modification-binding modules	1	39	24	3749	0.232397858548522	0.993854130169466
+7	Histone chaperones	0	40	25	3748	1	1
+7	Phosphoinositides and membrane traffic	0	40	23	3750	1	1
+7	Calcium � calmodulin activation of protein kinases	0	40	20	3753	1	1
+7	Inositol Phosphate metabolism	0	40	24	3749	1	1
+7	The structures of RNA polymerases	1	39	20	3753	0.199123585613684	0.916607881483173
+7	Mechanism of Fe�S-protein biogenesis	0	40	19	3754	1	1
+7	Selenocysteine biosynthesis	0	40	10	3763	1	1
+7	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	1	39	9	3764	0.100200866876668	0.726004114878964
+7	Pyruvate metabolism	0	40	17	3756	1	1
+7	Chaperone-assisted protein folding	0	40	71	3702	1	1
+7	Sphingomyelin and ceramide metabolism	0	40	18	3755	1	1
+7	Generation of polyphosphates	0	40	14	3759	1	1
+7	Cleavage and polyadenylation of pre-mRNA	1	39	14	3759	0.146560211646735	0.835313724489376
+7	Protein factors in pre-mRNA 3�-end processing	1	39	17	3756	0.173249094145337	0.862806282753574
+7	Oxidative protein folding in the endoplasmic reticulum	0	40	9	3764	1	1
+7	Transporters of the mitochondrial and apicoplast membranes	0	40	30	3743	1	1
+7	Phosphatases of Plasmodium falciparum and their timed expression	1	39	40	3733	0.352525403758667	1
+7	Transporters of the ER/Golgi and digestive vacuole membranes	0	40	30	3743	1	1
+7	CCR4 � NOT complex	1	39	17	3756	0.173249094145337	0.862806282753574
+7	Encoded proteins that could be constituents of P-bodies	1	39	42	3731	0.366186622800112	1
+7	Isoprenoids metabolism	0	40	14	3759	1	1
+7	Rab and other proteins involved in intracellular traffic	0	40	16	3757	1	1
+7	Rab proteins	0	40	13	3760	1	1
+7	Endosome maturation	0	40	12	3761	1	1
+7	Rab cycle	1	39	42	3731	0.366186622800112	1
+7	Molecular markers of resistance to antimalarial drugs	0	40	12	3761	1	1
+7	ATP synthase complex	0	40	20	3753	1	1
+7	DNA mismatch repair system	1	39	24	3749	0.232397858548522	0.993854130169466
+7	Base excision repair of AP sites	0	40	37	3736	1	1
+7	Actin and filaments	0	40	28	3745	1	1
+7	A model for UbpX function in the regulation of PCNA deubiquitylation	0	40	16	3757	1	1
+7	Model for translesion DNA synthesis	0	40	12	3761	1	1
+7	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	0	40	22	3751	1	1
+7	Phosphatidylcholine metabolism	0	40	13	3760	1	1
+7	Components of the linear motor responsible for merozoite motility in invasion	0	40	34	3739	1	1
+7	Parasite encoded proteins associated with the membrane of infected erythrocytes	0	40	34	3739	1	1
+7	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	0	40	35	3738	1	1
+7	Asparagine and Aspartate metabolism	0	40	8	3765	1	1
+7	Biosynthesis of Fe-S proteins in the apicoplast	0	40	14	3759	1	1
+7	Methionine and Polyamine metabolism	0	40	19	3754	1	1
+7	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	40	12	3761	1	1
+7	Karyopherin/exportin-mediated nuclear export pathways	1	39	17	3756	0.173249094145337	0.862806282753574
+7	tRNA modifications	1	39	42	3731	0.366186622800112	1
+7	Schematic depiction of pseudouridylation	2	38	13	3760	0.0103367817419835	0.180830300580267
+7	The HSP70 chaperone cycle	1	39	6	3767	0.0712162406009349	0.59307466757708
+7	Organization of chaperone pathways in the cytosol	1	39	29	3744	0.272099543976892	1
+7	The ATG autophagic pathway	0	40	13	3760	1	1
+7	Glutamate metabolism	0	40	14	3759	1	1
+7	Glycolysis	0	40	28	3745	1	1
+7	Model for metabolic compartmentalization of PI biosynthesis	0	40	12	3761	1	1
+7	Shikimate biosynthesis	0	40	5	3768	1	1
+7	CoA biosynthesis	0	40	8	3765	1	1
+7	Utilization of phospholipids	0	40	26	3747	1	1
+7	Structure and processing of pre rRNA	2	38	23	3750	0.0276493545603971	0.34152939123034
+7	Bulk mRNA transport through the nuclear pore	0	40	4	3769	1	1
+7	Posttranslational translocation in eukaryotes	0	40	27	3746	1	1
+7	SRP independent translocation of GPI anchored proteins	0	40	9	3764	1	1
+7	Proteasome-mediated proteolysis of ubiquinated proteins	1	39	37	3736	0.331493736359177	1
+7	Aminosugars metabolism	0	40	8	3765	1	1
+7	Quality control in mRNA biogenesis	0	40	22	3751	1	1
+7	Leucine_ Isoleucine and Valine metabolism	0	40	11	3762	1	1
+7	Classical COPII-mediated vesicular transport	0	40	25	3748	1	1
+7	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	0	40	11	3762	1	1
+7	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	0	40	14	3759	1	1
+7	Assisted assembly of Sm-class snRNPs	0	40	11	3762	1	1
+7	Lysine metabolism	0	40	5	3768	1	1
+7	Mitochondrial division	1	39	3	3770	0.0413220242583571	0.43408361474488
+7	Import and export through the nuclear pore	1	39	23	3750	0.224207918388997	0.987744732408839
+7	Putative SUMO substrates	0	40	21	3752	1	1
+7	RNA polymerase I transcribes rRNA	1	39	8	3765	0.0906387081824776	0.685866783481392
+7	Lipoic acid metabolism	0	40	6	3767	1	1
+7	Acetyl-CoA production in the mitochondrion	0	40	6	3767	1	1
+7	Mitochondrial antioxidant system	0	40	14	3759	1	1
+7	Chaperone network and protein quality control of the mitochondrion	0	40	36	3737	1	1
+7	Proteome of the parasitophorous vacuole	0	40	24	3749	1	1
+7	Proteins with ER retention sequences	0	40	12	3761	1	1
+7	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	40	3	3770	1	1
+7	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	0	40	16	3757	1	1
+7	Interactions between modified host cell membrane and endothelial cell	0	40	3	3770	1	1
+7	Rosette formation between normal and infected RBC	0	40	3	3770	1	1
+7	Domains of merozoite surface proteins	0	40	7	3766	1	1
+7	Nitrogen metabolism	0	40	9	3764	1	1
+7	RNA polymerase III transcribes tRNA and 5S rRNA	0	40	14	3759	1	1
+7	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	40	7	3766	1	1
+7	Structure of the nuclear pore	0	40	4	3769	1	1
+7	Biogenesis of cytochrome oxidase	0	40	20	3753	1	1
+7	Protein N-terminal acetylation	0	40	9	3764	1	1
+7	Mannose and Fructose metabolism	0	40	7	3766	1	1
+7	tRNA-wybutosine biosynthesis	0	40	4	3769	1	1
+7	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	0	40	6	3767	1	1
+7	Anaphase promoting complex ubiquitin-ligase	0	40	10	3763	1	1
+7	Lsm proteins and RNA processing	0	40	11	3762	1	1
+7	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	0	40	14	3759	1	1
+7	Exported parasite proteins associated with Maurer�s clefts	0	40	4	3769	1	1
+7	Translocon of exported proteins (PTEX)	0	40	6	3767	1	1
+7	Post-translational modification �SUMOylation	0	40	9	3764	1	1
+7	Activation of eiF5A	0	40	3	3770	1	1
+7	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	0	40	5	3768	1	1
+7	Different kinesins with different roles	0	40	5	3768	1	1
+7	Catabolism of polyphosphates	0	40	8	3765	1	1
+7	Glycine and Serine metabolism	0	40	10	3763	1	1
+7	Pathways of peptide export from the mitochondrion	0	40	5	3768	1	1
+7	Role of perforin 1 in merozoite egress	0	40	5	3768	1	1
+7	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	0	40	15	3758	1	1
+7	14-3-3 protein	0	40	3	3770	1	1
+7	Roles of rhoptry neck proteins during invasion	0	40	4	3769	1	1
+7	Folate biosynthesis	0	40	11	3762	1	1
+7	Telomerase and some telomerase associated proteins	1	39	7	3766	0.0809774992388651	0.629929616172102
+7	Nicotinate and nicotinamide metabolism	0	40	6	3767	1	1
+7	ER-to Golgi_ translocation and quality control	0	40	15	3758	1	1
+7	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	0	40	9	3764	1	1
+7	Transcription in prokaryotes	0	40	3	3770	1	1
+7	Various features of C/D and H/ACA snoRNAs	0	40	6	3767	1	1
+7	Merozoite egress	0	40	3	3770	1	1
+7	Riboflavin metabolism	1	39	2	3771	0.0311503746483662	0.365607028767667
+7	Post-translational modification of elongation factor 2	1	39	4	3769	0.0513895272853106	0.486503685196313
+7	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	0	40	10	3763	1	1
+7	Structure of telomere and sub-telomeric regions	0	40	1	3772	1	1
+7	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	1	39	1	3772	0.0208735289803563	0.279740707844812
+8	FALSE	32	16	1227	2538	2.82964858301142e-06	0.000177472022065747
+8	Genes coding for components involved in ribosome assembly	0	48	132	3633	0.412806944949055	1
+8	mRNA degradation	0	48	29	3736	1	1
+8	Splicing of pre-mRNA	1	47	105	3660	1	1
+8	RNA Degradation Factors	1	47	38	3727	0.391381021347441	1
+8	Phosphoproteome - Treeck et al 2011	4	44	850	2915	0.014632608304268	0.22511057984281
+8	Phosphoproteome - Pease et al 2013	4	44	595	3170	0.227977862738108	0.99037136475191
+8	S-nitrosylated proteins	4	44	243	3522	0.549985256183777	1
+8	S-Glutathionylated proteins	5	43	290	3475	0.416393568509012	1
+8	Transcription related proteins encoding genes	0	48	169	3596	0.273524522031248	1
+8	Translation in prokaryotes � a template for apicoplast and mitochondrion	0	48	48	3717	1	1
+8	Nuclear genes with apicoplast signal sequences	0	48	230	3535	0.115862873356438	0.758820395538536
+8	Terpenoid metabolism	0	48	13	3752	1	1
+8	N-myristoylation_ S-acylation and prenylation of proteins	0	48	20	3745	1	1
+8	Proteins of detergent-resistant membranes	1	47	104	3661	1	1
+8	Genes coding for transport proteins	0	48	132	3633	0.412806944949055	1
+8	Chromatin modifying proteins	0	48	31	3734	1	1
+8	Histone lysine methylation	0	48	16	3749	1	1
+8	Plasmodium falciparum chromatin landscape	0	48	18	3747	1	1
+8	Topogenesis of the Rieske FeS protein	0	48	10	3755	1	1
+8	Nuclear genes with mitochondrial signal sequences	0	48	270	3495	0.046721977018303	0.472781583450483
+8	Porphyrin metabolism	0	48	17	3748	1	1
+8	Pyrimidine metabolism	2	46	19	3746	0.0279879938437878	0.34152939123034
+8	Mitochondrial electron flow	0	48	24	3741	1	1
+8	Phosphoproteome - Lasonder et al 2011	3	45	503	3262	0.197565519382246	0.913626722120201
+8	Established and putative Maurer�s clefts proteins	1	47	48	3717	0.464587859069205	1
+8	The acidocalcisome	0	48	36	3729	1	1
+8	ATP-dependent chromatin remodeling complexes	0	48	34	3731	1	1
+8	Phenylalanine and Tyrosine metabolism	0	48	9	3756	1	1
+8	Modification of proteins by adenylylation and ADP-ribosylation	0	48	48	3717	1	1
+8	Protein biosynthesis	0	48	55	3710	1	1
+8	DNA binding proteins with AP2 domain(s)	0	48	19	3746	1	1
+8	Heterochromatin structure of the telomeric and subtelomeric regions	0	48	5	3760	1	1
+8	Total palmitome of Plasmodium falciparum	5	43	304	3461	0.588954703578332	1
+8	Ribosomal structure	0	48	145	3620	0.261496453985424	1
+8	Glyoxalase metabolism	0	48	6	3759	1	1
+8	The phosphoproteome of Plasmodium falciparum infected RBCs	1	47	313	3452	0.179860487562441	0.885129787352262
+8	Proteins involved in steps during passage through prophase	0	48	21	3744	1	1
+8	Protein phosphorylation	1	47	76	3689	1	1
+8	Protein kinase coding genes	0	48	84	3681	0.626624472063489	1
+8	Pre-replicative complex formation and transition to replication	0	48	20	3745	1	1
+8	Dolichol metabolism	0	48	6	3759	1	1
+8	Purine metabolism	2	46	31	3734	0.0639967917610567	0.550736550546362
+8	Double strand break repair and homologous recombination	0	48	11	3754	1	1
+8	Genes involved in excision-repair	1	47	77	3688	1	1
+8	Genes coding for enzymes/proteins involved in DNA replication	0	48	58	3707	1	1
+8	Fatty acids elongation in the endoplasmic reticulum	0	48	12	3753	1	1
+8	Fatty acid synthesis in the apicoplast	0	48	28	3737	1	1
+8	Genes coding for components of the proteasome degradation machinery & their timed transcription	1	47	103	3662	1	1
+8	Subcellular location of adaptor proteins	0	48	25	3740	1	1
+8	Classical COPI-mediated vesicular transport	0	48	30	3735	1	1
+8	Genes coding for protein traffic related proteins	0	48	60	3705	1	1
+8	Thioredoxin_ Glutaredoxin and Peroxiredoxin	0	48	24	3741	1	1
+8	Redox Metabolism	1	47	34	3731	0.359429610706057	1
+8	Initiation of translation	0	48	42	3723	1	1
+8	Quality control mechanisms during ribosome maturation	0	48	12	3753	1	1
+8	Signaling machinery in malaria parasites	0	48	17	3748	1	1
+8	Ubiquinone metabolism	0	48	7	3758	1	1
+8	Import of proteins into the mitochondrion	0	48	25	3740	1	1
+8	Peptidases and proteases	0	48	112	3653	0.402677652526643	1
+8	Genes coding for chaperones and their regulators	0	48	102	3663	0.639351794840003	1
+8	Centrosome proteins	1	47	74	3691	0.616928378966522	1
+8	Tubulin and microtubules	0	48	24	3741	1	1
+8	Proteins targeted by the thioredoxin superfamily enzymes	0	48	38	3727	1	1
+8	Arginine and proline metabolism	0	48	6	3759	1	1
+8	Pyridoxal phosphate (Vitamin B6) metabolism	1	47	21	3744	0.243823548835802	0.993854130169466
+8	Transporters of the plasma membrane	0	48	61	3704	1	1
+8	Mitochondrial TCA cycle	0	48	18	3747	1	1
+8	Possible paths for apoptosis	0	48	20	3745	1	1
+8	Phosphatidylethanolamine and phosphatidylserine metabolism	0	48	31	3734	1	1
+8	Structure and organization of centromeric chromatin	0	48	11	3754	1	1
+8	Chaperone-mediated modulation of nucleosome-histone interactions	1	47	12	3753	0.152064602269913	0.857303877730102
+8	Acetylation recognition by the bromodomain and other modules	0	48	12	3753	1	1
+8	Putative organization of the kinetochore	1	47	34	3731	0.359429610706057	1
+8	Plasmodium falciparum histone acetylation and methylation	0	48	7	3758	1	1
+8	Histone acetylation	0	48	24	3741	1	1
+8	Protein arginine methylation	0	48	10	3755	1	1
+8	Nucleosome assembly and regulation	0	48	38	3727	1	1
+8	Compartmentalization of transcription site in the nucleus	0	48	4	3761	1	1
+8	Pentose Phosphate Cycle	1	47	8	3757	0.107863673063107	0.74194912251237
+8	Thiamine metabolism	0	48	15	3750	1	1
+8	RNA polymerase II transcribes mRNA	0	48	38	3727	1	1
+8	tRNA thiolation	0	48	7	3758	1	1
+8	Genes coding for GPI-anchored membrane proteins	0	48	25	3740	1	1
+8	Subcellular localization of proteins involved in invasion	0	48	39	3726	1	1
+8	Functional annotation of merozoite invasion-related proteins	0	48	42	3723	1	1
+8	Maturation and export of 60S and 40S ribosomal subunits	0	48	87	3678	0.627732127993022	1
+8	Pre-ribosomal particles along the 60S assembly pathway	0	48	24	3741	1	1
+8	Structure of the mitotic centrosome	1	47	29	3736	0.317173605359741	1
+8	Centriole proteins	0	48	19	3746	1	1
+8	Classical clathrin-mediated vesicular transport	0	48	38	3727	1	1
+8	Molecular model of vesicle exocytosis	0	48	18	3747	1	1
+8	Molecular motor prototypes	1	47	40	3725	0.406766158807405	1
+8	Genes coding for Fe-S containing proteins	0	48	17	3748	1	1
+8	Maturation of cytosolic and nuclear Fe-S proteins	0	48	14	3751	1	1
+8	Nucleotide excision repair	1	47	28	3737	0.308400675235883	1
+8	DNA Replication	1	47	37	3728	0.383542622910273	1
+8	Kinetochores power chromosome movements in mitosis	1	47	38	3727	0.391381021347441	1
+8	Regulation of spindle microtubule dynamics	1	47	44	3721	0.43640262623045	1
+8	Control of the mitotic spindle organization by kinesins	0	48	10	3755	1	1
+8	Control of microtubule assembly	0	48	21	3744	1	1
+8	Pre-ribosomal particles along the 40S assembly pathway	0	48	15	3750	1	1
+8	Transcription and processing of snRNAs	0	48	21	3744	1	1
+8	Proteins containing histone post translational modification-binding modules	0	48	25	3740	1	1
+8	Histone chaperones	1	47	24	3741	0.272191929196378	1
+8	Phosphoinositides and membrane traffic	0	48	23	3742	1	1
+8	Calcium � calmodulin activation of protein kinases	1	47	19	3746	0.224312741563115	0.987744732408839
+8	Inositol Phosphate metabolism	0	48	24	3741	1	1
+8	The structures of RNA polymerases	0	48	21	3744	1	1
+8	Mechanism of Fe�S-protein biogenesis	0	48	19	3746	1	1
+8	Selenocysteine biosynthesis	0	48	10	3755	1	1
+8	Cotranslational cleavage of N-terminal methionine residues and N-terminal acetylation	0	48	10	3755	1	1
+8	Pyruvate metabolism	0	48	17	3748	1	1
+8	Chaperone-assisted protein folding	0	48	71	3694	1	1
+8	Sphingomyelin and ceramide metabolism	0	48	18	3747	1	1
+8	Generation of polyphosphates	0	48	14	3751	1	1
+8	Cleavage and polyadenylation of pre-mRNA	0	48	15	3750	1	1
+8	Protein factors in pre-mRNA 3�-end processing	0	48	18	3747	1	1
+8	Oxidative protein folding in the endoplasmic reticulum	0	48	9	3756	1	1
+8	Transporters of the mitochondrial and apicoplast membranes	0	48	30	3735	1	1
+8	Phosphatases of Plasmodium falciparum and their timed expression	1	47	40	3725	0.406766158807405	1
+8	Transporters of the ER/Golgi and digestive vacuole membranes	0	48	30	3735	1	1
+8	CCR4 � NOT complex	0	48	18	3747	1	1
+8	Encoded proteins that could be constituents of P-bodies	0	48	43	3722	1	1
+8	Isoprenoids metabolism	0	48	14	3751	1	1
+8	Rab and other proteins involved in intracellular traffic	0	48	16	3749	1	1
+8	Rab proteins	0	48	13	3752	1	1
+8	Endosome maturation	0	48	12	3753	1	1
+8	Rab cycle	0	48	43	3722	1	1
+8	Molecular markers of resistance to antimalarial drugs	0	48	12	3753	1	1
+8	ATP synthase complex	0	48	20	3745	1	1
+8	DNA mismatch repair system	1	47	24	3741	0.272191929196378	1
+8	Base excision repair of AP sites	0	48	37	3728	1	1
+8	Actin and filaments	1	47	27	3738	0.299517408554407	1
+8	A model for UbpX function in the regulation of PCNA deubiquitylation	1	47	15	3750	0.183800965650329	0.888888043518577
+8	Model for translesion DNA synthesis	1	47	11	3754	0.141219705096706	0.827774043065323
+8	Model of the Ube2w/CHIP/Ataxin-3 Ubiquitination Cycle	0	48	22	3743	1	1
+8	Phosphatidylcholine metabolism	0	48	13	3752	1	1
+8	Components of the linear motor responsible for merozoite motility in invasion	0	48	34	3731	1	1
+8	Parasite encoded proteins associated with the membrane of infected erythrocytes	0	48	34	3731	1	1
+8	Large Tethering Complexes that Act in the Secretory and Endocytic Pathways	0	48	35	3730	1	1
+8	Asparagine and Aspartate metabolism	0	48	8	3757	1	1
+8	Biosynthesis of Fe-S proteins in the apicoplast	0	48	14	3751	1	1
+8	Methionine and Polyamine metabolism	0	48	19	3746	1	1
+8	Signal recognition particle-mediated targeting of membrane and secretory proteins	0	48	12	3753	1	1
+8	Karyopherin/exportin-mediated nuclear export pathways	0	48	18	3747	1	1
+8	tRNA modifications	0	48	43	3722	1	1
+8	Schematic depiction of pseudouridylation	0	48	15	3750	1	1
+8	The HSP70 chaperone cycle	0	48	7	3758	1	1
+8	Organization of chaperone pathways in the cytosol	0	48	30	3735	1	1
+8	The ATG autophagic pathway	0	48	13	3752	1	1
+8	Glutamate metabolism	0	48	14	3751	1	1
+8	Glycolysis	0	48	28	3737	1	1
+8	Model for metabolic compartmentalization of PI biosynthesis	0	48	12	3753	1	1
+8	Shikimate biosynthesis	0	48	5	3760	1	1
+8	CoA biosynthesis	0	48	8	3757	1	1
+8	Utilization of phospholipids	0	48	26	3739	1	1
+8	Structure and processing of pre rRNA	0	48	25	3740	1	1
+8	Bulk mRNA transport through the nuclear pore	0	48	4	3761	1	1
+8	Posttranslational translocation in eukaryotes	0	48	27	3738	1	1
+8	SRP independent translocation of GPI anchored proteins	0	48	9	3756	1	1
+8	Proteasome-mediated proteolysis of ubiquinated proteins	1	47	37	3728	0.383542622910273	1
+8	Aminosugars metabolism	0	48	8	3757	1	1
+8	Quality control in mRNA biogenesis	0	48	22	3743	1	1
+8	Leucine_ Isoleucine and Valine metabolism	0	48	11	3754	1	1
+8	Classical COPII-mediated vesicular transport	0	48	25	3740	1	1
+8	Characteristics of Plasmodium falciparum export proteins that remodel infected erythrocyte	0	48	11	3754	1	1
+8	Maturation of snRNAs requires nuclear and cytoplasmic regulatory steps	0	48	14	3751	1	1
+8	Assisted assembly of Sm-class snRNPs	0	48	11	3754	1	1
+8	Lysine metabolism	0	48	5	3760	1	1
+8	Mitochondrial division	0	48	4	3761	1	1
+8	Import and export through the nuclear pore	0	48	24	3741	1	1
+8	Putative SUMO substrates	1	47	20	3745	0.234128978949082	0.993854130169466
+8	RNA polymerase I transcribes rRNA	0	48	9	3756	1	1
+8	Lipoic acid metabolism	0	48	6	3759	1	1
+8	Acetyl-CoA production in the mitochondrion	0	48	6	3759	1	1
+8	Mitochondrial antioxidant system	0	48	14	3751	1	1
+8	Chaperone network and protein quality control of the mitochondrion	1	47	35	3730	0.367568143973952	1
+8	Proteome of the parasitophorous vacuole	0	48	24	3741	1	1
+8	Proteins with ER retention sequences	0	48	12	3753	1	1
+8	Phosphatidylinositol 3-kinase (PI3K)-controlled endocytosis of host cell hemoglobin	0	48	3	3762	1	1
+8	SCF (Skp1-Cullin-F-box) ubiquitin-ligase	1	47	15	3750	0.183800965650329	0.888888043518577
+8	Interactions between modified host cell membrane and endothelial cell	0	48	3	3762	1	1
+8	Rosette formation between normal and infected RBC	0	48	3	3762	1	1
+8	Domains of merozoite surface proteins	0	48	7	3758	1	1
+8	Nitrogen metabolism	0	48	9	3756	1	1
+8	RNA polymerase III transcribes tRNA and 5S rRNA	0	48	14	3751	1	1
+8	The Atg8 and Atg12 ubiquitin-like conjugation systems	0	48	7	3758	1	1
+8	Structure of the nuclear pore	0	48	4	3761	1	1
+8	Biogenesis of cytochrome oxidase	0	48	20	3745	1	1
+8	Protein N-terminal acetylation	0	48	9	3756	1	1
+8	Mannose and Fructose metabolism	0	48	7	3758	1	1
+8	tRNA-wybutosine biosynthesis	0	48	4	3761	1	1
+8	Modification of the wobble position uridine (U34) in Lys_ Glu_ Gln_ Leu and Arg tRNAs	0	48	6	3759	1	1
+8	Anaphase promoting complex ubiquitin-ligase	1	47	9	3756	0.119120913781554	0.763016298221872
+8	Lsm proteins and RNA processing	0	48	11	3754	1	1
+8	Glycosylphosphatidylinositol (GPI) anchor biosynthesis	0	48	14	3751	1	1
+8	Exported parasite proteins associated with Maurer�s clefts	0	48	4	3761	1	1
+8	Translocon of exported proteins (PTEX)	0	48	6	3759	1	1
+8	Post-translational modification �SUMOylation	0	48	9	3756	1	1
+8	Activation of eiF5A	0	48	3	3762	1	1
+8	Involvement of GTP-binding proteins and ribosomes in amino acid shortage	0	48	5	3760	1	1
+8	Different kinesins with different roles	0	48	5	3760	1	1
+8	Catabolism of polyphosphates	0	48	8	3757	1	1
+8	Glycine and Serine metabolism	1	47	9	3756	0.119120913781554	0.763016298221872
+8	Pathways of peptide export from the mitochondrion	0	48	5	3760	1	1
+8	Role of perforin 1 in merozoite egress	0	48	5	3760	1	1
+8	Models for ubiquitin (Ub) chain amputation and trimming in regulating proteasomal degradation	0	48	15	3750	1	1
+8	14-3-3 protein	0	48	3	3762	1	1
+8	Roles of rhoptry neck proteins during invasion	0	48	4	3761	1	1
+8	Folate biosynthesis	1	47	10	3755	0.130239030042002	0.794497669587533
+8	Telomerase and some telomerase associated proteins	0	48	8	3757	1	1
+8	Nicotinate and nicotinamide metabolism	0	48	6	3759	1	1
+8	ER-to Golgi_ translocation and quality control	0	48	15	3750	1	1
+8	One-carbon enzyme systems serine hydroxymethyltransferase and glycine-cleavage complex	1	47	8	3757	0.107863673063107	0.74194912251237
+8	Transcription in prokaryotes	0	48	3	3762	1	1
+8	Various features of C/D and H/ACA snoRNAs	1	47	5	3760	0.0732400677973156	0.59997067783352
+8	Merozoite egress	0	48	3	3762	1	1
+8	Riboflavin metabolism	0	48	3	3762	1	1
+8	Post-translational modification of elongation factor 2	0	48	5	3760	1	1
+8	Replication in prokaryotes � a model for apicoplast and mitochondion DNA replication	0	48	10	3755	1	1
+8	Structure of telomere and sub-telomeric regions	0	48	1	3764	1	1
+8	Model of reaction schemes showing possible ADP-ribosylation and deacetylation outcomes of the sirtuin reaction	0	48	2	3763	1	1
