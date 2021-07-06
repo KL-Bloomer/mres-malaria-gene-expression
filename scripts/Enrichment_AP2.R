@@ -1,4 +1,4 @@
-#Enrichment  AP2 & metabolic 
+#Enrichment  AP2 & metabolic
 rm(list = ls())
 library(data.table)
 
@@ -25,9 +25,9 @@ ap2[, gene_id := sub('\\..*', '', tss_id)]
 ap2[, tss_id := NULL] # We don't need this column anymore
 
 #remove any duplicates (may be multiple peaks assigned to the same gene)
-ap2 <- unique(ap2) 
+ap2 <- unique(ap2)
 
-#Merge the table of expressed genes to the table of clusters (similar to the GO analysis) 
+#Merge the table of expressed genes to the table of clusters (similar to the GO analysis)
 #and then merge to the table of AP2 targets
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
 clusters <- fread('clusters_scaled_8clusters_20May.txt')
@@ -36,20 +36,23 @@ allgenes_table <- fread('gene_id_desc_table (1)')
 clusters <- merge(clusters, allgenes_table, by = "gene_id", all = TRUE)
 clusters <- clusters[, c("gene_id","groups")]
 setnames(clusters, "groups", "cluster_id")
-ap2 <- merge(clusters, ap2, by = "gene_id", all=TRUE)
-n_genes <- length(unique(ap2$gene_id))
-cluster_ids <- unique(ap2[!is.na(cluster_id)]$cluster_id)
-target <- unique(ap2[!is.na(target)]$target)
+ap2_clust <- merge(clusters, ap2, by = "gene_id", all=TRUE)
+ap2_clust[is.na(ap2_clust)] <- FALSE
+
+n_genes <- length(unique(ap2_clust$gene_id))
+cluster_ids <- unique(ap2_clust$cluster_id)
+target <- unique(ap2_clust$target)
 
 counts <- list()
 for(clst in cluster_ids) {
   for(trg in target) {
+    count_both <- length(unique(ap2_clust[cluster_id == clst & target == trg]$gene_id))
     cnt <- data.table(
       cluster_id= clst,
       target= trg,
-      count_both= nrow(ap2[cluster_id == clst & target == trg]),
-      count_only_cluster= nrow(ap2[cluster_id == clst & target != trg]),
-      count_only_target= nrow(ap2[cluster_id != clst & target == trg])
+      count_both= count_both,
+      count_only_cluster= length(unique(ap2_clust[cluster_id == clst]$gene_id)) - count_both,
+      count_only_target= length(unique(ap2_clust[target == trg]$gene_id)) - count_both
     )
     cnt[, count_none := n_genes - (count_both + count_only_cluster + count_only_target)]
     counts[[length(counts) + 1]] <- cnt
@@ -60,52 +63,67 @@ counts <- rbindlist(counts)
 counts[, p.value := NA]
 for(i in 1:nrow(counts)) {
   x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow= 2), conf.int= FALSE)$p.value
+  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
   counts$p.value[i] <- p
 }
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
+#check that rows Sum to 5245
+rowSums(counts[ , c(3,4,5, 6)])
+rowSums(counts[ , c(3,4)])
+colSums(counts[ , c(3,4)])
+colSums(counts[ , 5])
+test <- ap2_clust[cluster_id == 3 & target != "AP2-O3"]
+test <- ap2_clust[cluster_id != 7 & target == "AP2-O3"]
+ap2_clust[cluster_id != 8 & target == "AP2-O3"]
+ap2_clust[cluster_id == 7 & target == "FALSE"]
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
-write.table(counts, file="counts_ap2.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+write.table(counts, file="counts_ap2_FALSE.txt", row.names = FALSE, sep= '\t', quote= FALSE)
 
 #Metabolic pathway enrichment
+#The "universe" of genes should be all the genes in the metabolic pathway table rather
+#all the genes in the genome.
 
 #load pathways files and P.berghei and P. falciparum conversion table
 setwd('~/MRes_Malaria_2021/data/Enrichment/')
 pathways <- fread('MetabolicPathways.csv', select= c('PFID New Name', 'Map_Name' ))
+pathways <- unique(pathways)
 conversion <- fread('PbergheiANKA__v__Pfalciparum3D7.genes.tsv')
+conversion[, Orthogroup:= NULL]
+conversion <- conversion[!duplicated(conversion$PbergheiANKA)]
+conversion <- conversion[!duplicated(conversion$Pfalciparum3D7)]
 
 pathcon <- merge(pathways, conversion, by.x = "PFID New Name", by.y = 'Pfalciparum3D7', all = TRUE)
 
 #remove NA values  -select for Pbergehi genes which are associated with a pathway
 pathcon <- na.omit(pathcon)
-pathcon[, Orthogroup:= NULL]
 pathcon[, 'PFID New Name':= NULL]
+setnames(pathcon, "Map_Name", "target")
 
-#Merge the table of expressed genes to the table of clusters (similar to the GO analysis) 
-#and then merge to the table of AP2 targets
+#Merge the table of expressed genes to the table of clusters (similar to the GO analysis)
+#and then merge to the table of metabolic pathways
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
 clusters <- fread('clusters_scaled_8clusters_20May.txt')
-allgenes_table <- fread('gene_id_desc_table (1)')
 
-clusters <- merge(clusters, allgenes_table, by = "gene_id", all = TRUE)
 clusters <- clusters[, c("gene_id","groups")]
 setnames(clusters, "groups", "cluster_id")
 comb <- merge(clusters, pathcon, by.x = "gene_id", by.y = 'PbergheiANKA',all=TRUE)
+comb[is.na(comb)] <- FALSE
 
 n_genes <- length(unique(comb$gene_id))
-cluster_ids <- unique(comb[!is.na(cluster_id)]$cluster_id)
-target <- unique(comb[!is.na(Map_Name)]$Map_Name)
+cluster_ids <- unique(comb$cluster_id)
+target <- unique(comb$target)
 
 counts <- list()
 for(clst in cluster_ids) {
   for(trg in target) {
+    count_both <- length(unique(comb[cluster_id == clst & target == trg]$gene_id))
     cnt <- data.table(
       cluster_id= clst,
       target= trg,
-      count_both= nrow(comb[cluster_id == clst & target == trg]),
-      count_only_cluster= nrow(comb[cluster_id == clst & target != trg]),
-      count_only_target= nrow(comb[cluster_id != clst & target == trg])
+      count_both= count_both,
+      count_only_cluster= length(unique(comb[cluster_id == clst]$gene_id)) - count_both,
+      count_only_target= length(unique(comb[target == trg]$gene_id)) - count_both
     )
     cnt[, count_none := n_genes - (count_both + count_only_cluster + count_only_target)]
     counts[[length(counts) + 1]] <- cnt
@@ -119,8 +137,10 @@ for(i in 1:nrow(counts)) {
   p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow= 2), conf.int= FALSE)$p.value
   counts$p.value[i] <- p
 }
+
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
-counts_pvalue <- counts[p.value < 0.05]
+counts_nozero <- counts[count_both != 0]
+counts_FDRpos <- counts[fdr < 1]
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
-write.table(counts, file="counts_path.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+write.table(counts_FDRpos, file="counts_path_FDRpos.txt", row.names = FALSE, sep= '\t', quote= FALSE)
