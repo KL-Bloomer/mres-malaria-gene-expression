@@ -75,12 +75,7 @@ for(i in 1:nrow(counts)) {
 }
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
-
-#Quality control
-#check that rows Sum to 5245
-rowSums(counts[ , c(3,4,5, 6)])
-#check that column 3 and 4 sum to the total number of genes in cluster
-rowSums(counts[ , c(3,4)])
+unts[ , c(3,4)])
 
 write.table(counts, file= AP2_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
@@ -142,3 +137,4 @@ for(i in 1:nrow(counts)) {
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
 write.table(counts, file=path_table, row.names = FALSE, sep= '\t', quote= FALSE)
+
