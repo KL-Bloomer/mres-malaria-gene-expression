@@ -12,6 +12,8 @@ path <- snakemake@input[['pathways']]
 conversion_table <- snakemake@input[['conversion']]
 AP2_table <- snakemake@output[['AP2_table']]
 path_table <- snakemake@output[['path_table']]
+conoid_file <- snakemake@input[['conoid_file']]
+conoid_table <- snakemake@output[['conoid_table']]
 
 #load AP2 gene target files and concatenate
 ap2fg <- fread(ap2_FG, select= 'tss_id')
@@ -75,7 +77,7 @@ for(i in 1:nrow(counts)) {
 }
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
-unts[ , c(3,4)])
+counts[ , c(3,4)]
 
 write.table(counts, file= AP2_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
@@ -138,3 +140,52 @@ for(i in 1:nrow(counts)) {
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
 write.table(counts, file=path_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
+## enrichment for conoid/apical proteins
+conoid <- fread(conoid_file, header = TRUE, select= c('gene_id'))
+conoid[, target := 'Conoid/apical']
+
+#remove any duplicates (may be multiple peaks assigned to the same gene)
+conoid <- unique(conoid)
+
+#Merge the table of expressed genes to the table of clusters (similar to the GO analysis) and then to the conoid table
+clusters <- fread(clust)
+allgenes_table <- fread(gene_id_table)
+clusters <- merge(clusters, allgenes_table, by = "gene_id", all = TRUE)
+clusters <- clusters[, c("gene_id","groups")]
+setnames(clusters, "groups", "cluster_id")
+conoid_clust <- merge(clusters, conoid, by = "gene_id", all=TRUE)
+conoid_clust[is.na(conoid_clust)] <- FALSE
+
+n_genes <- length(unique(conoid_clust$gene_id))
+cluster_ids <- unique(conoid_clust$cluster_id)
+target <- unique(conoid_clust$target)
+
+counts <- list()
+for(clst in cluster_ids) {
+  for(trg in target) {
+    count_both <- length(unique(conoid_clust[cluster_id == clst & target == trg]$gene_id))
+    cnt <- data.table(
+      cluster_id= clst,
+      target= trg,
+      count_both= count_both,
+      count_only_cluster= length(unique(conoid_clust[cluster_id == clst]$gene_id)) - count_both,
+      count_only_target= length(unique(conoid_clust[target == trg]$gene_id)) - count_both
+    )
+    cnt[, count_none := n_genes - (count_both + count_only_cluster + count_only_target)]
+    counts[[length(counts) + 1]] <- cnt
+  }
+}
+counts <- rbindlist(counts)
+
+counts[, p.value := NA]
+for(i in 1:nrow(counts)) {
+  x <- counts[i]
+  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
+  counts$p.value[i] <- p
+}
+# not sure if this is relevant but let's adjust for multiple testing:
+counts[, fdr := p.adjust(p.value, method= 'fdr')]
+#check that rows Sum to 5245
+rowSums(counts[ , c(3,4,5, 6)])
+rowSums(counts[ , c(3,4)])
+write.table(counts, file=conoid_table, row.names = FALSE, sep= '\t', quote= FALSE)

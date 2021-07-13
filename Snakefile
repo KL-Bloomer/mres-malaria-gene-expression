@@ -70,6 +70,9 @@ rule final_output:
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
+        'conoid_enrichment.tsv',
+        expand('meme/{cluster_id}.fa', cluster_id= ['clst' + str(i) for i in range(1, config['n_clst']+1)]),
+        'meme/clstnot.fa',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -378,14 +381,112 @@ rule enrichment_clusters:
         ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
         ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
         pathways= os.path.join(workflow.basedir, 'Enrichment_files/MetabolicPathways.csv'),
-        conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv')
-        conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.tsv')
+        conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv'),
+        conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.csv'),
     output:
         AP2_table= 'AP2_enrichment.tsv',
         path_table= 'path_enrichment.tsv',
         conoid_table= 'conoid_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
+
+rule gff_files:
+    input:
+        clust= 'clusters_table.tsv',
+        gene_id_table= 'edger/geneid_desc_table.tsv',
+        gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
+    output:
+        clst1= 'meme/clst1.gff',
+        clst2= 'meme/clst2.gff',
+        clst3= 'meme/clst3.gff',
+        clst4= 'meme/clst4.gff',
+        clst5= 'meme/clst5.gff',
+        clst6= 'meme/clst6.gff',
+        clst7= 'meme/clst7.gff',
+        clst8= 'meme/clst8.gff',
+        clstnot= 'meme/clstnot.gff',
+    script:
+        os.path.join(workflow.basedir, 'scripts/clustfiles.R')
+
+rule gff_to_bed_pos:
+    input:
+        gff= 'meme/{cluster_id}.gff',
+    output:
+        bed= 'meme/{cluster_id}.bed',
+    shell:
+        r"""
+        gff2bed < {input.gff} > {output.bed}
+        """
+
+rule gff_to_bed_neg:
+    input:
+        gff= 'meme/clstnot.gff',
+    output:
+        bed= 'meme/clstnot.bed',
+    shell:
+        r"""
+        gff2bed < {input.gff} > {output.bed}
+        """
+
+rule chrom_sizes:
+    input:
+        fai= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta.fai',
+    output:
+        sizes= 'meme/sizes.chr',
+    shell:
+        r"""
+        cut -f1-2 {input.fai} > {output.sizes}
+        """
+
+rule extract_promoters_pos:
+    input:
+        pos= 'meme/{cluster_id}.bed',
+        sizes= 'meme/sizes.chr',
+    output:
+        pos= 'meme/{cluster_id}_prom.bed',
+    shell:
+        r"""
+        slopBed -s -i {input.pos} -g {input.sizes} -l 800 -r 100 \
+        | sort -k1,1 -k2,2n \
+        | mergeBed \
+        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.pos}
+        """
+
+rule promoter_seq_pos:
+    input:
+        pos= 'meme/{cluster_id}_prom.bed',
+        fa= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
+    output:
+        pos= 'meme/{cluster_id}.fa',
+    shell:
+        r"""
+        bedtools getfasta -s -fi {input.fa} -bed {input.pos} -fo {output.pos} -name
+        """
+
+rule extract_promoters_neg:
+    input:
+        neg= 'meme/clstnot.bed',
+        sizes= 'meme/sizes.chr',
+    output:
+        neg= 'meme/clstnot_prom.bed',
+    shell:
+        r"""
+        slopBed -s -i {input.neg} -g {input.sizes} -l 800 -r 100 \
+        | sort -k1,1 -k2,2n \
+        | mergeBed \
+        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.neg}
+        """
+
+rule promoter_seq_neg:
+    input:
+        neg= 'meme/clstnot_prom.bed',
+        fa= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
+    output:
+        neg= 'meme/clstnot.fa',
+    shell:
+        r"""
+        bedtools getfasta -s -fi {input.fa} -bed {input.neg} -fo {output.neg} -name
+        """
 
 rule download_meme_db:
     output:
@@ -397,6 +498,7 @@ rule download_meme_db:
         tar zxf motif_databases.12.21.tgz
         rm motif_databases.12.21.tgz
         """
+
 rule install_meme:
     output:
 	# Dummy file to signal installation done
