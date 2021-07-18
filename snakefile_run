@@ -1,9 +1,11 @@
 #!/bin/bash
 
 snakemake --printshellcmds --jobs 1 \
---config ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
+--config ss=$PWD/sample_sheet.tsv \
+         datadir=$PWD \
 --directory output \
---snakefile Snakefile 
+--snakefile Snakefile \
+ 
 
  
  

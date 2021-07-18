@@ -5,7 +5,7 @@ library(data.table)
 ##AP2 target enrichment
 
 #load AP2 gene target files and concatenate
-setwd('~/MRes_Malaria_2021/data/Enrichment/')
+setwd('~/MRes_Malaria_2021/data/Enrichment_files/')
 ap2fg <- fread('AP2-FG.targets.csv', select= 'tss_id')
 ap2fg[, target := 'AP2-FG']
 
@@ -77,15 +77,19 @@ test <- ap2_clust[cluster_id == 3 & target != "AP2-O3"]
 test <- ap2_clust[cluster_id != 7 & target == "AP2-O3"]
 ap2_clust[cluster_id != 8 & target == "AP2-O3"]
 ap2_clust[cluster_id == 7 & target == "FALSE"]
-setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
-write.table(counts, file="counts_ap2_FALSE.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+
+counts_p5 <- counts[p.value < 0.05]
+counts_p1 <- counts[p.value < 0.01]
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/Tables/')
+write.table(counts_p1, file="counts_ap2_p01.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+
 
 #Metabolic pathway enrichment
 #The "universe" of genes should be all the genes in the metabolic pathway table rather
 #all the genes in the genome.
 
 #load pathways files and P.berghei and P. falciparum conversion table
-setwd('~/MRes_Malaria_2021/data/Enrichment/')
+setwd('~/MRes_Malaria_2021/data/Enrichment_files/')
 pathways <- fread('MetabolicPathways.csv', select= c('PFID New Name', 'Map_Name' ))
 pathways <- unique(pathways)
 conversion <- fread('PbergheiANKA__v__Pfalciparum3D7.genes.tsv')
@@ -140,7 +144,67 @@ for(i in 1:nrow(counts)) {
 
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
-counts_nozero <- counts[count_both != 0]
-counts_FDRpos <- counts[fdr < 1]
+counts_p01 <- counts[p.value < 0.01]
+counts_p05 <- counts[p.value < 0.05]
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/Tables/')
+write.table(counts_p01, file="counts_path_p01.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+
+## enrichment for conoid/apical proteins
+
+#load AP2 gene target files and concatenate
+setwd('~/MRes_Malaria_2021/data/Enrichment_files/')
+conoid <- fread('conoid_analysis.csv', header = TRUE, select= c('gene_id'))
+#
+conoid[, target := 'Conoid/apical']
+
+#remove any duplicates (may be multiple peaks assigned to the same gene)
+conoid <- unique(conoid)
+
+#Merge the table of expressed genes to the table of clusters (similar to the GO analysis)
+#and then merge to the table of AP2 targets
 setwd('~/MRes_Malaria_2021/output/mres-malaria-gene-expression/R_output/RNA-seq_tables/')
-write.table(counts_FDRpos, file="counts_path_FDRpos.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+clusters <- fread('clusters_scaled_8clusters_20May.txt')
+allgenes_table <- fread('gene_id_desc_table (1)')
+
+clusters <- merge(clusters, allgenes_table, by = "gene_id", all = TRUE)
+clusters <- clusters[, c("gene_id","groups")]
+setnames(clusters, "groups", "cluster_id")
+conoid_clust <- merge(clusters, conoid, by = "gene_id", all=TRUE)
+conoid_clust[is.na(conoid_clust)] <- FALSE
+
+n_genes <- length(unique(conoid_clust$gene_id))
+cluster_ids <- unique(conoid_clust$cluster_id)
+target <- unique(conoid_clust$target)
+
+counts <- list()
+for(clst in cluster_ids) {
+  for(trg in target) {
+    count_both <- length(unique(conoid_clust[cluster_id == clst & target == trg]$gene_id))
+    cnt <- data.table(
+      cluster_id= clst,
+      target= trg,
+      count_both= count_both,
+      count_only_cluster= length(unique(conoid_clust[cluster_id == clst]$gene_id)) - count_both,
+      count_only_target= length(unique(conoid_clust[target == trg]$gene_id)) - count_both
+    )
+    cnt[, count_none := n_genes - (count_both + count_only_cluster + count_only_target)]
+    counts[[length(counts) + 1]] <- cnt
+  }
+}
+counts <- rbindlist(counts)
+
+counts[, p.value := NA]
+for(i in 1:nrow(counts)) {
+  x <- counts[i]
+  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
+  counts$p.value[i] <- p
+}
+# not sure if this is relevant but let's adjust for multiple testing:
+counts[, fdr := p.adjust(p.value, method= 'fdr')]
+#check that rows Sum to 5245
+rowSums(counts[ , c(3,4,5, 6)])
+rowSums(counts[ , c(3,4)])
+
+setwd('~/MRes_Malaria_2021/git_repos/mres-malaria-gene-expression/Tables/')
+write.table(counts, file="counts_conoid.txt", row.names = FALSE, sep= '\t', quote= FALSE)
+
