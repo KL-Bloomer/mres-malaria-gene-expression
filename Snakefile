@@ -463,5 +463,5 @@ rule meme_chip:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
+        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 10 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
         """
