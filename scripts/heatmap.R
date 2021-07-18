@@ -25,6 +25,7 @@ Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
 ss <- fread(ss_file)
 ss <- ss[Outliers == FALSE, ]
 ss[, Time := sprintf('%.2d', Time)]
+ss <- ss[!Time == 12]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
 ss <- ss[order(ss$Time)]
@@ -38,11 +39,11 @@ logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
 morecols <- colorRampPalette(mypalette)
-col.cell <- c("purple","orange","green","black", "red","pink", "blue", "grey")[ss$Time]
+col.cell <- c("purple","orange","green","black", "red", "blue", "grey")[ss$Time]
 
 # a function to assign colors based on treatment time
-treatment_times <- c(0,2,4,6,8,12,16,24)
-treatment_colours_options <- c("purple","orange","green","black", "red", "pink", "blue", "grey")
+treatment_times <- c(0,2,4,6,8,16,24)
+treatment_colours_options <- c("purple","orange","green","black", "red", "blue", "grey")
 
 #Heatmap key colours
 Colors= c("midnightblue", "thistle", "deeppink3")
@@ -73,7 +74,7 @@ hm <- heatmap.2(logrpkm_table_DE.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of DEG
-                with FDR<0.01 at different time points",
+                with FDR<0.01 at different time points - no 12hr",
                 ColSideColors=col.cell, RowSideColors=col1[gr.row], scale="row", cexCol=1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none", labRow = FALSE, labCol = FALSE,
@@ -84,7 +85,7 @@ dev.off()
 
 #Clustering the genes into 8 clusters
 hc <- as.hclust(hm$rowDendrogram)
-groups <- cutree(hc, snakemake@params[['n_clst']])
+groups <- cutree(hc, k = 8)
 groups <- as.data.table(groups, keep.rownames = "gene_id")
 
 #loading a table which contains the gene ids and their descriptions
@@ -117,29 +118,26 @@ avg_clst <- logrpkm_table_hm[, list(
 avg_clst[, panel_title := paste('Cluster ', groups, ' | N = ', ngenes, sep= "")]
 avg_clst[, Time := as.numeric(as.character(Time))]
 
-# Reorder clusters from bigger to smaller
-avg_clst <- avg_clst[order(-ngenes)]
-xord <- unique(avg_clst$panel_title)
-avg_clst[, panel_title := factor(panel_title, xord)]
 #Time is continuous
 
 ggplot(data= avg_clst, aes(x= Time, y= zscore, by = Time)) +
   geom_line() +
-  geom_point(size=0.5) +
+  geom_point(size=1.0) +
   facet_wrap(~panel_title, nrow=2) +
   geom_errorbar(aes(ymin=zscore - sd, ymax=zscore+sd), width=.2, position=position_dodge(.9)) +
-  ggtitle("Changes in average gene expression of clusters over time - scaled") +
+  ggtitle("Temporal changes in average gene Z-score of clusters - no 12hr") +
   xlab("Time (hr)") +
   ylab("Average gene Z-score") +
-  theme_bw() +
-  theme(axis.text = element_text(size = 12),
-        plot.margin=unit(c(1.5,7,1.5,1.5),"cm"),
-        strip.text = element_text(size = 14, face = "bold"),
+  theme_linedraw() +
+  theme(axis.text = element_text(size = 16),
+        plot.margin=unit(c(1.5,7,1.5,0.5),"cm"),
+        strip.text = element_text(size = 11, face = "bold"),
         axis.title=element_text(size=14,face="bold")) +
-  guides(y.sec = guide_axis()) +
-  scale_x_continuous(breaks = c(0, 4, 8, 12, 16, 24))
+  #guides(y.sec = guide_axis()) +
+  scale_x_continuous(breaks = c(0, 4, 8, 16, 24))
 
-ggsave(avergene_expr_clusters, width= 30, height= 20, units= 'cm')
+#for poster, sizes = 24
+ggsave(avergene_expr_clusters, width= 24, height= 15, units= 'cm')
 
 ##Heatmap for all the genes correlation distance matrix and default for hclust = "complete" method
 
@@ -152,7 +150,7 @@ heatmap.2(logrpkm_table.mat, col=Colors,
           dendrogram = "row",
           Colv = FALSE,
           main="Gene Z-score for normalised expression for
-          all genes at different time points",
+          all genes at different time points - no 12hr",
           ColSideColors=col.cell,scale="row", cexCol=1.5,
           key = TRUE, keysize = 1.2,  key.title = "Colour Key",
           density.info = "none", trace="none", labRow = FALSE, labCol = FALSE,
@@ -190,7 +188,7 @@ hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of AP2 TFs
-                at different time points",
+                at different time points - no 12hr",
                 ColSideColors=col.cell,scale="row", cexRow = 1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none",labCol = FALSE,
@@ -228,12 +226,12 @@ hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of
-                AP2 TFs with FDR<0.01 at different time points",
+                AP2 TFs with FDR<0.01 at different time points - no 12hr",
                 ColSideColors=col.cell, RowSideColors =col1[gr.row], scale="row", cexRow = 1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none",labCol = FALSE,
                 margins = c(21,19), xlab = "", ylab = "", lwid = c(5,15), lhei = c(3,15))
-legend("topright",legend=paste(treatment_times), title = "Time (h)", fill=treatment_colours_options,cex=1.0)
+legend("topright",legend=paste(treatment_times), title = "Time (h)", fill=treatment_colours_options, cex=1.0)
 legend("bottomleft", legend=paste(cluster_numbers), title = "Clusters",fill=col1, cex=1.0)
 dev.off()
 
@@ -241,7 +239,7 @@ dev.off()
 #Heatmap showing logFC of DEG
 mat <- dcast(data = dge_descr, gene_id ~ contrast, value.var = 'logFC')
 mat <- as.matrix(mat, rownames = "gene_id")
-neworder <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12','h24vs16')
+neworder <- c('h4vs0', 'h8vs4', 'h16vs4', 'h16vs8','h24vs16')
 mat <- mat[, neworder]
 
 png(file=Heatmap_DE_genes_logFC, width= 800, height= 750)
@@ -251,7 +249,7 @@ heatmap.2(mat, col=Colors,
           Colv = FALSE,
           dendrogram = "row",
           main="Gene Z-score for logFC of DEG
-          at different time points",
+          at different time points - no 12hr",
           scale="row", cexCol=1.5,
           key = TRUE, keysize = 1.2,  key.title = "Colour Key",
           density.info = "none", trace="none", labRow = FALSE,
