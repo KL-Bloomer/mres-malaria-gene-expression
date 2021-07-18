@@ -43,7 +43,7 @@ PbANKA_chroms = ['PbANKA_01_v3',
     'PbANKA_MIT_v3']
 
 wildcard_constraints:
-    cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1' 'clst_neg2' 'clst_neg3' 'clst_neg4' 'clst_neg5' 'clst_neg6' 'clst_neg7' 'clst_neg8')]),
+    cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1', 'clst_neg2', 'clst_neg3', 'clst_neg4', 'clst_neg5', 'clst_neg6', 'clst_neg7', 'clst_neg8')]),
     library_id= '|'.join([re.escape(x) for x in sample_sheet['library_id']]),
 
 rule final_output:
@@ -78,7 +78,6 @@ rule final_output:
         expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         expand('meme/clst_neg{i}.gff', i= range(1, 9)),
         'meme/clst_out.gff',
-        expand('meme/{cluster_id}.fa', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -404,7 +403,7 @@ rule gff_files:
     output:
         clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        clst_out= 'meme/clst_out.gff',
+        clst_out= 'meme/clst_out.gff'
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
@@ -416,10 +415,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 800 -r 100 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 100 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 1101 {{mid=int($2+($3-$2)/2); $2=mid-550; $3=mid+551; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -451,8 +450,8 @@ rule install_meme:
 
 rule meme_chip:
     input:
-        pos= 'meme/{cluster_id}.fa',
-        neg= 'meme/clst_out.fa',
+        pos= expand('meme/clst_pos{i}.fa', i= range(1, 9)),
+       	neg= expand('meme/clst_neg{i}.fa', i= range(1, 9)),
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
