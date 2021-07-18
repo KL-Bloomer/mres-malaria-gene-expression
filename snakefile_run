@@ -1,8 +1,7 @@
 #!/bin/bash
 
-snakemake --printshellcmds --jobs 1 \
---config ss=$PWD/sample_sheet.tsv \
-         datadir=$PWD \
+snakemake -R extract_promoters --use-conda --printshellcmds --jobs 1 \
+--config n_clst=8 ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
 --directory output \
 --snakefile Snakefile \
  
