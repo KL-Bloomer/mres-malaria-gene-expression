@@ -24,4 +24,3 @@ bioconductor-gviz =1.34.1
 bioconductor-topgo =2.42.0
 deeptools =3.5.1
 bedtools =2.30.0
-bedops =2.4.39

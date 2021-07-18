@@ -42,6 +42,10 @@ PbANKA_chroms = ['PbANKA_01_v3',
     'PbANKA_API_v3',
     'PbANKA_MIT_v3']
 
+wildcard_constraints:
+    cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1' 'clst_neg2' 'clst_neg3' 'clst_neg4' 'clst_neg5' 'clst_neg6' 'clst_neg7' 'clst_neg8')]),
+    library_id= '|'.join([re.escape(x) for x in sample_sheet['library_id']]),
+
 rule final_output:
     # The only purpose of this rule is listing the files we want as final
     # output of the workflow. Snakemake will use the rules after this one to
@@ -71,12 +75,14 @@ rule final_output:
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
-        expand('meme/{cluster_id}.fa', cluster_id= ['clst' + str(i) for i in range(1, config['n_clst']+1)]),
-        'meme/clstnot.fa',
+        expand('meme/clst_pos{i}.gff', i= range(1, 9)),
+        expand('meme/clst_neg{i}.gff', i= range(1, 9)),
+        'meme/clst_out.gff',
+        expand('meme/{cluster_id}.fa', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst' + str(i) for i in range(1, config['n_clst']+1)]),
-
+        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
+        
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -396,96 +402,35 @@ rule gff_files:
         gene_id_table= 'edger/geneid_desc_table.tsv',
         gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
     output:
-        clst1= 'meme/clst1.gff',
-        clst2= 'meme/clst2.gff',
-        clst3= 'meme/clst3.gff',
-        clst4= 'meme/clst4.gff',
-        clst5= 'meme/clst5.gff',
-        clst6= 'meme/clst6.gff',
-        clst7= 'meme/clst7.gff',
-        clst8= 'meme/clst8.gff',
-        clstnot= 'meme/clstnot.gff',
+        clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
+        clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
+        clst_out= 'meme/clst_out.gff',
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
-rule gff_to_bed_pos:
+rule extract_promoters:
     input:
         gff= 'meme/{cluster_id}.gff',
-    output:
-        bed= 'meme/{cluster_id}.bed',
-    shell:
-        r"""
-        gff2bed < {input.gff} > {output.bed}
-        """
-
-rule gff_to_bed_neg:
-    input:
-        gff= 'meme/clstnot.gff',
-    output:
-        bed= 'meme/clstnot.bed',
-    shell:
-        r"""
-        gff2bed < {input.gff} > {output.bed}
-        """
-
-rule chrom_sizes:
-    input:
         fai= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta.fai',
     output:
-        sizes= 'meme/sizes.chr',
+        prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        cut -f1-2 {input.fai} > {output.sizes}
-        """
-
-rule extract_promoters_pos:
-    input:
-        pos= 'meme/{cluster_id}.bed',
-        sizes= 'meme/sizes.chr',
-    output:
-        pos= 'meme/{cluster_id}_prom.bed',
-    shell:
-        r"""
-        slopBed -s -i {input.pos} -g {input.sizes} -l 800 -r 100 \
-        | sort -k1,1 -k2,2n \
+        slopBed -s -i {input.gff} -g {input.fai} -l 800 -r 100 \
+        | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.pos}
+        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.prom}
         """
 
-rule promoter_seq_pos:
+rule promoter_seq:
     input:
-        pos= 'meme/{cluster_id}_prom.bed',
+        prom= 'meme/{cluster_id}_prom.gff',
         fa= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
     output:
-        pos= 'meme/{cluster_id}.fa',
+        out= 'meme/{cluster_id}.fa',
     shell:
         r"""
-        bedtools getfasta -s -fi {input.fa} -bed {input.pos} -fo {output.pos} -name
-        """
-
-rule extract_promoters_neg:
-    input:
-        neg= 'meme/clstnot.bed',
-        sizes= 'meme/sizes.chr',
-    output:
-        neg= 'meme/clstnot_prom.bed',
-    shell:
-        r"""
-        slopBed -s -i {input.neg} -g {input.sizes} -l 800 -r 100 \
-        | sort -k1,1 -k2,2n \
-        | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.neg}
-        """
-
-rule promoter_seq_neg:
-    input:
-        neg= 'meme/clstnot_prom.bed',
-        fa= 'ref/PlasmoDB-49_PbergheiANKA_Genome.fasta',
-    output:
-        neg= 'meme/clstnot.fa',
-    shell:
-        r"""
-        bedtools getfasta -s -fi {input.fa} -bed {input.neg} -fo {output.neg} -name
+        bedtools getfasta -s -fi {input.fa} -bed {input.prom} -fo {output.out} -name
         """
 
 rule download_meme_db:
@@ -507,7 +452,7 @@ rule install_meme:
 rule meme_chip:
     input:
         pos= 'meme/{cluster_id}.fa',
-        neg= 'meme/clstnot.fa',
+        neg= 'meme/clst_out.fa',
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
