@@ -27,7 +27,7 @@ ss <- ss[Outliers == FALSE, ]
 ss[, Time := sprintf('%.2d', Time)]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
-ss$Time <- factor(c("00", "00", "00","00","00","00","02","04","04","04","04","06","08","08","08","08","12","12","16","16","16","16","24","24","24","24"))
+ss <- ss[order(ss$Time)]
 
 #Use rpkm table to cluster all the genes
 logrpkm_table <- fread(logrpkm_table_long)
@@ -38,7 +38,7 @@ logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
 morecols <- colorRampPalette(mypalette)
-col.cell <- c("purple","orange","green","black", "red", "pink", "blue", "grey")[ss$Time]
+col.cell <- c("purple","orange","green","black", "red","pink", "blue", "grey")[ss$Time]
 
 # a function to assign colors based on treatment time
 treatment_times <- c(0,2,4,6,8,12,16,24)
@@ -55,12 +55,6 @@ DE_filter <- dge_descr[FDR<0.01]
 
 logrpkm_table_DE <- logrpkm_table[logrpkm_table$gene_id %in% DE_filter$gene_id] #filter
 logrpkm_table_DE.mat <- as.matrix(logrpkm_table_DE, rownames = "gene_id")
-neworder <- c("F-1_SRR5260552", "F-2_SRR5260551", "F-3_SRR5260550","F1_21725_8_4","F2_21725_8_5","F3_21725_8_6",
-              "RM-2_S409","RM-3_S410","GFPcon-4hr-R1","Ap20-GFP-SFC-4h-R1","Ap20-GFP-SFC-4h-R2","RM-4_S411",
-              "Ap20-GFP-SFC-8h-R1","Ap20-GFP-SFC-8h-R2","GFPcon-8hr-R1_S9","GFPcon-8hr-R2","RM-1_S408","RM-6_S413",
-              "Ap20-GFP-SFC-16h-R1","Ap20-GFP-SFC-16h-R2","GFPcon-16hr-R1","GFPcon-16hr-R2","RM-5_S412","RM-7_S414",
-              "RM-8_S415","RM-9_S416")
-logrpkm_table_DE.mat <- logrpkm_table_DE.mat[,neworder]
 
 #Row side column for clusters
 cluster_numbers <- c(1,2,3,4,5,6,7,8)
@@ -90,7 +84,7 @@ dev.off()
 
 #Clustering the genes into 8 clusters
 hc <- as.hclust(hm$rowDendrogram)
-groups <- cutree(hc, k = 8)
+groups <- cutree(hc, snakemake@params[['n_clst']])
 groups <- as.data.table(groups, keep.rownames = "gene_id")
 
 #loading a table which contains the gene ids and their descriptions
@@ -150,12 +144,6 @@ ggsave(avergene_expr_clusters, width= 30, height= 20, units= 'cm')
 ##Heatmap for all the genes correlation distance matrix and default for hclust = "complete" method
 
 logrpkm_table.mat <- as.matrix(logrpkm_table, rownames = "gene_id")
-neworder <- c("F-1_SRR5260552", "F-2_SRR5260551", "F-3_SRR5260550","F1_21725_8_4","F2_21725_8_5","F3_21725_8_6",
-              "RM-2_S409","RM-3_S410","GFPcon-4hr-R1","Ap20-GFP-SFC-4h-R1","Ap20-GFP-SFC-4h-R2","RM-4_S411",
-              "Ap20-GFP-SFC-8h-R1","Ap20-GFP-SFC-8h-R2","GFPcon-8hr-R1_S9","GFPcon-8hr-R2","RM-1_S408","RM-6_S413",
-              "Ap20-GFP-SFC-16h-R1","Ap20-GFP-SFC-16h-R2","GFPcon-16hr-R1","GFPcon-16hr-R2","RM-5_S412","RM-7_S414",
-              "RM-8_S415","RM-9_S416")
-logrpkm_table.mat <- logrpkm_table.mat[,neworder]
 
 png(file=Heatmap_genes, width= 800, height= 750)
 par(cex.main=1.5)
@@ -185,12 +173,6 @@ logrpkm_table_AP2 <- logrpkm_table[logrpkm_table$gene_id %in% AP2_filter$gene_id
 logrpkm_table_AP2 <- merge(logrpkm_table_AP2, gaf, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
 logrpkm_table_AP2 <- logrpkm_table_AP2[, c("gene_name", ss$library_id), with= FALSE]
 logrpkm_table_AP2.mat <- as.matrix(logrpkm_table_AP2, rownames = "gene_name")
-neworder <- c("F-1_SRR5260552", "F-2_SRR5260551", "F-3_SRR5260550","F1_21725_8_4","F2_21725_8_5","F3_21725_8_6",
-              "RM-2_S409","RM-3_S410","GFPcon-4hr-R1","Ap20-GFP-SFC-4h-R1","Ap20-GFP-SFC-4h-R2","RM-4_S411",
-              "Ap20-GFP-SFC-8h-R1","Ap20-GFP-SFC-8h-R2","GFPcon-8hr-R1_S9","GFPcon-8hr-R2","RM-1_S408","RM-6_S413",
-              "Ap20-GFP-SFC-16h-R1","Ap20-GFP-SFC-16h-R2","GFPcon-16hr-R1","GFPcon-16hr-R2","RM-5_S412","RM-7_S414",
-              "RM-8_S415","RM-9_S416")
-logrpkm_table_AP2.mat <- logrpkm_table_AP2.mat[,neworder]
 
 #Row side column for clusters
 cluster_numbers <- c(1,2,3,4,5,6,7,8,9)
@@ -228,12 +210,6 @@ logrpkm_table_AP2 <- logrpkm_table[logrpkm_table$gene_id %in% AP2_filter$gene_id
 logrpkm_table_AP2 <- merge(logrpkm_table_AP2, gaf, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
 logrpkm_table_AP2 <- logrpkm_table_AP2[, c("gene_name", ss$library_id), with= FALSE]
 logrpkm_table_AP2.mat <- as.matrix(logrpkm_table_AP2, rownames = "gene_name")
-neworder <- c("F-1_SRR5260552", "F-2_SRR5260551", "F-3_SRR5260550","F1_21725_8_4","F2_21725_8_5","F3_21725_8_6",
-              "RM-2_S409","RM-3_S410","GFPcon-4hr-R1","Ap20-GFP-SFC-4h-R1","Ap20-GFP-SFC-4h-R2","RM-4_S411",
-              "Ap20-GFP-SFC-8h-R1","Ap20-GFP-SFC-8h-R2","GFPcon-8hr-R1_S9","GFPcon-8hr-R2","RM-1_S408","RM-6_S413",
-              "Ap20-GFP-SFC-16h-R1","Ap20-GFP-SFC-16h-R2","GFPcon-16hr-R1","GFPcon-16hr-R2","RM-5_S412","RM-7_S414",
-              "RM-8_S415","RM-9_S416")
-logrpkm_table_AP2.mat <- logrpkm_table_AP2.mat[,neworder]
 
 #Row side column for clusters
 cluster_numbers <- c(1,2,3,4,5,6,7,8,9)
