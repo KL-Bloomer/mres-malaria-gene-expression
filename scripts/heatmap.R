@@ -39,11 +39,11 @@ logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
 morecols <- colorRampPalette(mypalette)
-col.cell <- c("purple","orange","green","black", "red", "blue", "grey")[ss$Time]
+col.cell <- c("purple","orange","green","black", "red","pink",  "blue", "grey")[ss$Time]
 
 # a function to assign colors based on treatment time
-treatment_times <- c(0,2,4,6,8,16,24)
-treatment_colours_options <- c("purple","orange","green","black", "red", "blue", "grey")
+treatment_times <- c(0,2,4,6,8,16,12,24)
+treatment_colours_options <- c("purple","orange","green","black", "red","pink", "blue", "grey")
 
 #Heatmap key colours
 Colors= c("midnightblue", "thistle", "deeppink3")
@@ -74,7 +74,7 @@ hm <- heatmap.2(logrpkm_table_DE.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of DEG
-                with FDR<0.01 at different time points - no 12hr",
+                with FDR<0.01 at different time points",
                 ColSideColors=col.cell, RowSideColors=col1[gr.row], scale="row", cexCol=1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none", labRow = FALSE, labCol = FALSE,
@@ -125,7 +125,7 @@ ggplot(data= avg_clst, aes(x= Time, y= zscore, by = Time)) +
   geom_point(size=1.0) +
   facet_wrap(~panel_title, nrow=2) +
   geom_errorbar(aes(ymin=zscore - sd, ymax=zscore+sd), width=.2, position=position_dodge(.9)) +
-  ggtitle("Temporal changes in average gene Z-score of clusters - no 12hr") +
+  ggtitle("Temporal changes in average gene Z-score of clusters") +
   xlab("Time (hr)") +
   ylab("Average gene Z-score") +
   theme_linedraw() +
@@ -150,7 +150,7 @@ heatmap.2(logrpkm_table.mat, col=Colors,
           dendrogram = "row",
           Colv = FALSE,
           main="Gene Z-score for normalised expression for
-          all genes at different time points - no 12hr",
+          all genes at different time points",
           ColSideColors=col.cell,scale="row", cexCol=1.5,
           key = TRUE, keysize = 1.2,  key.title = "Colour Key",
           density.info = "none", trace="none", labRow = FALSE, labCol = FALSE,
@@ -188,7 +188,7 @@ hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of AP2 TFs
-                at different time points - no 12hr",
+                at different time points",
                 ColSideColors=col.cell,scale="row", cexRow = 1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none",labCol = FALSE,
@@ -226,7 +226,7 @@ hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
                 Colv = FALSE,
                 dendrogram = "row",
                 main="Gene Z-score for normalised expression of
-                AP2 TFs with FDR<0.01 at different time points - no 12hr",
+                AP2 TFs with FDR<0.01 at different time points",
                 ColSideColors=col.cell, RowSideColors =col1[gr.row], scale="row", cexRow = 1.5,
                 key = TRUE, keysize = 1.2, key.title = NULL,
                 density.info = "none", trace="none",labCol = FALSE,
@@ -249,7 +249,7 @@ heatmap.2(mat, col=Colors,
           Colv = FALSE,
           dendrogram = "row",
           main="Gene Z-score for logFC of DEG
-          at different time points - no 12hr",
+          at different time points",
           scale="row", cexCol=1.5,
           key = TRUE, keysize = 1.2,  key.title = "Colour Key",
           density.info = "none", trace="none", labRow = FALSE,
