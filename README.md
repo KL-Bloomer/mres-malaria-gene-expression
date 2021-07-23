@@ -9,8 +9,14 @@ conda create --yes --name mres-malaria-gene-expression
 conda activate mres-malaria-gene-expression
 mamba install --freeze-installed -n MRes_project_2021 --yes --file requirements.txt
 
+#Installing meme
+#Create conda environment with meme dependencies
+mamba env create -n meme --file meme.yaml
+conda activate meme
+[Download newest version of the source code](https://meme-suite.org/meme/doc/install.html?man_type=web#quick)
+
 #Snakemake run
-snakemake --printshellcmds --jobs 1 \
---config ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
+snakemake --use-conda --printshellcmds --jobs 1 \
+--config n_clst=8 ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
 --directory output \
---snakefile Snakefile
+--snakefile Snakefile 
