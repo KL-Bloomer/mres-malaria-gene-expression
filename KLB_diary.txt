@@ -96,5 +96,17 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 
 ##Week 19 (5-9 July)
 #Motif enrichment analysis
-#Custom scripts
+#Custom scripts - enrichment of conoid/apical proteins
 
+##Week 20 (12-16 July)
+#Lab induction & admin
+#Isolation of asexual parasites from blood, DNA extraction and PCR
+#Motif enrichment run - promoter length, negclst files and generic background files
+
+#Week 21 (19-23 July)
+#Isolation of asexual parasites from blood and treat sample with TRIZOL in preparation for RNA extraction 
+#could not complete RNA extraction due to no longer being allowed in the lab
+#pictures of blood stage parasites
+#Motif enrichment troubleshoot negclst runs & analyse data
+#AP2 target gene plots - average gene Z-score
+#re-run data without 12hr time points
