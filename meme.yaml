@@ -1,0 +1,17 @@
+dependencies:
+
+    - python >=3.0
+    - perl =5.22.0.1
+    - zlib
+    - ghostscript
+    - perl-xml-parser
+    - perl-yaml
+    - perl-xml-simple
+    - perl-html-template
+    - perl-cgi
+    - perl-html-parser
+    - perl-html-tree
+    - perl-math-cdf
+    - perl-log-log4perl
+    - perl-json
+    - perl-file-which
