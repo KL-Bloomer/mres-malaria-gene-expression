@@ -108,5 +108,12 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 #could not complete RNA extraction due to no longer being allowed in the lab
 #pictures of blood stage parasites
 #Motif enrichment troubleshoot negclst runs & analyse data
-#AP2 target gene plots - average gene Z-score
-#re-run data without 12hr time points
+#AP2 target gene plots - average gene Z-score - need to troubleshoot
+
+#Week 22 (26-30 July)
+#Finish troubleshooting AP2 target gene plot
+#Motif enrichment - run with meme diabled to see if it affects the results for cluster 7 and 8 (with small dataset)
+#re-run analysis without 12hr timepoint
+#DOZI enrichment?
+#Start writing up introduction and methods
+#putting data together - create the story
