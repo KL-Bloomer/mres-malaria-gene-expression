@@ -45,6 +45,7 @@ PbANKA_chroms = ['PbANKA_01_v3',
 wildcard_constraints:
     cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1', 'clst_neg2', 'clst_neg3', 'clst_neg4', 'clst_neg5', 'clst_neg6', 'clst_neg7', 'clst_neg8')]),
     library_id= '|'.join([re.escape(x) for x in sample_sheet['library_id']]),
+    i= '|'.join([re.escape(str(x)) for x in range(1, config['n_clst']+1)]),
 
 rule final_output:
     # The only purpose of this rule is listing the files we want as final
@@ -70,18 +71,17 @@ rule final_output:
         'Heatmap_AP2_genes_FDR.png',
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
+        'zscore_logrpkm_table.tsv',
         'gene_expression_changes_keygenes.png',
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
-        expand('meme/clst_pos{i}.gff', i= range(1, 9)),
-        expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        'meme/clst_out.gff',
+        'AP2_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
-        
+        expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -353,6 +353,7 @@ rule heatmap_and_clustering:
         Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
         Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
         Heatmap_genes= 'Heatmap_genes.png',
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
@@ -394,6 +395,20 @@ rule enrichment_clusters:
         conoid_table= 'conoid_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
+
+rule AP2_target_plot:
+    input:
+        ap2_FG= os.path.join(workflow.basedir, 'Enrichment_files/AP2-FG.targets.csv'),
+        ap2_O= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O.targets.csv'),
+        ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
+        ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
+        clust= 'clusters_table.tsv',
+        sample_sheet= config['ss'],
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
+    output:
+        target_plot= 'AP2_target_plot.png',
+    script:
+        os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
 rule gff_files:
     input:
@@ -450,12 +465,12 @@ rule install_meme:
 
 rule meme_chip:
     input:
-        pos= expand('meme/clst_pos{i}.fa', i= range(1, 9)),
-       	neg= expand('meme/clst_neg{i}.fa', i= range(1, 9)),
+        pos= 'meme/clst_pos{i}.fa',
+       	neg= 'meme/clst_neg{i}.fa',
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
-        oc= 'meme/{cluster_id}/meme-chip.html',
+        oc= 'meme/clst_pos{i}/meme-chip.html',
     params:
         Version= '5.3.3',
     shell:
