@@ -19,13 +19,14 @@ avergene_expr_clusters <- snakemake@output[['avergene_expr_clusters']]
 Heatmap_AP2_genes <- snakemake@output[['Heatmap_AP2_genes']]
 Heatmap_AP2_genes_FDR <- snakemake@output[['Heatmap_AP2_genes_FDR']]
 Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
+zscore_logrpkm_table <- snakemake@output[['zscore_logrpkm']]
 
 
 # Set up colour vector for time variable
 ss <- fread(ss_file)
 ss <- ss[Outliers == FALSE, ]
 ss[, Time := sprintf('%.2d', Time)]
-ss <- ss[!Time == 12]
+#ss <- ss[!Time == 12]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
 ss <- ss[order(ss$Time)]
@@ -39,7 +40,7 @@ logrpkm_table <- logrpkm_table[, c('gene_id', ss$library_id), with= FALSE]
 # Get some nicer colours
 mypalette <- brewer.pal(11,"RdYlBu")
 morecols <- colorRampPalette(mypalette)
-col.cell <- c("purple","orange","green","black", "red","pink",  "blue", "grey")[ss$Time]
+col.cell <- c("purple","orange","green","black", "red","pink", "blue", "grey")[ss$Time]
 
 # a function to assign colors based on treatment time
 treatment_times <- c(0,2,4,6,8,16,12,24)
@@ -102,10 +103,10 @@ logrpkm_table_hm <- as.data.table(logrpkm_table_hm, keep.rownames = "library_id"
 logrpkm_table_hm <- melt(logrpkm_table_hm, variable.name = "gene_id", id.vars = "library_id",
                            value.name = "zscore")
 logrpkm_table_hm <- data.table(logrpkm_table_hm)
+write.table(logrpkm_table_hm, file=zscore_logrpkm_table, row.names = FALSE, sep= '\t', quote= FALSE)
 logrpkm_table_hm <- merge(logrpkm_table_hm, groups, by= "gene_id")
 
 #Add time point to each library_id in logrpkm, unless you already have such column:
-
 # Add Time to each library_id
 logrpkm_table_hm <- merge(logrpkm_table_hm, ss[, list(library_id, Time)], by= 'library_id')
 

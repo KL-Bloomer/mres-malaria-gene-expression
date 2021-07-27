@@ -71,15 +71,17 @@ rule final_output:
         'Heatmap_AP2_genes_FDR.png',
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
+        'zscore_logrpkm_table.tsv',
         'gene_expression_changes_keygenes.png',
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
+        'AP2_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
-        
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -351,6 +353,7 @@ rule heatmap_and_clustering:
         Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
         Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
         Heatmap_genes= 'Heatmap_genes.png',
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
@@ -392,6 +395,20 @@ rule enrichment_clusters:
         conoid_table= 'conoid_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
+
+rule AP2_target_plot:
+    input:
+        ap2_FG= os.path.join(workflow.basedir, 'Enrichment_files/AP2-FG.targets.csv'),
+        ap2_O= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O.targets.csv'),
+        ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
+        ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
+        clust= 'clusters_table.tsv',
+        sample_sheet= config['ss'],
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
+    output:
+        target_plot= 'AP2_target_plot.png',
+    script:
+        os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
 rule gff_files:
     input:
