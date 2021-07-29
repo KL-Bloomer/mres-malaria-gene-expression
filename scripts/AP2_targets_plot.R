@@ -11,7 +11,9 @@ ap2_O4 <- snakemake@input[['ap2_O4']]
 clust <- snakemake@input[['clust']]
 ss_file <- snakemake@input[['sample_sheet']]
 zscore_logrpkm <- snakemake@input[['zscore_logrpkm']]
-target_plot <- snakemake@output[['target_plot']]
+AP2_FG_O3_plot <- snakemake@output[['AP2_FG_O3_plot']]
+AP2_O_O4_plot <- snakemake@output[['AP2_O_O4_plot']]
+AP2_O_O3_plot <- snakemake@output[['AP2_O_O3_plot']]
 
 #load AP2 gene target files and concatenate
 ap2fg <- fread(ap2_FG, select= 'tss_id')
@@ -44,11 +46,15 @@ ap2_clust <- merge(clusters, ap2, by = "gene_id", all=TRUE)
 ### remove NA values 
 genes <- na.omit(ap2_clust)
 
-ss <- fread(ss_file)
-ss <- ss[Outliers == FALSE,]
+#table with number of trxn factors and comma separated list of trxn factors
+geneTarget <- genes[, list(N= length(unique(target)), 
+                         target= paste(sort(target), collapse= ' & ')), by= gene_id] 
 
-#Use zscore logrpkm table to cluster all the genes
-logrpkm_table_long <- fread(zscore_logrpkm)
+
+###for AP2-FG and AP2-O3 plot
+genes <- geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
+genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
+                                              (target == "AP2-O3")]$gene_id]
 
 key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
 key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
@@ -57,7 +63,7 @@ avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(un
                  by= list(Time, target)]
 
 #Add a printable panel title
-avg[, panel_title := paste('Transcription factor', target, ' | N = ', ngenes, sep = " ")]
+avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
 avg[, Time := as.numeric(as.character(Time))]
 
 ##Creating plot showing the avr zscore of genes 
@@ -66,7 +72,8 @@ gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
   geom_point(size = 1.0)+
   geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
   facet_wrap(~panel_title, nrow=2) +
-  ggtitle("Temporal changes in average gene Z-score of AP2 transcription factor target genes") +
+  ggtitle("Temporal changes in average gene Z-score of 
+          AP2-FG & AP2-O3 transcription factor target genes") +
   xlab("Time (hr)") +
   ylab("Average gene Z-score")+
   theme_linedraw()
@@ -74,7 +81,85 @@ gg <- gg +
   scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
   theme(axis.text=element_text(size=12),
         axis.title=element_text(size=12, face = "bold"),
-        strip.text = element_text(size = 14, face = "bold"),
-        plot.title = element_text(hjust=0.5, size = 14, face = "bold"))+
+        strip.text = element_text(size = 12, face = "bold"),
+        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
   guides(y.sec = guide_axis())
-ggsave(target_plot, width= 25, height= 15, units= 'cm')
+ggsave(AP2_FG_O3_plot, width= 22, height= 15, units= 'cm')
+
+################################################################
+
+#for AP2-O and AP2-O4 plots
+
+geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
+genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O4") | (target == "AP2-O") |
+                                              (target == "AP2-O4")]$gene_id]
+
+key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
+key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
+
+avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
+                 by= list(Time, target)]
+
+#Add a printable panel title
+avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
+avg[, Time := as.numeric(as.character(Time))]
+
+##Creating plot showing the avr zscore of genes
+gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
+  geom_line() +
+  geom_point(size = 1.0)+
+  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
+  facet_wrap(~panel_title, nrow=2) +
+  ggtitle("Temporal changes in average gene Z-score of
+          AP2-O & AP2-O4 transcription factor target genes") +
+  xlab("Time (hr)") +
+  ylab("Average gene Z-score")+
+  theme_linedraw()
+gg <- gg +
+  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12, face = "bold"),
+        strip.text = element_text(size = 12, face = "bold"),
+        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
+  guides(y.sec = guide_axis())
+ggsave(AP2_O_O4_plot, width= 22, height= 15, units= 'cm')
+
+##############################################################
+
+### For AP2-O and AP2-O3 plots
+
+geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
+
+genes <- geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
+genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O3") | (target == "AP2-O") |
+                                              (target == "AP2-O3")]$gene_id]
+
+key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
+key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
+
+avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
+                 by= list(Time, target)]
+
+#Add a printable panel title
+avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
+avg[, Time := as.numeric(as.character(Time))]
+
+##Creating plot showing the avr zscore of genes
+gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
+  geom_line() +
+  geom_point(size = 1.0)+
+  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
+  facet_wrap(~panel_title, nrow=2) +
+  ggtitle("Temporal changes in average gene Z-score of
+          AP2-O & AP2-O3 transcription factor target genes") +
+  xlab("Time (hr)") +
+  ylab("Average gene Z-score")+
+  theme_linedraw()
+gg <- gg +
+  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12, face = "bold"),
+        strip.text = element_text(size = 12, face = "bold"),
+        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
+  guides(y.sec = guide_axis())
+ggsave(AP2_O_O3_plot, width= 22, height= 15, units= 'cm')
