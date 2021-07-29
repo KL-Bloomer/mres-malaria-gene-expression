@@ -77,6 +77,8 @@ for(i in 1:nrow(counts)) {
 }
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
+#counts_p5 <- counts[p.value < 0.05]
+#counts_p1 <- counts[p.value < 0.01]
 counts[ , c(3,4)]
 
 write.table(counts, file= AP2_table, row.names = FALSE, sep= '\t', quote= FALSE)
@@ -138,6 +140,8 @@ for(i in 1:nrow(counts)) {
 
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
+#counts_p01 <- counts[p.value < 0.01]
+#counts_p05 <- counts[p.value < 0.05]
 write.table(counts, file=path_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
 ## enrichment for conoid/apical proteins

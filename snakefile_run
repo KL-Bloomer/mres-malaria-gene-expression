@@ -3,7 +3,8 @@
 snakemake -R gff_files --use-conda --printshellcmds --jobs 1 \
 --config n_clst=8 ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
 --directory output \
---snakefile Snakefile 
+--snakefile Snakefile \
+ 
 
  
  
