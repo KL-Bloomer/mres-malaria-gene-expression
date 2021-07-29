@@ -56,6 +56,12 @@ genes <- geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
 genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
                                               (target == "AP2-O3")]$gene_id]
 
+#Use zscore_logrpkm table
+logrpkm_table_long <- fread(zscore_logrpkm)
+
+ss <- fread(ss_file)
+ss <- ss[Outliers == FALSE,]
+
 key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
 key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
 

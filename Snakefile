@@ -77,7 +77,9 @@ rule final_output:
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
-        'AP2_target_plot.png',
+        'AP2_O_O3_target_plot.png',
+       	'AP2_O_O4_target_plot.png',
+       	'AP2_FG_O3_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
@@ -406,7 +408,9 @@ rule AP2_target_plot:
         sample_sheet= config['ss'],
         zscore_logrpkm= 'zscore_logrpkm_table.tsv',
     output:
-        target_plot= 'AP2_target_plot.png',
+        AP2_O_O3_plot= 'AP2_O_O3_target_plot.png',
+        AP2_O_O4_plot= 'AP2_O_O4_target_plot.png',
+        AP2_FG_O3_plot= 'AP2_FG_O3_target_plot.png',
     script:
         os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
