@@ -43,8 +43,9 @@ PbANKA_chroms = ['PbANKA_01_v3',
     'PbANKA_MIT_v3']
 
 wildcard_constraints:
-    cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1' 'clst_neg2' 'clst_neg3' 'clst_neg4' 'clst_neg5' 'clst_neg6' 'clst_neg7' 'clst_neg8')]),
+    cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1', 'clst_neg2', 'clst_neg3', 'clst_neg4', 'clst_neg5', 'clst_neg6', 'clst_neg7', 'clst_neg8')]),
     library_id= '|'.join([re.escape(x) for x in sample_sheet['library_id']]),
+    i= '|'.join([re.escape(str(x)) for x in range(1, config['n_clst']+1)]),
 
 rule final_output:
     # The only purpose of this rule is listing the files we want as final
@@ -75,10 +76,6 @@ rule final_output:
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
-        expand('meme/clst_pos{i}.gff', i= range(1, 9)),
-        expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        'meme/clst_out.gff',
-        expand('meme/{cluster_id}.fa', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -451,17 +448,17 @@ rule install_meme:
 
 rule meme_chip:
     input:
-        pos= 'meme/{cluster_id}.fa',
+        pos= 'meme/clst_pos{i}.fa',
         neg= 'meme/clst_out.fa',
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
-        oc= 'meme/{cluster_id}/meme-chip.html',
+        oc= 'meme/clst_pos{i}/meme-chip.html',
     params:
         Version= '5.3.3',
     shell:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
+        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 3 -neg {input.neg} {input.pos}
         """

@@ -14,6 +14,7 @@ zscore_logrpkm <- snakemake@input[['zscore_logrpkm']]
 AP2_FG_O3_plot <- snakemake@output[['AP2_FG_O3_plot']]
 AP2_O_O4_plot <- snakemake@output[['AP2_O_O4_plot']]
 AP2_O_O3_plot <- snakemake@output[['AP2_O_O3_plot']]
+AP2_target_plot <- snakemake@output[['AP2_target_plot']]
 
 #load AP2 gene target files and concatenate
 ap2fg <- fread(ap2_FG, select= 'tss_id')
@@ -46,6 +47,46 @@ ap2_clust <- merge(clusters, ap2, by = "gene_id", all=TRUE)
 ### remove NA values 
 genes <- na.omit(ap2_clust)
 
+#Use zscore_logrpkm table
+logrpkm_table_long <- fread(zscore_logrpkm)
+
+ss <- fread(ss_file)
+ss <- ss[Outliers == FALSE,]
+
+key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
+key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
+
+avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
+                 by= list(Time, target)]
+
+#Add a printable panel title
+avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
+avg[, Time := as.numeric(as.character(Time))]
+
+##Creating plot showing the avr zscore of genes
+gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
+  geom_line() +
+  geom_point(size = 1.0)+
+  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
+  facet_wrap(~panel_title, nrow=2) +
+  ggtitle("Temporal changes in average gene Z-score of key 
+          developmental transcription factor target genes") +
+  xlab("Time (hr)") +
+  ylab("Average gene Z-score")+
+  theme_linedraw()
+gg <- gg +
+  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12, face = "bold"),
+        strip.text = element_text(size = 12, face = "bold"),
+        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
+  guides(y.sec = guide_axis())
+ggsave(AP2_target_plot, width= 22, height= 15, units= 'cm')
+
+############################################################
+
+#Generating plots for genes regulated by one or two transcription factors 
+
 #table with number of trxn factors and comma separated list of trxn factors
 geneTarget <- genes[, list(N= length(unique(target)), 
                          target= paste(sort(target), collapse= ' & ')), by= gene_id] 
@@ -56,11 +97,6 @@ genes <- geneTarget[gene_id %in% geneTarget[(N == 2) | (N == 1)]$gene_id]
 genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
                                               (target == "AP2-O3")]$gene_id]
 
-#Use zscore_logrpkm table
-logrpkm_table_long <- fread(zscore_logrpkm)
-
-ss <- fread(ss_file)
-ss <- ss[Outliers == FALSE,]
 
 key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
 key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
