@@ -76,6 +76,9 @@ rule final_output:
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
+        'cith_enrichment.tsv',
+        'dozi_enrichment.tsv',
+        'cith_dozi_enrichment.tsv',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -386,10 +389,14 @@ rule enrichment_clusters:
         pathways= os.path.join(workflow.basedir, 'Enrichment_files/MetabolicPathways.csv'),
         conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv'),
         conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.csv'),
+        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
     output:
         AP2_table= 'AP2_enrichment.tsv',
         path_table= 'path_enrichment.tsv',
         conoid_table= 'conoid_enrichment.tsv',
+        cith_table= 'cith_enrichment.tsv',
+        dozi_table= 'dozi_enrichment.tsv',
+        cith_dozi_table= 'cith_dozi_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
 
