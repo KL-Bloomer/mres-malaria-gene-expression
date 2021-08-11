@@ -79,6 +79,11 @@ rule final_output:
         'cith_enrichment.tsv',
         'dozi_enrichment.tsv',
         'cith_dozi_enrichment.tsv',
+        'AP2_O_O3_target_plot.png',
+       	'AP2_O_O4_target_plot.png',
+       	'AP2_FG_O3_target_plot.png',
+        'AP2_target_plot.png',
+        'lmer.out',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -399,6 +404,25 @@ rule enrichment_clusters:
         cith_dozi_table= 'cith_dozi_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
+
+rule AP2_target_plot:
+    input:
+        ap2_FG= os.path.join(workflow.basedir, 'Enrichment_files/AP2-FG.targets.csv'),
+        ap2_O= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O.targets.csv'),
+        ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
+        ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
+        clust= 'clusters_table.tsv',
+        sample_sheet= config['ss'],
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
+        logrpkm_table= 'edger/logrpkm_long.tsv',
+    output:
+        AP2_O_O3_plot= 'AP2_O_O3_target_plot.png',
+        AP2_O_O4_plot= 'AP2_O_O4_target_plot.png',
+        AP2_FG_O3_plot= 'AP2_FG_O3_target_plot.png',
+        AP2_target_plot= 'AP2_target_plot.png',
+        lmer_out_file= 'lmer.out',
+    script:
+        os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
 rule gff_files:
     input:
