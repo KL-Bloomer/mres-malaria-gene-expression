@@ -144,7 +144,7 @@ counts[, fdr := p.adjust(p.value, method= 'fdr')]
 #counts_p05 <- counts[p.value < 0.05]
 write.table(counts, file=path_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
-## enrichment for conoid/apical proteins
+############################### enrichment for conoid/apical proteins ############################
 conoid <- fread(conoid_file, header = TRUE, select= c('gene_id'))
 conoid[, target := 'Conoid/apical']
 
