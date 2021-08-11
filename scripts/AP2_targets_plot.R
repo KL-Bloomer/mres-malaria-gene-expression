@@ -283,7 +283,7 @@ summary(fitr)
 
 cat('\n\n# Compare slopes \n\n')
 
-trendr <- emtrends(fitr, 'target', var="Time", pbkrtest.limit = 10000, lmerTest.limit = 10000)
+trendr <- emtrends(fitr, 'target', var="Time", pbkrtest.limit = 10166, lmerTest.limit = 10166)
 trendr
 pairs(trendr)
 
