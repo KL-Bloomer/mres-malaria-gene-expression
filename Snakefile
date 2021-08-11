@@ -71,19 +71,23 @@ rule final_output:
         'Heatmap_AP2_genes_FDR.png',
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
-        'zscore_logrpkm_table.tsv',
         'gene_expression_changes_keygenes.png',
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
+        'cith_enrichment.tsv',
+        'dozi_enrichment.tsv',
+        'cith_dozi_enrichment.tsv',
         'AP2_O_O3_target_plot.png',
        	'AP2_O_O4_target_plot.png',
        	'AP2_FG_O3_target_plot.png',
+        'AP2_target_plot.png',
+        'lmer.out',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-        expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
-
+        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
+        
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
@@ -355,7 +359,6 @@ rule heatmap_and_clustering:
         Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
         Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
         Heatmap_genes= 'Heatmap_genes.png',
-        zscore_logrpkm= 'zscore_logrpkm_table.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')
 
@@ -391,10 +394,14 @@ rule enrichment_clusters:
         pathways= os.path.join(workflow.basedir, 'Enrichment_files/MetabolicPathways.csv'),
         conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv'),
         conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.csv'),
+        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
     output:
         AP2_table= 'AP2_enrichment.tsv',
         path_table= 'path_enrichment.tsv',
         conoid_table= 'conoid_enrichment.tsv',
+        cith_table= 'cith_enrichment.tsv',
+        dozi_table= 'dozi_enrichment.tsv',
+        cith_dozi_table= 'cith_dozi_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
 
@@ -407,10 +414,13 @@ rule AP2_target_plot:
         clust= 'clusters_table.tsv',
         sample_sheet= config['ss'],
         zscore_logrpkm= 'zscore_logrpkm_table.tsv',
+        logrpkm_table= 'edger/logrpkm_long.tsv',
     output:
         AP2_O_O3_plot= 'AP2_O_O3_target_plot.png',
         AP2_O_O4_plot= 'AP2_O_O4_target_plot.png',
         AP2_FG_O3_plot= 'AP2_FG_O3_target_plot.png',
+        AP2_target_plot= 'AP2_target_plot.png',
+        lmer_out_file= 'lmer.out',
     script:
         os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
@@ -422,7 +432,7 @@ rule gff_files:
     output:
         clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        clst_out= 'meme/clst_out.gff'
+        clst_out= 'meme/clst_out.gff',
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
@@ -434,10 +444,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 100 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 800 -r 100 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 1101 {{mid=int($2+($3-$2)/2); $2=mid-550; $3=mid+551; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -470,7 +480,7 @@ rule install_meme:
 rule meme_chip:
     input:
         pos= 'meme/clst_pos{i}.fa',
-       	neg= 'meme/clst_neg{i}.fa',
+        neg= 'meme/clst_out.fa',
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
@@ -481,5 +491,5 @@ rule meme_chip:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 10 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
+        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 3 -neg {input.neg} {input.pos}
         """
