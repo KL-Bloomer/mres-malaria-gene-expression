@@ -14,12 +14,8 @@ ap2_O3 <- snakemake@input[['ap2_O3']]
 ap2_O4 <- snakemake@input[['ap2_O4']]
 clust <- snakemake@input[['clust']]
 ss_file <- snakemake@input[['sample_sheet']]
-zscore_logrpkm <- snakemake@input[['zscore_logrpkm']]
 logrpkm_table <- snakemake@input[['logrpkm_table']]
-AP2_FG_O3_plot <- snakemake@output[['AP2_FG_O3_plot']]
-AP2_O_O4_plot <- snakemake@output[['AP2_O_O4_plot']]
-AP2_O_O3_plot <- snakemake@output[['AP2_O_O3_plot']]
-AP2_target_plot <- snakemake@output[['AP2_target_plot']]
+tf_plot_trendline <- snakemake@output[['tf_plot_trendline']]
 lmer_out_file <- snakemake@output[['lmer_out_file']]
 
 #load AP2 gene target files and concatenate
@@ -53,164 +49,97 @@ ap2_clust <- merge(clusters, ap2, by = "gene_id", all=TRUE)
 ### remove NA values 
 genes <- na.omit(ap2_clust)
 
-################################################# Plot zscore_logrpkm table ######################################
-logrpkm_table_long <- fread(zscore_logrpkm)
+######################## Plot normalised expression logrpkm #################################
+#Use logrpkm raw scores to cluster all genes as scaling makes the standard deviation 1 regardless of input.
+#If you use raw logrpkm's you can also test whether some genes bound by one
+#and/or another transcription factor tend to have different mean of expression.
+logrpkm_table_long <- fread(logrpkm_table)
 
 ss <- fread(ss_file)
 ss <- ss[Outliers == FALSE,]
 
-key_genes <- merge(logrpkm_table_long, genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
-
-avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
-                 by= list(Time, target)]
-
-#Add a printable panel title
-avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
-avg[, Time := as.numeric(as.character(Time))]
-
-##Creating plot showing the avr zscore of genes
-gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
-  geom_line() +
-  geom_point(size = 1.0)+
-  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
-  facet_wrap(~panel_title, nrow=2) +
-  ggtitle("Temporal changes in average gene Z-score of key 
-          developmental transcription factor target genes") +
-  xlab("Time (hr)") +
-  ylab("Average gene Z-score")+
-  theme_linedraw()
-gg <- gg +
-  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
-  theme(axis.text=element_text(size=12),
-        axis.title=element_text(size=12, face = "bold"),
-        strip.text = element_text(size = 12, face = "bold"),
-        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
-  guides(y.sec = guide_axis())
-ggsave(AP2_target_plot, width= 22, height= 15, units= 'cm')
-
-############################################################
-
-#Generating plots for genes regulated by one or two transcription factors 
-
 #table with number of trxn factors and comma separated list of trxn factors
-geneTarget <- genes[, list(N= length(unique(target)), 
-                         target= paste(sort(target), collapse= ' & ')), by= gene_id] 
+geneTarget <- genes[, list(N= length(unique(target)),
+                         target= paste(sort(target), collapse= ' & ')), by= gene_id]
 
-
-###for AP2-FG and AP2-O3 plot
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
+#for AP2-FG and AP2-O3 plot
+ap2fg_ap2o3 <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
                                               (target == "AP2-O3")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
 
-avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))), 
+ap2fg_ap2o3 <- merge(logrpkm_table_long, ap2fg_ap2o3, by= 'gene_id')
+ap2fg_ap2o3 <- merge(ap2fg_ap2o3, ss[, list(library_id, Time)], by= 'library_id')
+
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2fg_ap2o3, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+ap2fg_ap2o3$predict <- predict(fitr)
+
+avr_ap2fg_ap2o3 <- ap2fg_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                  by= list(Time, target)]
+avr_ap2fg_ap2o3[,tf_group := "AP2-FG and AP2-O3"]
 
-#Add a printable panel title
-avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
-avg[, Time := as.numeric(as.character(Time))]
 
-##Creating plot showing the avr zscore of genes 
-gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
-  geom_line() +
-  geom_point(size = 1.0)+
-  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
-  facet_wrap(~panel_title, nrow=2) +
-  ggtitle("Temporal changes in average gene Z-score of 
-          AP2-FG & AP2-O3 transcription factor target genes") +
-  xlab("Time (hr)") +
-  ylab("Average gene Z-score")+
-  theme_linedraw()
-gg <- gg +
-  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
-  theme(axis.text=element_text(size=12),
-        axis.title=element_text(size=12, face = "bold"),
-        strip.text = element_text(size = 12, face = "bold"),
-        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
-  guides(y.sec = guide_axis())
-ggsave(AP2_FG_O3_plot, width= 22, height= 15, units= 'cm')
-
-################################################################
-
-#for AP2-O and AP2-O4 plots
-
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O4") | (target == "AP2-O") |
+#for AP2-O and AP2-O4
+ap2o_ap2o4 <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O4") | (target == "AP2-O") |
                                               (target == "AP2-O4")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
 
-avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
-                 by= list(Time, target)]
+ap2o_ap2o4 <- merge(logrpkm_table_long, ap2o_ap2o4, by= 'gene_id')
+ap2o_ap2o4 <- merge(ap2o_ap2o4, ss[, list(library_id, Time)], by= 'library_id')
 
-#Add a printable panel title
-avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
-avg[, Time := as.numeric(as.character(Time))]
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2o_ap2o4, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+ap2o_ap2o4$predict <- predict(fitr)
 
-##Creating plot showing the avr zscore of genes
-gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
-  geom_line() +
-  geom_point(size = 1.0)+
-  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
-  facet_wrap(~panel_title, nrow=2) +
-  ggtitle("Temporal changes in average gene Z-score of
-          AP2-O & AP2-O4 transcription factor target genes") +
-  xlab("Time (hr)") +
-  ylab("Average gene Z-score")+
-  theme_linedraw()
-gg <- gg +
-  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
-  theme(axis.text=element_text(size=12),
-        axis.title=element_text(size=12, face = "bold"),
-        strip.text = element_text(size = 12, face = "bold"),
-        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
-  guides(y.sec = guide_axis())
-ggsave(AP2_O_O4_plot, width= 22, height= 15, units= 'cm')
+avr_ap2o_ap2o4 <- ap2o_ap2o4[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
+                           by= list(Time, target)]
 
-##############################################################
+avr_ap2o_ap2o4[,tf_group := "AP2-O and AP2-O4"]
 
-### For AP2-O and AP2-O3 plots
+#for AP2-O and AP2-O3 plot
 
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O3") | (target == "AP2-O") |
+ap2o_ap2o3 <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O3") | (target == "AP2-O") |
                                               (target == "AP2-O3")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
 
-avg <- key_genes[, list(zscore = mean(zscore), sd= sd(zscore), ngenes= length(unique(.SD$gene_id))),
-                 by= list(Time, target)]
+ap2o_ap2o3 <- merge(logrpkm_table_long, ap2o_ap2o3, by= 'gene_id')
+ap2o_ap2o3 <- merge(ap2o_ap2o3, ss[, list(library_id, Time)], by= 'library_id')
 
-#Add a printable panel title
-avg[, panel_title := paste(' ', target, ' | N = ', ngenes, sep = " ")]
-avg[, Time := as.numeric(as.character(Time))]
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2o_ap2o3, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+ap2o_ap2o3$predict <- predict(fitr)
 
-##Creating plot showing the avr zscore of genes
-gg <- ggplot(data= avg, aes(x= Time, y= zscore, by = Time)) +
-  geom_line() +
-  geom_point(size = 1.0)+
-  geom_errorbar(aes(ymin= zscore - sd, ymax= zscore + sd), width=.2, position=position_dodge(.9)) +
-  facet_wrap(~panel_title, nrow=2) +
-  ggtitle("Temporal changes in average gene Z-score of
-          AP2-O & AP2-O3 transcription factor target genes") +
+avr_ap2o_ap2o3 <- ap2o_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
+                         by= list(Time, target)]
+
+avr_ap2o_ap2o3[, tf_group := "AP2-O and AP2-O3"]
+
+#merge the average data
+avg <- rbindlist(list(avr_ap2fg_ap2o3, avr_ap2o_ap2o4, avr_ap2o_ap2o3))
+
+# Labels with transcription factor combinations & the number of genes:
+avg[, tf_ngenes := paste(' ', target, ' | N = ', ngenes, sep = " ")]
+labels <- avg[, list(Time= max(Time)), by= list(tf_ngenes)]
+labels <- merge(labels, avg, by= c('tf_ngenes', 'Time'))
+
+##Creating plot showing the avr expression of transcription factor target genes with fitted lines
+
+gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = target)) +
+  geom_errorbar(aes(ymin= logrpkm - sd, ymax= logrpkm + sd), width=.1, size = 0.5, position=position_dodge(.6)) +
+  geom_line(size =0.5, position = position_dodge(0.6)) +
+  geom_point(size = 1.5, position = position_dodge(0.6))+
+  geom_line(aes(y=predict), size =0.2) +
+  facet_wrap(~tf_group, nrow=2) +
+  ggtitle("Temporal changes in the average normalised gene expression of
+          transcription factor target genes") +
   xlab("Time (hr)") +
-  ylab("Average gene Z-score")+
+  ylab("Average normalised gene expression (log2 rpkm)")+
   theme_linedraw()
+
 gg <- gg +
-  scale_x_continuous(breaks= c(0, 4, 8, 12, 16, 24))+
-  theme(axis.text=element_text(size=12),
-        axis.title=element_text(size=12, face = "bold"),
-        strip.text = element_text(size = 12, face = "bold"),
-        plot.title = element_text(hjust=0.5, size = 16, face = "bold"))+
-  guides(y.sec = guide_axis())
-ggsave(AP2_O_O3_plot, width= 22, height= 15, units= 'cm')
-
-#############################################################################################
-
-######################## Plot normalised expression logrpkm #################################
-### need to work on taking into account Dario's suggestions
-
-logrpkm_table_long <- fread(logrpkm_table)
-
-
+  geom_text_repel(data= labels, xlim= c(max(labels$Time), NA), aes(x = Time, y=logrpkm, label= tf_ngenes), size = 3, inherit.aes = FALSE, hjust= 1, segment.colour= 'grey57') +
+  scale_x_continuous(expand = expansion(mult = c(0.1, 0.7), add = 0), breaks= c(0, 4, 8, 12, 16, 24))+
+  theme(axis.text=element_text(size=13),
+        axis.title=element_text(size=13, face = "bold"),
+        strip.text = element_text(size = 14, face = "bold"),
+        plot.title = element_text(hjust=0.5, size = 16, face = "bold"),
+        legend.position = "none")+
+        guides(y.sec = guide_axis())
+ggsave(tf_plot_trendline, width= 25, height= 15, units= 'cm')
 
 # Calculating the slope and the mean normalised expression values (log2 rpkm) for the targets of
 #the transcription factors, alone and in combination using a linear mixed effects model which
@@ -219,14 +148,10 @@ logrpkm_table_long <- fread(logrpkm_table)
 sink(lmer_out_file) # Send output to this file instead of to the Terminal
 
 cat ('# AP2-FG & AP2-O3 \n\n')
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-FG & AP2-O3") | (target == "AP2-FG") |
-                                              (target == "AP2-O3")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
 
 cat('# Model fit \n\n')
 
-fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= key_genes, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2fg_ap2o3, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
 summary(fitr)
 
 cat('\n\n# Compare slopes \n\n')
@@ -245,14 +170,9 @@ cat('\n# ================ \n')
 
 cat ('# AP2-O & AP2-O4 \n\n')
 
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O4") | (target == "AP2-O") |
-                                              (target == "AP2-O4")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
-
 cat('# Model fit \n\n')
 
-fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= key_genes, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2o_ap2o4, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
 summary(fitr)
 
 cat('\n\n# Compare slopes \n\n')
@@ -271,14 +191,9 @@ cat('\n# ================ \n')
 
 cat ('# AP2-O & AP2-O3 \n\n')
 
-key_genes <- geneTarget[gene_id %in% geneTarget[(target == "AP2-O & AP2-O3") | (target == "AP2-O") |
-                                              (target == "AP2-O3")]$gene_id]
-key_genes <- merge(logrpkm_table_long, key_genes, by= 'gene_id')
-key_genes <- merge(key_genes, ss[, list(library_id, Time)], by= 'library_id')
-
 cat('# Model fit \n\n')
 
-fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= key_genes, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
+fitr <- lmer(logrpkm ~ Time * target + (1 + Time|gene_id), data= ap2o_ap2o3, REML= FALSE, control = lmerControl(optimizer ="Nelder_Mead"))
 summary(fitr)
 
 cat('\n\n# Compare slopes \n\n')
