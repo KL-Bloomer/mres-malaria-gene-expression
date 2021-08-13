@@ -117,3 +117,5 @@ Kirstin's diary - https://github.com/KL-Bloomer/mres-malaria-gene-expression
 #DOZI enrichment?
 #Start writing up introduction and methods
 #putting data together - create the story
+
+#Have moved the weekly plan to Benchling.com
