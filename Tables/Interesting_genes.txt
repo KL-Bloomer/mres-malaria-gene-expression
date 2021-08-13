@@ -1,0 +1,25 @@
+Interesting genes
+
+gene_id	Description	Functional_group
+PBANKA_0800500	chitinase	Midgut wall penetration
+PBANKA_1319500	LCCL domain-containing protein	Crystalloid formation
+PBANKA_1300700	LCCL domain-containing protein	Crystalloid formation
+PBANKA_1035200	LCCL domain-containing protein	Crystalloid formation
+PBANKA_0417600	LCCL domain-containing protein	Crystalloid formation
+PBANKA_1315300	LCCL domain-containing protein	Crystalloid formation
+PBANKA_0204500	LCCL domain-containing protein	Crystalloid formation
+PBANKA_1037800	secreted ookinete adhesive protein	Midgut wall penetration
+PBANKA_1228900	von Willebrand factor A domain-related protein	Midgut wall penetration
+PBANKA_0515000	ookinete surface protein P25	Surface markers
+PBANKA_0514900	ookinete surface protein P28	Surface markers
+PBANKA_1107600	6-cysteine protein	Surface markers
+PBANKA_0905900	AP2 domain transcription factor AP2-O	Developmental transcription factors
+PBANKA_1363700	AP2 domain transcription factor AP2-O4	Developmental transcription factors
+PBANKA_1001800	AP2 domain transcription factor AP2-SP2	Developmental transcription factors
+PBANKA_1015500	AP2 domain transcription factor AP2-O3	Developmental transcription factors
+PBANKA_1217700	ATP-dependent RNA helicase DDX6	Transcriptional repressors
+PBANKA_1415700	AP2 domain transcription factor AP2-FG	Developmental transcription factors
+PBANKA_0412900	circumsporozoite- and TRAP-related protein	Midgut wall penetration
+PBANKA_1301300	trailer hitch homolog	Transcriptional repressors
+PBANKA_1023400	glutathione reductase, putative	Oxidative stress
+PBANKA_1111800	glutathione synthetase	Oxidative stress

@@ -1,0 +1,253 @@
+# AP2-FG & AP2-O3 
+
+# Model fit 
+
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: logrpkm ~ Time * target + (1 + Time | gene_id)
+   Data: ap2fg_ap2o3
+Control: lmerControl(optimizer = "Nelder_Mead")
+
+     AIC      BIC   logLik deviance df.resid 
+ 19219.1  19286.2  -9599.6  19199.1     6074 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.7566 -0.6327 -0.0067  0.6455  3.6741 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ gene_id  (Intercept) 4.54211  2.1312        
+          Time        0.01011  0.1006   -0.32
+ Residual             1.02758  1.0137        
+Number of obs: 6084, groups:  gene_id, 234
+
+Fixed effects:
+                             Estimate Std. Error         df t value Pr(>|t|)
+(Intercept)                  7.542875   0.285047 233.997312  26.462  < 2e-16
+Time                        -0.098333   0.013699 233.997938  -7.178 9.29e-12
+targetAP2-FG & AP2-O3        0.393621   0.410653 233.997350   0.959  0.33879
+targetAP2-O3                -1.069103   0.344386 233.997336  -3.104  0.00214
+Time:targetAP2-FG & AP2-O3   0.001474   0.019735 233.998016   0.075  0.94053
+Time:targetAP2-O3            0.069505   0.016550 233.997984   4.200 3.80e-05
+                              
+(Intercept)                ***
+Time                       ***
+targetAP2-FG & AP2-O3         
+targetAP2-O3               ** 
+Time:targetAP2-FG & AP2-O3    
+Time:targetAP2-O3          ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) Time   tAP2&A tAP2-O T:AP&A
+Time        -0.332                            
+tAP2-FG&AP2 -0.694  0.230                     
+targtAP2-O3 -0.828  0.275  0.575              
+T:AP2-FG&AP  0.230 -0.694 -0.332 -0.191       
+Tm:trAP2-O3  0.275 -0.828 -0.191 -0.332  0.575
+
+
+# Compare slopes 
+
+ target          Time.trend      SE  df lower.CL upper.CL
+ AP2-FG             -0.0983 0.01379 237  -0.1255  -0.0712
+ AP2-FG & AP2-O3    -0.0969 0.01430 237  -0.1250  -0.0687
+ AP2-O3             -0.0288 0.00935 237  -0.0472  -0.0104
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+ contrast                     estimate     SE  df t.ratio p.value
+ (AP2-FG) - (AP2-FG & AP2-O3) -0.00147 0.0199 237  -0.074  0.9970
+ (AP2-FG) - (AP2-O3)          -0.06950 0.0167 237  -4.173  0.0001
+ (AP2-FG & AP2-O3) - (AP2-O3) -0.06803 0.0171 237  -3.982  0.0003
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+# Compare means 
+
+Time = 9.23:
+ target          emmean    SE  df lower.CL upper.CL
+ AP2-FG            6.64 0.273 237     6.10     7.17
+ AP2-FG & AP2-O3   7.04 0.283 237     6.49     7.60
+ AP2-O3            6.21 0.185 237     5.84     6.57
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Time = 9.23:
+ contrast                     estimate    SE  df t.ratio p.value
+ (AP2-FG) - (AP2-FG & AP2-O3)   -0.407 0.393 237  -1.037  0.5541
+ (AP2-FG) - (AP2-O3)             0.428 0.329 237   1.299  0.3974
+ (AP2-FG & AP2-O3) - (AP2-O3)    0.835 0.338 237   2.472  0.0375
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+# ================ 
+# AP2-O & AP2-O4 
+
+# Model fit 
+
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: logrpkm ~ Time * target + (1 + Time | gene_id)
+   Data: ap2o_ap2o4
+Control: lmerControl(optimizer = "Nelder_Mead")
+
+     AIC      BIC   logLik deviance df.resid 
+ 22048.3  22116.5 -11014.1  22028.3     6776 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.2091 -0.5966  0.0308  0.6219  3.9589 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ gene_id  (Intercept) 3.20664  1.7907        
+          Time        0.01245  0.1116   -0.52
+ Residual             1.14993  1.0723        
+Number of obs: 6786, groups:  gene_id, 261
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                 5.206732   0.117132 261.004645  44.452  < 2e-16 ***
+Time                        0.135549   0.007372 261.001438  18.386  < 2e-16 ***
+targetAP2-O & AP2-O4        1.099465   0.517752 261.004660   2.124   0.0346 *  
+targetAP2-O4                0.129796   0.697194 261.004660   0.186   0.8525    
+Time:targetAP2-O & AP2-O4   0.144007   0.032588 261.001466   4.419 1.45e-05 ***
+Time:targetAP2-O4          -0.100298   0.043882 261.001466  -2.286   0.0231 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) Time   tAP2&A tAP2-O T:AP&A
+Time        -0.530                            
+tAP2-O&AP2- -0.226  0.120                     
+targtAP2-O4 -0.168  0.089  0.038              
+T:AP2-O&AP2  0.120 -0.226 -0.530 -0.020       
+Tm:trAP2-O4  0.089 -0.168 -0.020 -0.530  0.038
+
+
+# Compare slopes 
+
+ target         Time.trend      SE  df lower.CL upper.CL
+ AP2-O              0.1355 0.00742 264   0.1209    0.150
+ AP2-O & AP2-O4     0.2796 0.03193 264   0.2167    0.342
+ AP2-O4             0.0353 0.04351 264  -0.0504    0.121
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+ contrast                    estimate     SE  df t.ratio p.value
+ (AP2-O) - (AP2-O & AP2-O4)    -0.144 0.0328 264  -4.394  <.0001
+ (AP2-O) - (AP2-O4)             0.100 0.0441 264   2.272  0.0615
+ (AP2-O & AP2-O4) - (AP2-O4)    0.244 0.0540 264   4.527  <.0001
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+# Compare means 
+
+Time = 9.23:
+ target         emmean    SE  df lower.CL upper.CL
+ AP2-O            6.46 0.100 264     6.26     6.65
+ AP2-O & AP2-O4   8.89 0.431 264     8.04     9.73
+ AP2-O4           5.66 0.587 264     4.51     6.82
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Time = 9.23:
+ contrast                    estimate    SE  df t.ratio p.value
+ (AP2-O) - (AP2-O & AP2-O4)    -2.429 0.442 264  -5.492  <.0001
+ (AP2-O) - (AP2-O4)             0.796 0.596 264   1.337  0.3762
+ (AP2-O & AP2-O4) - (AP2-O4)    3.225 0.728 264   4.429  <.0001
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+# ================ 
+# AP2-O & AP2-O3 
+
+# Model fit 
+
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: logrpkm ~ Time * target + (1 + Time | gene_id)
+   Data: ap2o_ap2o3
+Control: lmerControl(optimizer = "Nelder_Mead")
+
+     AIC      BIC   logLik deviance df.resid 
+ 32426.8  32499.1 -16203.4  32406.8    10156 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.6563 -0.6121  0.0261  0.6347  4.1001 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr 
+ gene_id  (Intercept) 3.47181  1.863         
+          Time        0.01124  0.106    -0.43
+ Residual             1.07539  1.037         
+Number of obs: 10166, groups:  gene_id, 391
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                 5.206732   0.121628 391.003073  42.809   <2e-16 ***
+Time                        0.135549   0.007012 391.000359  19.331   <2e-16 ***
+targetAP2-O & AP2-O3        0.930957   0.389766 391.003094   2.389   0.0174 *  
+targetAP2-O3                1.267040   0.208675 391.003094   6.072    3e-09 ***
+Time:targetAP2-O & AP2-O3  -0.025262   0.022470 391.000323  -1.124   0.2616    
+Time:targetAP2-O3          -0.164377   0.012030 391.000330 -13.664   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) Time   tAP2&A tAP2-O T:AP&A
+Time        -0.439                            
+tAP2-O&AP2- -0.312  0.137                     
+targtAP2-O3 -0.583  0.256  0.182              
+T:AP2-O&AP2  0.137 -0.312 -0.439 -0.080       
+Tm:trAP2-O3  0.256 -0.583 -0.080 -0.439  0.182
+
+
+# Compare slopes 
+
+ target         Time.trend      SE  df lower.CL upper.CL
+ AP2-O              0.1355 0.00704 394   0.1217  0.14939
+ AP2-O & AP2-O3     0.1103 0.02143 394   0.0682  0.15242
+ AP2-O3            -0.0288 0.00981 394  -0.0481 -0.00954
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+ contrast                    estimate     SE  df t.ratio p.value
+ (AP2-O) - (AP2-O & AP2-O3)    0.0253 0.0226 394   1.120  0.5023
+ (AP2-O) - (AP2-O3)            0.1644 0.0121 394  13.611  <.0001
+ (AP2-O & AP2-O3) - (AP2-O3)   0.1391 0.0236 394   5.902  <.0001
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+# Compare means 
+
+Time = 9.23:
+ target         emmean    SE  df lower.CL upper.CL
+ AP2-O            6.46 0.110 394     6.24     6.67
+ AP2-O & AP2-O3   7.16 0.336 394     6.50     7.82
+ AP2-O3           6.21 0.154 394     5.91     6.51
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+Time = 9.23:
+ contrast                    estimate    SE  df t.ratio p.value
+ (AP2-O) - (AP2-O & AP2-O3)    -0.698 0.353 394  -1.975  0.1198
+ (AP2-O) - (AP2-O3)             0.250 0.189 394   1.323  0.3832
+ (AP2-O & AP2-O3) - (AP2-O3)    0.948 0.369 394   2.568  0.0285
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+# ================ 

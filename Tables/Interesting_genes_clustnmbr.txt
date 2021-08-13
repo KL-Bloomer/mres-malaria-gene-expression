@@ -1,0 +1,31 @@
+Geneid	Gene_name	cluster	Description/function
+PBANKA_0514900	P28	1	ookinete surface protein P28
+PBANKA_1432200	MDV1	1	male development gene 1
+PBANKA_0515000	P25	2	ookinete surface protein P25
+PBANKA_0905900	AP2-O	3	AP2 domain transcription factor AP2-O
+PBANKA_1319500	CCP2	4	LCCL domain-containing protein
+PBANKA_0417600	CCp4	4	LCCL domain-containing protein
+PBANKA_1315300	LAP5	4	LCCL domain-containing protein
+PBANKA_1436600	IMC1h	4	inner membrane complex protein 1h
+PBANKA_1217700	DOZI	5	ATP-dependent RNA helicase DDX6
+PBANKA_1301300	CITH	5	trailer hitch homolog
+PBANKA_1300700	CCp1	7	LCCL domain-containing protein
+PBANKA_1035200	CCp3	7	LCCL domain-containing protein
+PBANKA_0204500	CCp5	7	LCCL domain-containing protein, putative
+PBANKA_1414900	SAS6L	7	SAS6-like protein
+PBANKA_1415700	AP2-FG	7	AP2 domain transcription factor AP2-FG
+PBANKA_1302800	TPx1	7	thioredoxin peroxidase 1
+PBANKA_0314200	CDPK1	11	calcium-dependent protein kinase 1
+PBANKA_1228900	WARP	12	von Willebrand factor A domain-related protein
+PBANKA_1312700	GEST	12	gamete egress and sporozoite traversal protein
+PBANKA_0800500	CHT1	13	chitinase
+PBANKA_1037800	SOAP	13	secreted ookinete adhesive protein
+PBANKA_0905200	Cap93	13	oocyst capsule protein Cap93
+PBANKA_0412900	CTRP	13	circumsporozoite- and TRAP-related protein
+PBANKA_1001800	AP2-SP2	32	AP2 domain transcription factor AP2-SP2
+PBANKA_1436100	HP1	35	heterochromatin protein 1
+PBANKA_0615200	CDPK4	37	calcium-dependent protein kinase 4
+PBANKA_1227400	CNA	39	serine/threonine protein phosphatase 2B catalytic subunit A
+PBANKA_1363700	AP2-O4	40	AP2 domain transcription factor AP2-O4
+PBANKA_0402600	IMC1a	44	inner membrane complex protein 1a
+PBANKA_0620600	CPH1	47	protein CPH1, putative
