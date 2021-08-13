@@ -81,6 +81,7 @@ rule final_output:
         'cith_dozi_enrichment.tsv',
         'tf_plot_trendline.png',
         'lmer.out',
+        'rbp_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
@@ -416,6 +417,17 @@ rule AP2_target_plot:
         lmer_out_file= 'lmer.out',
     script:
         os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
+
+rule rbp_target_plot:
+    input:
+        clust= 'clusters_table.tsv',
+        sample_sheet= config['ss'],
+        logrpkm_table= 'edger/logrpkm_long.tsv',
+        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
+    output:
+        rbp_target_plot= 'rbp_target_plot.png',
+    script:
+        os.path.join(workflow.basedir, 'scripts/dozi_cith_plot.R')
 
 rule gff_files:
     input:
