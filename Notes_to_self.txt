@@ -5,9 +5,11 @@ Notes for self:
 [Create & clone a git repository](https://www.melbournebioinformatics.org.au/tutorials/tutorials/using_git/Using_Git/)
 
 #to backtrack to a different version of the files
-git log #take log string
+git log --oneline #take log string
+git show {log string}:file.txt
 git checkout {log string} test.text
-git checkout HEAD text.text
+git commit .... -m "revert..."
+#git checkout HEAD text.text
 
 git status
 git add
@@ -109,7 +111,7 @@ open IGV using the command "igv"
  * Note to self: can execute a snakemake wrapper script in the background using nohup (very handy!)
  nohup ./snakefile_run &
      * Therefore, even if I am logged out of the cluster, snakemake will still be going in the background;
-     * To see the output from snakemake = less nohup.out;
+     * To see the output from snakemake = less nohup.out; "less +G nohup.out" to go to the end of the file
      * to kill snakemake = pkill snakemake
      __OR__
      * immediate kill(emergency) = pkill -9 snakemake
@@ -232,3 +234,41 @@ Commands to start up each session:
 (meme) kirstin@kirstin-SATELLITE-C50-A:~/MRes_Malaria_2021/meme$ DIR=/home/kirstin/MRes_Malaria_2021/meme/
 (meme) kirstin@kirstin-SATELLITE-C50-A:~/MRes_Malaria_2021/meme$ export PATH=$DIR/bin:$DIR/libexec/meme-5.3.3:$PATH
 (meme) kirstin@kirstin-SATELLITE-C50-A:~/MRes_Malaria_2021/meme$ meme-chip -version
+
+The options I used for meme-chip say to look for motifs between 4 and 8 bp in length; -ccut 0 prevents meme from trimming and centring the input sequences (we want to use the whole sequence); with "-meme-nmotifs 0" we avoid running the "meme" module, we use only streme because meme would probably take ages to finish and it seems streme does a better job anyway; -db is the database of known motifs.
+
+#Wildcard constraints  https://snakemake.readthedocs.io/en/stable/tutorial/additional_features.html#constraining-wildcards
+
+## Note with meme-chip
+# if using more than 50 sequences, you would use STREME instead of MEME
+
+###converting pdf to txt
+#First thing I would convert to text with:
+
+gs -sDEVICE=txtwrite -o RIP-Chip_dataset_DOZI_CITH.txt RIP-Chip_dataset_DOZI_CITH.pdf
+
+#but the output is going to be quite irregular.
+
+###Notes re mixed models
+
+#> The message: boundary (singular) fit: see ?isSingular comes up.
+
+#I think this is because zscores by design have all the same intercept (same mean) so the estimation of the
+#intercept hits the numerical boundary, there is little or no variation between genes.
+#We could ignore the warning since we are interested in the fixed effects here, i.e. the "Time * target" component.
+
+#Better would be to use logrpkm since they may be more meaningful, but then you say Rstudio dies.
+#I guess you don't get any other useful message?
+#Maybe try removing the options "REML= FALSE" and "control = lmerControl(optimizer ="Nelder_Mead")".
+
+#I wonder if Rstudio runs out of memory... Could try running the code on bioinf03?
+#Just type R on the Terminal to start the R interpreter (after installing lme4 package).
+
+#You have probably discovered this already, you can get some information about the model fit with summary(fit).
+
+#######################################
+
+#error msg "Unable to negotiate with 130.209.19.28 port 22: no matching cipher found. Their offer: aes128-cbc,aes192-cbc,aes256-cbc"
+#Updating ssh config files - this did the trick
+sudo nano /etc/ssh/ssh_config
+#uncomment the line Ciphers .....and save
