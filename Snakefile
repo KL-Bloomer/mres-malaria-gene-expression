@@ -80,7 +80,10 @@ rule final_output:
         'dozi_enrichment.tsv',
         'cith_dozi_enrichment.tsv',
         'tf_plot_trendline.png',
-        'lmer.out',
+        'trendr_file.tsv',
+        'pairs_trendr_file.tsv',
+        'means_file.tsv',
+        'pairs_means_file.tsv',
         'rbp_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
@@ -414,7 +417,10 @@ rule AP2_target_plot:
         logrpkm_table= 'edger/logrpkm_long.tsv',
     output:
         tf_plot_trendline= 'tf_plot_trendline.png',   
-        lmer_out_file= 'lmer.out',
+        trendr_file= 'trendr_file.tsv',
+        pairs_trendr_file= 'pairs_trendr_file.tsv',
+        means_file= 'means_file.tsv',
+        pairs_means_file= 'pairs_means_file.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
