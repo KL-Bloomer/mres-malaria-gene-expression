@@ -76,18 +76,9 @@ rule final_output:
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
-        'cith_enrichment.tsv',
-        'dozi_enrichment.tsv',
-        'cith_dozi_enrichment.tsv',
-        'tf_plot_trendline.png',
-        'trendr_file.tsv',
-        'pairs_trendr_file.tsv',
-        'means_file.tsv',
-        'pairs_means_file.tsv',
-        'rbp_target_plot.png',
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
+        expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
         
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -395,45 +386,12 @@ rule enrichment_clusters:
         pathways= os.path.join(workflow.basedir, 'Enrichment_files/MetabolicPathways.csv'),
         conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv'),
         conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.csv'),
-        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
     output:
         AP2_table= 'AP2_enrichment.tsv',
         path_table= 'path_enrichment.tsv',
         conoid_table= 'conoid_enrichment.tsv',
-        cith_table= 'cith_enrichment.tsv',
-        dozi_table= 'dozi_enrichment.tsv',
-        cith_dozi_table= 'cith_dozi_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
-
-rule AP2_target_plot:
-    input:
-        ap2_FG= os.path.join(workflow.basedir, 'Enrichment_files/AP2-FG.targets.csv'),
-        ap2_O= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O.targets.csv'),
-        ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
-        ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
-        clust= 'clusters_table.tsv',
-        sample_sheet= config['ss'],
-        logrpkm_table= 'edger/logrpkm_long.tsv',
-    output:
-        tf_plot_trendline= 'tf_plot_trendline.png',   
-        trendr_file= 'trendr_file.tsv',
-        pairs_trendr_file= 'pairs_trendr_file.tsv',
-        means_file= 'means_file.tsv',
-        pairs_means_file= 'pairs_means_file.tsv',
-    script:
-        os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
-
-rule rbp_target_plot:
-    input:
-        clust= 'clusters_table.tsv',
-        sample_sheet= config['ss'],
-        logrpkm_table= 'edger/logrpkm_long.tsv',
-        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
-    output:
-        rbp_target_plot= 'rbp_target_plot.png',
-    script:
-        os.path.join(workflow.basedir, 'scripts/dozi_cith_plot.R')
 
 rule gff_files:
     input:
@@ -443,7 +401,7 @@ rule gff_files:
     output:
         clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        clst_out= 'meme/clst_out.gff',
+        clst_out= 'meme/clst_out.gff'
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
@@ -455,10 +413,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 800 -r 100 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 100 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 1101 {{mid=int($2+($3-$2)/2); $2=mid-550; $3=mid+551; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -491,7 +449,7 @@ rule install_meme:
 rule meme_chip:
     input:
         pos= 'meme/clst_pos{i}.fa',
-        neg= 'meme/clst_out.fa',
+       	neg= 'meme/clst_neg{i}.fa',
         done= 'meme_suite/installation.done',
         db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
@@ -502,5 +460,5 @@ rule meme_chip:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 3 -neg {input.neg} {input.pos}
+        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 10 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
         """
