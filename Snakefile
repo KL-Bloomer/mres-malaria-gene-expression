@@ -77,7 +77,8 @@ rule final_output:
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
         'meme_suite/installation.done',
-        expand('meme/clst_pos{i}/streme.html', i= range(1, 9)),
+        expand('meme/clst_pos{i}/streme.html', i= range(1, 7)),
+        expand('meme/clst_pos{i}/meme.html', i= range(7,9)),
         
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -412,10 +413,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 0 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 2000 -r 0 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 1001 {{mid=int($2+($3-$2)/2); $2=mid-500; $3=mid+501; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 2001 {{mid=int($2+($3-$2)/2); $2=mid-1000; $3=mid+1001; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -449,3 +450,20 @@ rule streme:
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
         streme --oc `dirname {output.oc}` --minw 4 --maxw 10 --n {input.neg} --p {input.pos}
         """
+
+rule meme:
+    input:
+        pos= 'meme/clst_pos{i}.fa',
+        neg= 'meme/clst_neg{i}.fa',
+        done= 'meme_suite/installation.done',
+    output:
+        oc= 'meme/clst_pos{i}/meme.html',
+    params:
+       	Version= '5.3.3',
+    shell:
+        r"""
+        DIR=$PWD/`dirname {input.done}`
+        export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
+        meme -oc `dirname {output.oc}` -minw 4 -maxw 10 -dna -evt 0.05 -objfun de -neg {input.neg} {input.pos}
+        """
+
