@@ -396,12 +396,11 @@ rule enrichment_clusters:
 rule gff_files:
     input:
         clust= 'clusters_table.tsv',
-        gene_id_table= 'edger/geneid_desc_table.tsv',
+        dge_table= 'edger/differential_gene_expression.tsv',
         gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
     output:
         clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
-        clst_out= 'meme/clst_out.gff'
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
@@ -416,7 +415,7 @@ rule extract_promoters:
         slopBed -s -i {input.gff} -g {input.fai} -l 2000 -r 0 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 2001 {{mid=int($2+($3-$2)/2); $2=mid-1000; $3=mid+1001; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 1501 {{mid=int($2+($3-$2)/2); $2=mid-750; $3=mid+751; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
