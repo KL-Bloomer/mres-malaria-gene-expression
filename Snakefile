@@ -77,8 +77,7 @@ rule final_output:
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
         'meme_suite/installation.done',
-        'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-        expand('meme/clst_pos{i}/meme-chip.html', i= range(1, 9)),
+        expand('meme/clst_pos{i}/streme.html', i= range(1, 9)),
         
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -413,10 +412,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 100 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 1000 -r 0 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 1101 {{mid=int($2+($3-$2)/2); $2=mid-550; $3=mid+551; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 1001 {{mid=int($2+($3-$2)/2); $2=mid-500; $3=mid+501; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -430,35 +429,23 @@ rule promoter_seq:
         bedtools getfasta -s -fi {input.fa} -bed {input.prom} -fo {output.out} -name
         """
 
-rule download_meme_db:
-    output:
-        'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
-    shell:
-        r"""
-        cd meme_suite/db
-        curl --silent -L -O https://meme-suite.org/meme/meme-software/Databases/motifs/motif_databases.12.21.tgz
-        tar zxf motif_databases.12.21.tgz
-        rm motif_databases.12.21.tgz
-        """
-
 rule install_meme:
     output:
 	# Dummy file to signal installation done
         done= touch('meme_suite/installation.done'),
 
-rule meme_chip:
+rule streme:
     input:
         pos= 'meme/clst_pos{i}.fa',
        	neg= 'meme/clst_neg{i}.fa',
         done= 'meme_suite/installation.done',
-        db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
-        oc= 'meme/clst_pos{i}/meme-chip.html',
+        oc= 'meme/clst_pos{i}/streme.html',
     params:
         Version= '5.3.3',
     shell:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 10 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 0 -neg {input.neg} {input.pos}
+        streme --oc `dirname {output.oc}` --minw 4 --maxw 10 --n {input.neg} --p {input.pos}
         """
