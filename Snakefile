@@ -71,7 +71,7 @@ rule final_output:
         'Heatmap_AP2_genes_FDR.png',
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
-        'gene_expression_changes_keygenes.png',
+        'PBANKA_1447900_gene_expression_plot.png',
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
@@ -358,10 +358,8 @@ rule interesting_gene_plot:
     input:
         sample_sheet= config['ss'],
         logrpkm_table= 'edger/logrpkm_long.tsv',
-        interesting_genes= os.path.join(workflow.basedir, 'Interesting_genes.txt'),
-        GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
     output:
-        gene_expression_changes_keygenes= 'gene_expression_changes_keygenes.png',
+        gene_expression_changes_keygenes= 'PBANKA_1447900_gene_expression_plot.png',
     script:
          os.path.join(workflow.basedir, 'scripts/gene_expression_interesting_genes.R')
 
@@ -412,7 +410,7 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 2000 -r 0 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 1500 -r 0 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
         | awk -v OFS='\t' '($3-$2) >= 1501 {{mid=int($2+($3-$2)/2); $2=mid-750; $3=mid+751; print $0}}' > {output.prom}
