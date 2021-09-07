@@ -74,7 +74,7 @@ ap2fg_ap2o3$predict <- predict(fitr)
 
 avr_ap2fg_ap2o3 <- ap2fg_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                  by= list(Time, target)]
-avr_ap2fg_ap2o3[,tf_group := "AP2-FG and AP2-O3"]
+avr_ap2fg_ap2o3[,tf_group := "A) AP2-FG and AP2-O3"]
 
 
 #for AP2-O and AP2-O4
@@ -90,7 +90,7 @@ ap2o_ap2o4$predict <- predict(fitr)
 avr_ap2o_ap2o4 <- ap2o_ap2o4[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                            by= list(Time, target)]
 
-avr_ap2o_ap2o4[,tf_group := "AP2-O and AP2-O4"]
+avr_ap2o_ap2o4[,tf_group := "B) AP2-O and AP2-O4"]
 
 #for AP2-O and AP2-O3 plot
 
@@ -106,7 +106,7 @@ ap2o_ap2o3$predict <- predict(fitr)
 avr_ap2o_ap2o3 <- ap2o_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                          by= list(Time, target)]
 
-avr_ap2o_ap2o3[, tf_group := "AP2-O and AP2-O3"]
+avr_ap2o_ap2o3[, tf_group := "C) AP2-O and AP2-O3"]
 
 #merge the average data
 avg <- rbindlist(list(avr_ap2fg_ap2o3, avr_ap2o_ap2o4, avr_ap2o_ap2o3))
@@ -127,7 +127,7 @@ gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = target)) 
   ggtitle("Temporal changes in the average normalised gene expression of
           transcription factor target genes") +
   xlab("Time (hr)") +
-  ylab("Average normalised gene expression (log2 rpkm)")+
+  ylab("Average normalised gene expression (log2 RPKM)")+
   theme_linedraw()
 
 gg <- gg +
