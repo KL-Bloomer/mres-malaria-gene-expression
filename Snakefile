@@ -71,14 +71,19 @@ rule final_output:
         'Heatmap_AP2_genes_FDR.png',
         'Heatmap_DE_genes_logFC.png',
         'Heatmap_genes.png',
-        'PBANKA_1447900_gene_expression_plot.png',
+        'gene_expression_changes_keygenes.png',
         'topGO_table_clusters.tsv',
         'AP2_enrichment.tsv',
         'path_enrichment.tsv',
         'conoid_enrichment.tsv',
+        'cith_enrichment.tsv',
+        'dozi_enrichment.tsv',
+        'cith_dozi_enrichment.tsv',
+        'tf_plot_trendline.png',
+        'lmer.out',
         'meme_suite/installation.done',
-        expand('meme/clst_pos{i}/streme.html', i= range(1, 7)),
-        expand('meme/clst_pos{i}/meme.html', i= range(7,9)),
+        'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
+        expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
         
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -358,8 +363,10 @@ rule interesting_gene_plot:
     input:
         sample_sheet= config['ss'],
         logrpkm_table= 'edger/logrpkm_long.tsv',
+        interesting_genes= os.path.join(workflow.basedir, 'Interesting_genes.txt'),
+        GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
     output:
-        gene_expression_changes_keygenes= 'PBANKA_1447900_gene_expression_plot.png',
+        gene_expression_changes_keygenes= 'gene_expression_changes_keygenes.png',
     script:
          os.path.join(workflow.basedir, 'scripts/gene_expression_interesting_genes.R')
 
@@ -384,21 +391,41 @@ rule enrichment_clusters:
         pathways= os.path.join(workflow.basedir, 'Enrichment_files/MetabolicPathways.csv'),
         conversion= os.path.join(workflow.basedir, 'Enrichment_files/PbergheiANKA__v__Pfalciparum3D7.genes.tsv'),
         conoid_file= os.path.join(workflow.basedir, 'Enrichment_files/conoid_analysis.csv'),
+        dozi_file= os.path.join(workflow.basedir, 'Enrichment_files/dozi.txt'),
     output:
         AP2_table= 'AP2_enrichment.tsv',
         path_table= 'path_enrichment.tsv',
         conoid_table= 'conoid_enrichment.tsv',
+        cith_table= 'cith_enrichment.tsv',
+        dozi_table= 'dozi_enrichment.tsv',
+        cith_dozi_table= 'cith_dozi_enrichment.tsv',
     script:
         os.path.join(workflow.basedir, 'scripts/Enrichment_AP2.R')
+
+rule AP2_target_plot:
+    input:
+        ap2_FG= os.path.join(workflow.basedir, 'Enrichment_files/AP2-FG.targets.csv'),
+        ap2_O= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O.targets.csv'),
+        ap2_O3= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O3.targets.csv'),
+        ap2_O4= os.path.join(workflow.basedir, 'Enrichment_files/AP2-O4.targets.csv'),
+        clust= 'clusters_table.tsv',
+        sample_sheet= config['ss'],
+        logrpkm_table= 'edger/logrpkm_long.tsv',
+    output:
+        tf_plot_trendline= 'tf_plot_trendline.png',   
+        lmer_out_file= 'lmer.out',
+    script:
+        os.path.join(workflow.basedir, 'scripts/AP2_targets_plot.R')
 
 rule gff_files:
     input:
         clust= 'clusters_table.tsv',
-        dge_table= 'edger/differential_gene_expression.tsv',
+        gene_id_table= 'edger/geneid_desc_table.tsv',
         gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
     output:
         clst_pos= expand('meme/clst_pos{i}.gff', i= range(1, 9)),
         clst_neg= expand('meme/clst_neg{i}.gff', i= range(1, 9)),
+        clst_out= 'meme/clst_out.gff',
     script:
         os.path.join(workflow.basedir, 'scripts/clustfiles.R')
 
@@ -410,10 +437,10 @@ rule extract_promoters:
         prom= 'meme/{cluster_id}_prom.gff',
     shell:
         r"""
-        slopBed -s -i {input.gff} -g {input.fai} -l 1500 -r 0 \
+        slopBed -s -i {input.gff} -g {input.fai} -l 800 -r 100 \
         | sort -k1,1 -k4,4n \
         | mergeBed \
-        | awk -v OFS='\t' '($3-$2) >= 1501 {{mid=int($2+($3-$2)/2); $2=mid-750; $3=mid+751; print $0}}' > {output.prom}
+        | awk -v OFS='\t' '($3-$2) >= 901 {{mid=int($2+($3-$2)/2); $2=mid-450; $3=mid+451; print $0}}' > {output.prom}
         """
 
 rule promoter_seq:
@@ -427,40 +454,35 @@ rule promoter_seq:
         bedtools getfasta -s -fi {input.fa} -bed {input.prom} -fo {output.out} -name
         """
 
+rule download_meme_db:
+    output:
+        'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
+    shell:
+        r"""
+        cd meme_suite/db
+        curl --silent -L -O https://meme-suite.org/meme/meme-software/Databases/motifs/motif_databases.12.21.tgz
+        tar zxf motif_databases.12.21.tgz
+        rm motif_databases.12.21.tgz
+        """
+
 rule install_meme:
     output:
 	# Dummy file to signal installation done
         done= touch('meme_suite/installation.done'),
 
-rule streme:
+rule meme_chip:
     input:
         pos= 'meme/clst_pos{i}.fa',
-       	neg= 'meme/clst_neg{i}.fa',
+        neg= 'meme/clst_out.fa',
         done= 'meme_suite/installation.done',
+        db= 'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
     output:
-        oc= 'meme/clst_pos{i}/streme.html',
+        oc= 'meme/clst_pos{i}/meme-chip.html',
     params:
         Version= '5.3.3',
     shell:
         r"""
         DIR=$PWD/`dirname {input.done}`
         export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        streme --oc `dirname {output.oc}` --minw 4 --maxw 10 --n {input.neg} --p {input.pos}
+        meme-chip -oc `dirname {output.oc}` -minw 4 -maxw 8 --seed 1234 -ccut 0 -db {input.db} -meme-nmotifs 3 -neg {input.neg} {input.pos}
         """
-
-rule meme:
-    input:
-        pos= 'meme/clst_pos{i}.fa',
-        neg= 'meme/clst_neg{i}.fa',
-        done= 'meme_suite/installation.done',
-    output:
-        oc= 'meme/clst_pos{i}/meme.html',
-    params:
-       	Version= '5.3.3',
-    shell:
-        r"""
-        DIR=$PWD/`dirname {input.done}`
-        export PATH=$DIR/bin:$DIR/libexec/meme-{params.Version}:$PATH
-        meme -oc `dirname {output.oc}` -minw 4 -maxw 10 -dna -evt 0.05 -objfun de -neg {input.neg} {input.pos}
-        """
-
