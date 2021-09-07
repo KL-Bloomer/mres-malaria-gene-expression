@@ -16,7 +16,12 @@ clust <- snakemake@input[['clust']]
 ss_file <- snakemake@input[['sample_sheet']]
 logrpkm_table <- snakemake@input[['logrpkm_table']]
 tf_plot_trendline <- snakemake@output[['tf_plot_trendline']]
-lmer_out_file <- snakemake@output[['lmer_out_file']]
+#lmer_out_file <- snakemake@output[['lmer_out_file']]
+trendr_file <- snakemake@output[['trendr_file']]
+pairs_trendr_file <- snakemake@output[['pairs_trendr_file']]
+means_file <- snakemake@output[['means_file']]
+pairs_means_file <- snakemake@output[['pairs_means_file']]
+
 
 #load AP2 gene target files and concatenate
 ap2fg <- fread(ap2_FG, select= 'tss_id')
@@ -74,7 +79,7 @@ ap2fg_ap2o3$predict <- predict(fitr)
 
 avr_ap2fg_ap2o3 <- ap2fg_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                  by= list(Time, target)]
-avr_ap2fg_ap2o3[,tf_group := "A) AP2-FG and AP2-O3"]
+avr_ap2fg_ap2o3[,tf_group := "AP2-FG and AP2-O3"]
 
 
 #for AP2-O and AP2-O4
@@ -90,7 +95,7 @@ ap2o_ap2o4$predict <- predict(fitr)
 avr_ap2o_ap2o4 <- ap2o_ap2o4[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                            by= list(Time, target)]
 
-avr_ap2o_ap2o4[,tf_group := "B) AP2-O and AP2-O4"]
+avr_ap2o_ap2o4[,tf_group := "AP2-O and AP2-O4"]
 
 #for AP2-O and AP2-O3 plot
 
@@ -106,7 +111,7 @@ ap2o_ap2o3$predict <- predict(fitr)
 avr_ap2o_ap2o3 <- ap2o_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                          by= list(Time, target)]
 
-avr_ap2o_ap2o3[, tf_group := "C) AP2-O and AP2-O3"]
+avr_ap2o_ap2o3[, tf_group := "AP2-O and AP2-O3"]
 
 #merge the average data
 avg <- rbindlist(list(avr_ap2fg_ap2o3, avr_ap2o_ap2o4, avr_ap2o_ap2o3))
@@ -127,7 +132,7 @@ gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = target)) 
   ggtitle("Temporal changes in the average normalised gene expression of
           transcription factor target genes") +
   xlab("Time (hr)") +
-  ylab("Average normalised gene expression (log2 RPKM)")+
+  ylab("Average normalised gene expression (log2 rpkm)")+
   theme_linedraw()
 
 gg <- gg +
@@ -145,7 +150,7 @@ ggsave(tf_plot_trendline, width= 25, height= 15, units= 'cm')
 #the transcription factors, alone and in combination using a linear mixed effects model which
 # accounts for multiple genes and library replicates in each transcription factor group:
 
-sink(lmer_out_file) # Send output to this file instead of to the Terminal
+#sink(lmer_out_file) # Send output to this file instead of to the Terminal
 
 cat ('# AP2-FG & AP2-O3 \n\n')
 
@@ -157,14 +162,14 @@ summary(fitr)
 cat('\n\n# Compare slopes \n\n')
 
 trendr <- emtrends(fitr, 'target', var="Time", pbkrtest.limit = 10000, lmerTest.limit = 10000)
-trendr
-pairs(trendr)
+fg_o3_trendr <- as.data.table(trendr)
+fg_o3_pairs_trendr <- as.data.table(pairs(trendr))
 
 cat('\n\n# Compare means \n\n')
 
 means <- emmeans(fitr, 'target', by= 'Time', pbkrtest.limit = 10000, lmerTest.limit = 10000)
-means
-pairs(means)
+fg_o3_means <- as.data.table(means)
+fg_o3_pairs_means <- as.data.table(pairs(means))
 
 cat('\n# ================ \n')
 
@@ -178,14 +183,14 @@ summary(fitr)
 cat('\n\n# Compare slopes \n\n')
 
 trendr <- emtrends(fitr, 'target', var="Time", pbkrtest.limit = 10000, lmerTest.limit = 10000)
-trendr
-pairs(trendr)
+o_o4_trendr <- as.data.table(trendr)
+o_o4_pairs_trendr <- as.data.table(pairs(trendr))
 
 cat('\n\n# Compare means \n\n')
 
 means <- emmeans(fitr, 'target', by= 'Time', pbkrtest.limit = 10000, lmerTest.limit = 10000)
-means
-pairs(means)
+o_o4_means <- as.data.table(means)
+o_o4_pairs_means <- as.data.table(pairs(means))
 
 cat('\n# ================ \n')
 
@@ -199,16 +204,36 @@ summary(fitr)
 cat('\n\n# Compare slopes \n\n')
 
 trendr <- emtrends(fitr, 'target', var="Time", pbkrtest.limit = 10166, lmerTest.limit = 10166)
-trendr
-pairs(trendr)
+o_o3_trendr <- as.data.table(trendr)
+o_o3_pairs_trendr <- as.data.table(pairs(trendr))
 
 cat('\n\n# Compare means \n\n')
 
 means <- emmeans(fitr, 'target', by= 'Time',pbkrtest.limit = 10166, lmerTest.limit = 10166)
-means
-pairs(means)
+o_o3_means <- as.data.table(means)
+o_o3_pairs_means <- as.data.table(pairs(means))
 
 cat('\n# ================ \n')
 
-sink() # Stop sending output to file
+cat('# concatenate trendr \n\n')
+
+trendr <- rbindlist(list(fg_o3_trendr, o_o4_trendr, o_o3_trendr))
+write.table(trendr, file=trendr_file, row.names = FALSE, sep= '\t', quote= FALSE)
+
+cat('# concatenate pairs(trendr) \n\n')
+
+pairs_trendr <- rbindlist(list(fg_o3_pairs_trendr, o_o4_pairs_trendr, o_o3_pairs_trendr))
+write.table(pairs_trendr, file=pairs_trendr_file, row.names = FALSE, sep= '\t', quote= FALSE)
+
+cat('# concatenate means \n\n')
+
+means <- rbindlist(list(fg_o3_means, o_o4_means, o_o3_means))
+write.table(means, file=means_file, row.names = FALSE, sep= '\t', quote= FALSE)
+
+cat('# concatenate pairs(means) \n\n')
+
+pairs_means <- rbindlist(list(fg_o3_pairs_means, o_o4_pairs_means, o_o3_pairs_means))
+write.table(pairs_means, file=pairs_means_file, row.names = FALSE, sep= '\t', quote= FALSE)
+
+#sink() # Stop sending output to file
 
