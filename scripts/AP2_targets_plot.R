@@ -79,7 +79,7 @@ ap2fg_ap2o3$predict <- predict(fitr)
 
 avr_ap2fg_ap2o3 <- ap2fg_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                  by= list(Time, target)]
-avr_ap2fg_ap2o3[,tf_group := "AP2-FG and AP2-O3"]
+avr_ap2fg_ap2o3[,tf_group := "A) AP2-FG and AP2-O3"]
 
 
 #for AP2-O and AP2-O4
@@ -95,7 +95,7 @@ ap2o_ap2o4$predict <- predict(fitr)
 avr_ap2o_ap2o4 <- ap2o_ap2o4[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                            by= list(Time, target)]
 
-avr_ap2o_ap2o4[,tf_group := "AP2-O and AP2-O4"]
+avr_ap2o_ap2o4[,tf_group := "B) AP2-O and AP2-O4"]
 
 #for AP2-O and AP2-O3 plot
 
@@ -111,7 +111,7 @@ ap2o_ap2o3$predict <- predict(fitr)
 avr_ap2o_ap2o3 <- ap2o_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                          by= list(Time, target)]
 
-avr_ap2o_ap2o3[, tf_group := "AP2-O and AP2-O3"]
+avr_ap2o_ap2o3[, tf_group := "C) AP2-O and AP2-O3"]
 
 #merge the average data
 avg <- rbindlist(list(avr_ap2fg_ap2o3, avr_ap2o_ap2o4, avr_ap2o_ap2o3))
@@ -121,9 +121,13 @@ avg[, tf_ngenes := paste(' ', target, ' | N = ', ngenes, sep = " ")]
 labels <- avg[, list(Time= max(Time)), by= list(tf_ngenes)]
 labels <- merge(labels, avg, by= c('tf_ngenes', 'Time'))
 
+#This will give to each TF a different colour which may or may not be a good thing.
+#If it's no good, create a dummy variable for each group and use that as colour
+avg[, tf_colour := as.factor(as.numeric(as.factor(target))), by= tf_group]
+
 ##Creating plot showing the avr expression of transcription factor target genes with fitted lines
 
-gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = target)) +
+gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = tf_colour)) +
   geom_errorbar(aes(ymin= logrpkm - sd, ymax= logrpkm + sd), width=.1, size = 0.5, position=position_dodge(.6)) +
   geom_line(size =0.5, position = position_dodge(0.6)) +
   geom_point(size = 1.5, position = position_dodge(0.6))+
@@ -132,7 +136,7 @@ gg <- ggplot(data= avg, aes(x= Time, y= logrpkm, by = target, colour = target)) 
   ggtitle("Temporal changes in the average normalised gene expression of
           transcription factor target genes") +
   xlab("Time (hr)") +
-  ylab("Average normalised gene expression (log2 rpkm)")+
+  ylab("Average normalised gene expression (log2 RPKM)")+
   theme_linedraw()
 
 gg <- gg +
