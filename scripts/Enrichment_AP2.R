@@ -74,16 +74,18 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
 #counts_p5 <- counts[p.value < 0.05]
 #counts_p1 <- counts[p.value < 0.01]
-counts[ , c(3,4)]
+
 
 write.table(counts, file= AP2_table, row.names = FALSE, sep= '\t', quote= FALSE)
 
@@ -136,10 +138,12 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow= 2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
 
 # not sure if this is relevant but let's adjust for multiple testing:
@@ -186,11 +190,14 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
+
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
 #check that rows Sum to 5245
@@ -251,11 +258,14 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
+
 # not sure if this is relevant but let's adjust for multiple testing:
 counts[, fdr := p.adjust(p.value, method= 'fdr')]
 
@@ -300,10 +310,12 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
 
 # not sure if this is relevant but let's adjust for multiple testing:
@@ -350,10 +362,12 @@ for(clst in cluster_ids) {
 counts <- rbindlist(counts)
 
 counts[, p.value := NA]
+counts[, odds.ratio := NA]
 for(i in 1:nrow(counts)) {
-  x <- counts[i]
-  p <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)$p.value
-  counts$p.value[i] <- p
+x <- counts[i]
+ft <- fisher.test(matrix(c(x$count_both, x$count_only_cluster, x$count_only_target, x$count_none), nrow=2), conf.int= FALSE)
+counts$p.value[i] <- ft$p.value
+counts$odds.ratio[i] <- ft$estimate
 }
 
 # not sure if this is relevant but let's adjust for multiple testing:
