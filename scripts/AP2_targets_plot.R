@@ -95,7 +95,7 @@ ap2o_ap2o4$predict <- predict(fitr)
 avr_ap2o_ap2o4 <- ap2o_ap2o4[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                            by= list(Time, target)]
 
-avr_ap2o_ap2o4[,tf_group := "B) AP2-O and AP2-O4"]
+avr_ap2o_ap2o4[,tf_group := "C) AP2-O and AP2-O4"]
 
 #for AP2-O and AP2-O3 plot
 
@@ -111,7 +111,7 @@ ap2o_ap2o3$predict <- predict(fitr)
 avr_ap2o_ap2o3 <- ap2o_ap2o3[, list(logrpkm = mean(logrpkm), sd= sd(logrpkm), predict = mean(predict), ngenes= length(unique(.SD$gene_id))),
                          by= list(Time, target)]
 
-avr_ap2o_ap2o3[, tf_group := "C) AP2-O and AP2-O3"]
+avr_ap2o_ap2o3[, tf_group := "B) AP2-O and AP2-O3"]
 
 #merge the average data
 avg <- rbindlist(list(avr_ap2fg_ap2o3, avr_ap2o_ap2o4, avr_ap2o_ap2o3))
@@ -148,7 +148,7 @@ gg <- gg +
         plot.title = element_text(hjust=0.5, size = 16, face = "bold"),
         legend.position = "none")+
         guides(y.sec = guide_axis())
-ggsave(tf_plot_trendline, width= 25, height= 15, units= 'cm')
+ggsave(tf_plot_trendline, width= 30, height= 20, units= 'cm')
 
 # Calculating the slope and the mean normalised expression values (log2 rpkm) for the targets of
 #the transcription factors, alone and in combination using a linear mixed effects model which

@@ -46,7 +46,7 @@ wildcard_constraints:
     cluster_id= '|'.join([re.escape(x) for x in ('clst_pos1', 'clst_pos2', 'clst_pos3', 'clst_pos4', 'clst_pos5', 'clst_pos6', 'clst_pos7', 'clst_pos8', 'clst_out', 'clst_neg1', 'clst_neg2', 'clst_neg3', 'clst_neg4', 'clst_neg5', 'clst_neg6', 'clst_neg7', 'clst_neg8')]),
     library_id= '|'.join([re.escape(x) for x in sample_sheet['library_id']]),
     i= '|'.join([re.escape(str(x)) for x in range(1, config['n_clst']+1)]),
-
+    
 rule final_output:
     # The only purpose of this rule is listing the files we want as final
     # output of the workflow. Snakemake will use the rules after this one to
@@ -88,7 +88,7 @@ rule final_output:
         'meme_suite/installation.done',
         'meme_suite/db/motif_databases/MALARIA/campbell2010_malaria_pbm.meme',
         expand('meme/{cluster_id}/meme-chip.html', cluster_id= ['clst_pos' + str(i) for i in range(1, config['n_clst']+1)]),
-        
+
 # ------
 # NB: With the exception of the first rule, which determines the final output,
 # the order of the following rules does not matter. Snakemake will chain them in
