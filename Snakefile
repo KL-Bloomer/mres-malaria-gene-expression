@@ -54,8 +54,8 @@ rule final_output:
     input:
         'multiqc/fastqc_report.html',
         'featureCounts/counts.tsv',
-        expand('blast_species/{library_id}.species.tsv', library_id= sample_sheet['library_id']),
         'idxstats/idxstats.tsv',
+        expand('bigwig/{library_id}.bw', library_id= sample_sheet[sample_sheet.library_type == "RNA-seq"]['library_id']),
 
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -145,17 +145,20 @@ rule align_reads:
         bam= 'hisat2/{library_id}.bam',
         bai= 'hisat2/{library_id}.bam.bai',
         log= 'hisat2/{library_id}.log',
+        md= 'hisat2/{library_id}.md',
     shell:
         r"""
         hisat2 --summary-file {output.log} --new-summary \
                --max-intronlen 5000 --threads 16 -x {input.genome} -1 {input.R1} -2 {input.R2} \
-        | samtools sort -@ 1 > {output.bam}
-        samtools index -@ 1 {output.bam}
+        | samtools fixmate -m -@ 4 - - \
+        | samtools sort -@ 8 \
+        | samtools markdup -@ 8 -f {output.md} - {output.bam}
+        samtools index -@ 4 {output.bam}
         """
 
 rule count_reads_in_genes:
     input:
-        bam= expand('hisat2/{library_id}.bam', library_id= sample_sheet['library_id']),
+        bam= expand('hisat2/{library_id}.bam', library_id= sample_sheet[sample_sheet.library_type == "RNA-seq"]['library_id']),
         gff= 'ref/PlasmoDB-49_PbergheiANKA.gff',
     output:
         counts= 'featureCounts/counts.tsv',
@@ -177,7 +180,7 @@ rule samtools_idxstats:
 
 rule concatenate_idxstats:
     input:
-        stats= expand('idxstats/{library_id}.tsv', library_id= sample_sheet['library_id']),
+        stats= expand('idxstats/{library_id}.tsv', library_id= sample_sheet[sample_sheet.library_type == "RNA-seq"]['library_id']),
     output:
         stats= 'idxstats/idxstats.tsv',
     shell:
