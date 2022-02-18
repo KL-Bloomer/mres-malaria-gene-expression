@@ -1,40 +1,40 @@
-library_type	library_id	plot_id	Outliers	Time	Strain	Batch	R1	R2
-RNA-seq	12OokB_S41	12OokB	FALSE	12	2.34	Other	data/12OokB_S41_R1_001.fastq.gz	data/12OokB_S41_R2_001.fastq.gz
-RNA-seq	6OokB_S40	6OokB	FALSE	6	2.34	Other	data/6OokB_S40_R1_001.fastq.gz	data/6OokB_S40_R2_001.fastq.gz
-RNA-seq	2OokB_S39	2OokB	FALSE	2	2.34	Other	data/2OokB_S39_R1_001.fastq.gz	data/2OokB_S39_R2_001.fastq.gz
-RNA-seq	6_2-34_S36	6OokA	FALSE	6	2.34	Other	data/6_2-34_S36_R1_001.fastq.gz	data/6_2-34_S36_R2_001.fastq.gz
-RNA-seq	AsexA_S37	AsexA	FALSE	Asex	2.34	Other	data/AsexA_S37_R1_001.fastq.gz	data/AsexA_S37_R2_001.fastq.gz
-RNA-seq	AsexB_S38	AsexB	FALSE	Asex	2.34	Other	data/AsexB_S38_R1_001.fastq.gz	data/AsexB_S38_R2_001.fastq.gz
-ChIP-seq	FG-in_S46	FG-in	FALSE	Gams	FG-HA	Other	data/FG-in_S46_R1_001.fastq.gz	data/FG-in_S46_R2_001.fastq.gz
-ChIP-seq	KO_sam_S44	KO_sam	FALSE	Gams	O3-KO_FG-HA	Other	data/KO_sam_S44_R1_001.fastq.gz	data/KO_sam_S44_R2_001.fastq.gz
-ChIP-seq	O3_con_S43	O3_con	FALSE	Gams	O3-GFP	Other	data/O3_con_S43_R1_001.fastq.gz	data/O3_con_S43_R2_001.fastq.gz
-ChIP-seq	O3_gfp-in_S45	O3_in	FALSE	Gams	O3-GFP	Other	data/O3_gfp-in_S45_R1_001.fastq.gz	data/O3_gfp-in_S45_R2_001.fastq.gz
-ChIP-seq	O3_sam_S42	O3_sam	FALSE	Gams	O3-GFP	Other	data/O3_sam_S42_R1_001.fastq.gz	data/O3_sam_S42_R2_001.fastq.gz
-RNA-seq	Ap20-GFP-SFC-16h-R1	Ap2O-16h	FALSE	16	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-16h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-16h-R1_R2_combined.fastq.gz
-RNA-seq	Ap20-GFP-SFC-16h-R2	Ap2O-16h	FALSE	16	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-16h-R2_S14_R1_001.fastq.gz	data/Ap20-GFP-SFC-16h-R2_S14_R2_001.fastq.gz
-RNA-seq	Ap20-GFP-SFC-4h-R1	Ap2O-4h	FALSE	4	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-4h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-4h-R1_R2_combined.fastq.gz
-RNA-seq	Ap20-GFP-SFC-4h-R2	Ap2O-4h	FALSE	4	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-4h-R2_R1_combined.fastq.gz	data/Ap20-GFP-SFC-4h-R2_R2_combined.fastq.gz
-RNA-seq	Ap20-GFP-SFC-8h-R1	Ap2O-8h	FALSE	8	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-8h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-8h-R1_R2_combined.fastq.gz
-RNA-seq	Ap20-GFP-SFC-8h-R2	Ap2O-8h	FALSE	8	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-8h-R2_R1_combined.fastq.gz	data/Ap20-GFP-SFC-8h-R2_R2_combined.fastq.gz
-RNA-seq	GFPcon-16hr-R1	GFPcon-16h	FALSE	16	GFPcon	Other	data/GFPcon-16hr-R1_R1_combined.fastq.gz	data/GFPcon-16hr-R1_R2_combined.fastq.gz
-RNA-seq	GFPcon-16hr-R2	GFPcon-16h	FALSE	16	GFPcon	Other	data/GFPcon-16hr-R2_R1_combined.fastq.gz	data/GFPcon-16hr-R2_R2_combined.fastq.gz
-RNA-seq	GFPcon-4hr-R1	GFPcon-4h	FALSE	4	GFPcon	Other	data/GFPcon-4hr-R1_R1_combined.fastq.gz	data/GFPcon-4hr-R1_R2_combined.fastq.gz
-RNA-seq	GFPcon-4hr-R2	GFPcon-4h	TRUE	4	GFPcon	Other	data/GFPcon-4hr-R2_R1_combined.fastq.gz	data/GFPcon-4hr-R2_R2_combined.fastq.gz
-RNA-seq	GFPcon-8hr-R1_S9	GFPcon-8h	FALSE	8	GFPcon	Other	data/GFPcon-8hr-R1_S9_R1_001.fastq.gz	data/GFPcon-8hr-R1_S9_R2_001.fastq.gz
-RNA-seq	GFPcon-8hr-R2	GFPcon-8h	FALSE	8	GFPcon	Other	data/GFPcon-8hr-R2_S10_R1_001.fastq.gz	data/GFPcon-8hr-R2_S10_R2_001.fastq.gz
-RNA-seq	RM-10_S417	RM-24h	TRUE	24	mCherrycon	RM	data/RM-10_S417_R1_001.fastq.gz	data/RM-10_S417_R2_001.fastq.gz
-RNA-seq	RM-1_S408	RM-12h	FALSE	12	mCherrycon	RM	data/RM-1_S408_R1_001.fastq.gz	data/RM-1_S408_R2_001.fastq.gz
-RNA-seq	RM-2_S409	RM-2h	FALSE	2	mCherrycon	RM	data/RM-2_S409_R1_001.fastq.gz	data/RM-2_S409_R2_001.fastq.gz
-RNA-seq	RM-3_S410	RM-4h	FALSE	4	mCherrycon	RM	data/RM-3_S410_R1_001.fastq.gz	data/RM-3_S410_R2_001.fastq.gz
-RNA-seq	RM-4_S411	RM-6h	FALSE	6	mCherrycon	RM	data/RM-4_S411_R1_001.fastq.gz	data/RM-4_S411_R2_001.fastq.gz
-RNA-seq	RM-5_S412	RM-24h	FALSE	24	mCherrycon	RM	data/RM-5_S412_R1_001.fastq.gz	data/RM-5_S412_R2_001.fastq.gz
-RNA-seq	RM-6_S413	RM-12h	FALSE	12	mCherrycon	RM	data/RM-6_S413_R1_001.fastq.gz	data/RM-6_S413_R2_001.fastq.gz
-RNA-seq	RM-7_S414	RM-24h	FALSE	24	mCherrycon	RM	data/RM-7_S414_R1_001.fastq.gz	data/RM-7_S414_R2_001.fastq.gz
-RNA-seq	RM-8_S415	RM-24h	FALSE	24	mCherrycon	RM	data/RM-8_S415_R1_001.fastq.gz	data/RM-8_S415_R2_001.fastq.gz
-RNA-seq	RM-9_S416	RM-24h	FALSE	24	mCherrycon	RM	data/RM-9_S416_R1_001.fastq.gz	data/RM-9_S416_R2_001.fastq.gz
-RNA-seq	F-1_SRR5260552	RFP-0h	FALSE	0	RFP	Other	data/F-1_SRR5260552_1.fastq.gz	data/F-1_SRR5260552_2.fastq.gz
-RNA-seq	F-2_SRR5260551	RFP-0h	FALSE	0	RFP	Other	data/F-2_SRR5260551_1.fastq.gz	data/F-2_SRR5260551_2.fastq.gz
-RNA-seq	F-3_SRR5260550	RFP-0h	FALSE	0	RFP	Other	data/F-3_SRR5260550_1.fastq.gz	data/F-3_SRR5260550_2.fastq.gz
-RNA-seq	F1_21725_8_4	RFP-0h	FALSE	0	RFP	Other	data/F1_21725_8_4_1.fastq.gz	data/F1_21725_8_4_2.fastq.gz
-RNA-seq	F2_21725_8_5	RFP-0h	FALSE	0	RFP	Other	data/F2_21725_8_5_1.fastq.gz	data/F2_21725_8_5_2.fastq.gz
-RNA-seq	F3_21725_8_6	RFP-0h	FALSE	0	RFP	Other	data/F3_21725_8_6_1.fastq.gz	data/F3_21725_8_6_2.fastq.gz
+library_type	library_id	plot_id	Outliers	Time	Stage	Strain	Batch	R1	R2
+RNA-seq	12OokB_S41	12OokB	FALSE	12	Ook	2.34	Other	data/12OokB_S41_R1_001.fastq.gz	data/12OokB_S41_R2_001.fastq.gz
+RNA-seq	6OokB_S40	6OokB	FALSE	6	Ook	2.34	Other	data/6OokB_S40_R1_001.fastq.gz	data/6OokB_S40_R2_001.fastq.gz
+RNA-seq	2OokB_S39	2OokB	FALSE	2	Ook	2.34	Other	data/2OokB_S39_R1_001.fastq.gz	data/2OokB_S39_R2_001.fastq.gz
+#RNA-seq	6_2-34_S36	6OokA	FALSE	6	Ook	2.34	Other	data/6_2-34_S36_R1_001.fastq.gz	data/6_2-34_S36_R2_001.fastq.gz
+RNA-seq	AsexA_S37	AsexA	FALSE	72	Asex	2.34	Other	data/AsexA_S37_R1_001.fastq.gz	data/AsexA_S37_R2_001.fastq.gz
+RNA-seq	AsexB_S38	AsexB	FALSE	72	Asex	2.34	Other	data/AsexB_S38_R1_001.fastq.gz	data/AsexB_S38_R2_001.fastq.gz
+ChIP-seq	FG-in_S46	FG-in	FALSE	0	Gams	FG-HA	Other	data/FG-in_S46_R1_001.fastq.gz	data/FG-in_S46_R2_001.fastq.gz
+ChIP-seq	KO_sam_S44	KO_sam	FALSE	0	Gams	O3-KO_FG-HA	Other	data/KO_sam_S44_R1_001.fastq.gz	data/KO_sam_S44_R2_001.fastq.gz
+ChIP-seq	O3_con_S43	O3_con	FALSE	0	Gams	O3-GFP	Other	data/O3_con_S43_R1_001.fastq.gz	data/O3_con_S43_R2_001.fastq.gz
+ChIP-seq	O3_gfp-in_S45	O3_in	FALSE	0	Gams	O3-GFP	Other	data/O3_gfp-in_S45_R1_001.fastq.gz	data/O3_gfp-in_S45_R2_001.fastq.gz
+ChIP-seq	O3_sam_S42	O3_sam	FALSE	0	Gams	O3-GFP	Other	data/O3_sam_S42_R1_001.fastq.gz	data/O3_sam_S42_R2_001.fastq.gz
+RNA-seq	Ap20-GFP-SFC-16h-R1	Ap2O-16h	FALSE	16	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-16h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-16h-R1_R2_combined.fastq.gz
+RNA-seq	Ap20-GFP-SFC-16h-R2	Ap2O-16h	FALSE	16	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-16h-R2_S14_R1_001.fastq.gz	data/Ap20-GFP-SFC-16h-R2_S14_R2_001.fastq.gz
+RNA-seq	Ap20-GFP-SFC-4h-R1	Ap2O-4h	FALSE	4	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-4h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-4h-R1_R2_combined.fastq.gz
+RNA-seq	Ap20-GFP-SFC-4h-R2	Ap2O-4h	FALSE	4	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-4h-R2_R1_combined.fastq.gz	data/Ap20-GFP-SFC-4h-R2_R2_combined.fastq.gz
+RNA-seq	Ap20-GFP-SFC-8h-R1	Ap2O-8h	FALSE	8	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-8h-R1_R1_combined.fastq.gz	data/Ap20-GFP-SFC-8h-R1_R2_combined.fastq.gz
+RNA-seq	Ap20-GFP-SFC-8h-R2	Ap2O-8h	FALSE	8	Ook	Ap2-O-GFP	Other	data/Ap20-GFP-SFC-8h-R2_R1_combined.fastq.gz	data/Ap20-GFP-SFC-8h-R2_R2_combined.fastq.gz
+RNA-seq	GFPcon-16hr-R1	GFPcon-16h	FALSE	16	Ook	GFPcon	Other	data/GFPcon-16hr-R1_R1_combined.fastq.gz	data/GFPcon-16hr-R1_R2_combined.fastq.gz
+RNA-seq	GFPcon-16hr-R2	GFPcon-16h	FALSE	16	Ook	GFPcon	Other	data/GFPcon-16hr-R2_R1_combined.fastq.gz	data/GFPcon-16hr-R2_R2_combined.fastq.gz
+RNA-seq	GFPcon-4hr-R1	GFPcon-4h	FALSE	4	Ook	GFPcon	Other	data/GFPcon-4hr-R1_R1_combined.fastq.gz	data/GFPcon-4hr-R1_R2_combined.fastq.gz
+RNA-seq	GFPcon-4hr-R2	GFPcon-4h	TRUE	4	Ook	GFPcon	Other	data/GFPcon-4hr-R2_R1_combined.fastq.gz	data/GFPcon-4hr-R2_R2_combined.fastq.gz
+RNA-seq	GFPcon-8hr-R1_S9	GFPcon-8h	FALSE	8	Ook	GFPcon	Other	data/GFPcon-8hr-R1_S9_R1_001.fastq.gz	data/GFPcon-8hr-R1_S9_R2_001.fastq.gz
+RNA-seq	GFPcon-8hr-R2	GFPcon-8h	FALSE	8	Ook	GFPcon	Other	data/GFPcon-8hr-R2_S10_R1_001.fastq.gz	data/GFPcon-8hr-R2_S10_R2_001.fastq.gz
+RNA-seq	RM-10_S417	RM-24h	TRUE	24	Ook	mCherrycon	RM	data/RM-10_S417_R1_001.fastq.gz	data/RM-10_S417_R2_001.fastq.gz
+RNA-seq	RM-1_S408	RM-12h	FALSE	12	Ook	mCherrycon	RM	data/RM-1_S408_R1_001.fastq.gz	data/RM-1_S408_R2_001.fastq.gz
+RNA-seq	RM-2_S409	RM-2h	FALSE	2	Ook	mCherrycon	RM	data/RM-2_S409_R1_001.fastq.gz	data/RM-2_S409_R2_001.fastq.gz
+RNA-seq	RM-3_S410	RM-4h	FALSE	4	Ook	mCherrycon	RM	data/RM-3_S410_R1_001.fastq.gz	data/RM-3_S410_R2_001.fastq.gz
+RNA-seq	RM-4_S411	RM-6h	FALSE	6	Ook	mCherrycon	RM	data/RM-4_S411_R1_001.fastq.gz	data/RM-4_S411_R2_001.fastq.gz
+RNA-seq	RM-5_S412	RM-24h	FALSE	24	Ook	mCherrycon	RM	data/RM-5_S412_R1_001.fastq.gz	data/RM-5_S412_R2_001.fastq.gz
+RNA-seq	RM-6_S413	RM-12h	FALSE	12	Ook	mCherrycon	RM	data/RM-6_S413_R1_001.fastq.gz	data/RM-6_S413_R2_001.fastq.gz
+RNA-seq	RM-7_S414	RM-24h	FALSE	24	Ook	mCherrycon	RM	data/RM-7_S414_R1_001.fastq.gz	data/RM-7_S414_R2_001.fastq.gz
+RNA-seq	RM-8_S415	RM-24h	FALSE	24	Ook	mCherrycon	RM	data/RM-8_S415_R1_001.fastq.gz	data/RM-8_S415_R2_001.fastq.gz
+RNA-seq	RM-9_S416	RM-24h	FALSE	24	Ook	mCherrycon	RM	data/RM-9_S416_R1_001.fastq.gz	data/RM-9_S416_R2_001.fastq.gz
+RNA-seq	F-1_SRR5260552	RFP-0h	FALSE	0	Ook	RFP	Other	data/F-1_SRR5260552_1.fastq.gz	data/F-1_SRR5260552_2.fastq.gz
+RNA-seq	F-2_SRR5260551	RFP-0h	FALSE	0	Ook	RFP	Other	data/F-2_SRR5260551_1.fastq.gz	data/F-2_SRR5260551_2.fastq.gz
+RNA-seq	F-3_SRR5260550	RFP-0h	FALSE	0	Ook	RFP	Other	data/F-3_SRR5260550_1.fastq.gz	data/F-3_SRR5260550_2.fastq.gz
+RNA-seq	F1_21725_8_4	RFP-0h	FALSE	0	Ook	RFP	Other	data/F1_21725_8_4_1.fastq.gz	data/F1_21725_8_4_2.fastq.gz
+RNA-seq	F2_21725_8_5	RFP-0h	FALSE	0	Ook	RFP	Other	data/F2_21725_8_5_1.fastq.gz	data/F2_21725_8_5_2.fastq.gz
+RNA-seq	F3_21725_8_6	RFP-0h	FALSE	0	Ook	RFP	Other	data/F3_21725_8_6_1.fastq.gz	data/F3_21725_8_6_2.fastq.gz
