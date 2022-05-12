@@ -1,7 +1,7 @@
 #!/bin/bash
 
-snakemake -R AP2_target_plot -P AP2_target_plot --use-conda --printshellcmds --jobs 1 \
---config n_clst=8 ss=$PWD/sample_sheet.tsv datadir=/export/home/2592613b/mres-malaria-gene-expression \
+snakemake -R differential_gene_expression --use-conda --printshellcmds --jobs 3 \
+--config n_clst=8 ss=$PWD/sample_sheet.tsv datadir=/export/home3/kb255t/mres-malaria-gene-expression \
 --directory output \
 --snakefile Snakefile 
 

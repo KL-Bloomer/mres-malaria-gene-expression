@@ -16,9 +16,9 @@ Heatmap_DE_genes <- snakemake@output[['Heatmap_DE_genes']]
 Heatmap_genes <- snakemake@output[['Heatmap_genes']]
 clusters_table <- snakemake@output[['clusters_table']]
 avergene_expr_clusters <- snakemake@output[['avergene_expr_clusters']]
-Heatmap_AP2_genes <- snakemake@output[['Heatmap_AP2_genes']]
-Heatmap_AP2_genes_FDR <- snakemake@output[['Heatmap_AP2_genes_FDR']]
-Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
+#Heatmap_AP2_genes <- snakemake@output[['Heatmap_AP2_genes']]
+#Heatmap_AP2_genes_FDR <- snakemake@output[['Heatmap_AP2_genes_FDR']]
+#Heatmap_DE_genes_logFC <- snakemake@output[['Heatmap_DE_genes_logFC']]
 zscore_logrpkm_table <- snakemake@output[['zscore_logrpkm']]
 
 
@@ -26,7 +26,7 @@ zscore_logrpkm_table <- snakemake@output[['zscore_logrpkm']]
 ss <- fread(ss_file)
 ss <- ss[Outliers == FALSE, ]
 ss[, Time := sprintf('%.2d', Time)]
-#ss <- ss[!Time == 12]
+ss <- ss[library_type == "RNA-seq"]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
 ss <- ss[order(ss$Time)]
@@ -159,100 +159,3 @@ heatmap.2(logrpkm_table.mat, col=Colors,
 legend("topright",legend=paste(treatment_times),title = "Time(h)", fill=treatment_colours_options,cex=1.0)
 dev.off()
 
-## Heatmap for all AP2 transcription factors
-
-#Filter for AP2 genes
-AP2_filter <- dge_descr[grepl("AP2 domain", description, fixed = TRUE)]
-
-#Gene names
-gaf <- fread(cmd= paste("grep -v '^!'", GAF), select= c(2, 3, 10), col.names= c('Geneid', 'gene_name', 'description'))
-gaf <- unique(gaf)
-
-logrpkm_table_AP2 <- logrpkm_table[logrpkm_table$gene_id %in% AP2_filter$gene_id] #filter
-logrpkm_table_AP2 <- merge(logrpkm_table_AP2, gaf, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
-logrpkm_table_AP2 <- logrpkm_table_AP2[, c("gene_name", ss$library_id), with= FALSE]
-logrpkm_table_AP2.mat <- as.matrix(logrpkm_table_AP2, rownames = "gene_name")
-
-#Row side column for clusters
-cluster_numbers <- c(1,2,3,4,5,6,7,8,9)
-#run clustering
-col1 <- brewer.pal(9,"Paired")
-corr_mat <- cor(t(logrpkm_table_AP2.mat)) #creating a correlation
-distmat_cor <- as.dist(1-corr_mat) # determining distance from corr matrix
-hclust <- hclust(distmat_cor, method = "complete")
-gr.row <- cutree(hclust, k=9)
-
-png(file=Heatmap_AP2_genes, width= 800, height= 750)
-par(cex.main = 1.5)
-hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
-                distfun = function(logrpkm_table_DE.mat) as.dist(1-cor(t(logrpkm_table_DE.mat))),
-                Colv = FALSE,
-                dendrogram = "row",
-                main="Gene Z-score for normalised expression of AP2 TFs
-                at different time points",
-                ColSideColors=col.cell,scale="row", cexRow = 1.5,
-                key = TRUE, keysize = 1.2, key.title = NULL,
-                density.info = "none", trace="none",labCol = FALSE,
-                margins = c(25,16), xlab = "", ylab = "", lwid = c(5,15), lhei = c(3,15))
-legend("topright",legend=paste(treatment_times), title = "Time (h)", fill=treatment_colours_options,cex=1.0)
-legend("bottomleft", legend=paste(cluster_numbers), title = "Clusters",fill=col1, cex=1.0)
-dev.off()
-
-### Heatmap for AP2 transcription factors with FDR<0.01
-
-#Use rpkm table to cluster all the genes
-
-#Filter for AP2 genes
-AP2_filter <- DE_filter[grepl("AP2 domain", description, fixed = TRUE)]
-
-logrpkm_table_AP2 <- logrpkm_table[logrpkm_table$gene_id %in% AP2_filter$gene_id] #filter
-logrpkm_table_AP2 <- merge(logrpkm_table_AP2, gaf, by.x= 'gene_id', by.y= 'Geneid', all.x= TRUE, sort= FALSE)
-logrpkm_table_AP2 <- logrpkm_table_AP2[, c("gene_name", ss$library_id), with= FALSE]
-logrpkm_table_AP2.mat <- as.matrix(logrpkm_table_AP2, rownames = "gene_name")
-
-#Row side column for clusters
-cluster_numbers <- c(1,2,3,4,5,6,7,8,9)
-#run clustering
-col1 <- brewer.pal(9,"Paired")
-corr_mat <- cor(t(logrpkm_table_AP2.mat)) #creating a correlation
-distmat_cor <- as.dist(1-corr_mat) # determining distance from corr matrix
-hclust <- hclust(distmat_cor, method = "complete")
-gr.row <- cutree(hclust, k=9)
-
-#Heatmap: AP2; correlation distance matrix and "complete" hierarchical clustering
-png(file=Heatmap_AP2_genes_FDR, width= 800, height= 750)
-par(cex.main = 1.5)
-hm <- heatmap.2(logrpkm_table_AP2.mat, col=Colors,
-                distfun = function(logrpkm_table_AP2.mat) as.dist(1-cor(t(logrpkm_table_AP2.mat))),
-                Colv = FALSE,
-                dendrogram = "row",
-                main="Gene Z-score for normalised expression of
-                AP2 TFs with FDR<0.01 at different time points",
-                ColSideColors=col.cell, RowSideColors =col1[gr.row], scale="row", cexRow = 1.5,
-                key = TRUE, keysize = 1.2, key.title = NULL,
-                density.info = "none", trace="none",labCol = FALSE,
-                margins = c(21,19), xlab = "", ylab = "", lwid = c(5,15), lhei = c(3,15))
-legend("topright",legend=paste(treatment_times), title = "Time (h)", fill=treatment_colours_options, cex=1.0)
-legend("bottomleft", legend=paste(cluster_numbers), title = "Clusters",fill=col1, cex=1.0)
-dev.off()
-
-
-#Heatmap showing logFC of DEG
-mat <- dcast(data = dge_descr, gene_id ~ contrast, value.var = 'logFC')
-mat <- as.matrix(mat, rownames = "gene_id")
-neworder <- c('h4vs0', 'h8vs4', 'h16vs4', 'h16vs8','h24vs16')
-mat <- mat[, neworder]
-
-png(file=Heatmap_DE_genes_logFC, width= 800, height= 750)
-par(cex.axis = 1.5)
-heatmap.2(mat, col=Colors,
-          distfun = function(mat) as.dist(1-cor(t(mat))),
-          Colv = FALSE,
-          dendrogram = "row",
-          main="Gene Z-score for logFC of DEG
-          at different time points",
-          scale="row", cexCol=1.5,
-          key = TRUE, keysize = 1.2,  key.title = "Colour Key",
-          density.info = "none", trace="none", labRow = FALSE,
-          margins = c(10,5), xlab = "Contrasts", ylab = "Genes", lwid = c(5,12), lhei = c(3,15))
-dev.off()

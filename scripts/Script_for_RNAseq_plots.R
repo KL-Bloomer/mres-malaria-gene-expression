@@ -21,12 +21,14 @@ dge_table_file <- snakemake@output[['dge_table']]
 geneid_desc_table <- snakemake@output[['geneid_desc_table']]
 logrpkm_table_file <- snakemake@output[['logrpkm_table']]
 MAplot <- snakemake@output[['MA_plot']]
-Volcano_plot <- snakemake@output[['Volcano_plot']]
-globalexpression <- snakemake@output[['globalexpression']]
+#Volcano_plot <- snakemake@output[['Volcano_plot']]
+#globalexpression <- snakemake@output[['globalexpression']]
 
 #read the sample sheet
 ss_min_outliers <- fread(ss)
 ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
+ss_min_outliers <- ss_min_outliers[library_type == "RNA-seq",]
+ss_min_outliers <- ss_min_outliers[!Stage == "Asex",]
 ss_min_outliers[, Time := sprintf('%.2d', Time)]
 ss_min_outliers[, group := paste(Time)]
 ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
@@ -49,9 +51,10 @@ counts <- counts[!counts$Geneid %in% RNA_Gene_ID]
 
 #create a matrix of the counts
 mat <- as.matrix(counts, rownames= 'Geneid')
+mat_log <- log(mat+1)
 design <- model.matrix(~0 + ss_min_outliers$group)
 colnames(design) <- sub('ss_min_outliers$group', '', colnames(design), fixed= TRUE)
-y <- DGEList(counts= mat,
+y <- DGEList(counts= mat_log,
              group= ss_min_outliers$group)
 keep <- filterByExpr(y)
 y <- y[keep, , keep.lib.sizes=FALSE]
@@ -64,76 +67,15 @@ y$samples
 mds_min_outliers_nobatch <- plotMDS(y, plot=FALSE)
 mdsout_min_outliers_nobatch <- as.data.table(mds_min_outliers_nobatch$cmdscale.out)
 mdsout_min_outliers_nobatch[, library_id := colnames(y)]
-mdsout_min_outliers_nobatch[, sample_set := 'B) No outliers - no batch correction']
-
-### MDS plot with outliers
-#read the sample sheet
-ss_outliers <- fread(ss)
-ss_outliers[, Time := sprintf('%.2d', Time)]
-ss_outliers[, group := paste(Time)]
-ss_outliers$Time <- as.factor(ss_outliers$Time)
-
-#read the counts table
-counts <- fread(cmd= paste('grep -v "^#"', counts_file))
-setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
-counts <- counts[, c('Geneid', ss_outliers$library_id), with= FALSE]
-
-#Removing the rRNA contamination
-counts <- counts[!counts$Geneid %in% RNA_Gene_ID]
-
-#create a matrix of the counts
-mat <- as.matrix(counts, rownames= 'Geneid')
-design <- model.matrix(~0 + ss_outliers$group)
-colnames(design) <- sub('ss_outliers$group', '', colnames(design), fixed= TRUE)
-y <- DGEList(counts= mat,
-             group= ss_outliers$group)
-keep <- filterByExpr(y)
-y <- y[keep, , keep.lib.sizes=FALSE]
-y <- calcNormFactors(y)
-y <- estimateDisp(y, design)
-y$samples
-
-# MDS plot no batch correction
-
-mds <- plotMDS(y, plot=FALSE)
-mdsout <- as.data.table(mds$cmdscale.out)
-mdsout[, library_id := colnames(y)]
-mdsout[, sample_set := 'A) With outliers - no batch correction']
+mdsout_min_outliers_nobatch[, sample_set := 'No batch correction']
 
 ### MDS no outliers and with batch corretion
-#read the sample sheet
-ss_min_outliers <- fread(ss)
-ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
-ss_min_outliers[, Time := sprintf('%.2d', Time)]
-ss_min_outliers[, group := paste(Time)]
-ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
 
 # Another sanity check that Time is a factor variable - maybe redundant
 stopifnot(is.factor(ss_min_outliers$Time))
 
-#read the counts table
-counts <- fread(cmd= paste('grep -v "^#"', counts_file))
-setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
-counts_min_outliers <- counts[, c('Geneid', ss_min_outliers$library_id), with= FALSE]
-
-#Removing the rRNA contamination
-#load required packages
-library(dplyr)
-
-#read the annotation file
-GFF <- fread(cmd=paste('grep -v "^#"', GFF_file))
-rRNA_GFF <- GFF[V3 == "rRNA"]
-rRNA_ID <- subset(rRNA_GFF, select= V9) 
-RNA_ID_sep <- separate(data = rRNA_ID, col = V9, into = c("Geneid_Feature", "Parent", "Description", "Geneid"), sep = "([;])")
-RNA_Gene_ID <- subset(RNA_ID_sep, select= Geneid) 
-RNA_Gene_ID <- gsub("gene_id=", "", RNA_Gene_ID$Geneid)
-counts_min_outliers <- counts_min_outliers[!counts_min_outliers$Geneid %in% RNA_Gene_ID]
-
-#create a matrix of the counts
-mat <- as.matrix(counts_min_outliers, rownames= 'Geneid')
-
 #for batch correction, rename mat to raw_counts
-raw_counts <- mat
+raw_counts <- mat_log
 
 # Sanity check that sample sheet and count matrix are in the same order
 #issue with this command...
@@ -162,18 +104,18 @@ y$samples
 mds_min_outliers_batch <- plotMDS(y, plot=FALSE)
 mdsout_min_outliers_batch <- as.data.table(mds_min_outliers_batch$cmdscale.out)
 mdsout_min_outliers_batch[, library_id := colnames(y)]
-mdsout_min_outliers_batch[, sample_set := 'C) No outliers - with batch correction']
+mdsout_min_outliers_batch[, sample_set := 'Batch correction']
 
-#Now concatenate the three MDS datasets and add the information from the sample sheet:
+#Now concatenate the two MDS datasets and add the information from the sample sheet:
 
-mdsdata <- rbind(mdsout_min_outliers_batch, mdsout_min_outliers_nobatch, mdsout)
+mdsdata <- rbind(mdsout_min_outliers_batch, mdsout_min_outliers_nobatch)
 
 # Add library characteristics from sample sheet
-mdsdata <- merge(mdsdata, ss_outliers, by= "library_id")
+mdsdata <- merge(mdsdata, ss_min_outliers, by= "library_id")
 
 gg <- ggplot(data= mdsdata, aes(x= V1, y= V2, label= Time, colour= Time, shape= Strain)) +
-  geom_point() +
-  geom_text_repel(size = 3, segment.colour= "grey80") +
+  geom_point(size = 3) +
+  geom_text_repel(size = 4, segment.colour= "grey80") +
   labs( colour = "Time (h)", shape = "Parasite lines") +
   ggtitle("MDS plots") +
   xlab("Leading logFC dim 1") +
@@ -182,11 +124,10 @@ gg <- ggplot(data= mdsdata, aes(x= V1, y= V2, label= Time, colour= Time, shape= 
   facet_wrap(~sample_set, scales = "free")
 gg + theme(axis.text=element_text(size=12),
            axis.title=element_text(size=14,face="bold"),
-           strip.text = element_text(size = 7, face="bold"))
+           strip.text = element_text(size = 16, face="bold"))
 
 # Choose appropriate width and height
-ggsave(MDSplots_concatenated, width = 21, height = 10, units = "cm")
-
+ggsave(MDSplots_concatenated, width = 40, height = 15, units = "cm")
 
 # Differential expression
 # =======================
@@ -196,13 +137,13 @@ design_glm <- model.matrix(~0+group, data=y$samples)
 
 # These must be the same as those for ATAC
 contrasts <- makeContrasts("h24vs16"= group24 - group16,
-                           "h24vs12" = group24 - group12,
                            "h16vs12"= group16 - group12,
-                           "h16vs8" = group16 - group08,
-                           "h16vs4" = group16 - group04, 
                            "h12vs8"= group12 - group08,
-                           "h8vs4"= group08 - group04,
-                           "h4vs0"= group04 - group00,
+                           "h8vs6"= group08 - group06,
+                           "h6vs4"= group08 - group04,
+                           "h4vs2"= group04 - group02,
+                           "h2vs0"= group02 - group00,
+                           #"h0vs72"= group00 - group72,
                            levels= make.names(colnames(design_glm)))
 
 stopifnot(all(abs(colSums(contrasts)) < 1e-6))
@@ -246,7 +187,7 @@ write.table(dge_table, dge_table_file, sep= '\t', row.names= FALSE, quote= FALSE
 
 ##Creating an MA plot
 #order the contrasts appropriately
-xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12','h24vs16')
+xord <- c('h2vs0', 'h4vs2', 'h6vs4', 'h8vs6', 'h12vs8', 'h16vs12', 'h24vs16')
 dge_table[, contrast_order := factor(contrast, xord)]
 nsig <- dge_table[, list(n_up= sum(FDR < 0.01 & logFC > 0), n_down= sum(FDR < 0.01 & logFC < 0)), contrast_order]
 nsig[, n_up:= sprintf('Up = %s', n_up)]
@@ -265,69 +206,9 @@ ggplot(data= dge_table, aes(x= logCPM, y= logFC)) +
   theme(strip.text= element_text(colour= 'black'))
 ggsave(MAplot, width= 12, height= 12, units = "cm")
 
-###Volcano plot
-#order the contrasts appropriately
-xord <- c('h4vs0', 'h8vs4', 'h12vs8', 'h16vs4', 'h16vs8', 'h16vs12', 'h24vs12','h24vs16')
-dge_table[, contrast_order := factor(contrast, xord)]
-
-dge_volcano <- dge_table
-
-#add a column of NA's
-dge_volcano$diffexpressed <- "NO"
-
-#if logfold change > 0.58 and p-value less than 0.01, set as "UP"
-dge_volcano$diffexpressed[dge_volcano$logFC > 0.58 & dge_volcano$PValue < 0.001] <- "UP"
-dge_volcano$diffexpressed[dge_volcano$logFC < -0.58 & dge_volcano$PValue < 0.001] <- "DOWN"
-
-# Automate a bit
-mycolours <- c("blue", "red", "black")
-names(mycolours) <- c("DOWN", "UP", "NO")
-
-# Names of genes besides the points
-dge_volcano$delabel <- NA
-dge_volcano$delabel[dge_volcano$diffexpressed != "NO"] <- dge_volcano$gene_id[dge_volcano$diffexpressed != "NO"]
-
-ggplot(dge_volcano, mapping = aes(x= logFC, y= -log10(PValue), col = diffexpressed, label=delabel)) +
-  geom_point() +
-  ylab("-log10 (P-value)") +
-  xlab("log2 Fold change") +
-  ggtitle("Volcano plot with batch correction, p-value < 0.001") +
-  geom_vline(xintercept=c(-0.58,0.58), col="red") +
-  geom_hline(yintercept=-log10(0.001), col="red") +
-  facet_wrap(~contrast_order, ncol= 2) +
-  scale_colour_manual(values=mycolours)+ ##change point colour
-  theme_minimal()
-ggsave(Volcano_plot, width= 12, height= 12, units= 'cm')
-
-### Global expression plot
-
-global <- data.table(dge_table$gene_id, dge_table$contrast_order, dge_table$logFC)
-global <- rename(global, gene_id = V1, contrast = V2, logFC = V3)
-qq <- quantile(global$logFC, p= 0.995)
-global[, col := ifelse(abs(global$logFC) > qq, qq, abs(logFC))]
-
-p <- c(0.005, 0.05, 0.95, 0.99)
-qbar <- global[, list(qq= quantile(logFC, p= p), p= p), by= contrast]
-gg <- ggplot(data= global, aes(x= contrast, y= logFC, colour= col)) +
-  geom_line(data= qbar, aes(y= qq, group= p), colour= 'dodgerblue', alpha= 0.5) +
-  ggtitle ("Global gene expression plot with batch correction") +
-  geom_quasirandom(width= 0.2, size= 0.25, bandwidth= 0.01) +
-  scale_colour_gradient(low= 'grey80', high= 'black', guide= FALSE) +
-  xlab('') +
-  theme_light()
-ggsave(globalexpression, width= length(unique(global$contrast)) * 2, height= 10, units= 'cm')
-
-
 ### Generating logrpkm table in long format
 
-#read the sample sheet
-ss_min_outliers <- fread(ss)
-ss_min_outliers <- ss_min_outliers[Outliers == FALSE,]
-ss_min_outliers[, Time := sprintf('%.2d', Time)]
-ss_min_outliers[, group := paste(Time)]
-ss_min_outliers$Time <- as.factor(ss_min_outliers$Time)
-
-#read the counts table
+#Need to re-read the counts table to include the column "length"
 counts <- fread(cmd=paste('grep -v "^#"', counts_file))
 setnames(counts, names(counts), sub('.bam', '', basename(names(counts))))
 counts <- counts[, c('Length','Geneid', ss_min_outliers$library_id), with= FALSE]
@@ -346,4 +227,3 @@ logrpkm_table <- melt(logrpkm, variable.name = "library_id", id.vars = "gene_id"
                            value.name = "logrpkm")
 logrpkm_table <- data.table(logrpkm_table)
 write.table(logrpkm_table, file=logrpkm_table_file, row.names = FALSE, sep= '\t', quote= FALSE)
-

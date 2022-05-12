@@ -56,6 +56,13 @@ rule final_output:
         'featureCounts/counts.tsv',
         'idxstats/idxstats.tsv',
         expand('bigwig/{library_id}.bw', library_id= sample_sheet[sample_sheet.library_type == "RNA-seq"]['library_id']),
+        'barplot_libsizes_beforenorm.png',
+        'edger/MDSplots_concatenated_log_minasex.png',
+        'edger/differential_gene_expression.tsv',
+        'edger/geneid_desc_table.tsv',
+        'edger/logrpkm_long.tsv',
+        'edger/MAplot_adj_contrasts.png',
+        'Heatmap_genes.png',
 
 # ------
 # NB: With the exception of the first rule, which determines the final output,
@@ -309,10 +316,10 @@ rule differential_gene_expression:
         dge_table= 'edger/differential_gene_expression.tsv',
         geneid_desc_table= 'edger/geneid_desc_table.tsv',
         logrpkm_table= 'edger/logrpkm_long.tsv',
-        MDSplots_concatenated= 'edger/MDSplots_concatenated.png',
-        MA_plot= 'edger/MAplot_all_contrasts.png',
-        Volcano_plot= 'edger/Volcano_plot_all_contrasts.png',
-        globalexpression= 'edger/globalexpression_all_contrasts.png',
+        MDSplots_concatenated= 'edger/MDSplots_concatenated_log_minasex.png',
+        MA_plot= 'edger/MAplot_adj_contrasts.png',
+        #Volcano_plot= 'edger/Volcano_plot_all_contrasts.png',
+        #globalexpression= 'edger/globalexpression_all_contrasts.png',
     script:
         os.path.join(workflow.basedir, 'scripts/Script_for_RNAseq_plots.R')
 
@@ -322,14 +329,15 @@ rule heatmap_and_clustering:
         logrpkm_table= 'edger/logrpkm_long.tsv',
         dge_table= 'edger/differential_gene_expression.tsv',
         geneid_desc_table= 'edger/geneid_desc_table.tsv',
-        GAF= 'ref/PlasmoDB-49_PbergheiANKA_GO.gaf',
+        GAF= 'ref/PlasmoDB-56_PbergheiANKA_GO.gaf',
     output:
         Heatmap_DE_genes= 'Heatmap_DE_genes.png',
         clusters_table= 'clusters_table.tsv',
+        zscore_logrpkm= 'zscore_logrpkm_table.tsv', 
         avergene_expr_clusters= 'avergene_expr_clusters.png',
-        Heatmap_AP2_genes= 'Heatmap_AP2_genes.png',
-        Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
-        Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
+        #Heatmap_AP2_genes= 'Heatmap_AP2_genes.png',
+        #Heatmap_AP2_genes_FDR= 'Heatmap_AP2_genes_FDR.png',
+        #Heatmap_DE_genes_logFC= 'Heatmap_DE_genes_logFC.png',
         Heatmap_genes= 'Heatmap_genes.png',
     script:
         os.path.join(workflow.basedir, 'scripts/heatmap.R')

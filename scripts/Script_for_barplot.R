@@ -13,6 +13,7 @@ barplot_libsizes_beforenorm <- snakemake@output[['barplot_libsizes_beforenorm']]
 
 #read the sample sheet
 ss <- fread(ss)
+ss <- ss[library_type == "RNA-seq",]
 ss[, Time := sprintf('%.2d', Time)]
 ss[, group := paste(Time)]
 ss$Time <- as.factor(ss$Time)
